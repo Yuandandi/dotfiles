@@ -1,0 +1,68 @@
+co.html:    <p>Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit
+co.html:    amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud
+co.html:    sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris
+co.html:    laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo
+singkatan/go.vimrc:autocmd FileType go nn <leader>2 _v$y:e ~/.config/nvim/lua/dandi/abbrev/go.lua<CR>}}Oautocmd FileType go ia <buffer> <Esc>phi<Space>
+singkatan/go.vimrc:autocmd FileType go nn <leader>3 yiw:vs ~/.config/nvim/lua/dandi/abbrev/go.lua<CR>}}Oautocmd FileType go ia <buffer> <Esc>pa <Esc>p2b3ldevip:sort<CR>:wq<CR>
+singkatan/go.vimrc:autocmd FileType go nn <leader>4 vipy:vs ~/.config/nvim/lua/dandi/abbrev/go.lua<CR>}}Oautocmd FileType go ia <buffer>
+singkatan/go.vimrc:autocmd FileType go nn <leader>g :w<CR>:!go run %<CR>
+singkatan/remap.vimrc:" Set leader key
+singkatan/remap.vimrc:let g:mapleader = " "
+singkatan/remap.vimrc:nn <buffer> <leader>md :%norm _i1. <cr>ggVG:norm _wgUl<cr>gv:norm f.wgUl<cr>
+singkatan/remap.vimrc:xn <leader>p "_dP
+singkatan/remap.vimrc:nn <leader>gy "+y
+singkatan/remap.vimrc:vn <leader>gy "+y
+singkatan/remap.vimrc:nn <leader>e :Ex<CR>
+singkatan/remap.vimrc:nn <leader>Y "+Y
+singkatan/remap.vimrc:xn <leader>d "_d
+singkatan/remap.vimrc:nn <leader>so :source ~.vimrc<CR>
+singkatan/remap.vimrc:nn <leader>sk :s/, /', '/g<cr>I'<end>'
+singkatan/remap.vimrc:nn <leader>dk :s/, /", "/g<cr>I"<end>"
+singkatan/remap.vimrc:nn <leader>ss :le<cr>:s/ /', '/g<cr>I'<end>'<esc>=ipg;
+singkatan/remap.vimrc:nn <leader>dd :le<cr>:s/ /", "/g<cr>I"<end>"<esc>=ipg;
+singkatan/remap.vimrc:nn <leader>ltf :%s/\(.*\), \(.*\)/\2,\1/<cr>:%s/,/ /<cr>
+singkatan/remap.vimrc:nn <leader>k <cmd>lnext<CR>zz
+singkatan/remap.vimrc:nn <leader>j <cmd>lprev<CR>zz
+singkatan/remap.vimrc:" Find and replace word under the cursor case insensitive or confirmation
+singkatan/remap.vimrc:nn <leader>si :%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>
+singkatan/remap.vimrc:vn <leader>si :%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>
+singkatan/remap.vimrc:nn <leader>sc :%s/\<<C-r><C-w>\>/<C-r><C-w>/gc<Left><Left><Left>
+singkatan/remap.vimrc:vn <leader>sc :%s/\<<C-r><C-w>\>/<C-r><C-w>/gc<Left><Left><Left>
+singkatan/remap.vimrc:nn <leader>x <cmd>!chmod +x %<CR>
+singkatan/remap.vimrc:nn <leader>fo :r !~/script/fuzzy_find.sh<CR>
+singkatan/remap.vimrc:nn <leader>fo :FZF ~<CR>
+singkatan/remap.vimrc:nn <leader>fl :FZF ~/learn/<CR>
+singkatan/remap.vimrc:nn <leader>fv :FZF ~/.vim/<CR>
+singkatan/remap.vimrc:nn <leader>fv :FZF ~/.vim/<CR>
+singkatan/remap.vimrc:nn <leader>t :term<CR>
+singkatan/remap.vimrc:nn <leader>sd :s/'/"/g<CR>
+singkatan/remap.vimrc:nn <leader>ds :s/"/'/g<CR>
+singkatan/remap.vimrc:nn <leader>idk :s/(/("<CR>:s/)/")<CR>:s/, /", "/g<CR>
+singkatan/remap.vimrc:nn <leader>idK :s/{/{"<CR>:s/}/"}<CR>:s/, /", "/g<CR>
+singkatan/remap.vimrc:nn <leader>bd :w<CR>:bd<CR>
+singkatan/command.vimrc:nmap <F15> <Plug>VimwikiAddHeaderLevel
+singkatan/html.vimrc:autocmd FileType html nn <leader>2 _v$y:e ~/.config/nvim/lua/dandi/abbrev/html.lua<CR>}}Oautocmd FileType html ia <buffer> <Esc>phi<Space>
+singkatan/html.vimrc:autocmd FileType html nn <leader>3 yiw:vs ~/.config/nvim/lua/dandi/abbrev/html.lua<CR>}}}Oautocmd FileType html ia <buffer> <Esc>pa <Esc>p2b3ldevip:sort<CR>:wq<CR>
+singkatan/html.vimrc:autocmd FileType html,vimwiki ia <buffer> lorp Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.
+singkatan/html.vimrc:autocmd FileType html ia <buffer> headec <header class=""><CR><header><C-o>?"<CR>
+singkatan/md.vimrc:au filetype vimwiki nn <buffer> <leader>so vip:sor u<cr>
+singkatan/co:ia wonderyng wondering
+singkatan/co:ia undet under
+singkatan/co:ia consideresd considered
+singkatan/co:ia moderyn modern
+singkatan/co:ia surender surrender
+singkatan/co:ia federationf federation
+singkatan/co:ia Uncerstatnd Understand
+singkatan/co:ia containder container
+singkatan/co:ia Understatnd Understand
+singkatan/co:ia defived derived
+singkatan/typos.vimrc:ia Uncerstatnd Understand
+singkatan/typos.vimrc:ia Understatnd Understand
+singkatan/typos.vimrc:ia consideresd considered
+singkatan/typos.vimrc:ia containder container
+singkatan/typos.vimrc:ia defived derived
+singkatan/typos.vimrc:ia federationf federation
+singkatan/typos.vimrc:ia moderyn modern
+singkatan/typos.vimrc:ia surender surrender
+singkatan/typos.vimrc:ia undet under
+singkatan/typos.vimrc:ia wonderyng wondering
