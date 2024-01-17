@@ -1,0 +1,3 @@
+#!/bin/bash
+
+while read i; do head $i; done

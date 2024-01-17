@@ -1,0 +1,3 @@
+#!/bin/bash
+
+wc -l * | sort -r | head

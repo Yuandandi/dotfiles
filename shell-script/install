@@ -1,0 +1,4 @@
+#!/bin/bash
+
+yes | sudo apt-ge install entr cmatrix python-is-python3 figlet autoconf ruby
+nmap jq sudo cpan
