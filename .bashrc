@@ -63,6 +63,7 @@ alias '?'="duck"
 alias 'glow'='glow -p'
 alias 'sl'='ls --color=auto'
 alias 'mr'='rm'
+alias 'iv'='vi'
 alias 'gg'="google"
 alias 'sun'="~/.local/bin/scripts/sunrise"
 alias 'fetch'="~/.local/bin/scripts/fetch.sh"
@@ -92,6 +93,7 @@ alias clm='clear'
 alias cm='codium .'
 alias cmo='chmod 764'
 alias cpu='lscpu'
+alias cp='clip.exe'
 alias cur="curl -X GET 'https://openexchangerates.org/api/latest.json?app_id=9d128b37ede54a149068edf42f1b3b04' ; grep IDR"
 alias d.="rm (fzf --multi)" # delete multiple files
 alias d='~/.local/bin/scripts/d'
