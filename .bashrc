@@ -6,6 +6,12 @@ esac
 
 set -o vi
 
+# bind -m vi-command 'Control-l: clear-screen'
+# bind -m vi-insert 'Control-l: clear-screen'
+# # # shopt -s autocd
+
+bind -m vi-insert 'control-l: unix-word-rubout'
+
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
@@ -60,16 +66,19 @@ case "$TERM" in
 esac
 
 alias '?'="duck"
-alias 'glow'='glow -p'
-alias 'sl'='ls --color=auto'
-alias 'mr'='rm'
-alias 'iv'='vi'
-alias 'gg'="google"
-alias 'sun'="~/.local/bin/scripts/sunrise"
-alias 'fetch'="~/.local/bin/scripts/fetch.sh"
-alias vimp="~/.local/bin/scripts/vimprev.sh"
-alias 'cols'="~/.local/bin/scripts/colorstrip"
+alias 'all'='~/.local/bin/scripts/all'
+alias dot='wslview https://github.com/yuandandi/dotfiles'
+alias clj='clear'
+alias lsj='ls'
 alias 'brute'="~/.local/bin/scripts/brute.sh"
+alias 'cols'="~/.local/bin/scripts/colorstrip"
+alias 'fetch'="~/.local/bin/scripts/fetch.sh"
+alias 'gg'="google"
+alias 'glow'='glow -p'
+alias 'iv'='vi'
+alias 'mr'='rm'
+alias 'sl'='ls --color=auto'
+alias 'sun'="~/.local/bin/scripts/sunrise"
 alias ...='cd ../.. && exa -g --icons'
 alias ..='cd .. ; ls -A --color=auto'
 alias ahk='cd ~/.local/bin/scripts && explorer.exe main.ahk'
@@ -88,12 +97,13 @@ alias c='clear'
 alias chat='cmd.exe /c start brave.exe https://chat.openai.com'
 alias cip='curl ipinfo.io/ip'
 alias cl='clear'
+alias clar='clear'
 alias clean='sudo apt autoclean && sudo apt autoremove'
 alias clm='clear'
 alias cm='codium .'
 alias cmo='chmod 764'
+alias clIP='clip.exe'
 alias cpu='lscpu'
-alias cp='clip.exe'
 alias cur="curl -X GET 'https://openexchangerates.org/api/latest.json?app_id=9d128b37ede54a149068edf42f1b3b04' ; grep IDR"
 alias d.="rm (fzf --multi)" # delete multiple files
 alias d='~/.local/bin/scripts/d'
@@ -124,9 +134,6 @@ alias fl="cd ~/learn; vi (fd | fzf --exact)" # one day last files changed
 alias fla="vi (fd --changed-within 1d | fzf)" # one day last files changed
 alias fn="cd ~/notes ; and vi (fd -H | fzf)" # if You not sure the exact file name
 alias fnot='find . 2>/dev/null| grep -v'
-alias grep='grep --color'
-alias greph='grep -Hnri'
-alias grepl='grep -lnri'
 alias fo="cd ~; open (fd | fzf)" # open files anywhere but not a hidden files
 alias fp="cd ~; echo (fd -uu -H --exclude go --exclude ghq --exclude snap --exclude .local --exclude .cache --exclude .rustup --exclude paru --exclude mutt-wizard --exclude .fzf --exclude .vscode-server --exclude squashfs-root --exclude vimplugins --exclude .vim --exclude .tmux --exclude .nvm --exclude .npm --exclude libvips-8.14.5 --exclude clone --exclude .gnupg| fzf --exact ) | xclip -selection clipboard"
 alias free='free -h'
@@ -147,6 +154,9 @@ alias gp='git push -u origin main'
 alias gp='git push'
 alias gpl='git pull'
 alias gr="entr bash -c 'clear; go run /tmp/co.go' <<< /tmp/co.go"
+alias grep='grep --color --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}'
+alias greph='grep -Hnri'
+alias grepl='grep -lnri'
 alias gs='git status'
 alias gt='cmd.exe /c start brave.exe https://github.com'
 alias h=head
@@ -174,6 +184,7 @@ alias lt="exa --tree --level=2 -a"
 alias m.="mv (fzf --multi)" # easier way to copy multiple files
 alias m='less'
 alias mem='free -h'
+alias newgit='~/.local/bin/scripts/newgit'
 alias note='cd ~/notes ; exa -l -g --icons'
 alias notes='cd ~/notes ; exa -l -g --icons'
 alias now='date +"%Y-%m-%d %T"'
@@ -215,7 +226,6 @@ alias smtl='sort coo.md | uniq -dc | sort -nr'
 alias sni='sudo snap install'
 alias snli='snap list'
 alias so='source ~/.bashrc'
-alias so='source ~/.bashrc'
 alias spt='speedtest'
 alias sw='sr wiki'
 alias t='tail'
@@ -246,6 +256,7 @@ alias ve='cd /mnt/c/Users/Dandi/AppData/Roaming/espanso/match'
 alias vf='vi ~/.bashrc'
 alias vh='vi /mnt/c/Users/Dandi/AppData/Roaming/Hyper/.hyper.js'
 alias vic='~/.local/bin/scripts/vic.sh'
+alias vimp="~/.local/bin/scripts/vimprev.sh"
 alias vit='vi ~/note/translate'
 alias vl='vi ~/.config/sc-im/scimrc'
 alias vn='cd ~/.config/vi && vi .'

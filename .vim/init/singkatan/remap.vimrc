@@ -46,8 +46,10 @@ nn gk <C-W>k
 nn gl <C-W>l
 nn vn vip:norm I
 
+ino <c-l> <c-w>
+
 " go down
-ino <c-j> <c-g>j
+" ino <c-m> <c-g>j
 
 " Visual a single line
 nn vv V
@@ -173,8 +175,8 @@ nn <leader>fv :FZF ~/.vim/<CR>
 
 nn <leader>t :term<CR>
 
-ino <c-l> <c-x>l
-ino <c-i> <c-x>f
+" ino <c-l> <c-x>l
+" ino <c-i> <c-x>f
 
 " faster operator
 ino zk <space>:=<space>
@@ -226,4 +228,7 @@ ino <C-g>p <Esc>yiwA = <Esc>p_yiwo<Esc>pA.
 " ino "" ""<left>
 " ino '' ''<left>
 " ino :: ::<left>
+
+" open link under the cursor
+nn gx :!wslview <c-r><c-f><cr>
 

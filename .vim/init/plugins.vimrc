@@ -6,6 +6,8 @@ Plug 'tpope/vim-surround'
 
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-commentary'
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'nvim-treesitter/playground'
 Plug 'theprimeagen/refactoring.nvim'
 Plug 'mbbill/undotree'
