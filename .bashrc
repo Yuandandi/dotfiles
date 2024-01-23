@@ -6,11 +6,11 @@ esac
 
 set -o vi
 
-# bind -m vi-command 'Control-l: clear-screen'
-# bind -m vi-insert 'Control-l: clear-screen'
+bind -m vi-command 'Control-l: clear-screen'
+bind -m vi-insert 'Control-l: clear-screen'
 # # # shopt -s autocd
 
-bind -m vi-insert 'control-l: unix-word-rubout'
+# bind -m vi-insert 'control-l: unix-word-rubout'
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
@@ -67,7 +67,16 @@ esac
 
 alias '?'="duck"
 alias 'all'='~/.local/bin/scripts/all'
+alias ifconifg='ifconfig'
+alias term='cd ~/repos/github.com/yuandandi/notes/terms/'
+alias bas='cd ~/repos/github.com/yuandandi/notes/bash/'
+alias ccl='clear'
+alias mna='man'
 alias dot='wslview https://github.com/yuandandi/dotfiles'
+alias whihc='which'
+alias not='cd ~/repos/github.com/yuandandi/notes/'
+alias mb='mv'
+alias vm='mv'
 alias clj='clear'
 alias lsj='ls'
 alias 'brute'="~/.local/bin/scripts/brute.sh"
@@ -120,7 +129,7 @@ alias e="explorer.exe" # delete multiple files from anywhere
 alias ed='ed -p ">"'
 alias exgo='~/.local/bin/scripts/exgo.sh'
 alias exshell='~/.local/bin/scripts/exe'
-alias f="find . -type f 2>/dev/null| grep "
+alias f="find . -type f 2>/dev/null| grep --exclude-dir={.bzr,CVS,^./.,.hg,.svn,.idea,.tox}"
 alias fd='~/.local/bin/scripts/fd'
 alias ff="cd ~; echo (fzf --exact) | xclip -selection clipboard" #copy the file path
 alias fidn='find'
@@ -132,7 +141,9 @@ alias fishhhh='curl "http://asciiquarium.live?cols=$(tput cols)&rows=$(tput line
 alias fkil='ps -ef | fzf -m | awk '\''{print $2}'\'' | xargs kill'
 alias fl="cd ~/learn; vi (fd | fzf --exact)" # one day last files changed
 alias fla="vi (fd --changed-within 1d | fzf)" # one day last files changed
-alias fn="cd ~/notes ; and vi (fd -H | fzf)" # if You not sure the exact file name
+alias fn="~/.local/bin/scripts/fn"
+alias fnn="~/.local/bin/scripts/fnn"
+alias ecoh='echo'
 alias fnot='find . 2>/dev/null| grep -v'
 alias fo="cd ~; open (fd | fzf)" # open files anywhere but not a hidden files
 alias fp="cd ~; echo (fd -uu -H --exclude go --exclude ghq --exclude snap --exclude .local --exclude .cache --exclude .rustup --exclude paru --exclude mutt-wizard --exclude .fzf --exclude .vscode-server --exclude squashfs-root --exclude vimplugins --exclude .vim --exclude .tmux --exclude .nvm --exclude .npm --exclude libvips-8.14.5 --exclude clone --exclude .gnupg| fzf --exact ) | xclip -selection clipboard"
@@ -148,8 +159,7 @@ alias gcl='git clone'
 alias gg='cmd.exe /c start brave.exe https://google.com'
 alias gist='cmd.exe /c start brave.exe https://gist.github.com'
 alias gl='git log --oneline --decorate --all --graph'
-alias gl='git pull'
-alias gn='cd /home/dandi/repos/github.com/yuandandi/notes ; rg -i'
+alias gn='cd /home/dandi/repos/github.com/yuandandi/notes ; grep -Hnri '
 alias gp='git push -u origin main'
 alias gp='git push'
 alias gpl='git pull'
@@ -163,6 +173,7 @@ alias h=head
 alias het='~/.local/bin/scripts/het'
 alias i='yes | sudo apt install'
 alias ipa='ip address'
+alias ips='~/.local/bin/scripts/ips'
 alias iptab='sudo iptables --verbose --numeric --list --line-numbers'
 alias ix='~/.local/bin/scripts/ix'
 alias kil='kill -9'
@@ -277,7 +288,7 @@ alias wich='which'
 alias wk='wikit'
 alias wl='wc -l'
 alias wm='w3mman'
-alias wp='vim /home/dandi/repos/github.com/yuandandi/notes/programs.md'
+alias wp='vim /home/dandi/repos/github.com/yuandandi/notes/program/programs.md'
 alias x='exit'
 alias yt='cmd.exe /c start brave.exe https://youtube.com'
 alias za='zellij attach'
@@ -341,4 +352,10 @@ _edit_wo_executing() {
 }
 
 bind -x '"\C-x\C-e":_edit_wo_executing'
+
+# disable c-s in TTY both interactive and non
+if [[ -t 0 && $- = *i* ]]
+then
+    stty -ixon
+fi
 

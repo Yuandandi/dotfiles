@@ -10,7 +10,7 @@ nn n nzzzv
 nn N Nzzzv
 nn <buffer> du ggVG:norm _wgUl<cr>gv:norm f.wgUl<cr>
 nn <buffer> <leader>md :%norm _i1. <cr>ggVG:norm _wgUl<cr>gv:norm f.wgUl<cr>
-nn e :w!<CR>
+nn e =ip:w!<cr>g;
 nn E $
 
 " Greatest remap ever
