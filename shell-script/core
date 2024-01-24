@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# the number of CPU core
+grep ^processor /proc/cpuinfo | wc -l
