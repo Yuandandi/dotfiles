@@ -66,7 +66,9 @@ case "$TERM" in
 esac
 
 alias '?'="duck"
+alias claer='clear'
 alias brute="~/.local/bin/scripts/brute.sh"
+alias manf='~/.local/bin/scripts/manf'
 alias cols="~/.local/bin/scripts/colorstrip"
 alias fetch="~/.local/bin/scripts/fetch.sh"
 alias gg="google"
@@ -176,7 +178,7 @@ alias ips='~/.local/bin/scripts/ips'
 alias iptab='sudo iptables --verbose --numeric --list --line-numbers'
 alias ix='~/.local/bin/scripts/ix'
 alias kil='kill -9'
-alias l="exa -l -g --icons"
+alias l="lynx"
 alias las='~/.local/bin/scripts/las'
 alias last='~/.local/bin/scripts/last'
 alias lb='lynx bing.com'
@@ -368,4 +370,5 @@ then
 fi
 
 export NNN_OPENER=wslview
+
 

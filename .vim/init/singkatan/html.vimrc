@@ -137,6 +137,7 @@ autocmd FileType html ia <buffer> var <var></var><Esc>cit
 
 
 autocmd FileType html ia <buffer> cha charset=""<left>
+autocmd FileType html ia <buffer> maxl maxlength=""<left>
 autocmd FileType html ia <buffer> cit cite=""<left>
 autocmd FileType html ia <buffer> cla class=""<left>
 autocmd FileType html ia <buffer> cols cols=""<left>

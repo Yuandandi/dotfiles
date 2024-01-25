@@ -1510,4 +1510,14 @@ ia ofrmat format
 ia bechmarking benchmarking
 ia padnoc pandoc
 ia confert convert
+ia batt4ery battery
+ia acpi ACPI
+ia matchies matches
+ia reidirect redirect
+ia underpinings underpinnings
+ia commnet comment
+ia omited omitted
+ia conformace conformance
+ia amil mail
+ia remve remove
 ia @ dandiyuan@proton.me
