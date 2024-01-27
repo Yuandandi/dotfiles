@@ -66,7 +66,10 @@ case "$TERM" in
 esac
 
 alias '?'="duck"
+alias caniuser='caniuse'
 alias claer='clear'
+alias mor='more'
+alias mroe='more'
 alias brute="~/.local/bin/scripts/brute.sh"
 alias manf='~/.local/bin/scripts/manf'
 alias cols="~/.local/bin/scripts/colorstrip"
@@ -130,7 +133,6 @@ alias exshell='~/.local/bin/scripts/exe'
 alias f="find . -type f 2>/dev/null| grep --exclude-dir={.bzr,CVS,^./.,.hg,.svn,.idea,.tox}"
 alias fd='~/.local/bin/scripts/fd'
 alias fe='~/.local/bin/scripts/fe'
-alias ff="cd ~; echo (fzf --exact) | xclip -selection clipboard" #copy the file path
 alias fidn='find'
 alias fiel='file'
 alias fig=figlet
@@ -141,6 +143,7 @@ alias fkil='ps -ef | fzf -m | awk '\''{print $2}'\'' | xargs kill'
 alias fl="cd ~/learn; vi (fd | fzf --exact)" # one day last files changed
 alias fla="vi (fd --changed-within 1d | fzf)" # one day last files changed
 alias fn="~/.local/bin/scripts/fn"
+alias fs='~/.local/bin/scripts/fs'
 alias fnot='find . 2>/dev/null| grep -v'
 alias fo="cd ~; open (fd | fzf)" # open files anywhere but not a hidden files
 alias fp="cd ~; echo (fd -uu -H --exclude go --exclude ghq --exclude snap --exclude .local --exclude .cache --exclude .rustup --exclude paru --exclude mutt-wizard --exclude .fzf --exclude .vscode-server --exclude squashfs-root --exclude vimplugins --exclude .vim --exclude .tmux --exclude .nvm --exclude .npm --exclude libvips-8.14.5 --exclude clone --exclude .gnupg| fzf --exact ) | xclip -selection clipboard"

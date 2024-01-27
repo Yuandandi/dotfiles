@@ -120,7 +120,7 @@ autocmd FileType html ia <buffer> ul <ul></ul><Esc>cit
 autocmd FileType html ia <buffer> sou <source src="" type=""><Esc>cittyp<CR>
 autocmd FileType html ia <buffer> sel <select><CR></select><C-o>O
 autocmd FileType html ia <buffer> scr <script><CR></script><C-o>O
-autocmd FileType html ia <buffer> sec <section></section><C-o>O
+autocmd FileType html ia <buffer> sec <section id=""><cr></section><esc>?"<cr>i
 autocmd FileType html ia <buffer> sum <summary></summary><Esc>cit
 autocmd FileType html ia <buffer> th <th></th><Esc>cit
 autocmd FileType html ia <buffer> timd <time datetime=""></time><Esc>citCR>

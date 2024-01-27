@@ -189,8 +189,8 @@ ino zL {}<left>
 ino zo ""<left>
 ino zO ''<left>
 ino zh []<left>
-ino zp (<cr>)<esc>O
-ino zP {<cr>}<esc>O
+ino zP (<cr>)<esc>O
+ino zp {<cr>}<esc>O
 ino zz <esc>zza
 
 nn <F4> "=strftime("%c")<CR>P

@@ -1,4 +1,4 @@
 #!/bin/bash
 
 # man flags ; grep the flags of man page
-man $1 | grep -e "-$2, --" -A2 | grep -w "$2" -A2
+man $1 | grep -e "-$2" -A2 | grep -w "$2" -A2
