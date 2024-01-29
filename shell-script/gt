@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# grep your dictionary vocab
+grep -ri $1 ~/repos/github.com/yuandandi/notes/translate
