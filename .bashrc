@@ -66,6 +66,7 @@ case "$TERM" in
 esac
 
 alias '?'="duck"
+alias meg='~/.local/bin/scripts/megadown'
 alias mdkir='mkdir'
 alias fire='cmd.exe /c firefox.exe'
 alias mt='xargs mv -t'
