@@ -10,7 +10,6 @@ ca mason Mason
 ca n norm
 ca q q!
 ca t term
-ia !! #!/bin/sh
 ia @ dandiyuan@proton.me
 ia Crearte Create
 ia Differecne Difference
@@ -1105,7 +1104,7 @@ ia preverable preferable
 ia prevfer prefer
 ia previdous previous
 ia previeous previous
-ia previewous preious
+ia previewous previous
 ia previleged privileged
 ia prevneting preventing
 ia prhase phrase
@@ -1557,4 +1556,20 @@ ia youu you
 ia yu you
 ia gihtub GitHub
 ia withing within
+ia oom OOM
+ia secodns seconds
+ia mangager manager
+ia sii see
+ia instlaled installed
+ia packgae package
+ia previwous previous
+ia preious previous
+ia leter letter
+ia sha SHA
+ia passowrd password
+ia reeally really
+ia conencted connected
+ia akunbarudanzor unburdens
+ia dimaspradana4478 disappearance
+ia doi do I
 ia zealand Zealand

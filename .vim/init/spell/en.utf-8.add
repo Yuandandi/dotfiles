@@ -335,3 +335,6 @@ pidwait
 urinteresting
 intitle
 baz
+OOM
+shasum
+kaggle

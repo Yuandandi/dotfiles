@@ -10,3 +10,8 @@ au filetype css ia <buffer> p p {<cr>}<esc>O
 au filetype css ia <buffer> sse sans-serif
 au filetype css ia <buffer> pos position
 au filetype css ia <buffer> wid width: ;<left>
+
+augroup css_settings
+  autocmd!
+  autocmd bufread,bufnewfile *.css execute 'badd ' . expand('~/.vim/init/singkatan/css.vimrc') | execute 'buffer ' . bufnr('~/.vim/init/singkatan/css.vimrc') | setlocal bufhidden=hide | bn
+augroup END

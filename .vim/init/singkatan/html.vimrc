@@ -8,7 +8,7 @@ autocmd FileType html ino <buffer> <C-b> <C-o>?><CR>
 autocmd FileType html ino <buffer> <C-g>< <Esc>d/<<CR>
 autocmd FileType html ino <buffer> <C-g>n <C-o>/><CR>
 autocmd FileType html ino <buffer> <C-g>p <C-o>?><CR>
-autocmd FileType html ino <buffer> e =at:w<cr>}
+autocmd FileType html nn <buffer> e =at:w<cr>}
 
 autocmd FileType html ia <buffer> ! <!DOCTYPE html><CR><html lang="en"><CR><head><CR><meta charset="UTF-8"><CR><meta name="viewport" content="width=device-width, initial-scale=1.0"><CR><title>Document</title><CR></head><CR><body><CR></body><CR></html>
 autocmd FileType html ia <buffer> str <strong></strong><Esc>cit
@@ -171,3 +171,8 @@ autocmd FileType html ia <buffer> typ type=""<left>
 autocmd FileType html ia <buffer> val value=""<left>
 autocmd FileType html ia <buffer> tarb target="_blank"
 autocmd FileType html ia <buffer> blan _blank
+
+augroup html_settings
+  autocmd!
+  autocmd BufRead,BufNewFile *.html execute 'badd ' . expand('~/.vim/init/singkatan/html.vimrc') | execute 'buffer ' . bufnr('~/.vim/init/singkatan/html.vimrc') | setlocal bufhidden=hide | bn
+augroup END

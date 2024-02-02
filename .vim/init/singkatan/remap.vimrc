@@ -121,7 +121,6 @@ nn dW :%s/\s*$//g<cr>
 
 " Vim built-in formatting
 " nn <C-f> gg=G''
-ino <c-i> <c-x>f
 
 " Select, delete, and visual in a faster way
 nn vo ggVG
@@ -186,8 +185,6 @@ ino zk <space>:=<space>
 ino zK <space>!=<space>
 ino zl ()<left>
 ino zL {}<left>
-ino zo ""<left>
-ino zO ''<left>
 ino zh []<left>
 ino zP (<cr>)<esc>O
 ino zp {<cr>}<esc>O
