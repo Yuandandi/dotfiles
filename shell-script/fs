@@ -1,0 +1,3 @@
+#!/bin/bash
+
+vi $(find ~/.local/bin/scripts -type f | grep $1)

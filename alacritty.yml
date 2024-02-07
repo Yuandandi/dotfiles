@@ -1,9 +1,4 @@
-# /mnt/c/Users/Dandi/AppData/Roaming/alacritty
-
-shell:
-  program: wsl
-  args:
-    - "cd ~dandi && tmux attach; rbash"
+# /home/danzor/.config/alacritty/alacritty.yml
 
 live_config_reload: true
 
@@ -17,6 +12,7 @@ cl#ass:
   general: Alacritty
 
 gtk_theme_variant: 'dark'
+
 
 window:
   # startup_mode: "Fullscreen"
@@ -47,26 +43,27 @@ colors:
     foreground: '0xB3B1AD'
 # ~/.config/alacritty/alacritty.yml
 
-window.opacity: 7.0
+window:
+  oppacity: 0.0
 
 unfocused_hollow: false
 
 enable_experimental_conpty_backend : true
 
-font:
-  normal:
-    family: "Liga SFMono Nerd Font"
-    style: Medium
-  italic:
-    family: "Liga SFMono Nerd Font"
-    style: Medium Italic
-  bold:
-    family: "Liga SFMono Nerd Font"
-    style: Regular
-  bold_italic:
-    family: "Liga SFMono Nerd Font"
-    style: Heavy Italic
-  size: 16.0
+# font:
+#   normal:
+#     family: "Liga SFMono Nerd Font"
+#     style: Medium
+#   italic:
+#     family: "Liga SFMono Nerd Font"
+#     style: Medium Italic
+#   bold:
+#     family: "Liga SFMono Nerd Font"
+#     style: Regular
+#   bold_italic:
+#     family: "Liga SFMono Nerd Font"
+#     style: Heavy Italic
+#   size: 16.0
 
 key_bindings:
   # - { key: H, mods: Control|Shift, chars: "\x02%" } # split tmux window horizontally

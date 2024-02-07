@@ -1,0 +1,2 @@
+#!/bin/bash
+"/mnt/c/Program Files/BraveSoftware/Brave-Browser/Application/brave.exe" "$@"
