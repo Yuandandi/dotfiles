@@ -22,7 +22,6 @@ ca ifn fin
 ca bdm bd!
 ca bd bd!
 ca waq wqa!
-ca o browse oldfiles
 ca rex Rexplore
 ca bahs bash
 ca sex Sexplore

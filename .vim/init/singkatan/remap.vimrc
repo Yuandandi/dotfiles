@@ -227,5 +227,5 @@ ino <C-g>p <Esc>yiwA = <Esc>p_yiwo<Esc>pA.
 " ino :: ::<left>
 
 " open link under the cursor
-nn gx :!wslview <c-r><c-f><cr>
+nn gx :!qutebrowser <c-r><c-f><cr>
 

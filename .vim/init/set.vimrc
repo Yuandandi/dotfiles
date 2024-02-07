@@ -1,12 +1,12 @@
 " General setings
 syntax on
 filetype plugin indent on
-let &backupdir=expand('~/.vim/backupdir')
+" let &backupdir=expand('~/.vim/backupdir')
 
 se acd
 se ai
-se dir=~/.vim/backupdir
-se backupcopy=yes
+" se dir=~/.vim/backupdir
+" se backupcopy=yes
 se expandtab
 " se mouse=a
 se gp=git\ grep\ -n
@@ -42,7 +42,7 @@ se smartcase
 se smartindent
 se softtabstop=4
 se spl=en_us
-" se spl=id
+" se spl=idhere
 se spr
 se tabpagemax=5
 se tabstop=4
