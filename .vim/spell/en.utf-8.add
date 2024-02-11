@@ -3,3 +3,8 @@ config
 keybind
 qutebrowser
 usr
+TTY
+dpkg
+each
+columnate
+terminfo

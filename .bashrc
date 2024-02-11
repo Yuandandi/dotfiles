@@ -7,11 +7,6 @@ esac
 set -o vi
 set -o ignoreeof
 
-bind -m vi-command 'Control-l: clear-screen'
-bind -m vi-insert 'Control-l: clear-screen'
-# # # shopt -s autocd
-
-# bind -m vi-insert 'control-l: unix-word-rubout'
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
@@ -67,6 +62,9 @@ case "$TERM" in
 esac
 
 alias ahk='cd ~/.local/bin/scripts && explorer.exe main.ahk'
+alias his='history'
+alias upfile='~/.local/bin/scripts/upfile'
+alias fli='yes | flatpak install'
 alias slip='systemctl suspend'
 alias lock=' gnome-screensaver-command --lock'
 alias fls='flatpak search'
@@ -267,6 +265,7 @@ alias smtl='sort coo.md | uniq -dc | sort -nr'
 alias sni='sudo snap install'
 alias snli='snap list'
 alias so='source ~/.bashrc'
+alias sot='tmux source ~/.config/tmux/tmux.conf'
 alias spt='speedtest'
 alias sun="~/.local/bin/scripts/sunrise"
 alias sw='sr wiki'
@@ -309,7 +308,7 @@ alias vr='vim ~/.bashrc'
 alias vt='vi /mnt/c/Users/Dandi/AppData/Local/Packages/Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe/LocalState/settings.json'
 alias v.="vi (fd -H | fzf --dct)" # search from the curent directory
 alias vv='vi -c "norm Gzz"'  # go to the last line and make in the middle
-alias vx='vi ~/.tmux.conf'
+alias vx='vi ~/.config/tmux/tmux.conf'
 alias vz="vi ~/.config/vi/lua/danzor/lazy.lua"
 alias wafil='~/.local/bin/scripts/wafile'
 alias wd='w3m duckduckgo.com'
@@ -376,7 +375,6 @@ export NVM_DIR="$HOME/.nvm"
 
 export TERM=xterm-256color
 export HRULEWIDTH=73
-bind 'set completion-ignore-case on'
 
 # edit longline shell into a anim buffer
 _edit_wo_executing() {
@@ -390,6 +388,12 @@ _edit_wo_executing() {
 }
 
 bind -x '"\C-x\C-e":_edit_wo_executing'
+bind 'set completion-ignore-case on'
+bind -r '\C-\Shift-u'
+bind -m vi-command 'Control-l: clear-screen'
+bind -m vi-insert 'Control-l: clear-screen'
+
+
 
 # disable c-s in TTY both interactive and non
 if [[ -t 0 && $- = *i* ]]

@@ -1,4 +1,4 @@
-# /home/danzor/.config/alacritty/alacritty.yml
+# ~/.config/alacritty/alacritty.yml
 
 live_config_reload: true
 
@@ -7,7 +7,7 @@ env:
 
 title: Alacritty
 
-cl#ass:
+class:
   isntance: Alacritty
   general: Alacritty
 
@@ -15,9 +15,14 @@ gtk_theme_variant: 'dark'
 
 
 window:
-  # startup_mode: "Fullscreen"
+  startup_mode: "Fullscreen"
   decorations: 'None'
   dynamic_padding: false
+  opacity: 0.9
+  dimensions:
+    columns: 100
+    lines: 30
+  scale: 100
 
 offset:
   x: 5
@@ -34,45 +39,30 @@ glyph_offset:
   x: 0
   y: 0
 
-# Colors (Ayu Dark)
-colors:
-
-  # Default colors
-  primary:
-    background: '0x0A0E14'
-    foreground: '0xB3B1AD'
-# ~/.config/alacritty/alacritty.yml
-
-window:
-  oppacity: 0.0
-
 unfocused_hollow: false
 
 enable_experimental_conpty_backend : true
 
-# font:
-#   normal:
-#     family: "Liga SFMono Nerd Font"
-#     style: Medium
-#   italic:
-#     family: "Liga SFMono Nerd Font"
-#     style: Medium Italic
-#   bold:
-#     family: "Liga SFMono Nerd Font"
-#     style: Regular
-#   bold_italic:
-#     family: "Liga SFMono Nerd Font"
-#     style: Heavy Italic
-#   size: 16.0
+font:
+  normal:
+    family: JetBrainsMonoNl Nerd Font Propo
+    style: Semibold
+  bold:
+    family: JetBrainsMonoNl Nerd Font Propo
+    style: Extrabold
+  italic:
+    family: JetBrainsMonoNl Nerd Font Propo
+    style: Semibold Italic
+
+cursor:
+  style: Block
+
+scrolling:
+  history: 1000
+
+allow_terminal_to_use_alternate_screen: true
 
 key_bindings:
-  # - { key: H, mods: Control|Shift, chars: "\x02%" } # split tmux window horizontally
-  # - { key: V, mods: Control|Shift, chars: "\x02\"" } # split tmux window vertically
-  # - { key: J, mods: Control|Shift, chars: "\x02c" } # create a new tmux window
-  # - { key: N, mods: Control|Shift, chars: "\x02p" } # switch to next tmux window
-  # - { key: L, mods: Control|Shift, chars: "\x02o" } # switch to next tmux window
-  # - { key: P, mods: Control|Shift, chars: "\x02n" } # switch to previous tmux window
-  # - { key: D, mods: Control|Shift, chars: "\x02x" } # kill the current pane
-  - { key: O, mods: Control, chars: "\x02o" } # open URLs 'joshmedeski/tmux-fzf-url'
-  - { key: Semicolon, mods: Control, chars: "\x17" }  # "\x17" represents Ctrl-W
-  - { key: Space, mods: Control, chars: "\x02n" } # switch to previous tmux window
+  - { key: O, mods: Control, chars: "\x02o" } 
+  - { key: Semicolon, mods: Control, chars: "\x17" }  
+  - { key: Space, mods: Control, chars: "\x02n" } 
