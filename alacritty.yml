@@ -18,7 +18,7 @@ window:
   startup_mode: "Fullscreen"
   decorations: 'None'
   dynamic_padding: false
-  opacity: 0.9
+  opacity: 1.8
   dimensions:
     columns: 100
     lines: 30

@@ -44,7 +44,7 @@ nn gh <C-W>h
 nn gj <C-W>j
 nn gk <C-W>k
 nn gl <C-W>l
-nn vn vip:norm I
+nn vn vip:norm 
 
 ino <c-l> <c-w>
 
@@ -129,8 +129,6 @@ nn do ggVGd
 " Faster :wq and :q!
 nn Z :wq!<CR>
 nn Q ZQ
-
-
 
 ino <M-z> <esc>:wq<cr>
 
@@ -229,3 +227,5 @@ ino <C-g>p <Esc>yiwA = <Esc>p_yiwo<Esc>pA.
 " open link under the cursor
 nn gx :!qutebrowser <c-r><c-f><cr>
 
+nn <F5> :UndotreeToggle<CR>
+nn !% :%!

@@ -7,7 +7,33 @@ config.set('content.headers.user_agent', 'Mozilla/5.0 ({os_info}; rv:90.0) Gecko
 config.set('content.headers.user_agent', 'Mozilla/5.0 ({os_info}) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99 Safari/537.36', 'https://*.slack.com/*')
 config.set('content.images', True, 'chrome-devtools://*')
 config.set('content.images', True, 'devtools://*')
+config.set('content.images', True)
+config.set('hints.uppercase', True)
+config.set('auto_save.session', True)
+config.set('scrolling.smooth', False)
 c.zoom.levels = ['100%', '125%', '150%', '175%', '200%']
+
+# Set the default page to about:blank
+c.url.default_page = 'about:blank'
+c.url.start_pages = ['about:blank']
+
+# Disable various features
+config.set('content.autoplay', False)
+config.set('content.notifications.enabled', False)
+config.set('content.geolocation', False)
+config.set('content.desktop_capture', False)
+config.set('content.webgl', False)
+
+
+c.fonts.default_family = '"JetBrainsMonoNl Nerd Font Propo"'
+c.fonts.default_size = '12pt'
+c.fonts.debug_console = '11pt "JetBrainsMonoNl Nerd Font Propo"'
+c.zoom.default = '160%'
+c.fonts.prompts = 'default_size JetBrainsMonoNl Nerd Font Propo'
+c.fonts.statusbar = '11pt "JetBrainsMonoNl Nerd Font Propo"'
+c.downloads.location.directory = "~/downloads"
+
+
 # config.set('content.javascript.enabled', True, 'chrome-devtools://*')
 # config.set('content.javascript.enabled', True, 'devtools://*')
 # config.set('content.javascript.enabled', True, 'chrome://*/*')
@@ -25,7 +51,7 @@ config.bind("<Ctrl-p>", "fake-key <Up>", "insert")
 config.bind("<Ctrl-n>", "fake-key <Down>", "insert")
 config.bind("<Mod1-d>", "fake-key <Ctrl-Delete>", "insert")
 config.bind("<Ctrl-d>", "fake-key <Delete>", "insert")
-config.bind("<Ctrl-w>", "fake-key <Ctrl-Backspace>", "insert")
+# config.bind("<Ctrl-w>", "fake-key <Ctrl-Backspace>", "insert")
 config.bind("<Ctrl-;>", "fake-key <Ctrl-Backspace>", "insert")
 config.bind("<Ctrl-u>", "fake-key <Shift-Home><Delete>", "insert")
 config.bind("<Ctrl-k>", "fake-key <Shift-End><Delete>", "insert")
@@ -36,32 +62,28 @@ config.bind(r"<Backspace>", "config-source")
 
 # Bindings for normal mode
 config.bind('gy', 'hint links spawn mpv {hint-url}')
-# config.bind('Z', 'hint links spawn st -e youtube-dl {hint-url}')
 config.bind('xb', 'config-cycle statusbar.show always never')
 config.bind('xt', 'config-cycle tabs.show always never')
 config.bind('xo', 'config-cycle statusbar.show always never;; config-cycle tabs.show always never')
 
 
 
-# c.fonts.default_family = '"Source Code Pro"'
-c.fonts.default_family = '"JetBrainsMonoNl Nerd Font Propo"'
+# # Darkmode
+# config.set('colors.webpage.darkmode.enabled', True)
 
-c.fonts.default_size = '12pt'
+# Use a minimalistic user agent string
+config.set('content.headers.user_agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36')
 
-c.fonts.debug_console = '11pt "JetBrainsMonoNl Nerd Font Propo"'
+# Disable plugins
+config.set('content.plugins', False)
 
-c.zoom.default = '150%'
-
-c.fonts.prompts = 'default_size JetBrainsMonoNl Nerd Font Propo'
-
-# c.zoom.text_only = False
-
-c.fonts.statusbar = '11pt "JetBrainsMonoNl Nerd Font Propo"'
-
-# Darkmode
+# Set a minimalistic color scheme
 config.set('colors.webpage.darkmode.enabled', True)
+config.set('colors.webpage.darkmode.policy.images', 'never')
+config.set('colors.webpage.darkmode.algorithm', 'lightness-hsl')
 
-c.downloads.location.directory = "~/downloads"
+# Disable spell checking
+config.set('spellcheck.languages', [])
 
 
 config.unbind('<Alt-1>', mode='normal')
@@ -93,7 +115,7 @@ config.unbind('<Ctrl-Shift-W>', mode='normal')
 config.unbind('<Ctrl-s>', mode='normal')
 config.unbind('<Ctrl-Tab>', mode='normal')
 config.unbind('<Ctrl-T>', mode='normal')
-config.unbind('<Ctrl-U>', mode='normal')
+# config.unbind('<Ctrl-U>', mode='normal')
 config.unbind('<Ctrl-W>', mode='normal')
 config.unbind('<Ctrl-X>', mode='normal')
 config.unbind('d', mode='normal')
@@ -197,7 +219,6 @@ config.unbind('wb', mode='normal')
 # unbind command
 config.unbind('<Ctrl-B>', mode='command')
 config.unbind('<Ctrl-C>', mode='command')
-config.unbind('<Ctrl-D>', mode='command')
 config.unbind('<Ctrl-K>', mode='command')
 config.unbind('<Ctrl-Shift-C>', mode='command')
 config.unbind('<Ctrl-Shift-Tab>', mode='command')
@@ -245,104 +266,3 @@ config.bind('<Ctrl-J>', 'completion-item-focus --history next', mode="command")
 config.bind('<Ctrl-K>', 'completion-item-focus --history prev', mode="command")
 config.bind('b', 'scroll-page 0 -0.5')
 config.bind('b', 'rl-unix-line-discard', mode='prompt')
-
-c.content.javascript.enabled = False
-
-ALLOW_JAVASCRIPT_WEBSITES = (
-    r"*://*.amazon.com/*",
-    r"*://*.archlinux.org/*",
-    r"*://*.bitwarden.com/*",
-    r"*://*.commonapp.org/*",
-    r"*://*.crosserville.com/*",
-    r"*://*.duckduckgo.com/*",
-    r"*://*.chat.openai.com/*",
-    r"*://*.evanchen.cc/*",
-    r"*://*.facebook.com/*",
-    r"*://*.firebaseapp.com/*",
-    r"*://*.galacticpuzzlehunt.com/*",
-    r"*://*.g2mathprogram.org/*",
-    r"*://*.github.com/*",
-    r"*://*.gradescope.com/*",
-    r"*://*.hanabi.github.io/*",
-    r"*://*.hmmt.org/*",
-    r"*://*.instagram.com/*",
-    r"*://*.itch.io/*",
-    r"*://*.komal.hu/*",
-    r"*://*.lmfdb.org/*",
-    r"*://*.miro.com/*",
-    r"*://*.mit.edu/*",
-    r"*://*.mitadmissions.org/*",
-    r"*://*.monkeytype.com/*",
-    r"*://*.myaccount.google.com/*",
-    r"*://*.overleaf.com/*",  # their documentation is admittedly not bad
-    r"*://*.pretzel.rocks/*",
-    r"*://*.probase.app/*",
-    r"*://*.pythonanywhere.com/*",
-    r"*://*.readthedocs.io/*",
-    r"*://*.reference.slideroom.com/*",
-    r"*://*.sagemath.org/*",
-    r"*://*.stackexchange.com/*",
-    r"*://*.steampowered.com/*",
-    r"*://*.stripe.com/*",
-    r"*://*.tailwindcss.com/*",
-    r"*://*.teammatehunt.com/*",
-    r"*://*.torproject.com/*",
-    r"*://*.twitch.tv/*",
-    r"*://*.wikipedia.org/*",
-    r"*://*.wolframalpha.com/*",
-    r"*://*.wikidata.org/*",
-    r"*://*.usaco.org/*",
-    r"*://*.youtube.com/*",
-    r"*://127.0.0.1/*",
-    r"*://accounts.google.com/*",
-    r"*://artofproblemsolving.com/*",
-    r"*://arxiv.org/*",
-    r"*://athemath.org/*",
-    r"*://bitwarden.com/*",
-    r"*://calendar.google.com/*",
-    r"*://calendly.com/*",
-    r"*://codeforces.com/*",
-    r"*://dennisc.net/*",
-    r"*://devjoe.appspot.com/*",
-    r"*://discord.com/*",
-    r"*://docs.google.com/*",
-    r"*://drive.google.com/*",
-    r"*://duckduckgo.com/*",
-    r"*://gitlab.com/*",
-    r"*://github.com/*",
-    r"*://groups.google.com/*",
-    r"*://hanabi-competitions.com/*",
-    r"*://hanabi.github.io/*",
-    r"*://hanabi-league.com/*",
-    r"*://hanabi-league.github.io/*",
-    r"*://hanab.live/*",
-    r"*://ioinformatics.org/*",
-    # r"*://liquipedia.net/*",
-    r"*://localhost/*",
-    r"*://login.artofproblemsolving.com/*",
-    r"*://mathoverflow.net/*",
-    r"*://mit.edu/*",
-    r"*://poll.ma.pe/*",
-    r"*://projecteuler.net/*",
-    r"*://nightbot.tv/*",
-    r"*://regex101.com/*",
-    r"*://sc2replaystats.com/*",
-    r"*://stackoverflow.com/*",
-    r"*://streamlabs.com/*",
-    r"*://tailwindcomponents.com/*",
-    r"*://tailwindcss.com/*",
-    r"*://translate.google.com/*",
-    r"*://usaco.guide/*",
-    r"*://usaco.org/*",
-    r"*://usamo.wordpress.com/*",
-    r"*://wordpress.com/*",
-    r"*://www.google.com/maps/*",
-    r"*://xkcd.com/*",
-    r"*://youtube.com/*",
-)
-
-for site in ALLOW_JAVASCRIPT_WEBSITES:
-    config.set("content.javascript.enabled", True, site)
-    # config.set("content.javascript.clipboard", "access-paste", site)
-
-
