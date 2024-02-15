@@ -11,3 +11,6 @@ terminfo
 async
 Asychronous
 const
+Tera
+Jinja2
+SSG

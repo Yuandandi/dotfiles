@@ -1,5 +1,4 @@
 # ~/.config/alacritty/alacritty.yml
-
 live_config_reload: true
 
 env:
@@ -18,10 +17,11 @@ window:
   startup_mode: "Fullscreen"
   decorations: 'None'
   dynamic_padding: false
-  opacity: 1.8
+  opacity: 1.0
+  blur: true
   dimensions:
     columns: 100
-    lines: 30
+    lines: 80
   scale: 100
 
 offset:
@@ -47,6 +47,7 @@ font:
   normal:
     family: JetBrainsMonoNl Nerd Font Propo
     style: Semibold
+    size: 24
   bold:
     family: JetBrainsMonoNl Nerd Font Propo
     style: Extrabold

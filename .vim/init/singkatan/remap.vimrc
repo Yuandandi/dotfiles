@@ -23,6 +23,7 @@ nn <leader>e :Ex<CR>
 nn <leader>Y "+Y
 xn <leader>d "_d
 nn <leader>so :source ~.vimrc<CR>
+nn <leader>su !ipsort -u<cr>
 nn co O<esc>j
 nn Q q
 nn tq q

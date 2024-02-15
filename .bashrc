@@ -62,9 +62,14 @@ case "$TERM" in
 esac
 
 alias ahk='cd ~/.local/bin/scripts && explorer.exe main.ahk'
+alias s='ls'
+alias zola='flatpak run org.getzola.zola'
+alias ymd='date +"%Y-%m-%d"'
+alias setting='gnome-control-center'
+alias tt='tail -n 1'
 alias his='history'
 alias upfile='~/.local/bin/scripts/upfile'
-alias fli='sudo yes | flatpak install'
+alias fli='yes | sudo flatpak install'
 alias slip='systemctl suspend'
 alias lock=' gnome-screensaver-command --lock'
 alias fls='flatpak search'

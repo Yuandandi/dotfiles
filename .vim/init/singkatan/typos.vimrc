@@ -1692,4 +1692,16 @@ ia reassingde reassigned
 ia constatnt constant
 ia Assgnment Assignment
 ia documen document
+ia ploting plotting
+ia interactie interactive
+ia ssg SSG
+ia django Django
+ia trea Tera
+ia templeate template
+ia wich which
+ia jinja2 Jinja2
+ia jekyll Jekyll
+ia hugo Hugo
+ia generatro generator
+ia zola Zola
 ia zealand Zealand
