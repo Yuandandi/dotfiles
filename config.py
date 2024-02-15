@@ -267,9 +267,8 @@ config.bind('<Ctrl-K>', 'completion-item-focus --history prev', mode="command")
 config.bind('b', 'scroll-page 0 -0.5')
 config.bind('b', 'rl-unix-line-discard', mode='prompt')
 
-c.content.blocking.method = "both"
-c.content.javascript.enabled = False
 c.content.pdfjs = True
+c.content.javascript.enabled = False
 
 ALLOW_JAVASCRIPT_WEBSITES = (
     r"*://*.amazon.com/*",
@@ -278,6 +277,7 @@ ALLOW_JAVASCRIPT_WEBSITES = (
     r"*://*.commonapp.org/*",
     r"*://*.crosserville.com/*",
     r"*://*.duckduckgo.com/*",
+    r"*://*.piped.kavin.rocks/*",
     r"*://*.evanchen.cc/*",
     r"*://*.facebook.com/*",
     r"*://*.firebaseapp.com/*",
@@ -361,9 +361,8 @@ ALLOW_JAVASCRIPT_WEBSITES = (
     r"*://www.google.com/maps/*",
     r"*://xkcd.com/*",
     r"*://youtube.com/*",
+    r"*://chat.openai.com/*",
 )
 
 for site in ALLOW_JAVASCRIPT_WEBSITES:
     config.set("content.javascript.enabled", True, site)
-
-

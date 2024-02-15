@@ -1704,4 +1704,6 @@ ia jekyll Jekyll
 ia hugo Hugo
 ia generatro generator
 ia zola Zola
+ia hedign heeding
+ia hading hating
 ia zealand Zealand
