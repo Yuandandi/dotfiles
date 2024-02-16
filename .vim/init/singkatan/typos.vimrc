@@ -1706,4 +1706,6 @@ ia generatro generator
 ia zola Zola
 ia hedign heeding
 ia hading hating
+ia extesnsion extension
+ia randr RandR
 ia zealand Zealand

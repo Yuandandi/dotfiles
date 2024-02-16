@@ -14,7 +14,7 @@ gtk_theme_variant: 'dark'
 
 
 window:
-  startup_mode: "Fullscreen"
+  # startup_mode: "Fullscreen"
   decorations: 'None'
   dynamic_padding: false
   opacity: 1.0

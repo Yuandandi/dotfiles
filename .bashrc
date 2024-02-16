@@ -62,6 +62,8 @@ case "$TERM" in
 esac
 
 alias ahk='cd ~/.local/bin/scripts && explorer.exe main.ahk'
+alias librewolf='flatpak run io.gitlab.librewolf-community'
+alias mci='make clean install'
 alias s='ls'
 alias zola='flatpak run org.getzola.zola'
 alias ymd='date +"%Y-%m-%d"'

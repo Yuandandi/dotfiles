@@ -5,12 +5,11 @@ config.set('content.headers.accept_language', '', 'https://matchmaker.krunker.io
 config.set('content.headers.user_agent', 'Mozilla/5.0 ({os_info}) AppleWebKit/{webkit_version} (KHTML, like Gecko) {upstream_browser_key}/{upstream_browser_version} Safari/{webkit_version}', 'https://web.whatsapp.com/')
 config.set('content.headers.user_agent', 'Mozilla/5.0 ({os_info}; rv:90.0) Gecko/20100101 Firefox/90.0', 'https://accounts.google.com/*')
 config.set('content.headers.user_agent', 'Mozilla/5.0 ({os_info}) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99 Safari/537.36', 'https://*.slack.com/*')
-config.set('content.images', True, 'chrome-devtools://*')
-config.set('content.images', True, 'devtools://*')
-config.set('content.images', True)
+config.set('content.images',False )
 config.set('hints.uppercase', True)
 config.set('auto_save.session', True)
 config.set('scrolling.smooth', False)
+config.set('content.cache.size', 5242880) # Set cache size to 5 MB
 c.zoom.levels = ['100%', '125%', '150%', '175%', '200%']
 
 # Set the default page to about:blank
@@ -267,7 +266,7 @@ config.bind('<Ctrl-K>', 'completion-item-focus --history prev', mode="command")
 config.bind('b', 'scroll-page 0 -0.5')
 config.bind('b', 'rl-unix-line-discard', mode='prompt')
 
-c.content.pdfjs = True
+c.content.pdfjs = False
 c.content.javascript.enabled = False
 
 ALLOW_JAVASCRIPT_WEBSITES = (
@@ -366,3 +365,17 @@ ALLOW_JAVASCRIPT_WEBSITES = (
 
 for site in ALLOW_JAVASCRIPT_WEBSITES:
     config.set("content.javascript.enabled", True, site)
+
+ALLOW_IMAGE =  (
+    r"*://*.wikidata.org/*",
+    r"*://*.youtube.com/*",
+    r"*://drive.google.com/*",
+    r"*://duckduckgo.com/*",
+    r"*://gitlab.com/*",
+    r"*://github.com/*",
+    r"*://youtube.com/*",
+    r"*://chat.openai.com/*",
+)
+
+for img in ALLOW_IMAGE:
+    config.set("content.images", True, site)
