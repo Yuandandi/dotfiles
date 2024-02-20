@@ -33,10 +33,10 @@ c.fonts.statusbar = '11pt "JetBrainsMonoNl Nerd Font Propo"'
 c.downloads.location.directory = "~/downloads"
 
 
-# config.set('content.javascript.enabled', True, 'chrome-devtools://*')
-# config.set('content.javascript.enabled', True, 'devtools://*')
-# config.set('content.javascript.enabled', True, 'chrome://*/*')
-# config.set('content.javascript.enabled', True, 'qute://*/*')
+config.set('content.javascript.enabled', True, 'chrome-devtools://*')
+config.set('content.javascript.enabled', True, 'devtools://*')
+config.set('content.javascript.enabled', True, 'chrome://*/*')
+config.set('content.javascript.enabled', True, 'qute://*/*')
 
 config.bind('yo', 'yank inline [[{url}][{title}]]')
 config.bind("<Ctrl-h>", "fake-key <Backspace>", "insert")
@@ -50,7 +50,6 @@ config.bind("<Ctrl-p>", "fake-key <Up>", "insert")
 config.bind("<Ctrl-n>", "fake-key <Down>", "insert")
 config.bind("<Mod1-d>", "fake-key <Ctrl-Delete>", "insert")
 config.bind("<Ctrl-d>", "fake-key <Delete>", "insert")
-# config.bind("<Ctrl-w>", "fake-key <Ctrl-Backspace>", "insert")
 config.bind("<Ctrl-;>", "fake-key <Ctrl-Backspace>", "insert")
 config.bind("<Ctrl-u>", "fake-key <Shift-Home><Delete>", "insert")
 config.bind("<Ctrl-k>", "fake-key <Shift-End><Delete>", "insert")
@@ -64,11 +63,6 @@ config.bind('gy', 'hint links spawn mpv {hint-url}')
 config.bind('xb', 'config-cycle statusbar.show always never')
 config.bind('xt', 'config-cycle tabs.show always never')
 config.bind('xo', 'config-cycle statusbar.show always never;; config-cycle tabs.show always never')
-
-
-
-# # Darkmode
-# config.set('colors.webpage.darkmode.enabled', True)
 
 # Use a minimalistic user agent string
 config.set('content.headers.user_agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36')
@@ -338,7 +332,6 @@ ALLOW_JAVASCRIPT_WEBSITES = (
     r"*://hanabi-league.github.io/*",
     r"*://hanab.live/*",
     r"*://ioinformatics.org/*",
-    # r"*://liquipedia.net/*",
     r"*://localhost/*",
     r"*://login.artofproblemsolving.com/*",
     r"*://mathoverflow.net/*",
@@ -361,6 +354,7 @@ ALLOW_JAVASCRIPT_WEBSITES = (
     r"*://xkcd.com/*",
     r"*://youtube.com/*",
     r"*://chat.openai.com/*",
+    r"*://www.speedtest.net/*",
 )
 
 for site in ALLOW_JAVASCRIPT_WEBSITES:
@@ -370,12 +364,14 @@ ALLOW_IMAGE =  (
     r"*://*.wikidata.org/*",
     r"*://*.youtube.com/*",
     r"*://drive.google.com/*",
-    r"*://duckduckgo.com/*",
     r"*://gitlab.com/*",
     r"*://github.com/*",
     r"*://youtube.com/*",
     r"*://chat.openai.com/*",
+    r"*://www.speedtest.net/*",
+    r"*://duckduckgo.com/?q=*=images",
+    r"*://www.twitch.tv/*",
 )
 
 for img in ALLOW_IMAGE:
-    config.set("content.images", True, site)
+    config.set("content.images", True, img)

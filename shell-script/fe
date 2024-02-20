@@ -1,4 +1,4 @@
 #!/bin/bash
 
 # if You know exactly the name of the file
-vi $(find ~/repos/github.com/yuandandi/notes/ -type f 2>/dev/null | grep $1 | grep -v './.git' -m 1)
+vim $(find ~/repos/github.com/yuandandi/notes/ -type f 2>/dev/null | grep $1 | grep -v './.git' -m 1)
