@@ -8,9 +8,10 @@ autocmd FileType html setlocal shiftwidth=2
             \| ino <buffer> <C-g>< <Esc>d/<<CR>
             \| ino <buffer> <C-g>n <C-o>/><CR>
             \| ino <buffer> <C-g>p <C-o>?><CR>
-            \| nn <buffer> e =at:w<cr>}
+            \| nn <buffer> gca A<Space><!----><left><left><left>
 
-autocmd FileType html,htmldjango ia <buffer> ! <!DOCTYPE html><CR><html lang="en"><CR><head><CR><meta charset="UTF-8"><CR><meta name="viewport" content="width=device-width, initial-scale=1.0"><CR><title>Document</title><CR></head><CR><body><CR></body><CR></html>
+autocmd FileType html set tw=120
+autocmd FileType html,htmldjango ia <buffer> !!! <!DOCTYPE html><CR><html lang="en"><CR><head><CR><meta charset="UTF-8"><CR><meta name="viewport" content="width=device-width, initial-scale=1.0"><CR><title>Document</title><CR></head><CR><body><CR></body><CR></html>
             \| ia <buffer> str <strong></strong><Esc>cit
             \| ia <buffer> ii <i></i><Esc>cit
             \| ia <buffer> q <q></q><Esc>cit
@@ -54,7 +55,7 @@ autocmd FileType html,htmldjango ia <buffer> bi <big></big><Esc>cit
             \| ia <buffer> fig <figure><CR></figure><Esc>cit
             \| ia <buffer> figc <figcaption></figcaption><Esc>cit
             \| ia <buffer> foot <footer><CR></footer><Esc>cit
-            \| ia <buffer> form <form></form><Esc>cit
+            \| ia <buffer> formm <form></form><Esc>cit
             \| ia <buffer> h1 <h1></h1><Esc>cit
             \| ia <buffer> h2 <h2></h2><Esc>cit
             \| ia <buffer> h3 <h3></h3><Esc>cit
@@ -106,7 +107,7 @@ autocmd FileType html,htmldjango ia <buffer> mai <main><CR></main><Esc>cit
             \| ia <buffer> rp <rp></rp><Esc>cit
             \| ia <buffer> rt <rt></rt><Esc>cit
             \| ia <buffer> rub <ruby><CR></ruby><C-o>O
-            \| ia <buffer> s <s></s><Esc>cit
+            \| ia <buffer> ss <s></s><Esc>cit
             \| ia <buffer> sam <samp></samp><Esc>cit
             \| ia <buffer> sma <small></small><Esc>cit
             \| ia <buffer> spa <span></span><Esc>cit
@@ -117,7 +118,7 @@ autocmd FileType html,htmldjango ia <buffer> mai <main><CR></main><Esc>cit
             \| ia <buffer> sup <sup></sup><Esc>cit
             \| ia <buffer> tab <table></table><Esc>cit
             \| ia <buffer> td <td></td><Esc>cit
-            \| ia <buffer> title <title><CR></title><C-o>O
+            \| ia <buffer> titl <title><CR></title><C-o>O
             \| ia <buffer> tr <tr></tr><Esc>cit
             \| ia <buffer> ul <ul></ul><Esc>cit
             \| ia <buffer> sou <source src="" type=""><Esc>cittyp<CR>
@@ -172,6 +173,8 @@ autocmd filetype html,htmldjango ia <buffer> cha charset=""<left>
             \| ia <buffer> val value=""<left>
             \| ia <buffer> tarb target="_blank"
             \| ia <buffer> blan _blank
+            \| ia <buffer> seta setAttribute();<left><left>
+
 
 augroup html_settings
   autocmd!

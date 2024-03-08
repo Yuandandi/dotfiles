@@ -169,9 +169,7 @@ ino <M-z> <Esc>:wq<cr>
 nn <leader>fo :FZF ~<CR>
 nn <leader>fl :FZF ~/learn/<CR>
 nn <leader>fv :FZF ~/.vim/<CR>
-nn <leader>fv :FZF ~/.vim/<CR>
-
-nn <leader>t :term<CR>
+nn <leader>fn :FZF ~/repos/github.com/yuandandi/notes/<CR>
 
 " ino <c-l> <c-x>l
 " ino <c-i> <c-x>f
@@ -210,6 +208,8 @@ cno <M-i> <Home><right>
 
 nn <leader>sd :s/'/"/g<CR>
 nn <leader>ds :s/"/'/g<CR>
+nn <leader>d0 :s/"//g<CR>
+nn <leader>s0 :s/'//g<CR>
 
 nn <leader>idk :s/(/("<CR>:s/)/")<CR>:s/, /", "/g<CR>
 nn <leader>idK :s/{/{"<CR>:s/}/"}<CR>:s/, /", "/g<CR>

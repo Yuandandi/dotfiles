@@ -7,6 +7,7 @@ autocmd FileType go nn <leader>3 yiw:vs ~/.config/nvim/lua/dandi/abbrev/go.lua<C
 autocmd FileType go nn <leader>4 vipy:vs ~/.config/nvim/lua/dandi/abbrev/go.lua<CR>}}Oautocmd FileType go ia <buffer>
 autocmd FileType go nn <leader>g :w<CR>:!go run %<CR>
 autocmd FileType go ino <buffer> <m-b> <esc>/}<CR>a<space>
+autocmd FileType go nn <buffer> gca A<space>//<space>
 
 autocmd FileType go ia <buffer> apen append()<Left>
 autocmd FileType go ia <buffer> boo bool

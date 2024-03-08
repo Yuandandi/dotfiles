@@ -38,31 +38,31 @@ config.set('content.javascript.enabled', True, 'devtools://*')
 config.set('content.javascript.enabled', True, 'chrome://*/*')
 config.set('content.javascript.enabled', True, 'qute://*/*')
 
-config.bind('yo', 'yank inline [[{url}][{title}]]')
-config.bind("<Ctrl-h>", "fake-key <Backspace>", "insert")
 config.bind("<Ctrl-a>", "fake-key <Home>", "insert")
-config.bind("<Ctrl-e>", "fake-key <End>", "insert")
 config.bind("<Ctrl-b>", "fake-key <Left>", "insert")
-config.bind("<Mod1-b>", "fake-key <Ctrl-Left>", "insert")
-config.bind("<Ctrl-f>", "fake-key <Right>", "insert")
-config.bind("<Mod1-f>", "fake-key <Ctrl-Right>", "insert")
-config.bind("<Ctrl-p>", "fake-key <Up>", "insert")
-config.bind("<Ctrl-n>", "fake-key <Down>", "insert")
-config.bind("<Mod1-d>", "fake-key <Ctrl-Delete>", "insert")
 config.bind("<Ctrl-d>", "fake-key <Delete>", "insert")
+config.bind("<Ctrl-e>", "fake-key <End>", "insert")
 config.bind("<Ctrl-;>", "fake-key <Ctrl-Backspace>", "insert")
-config.bind("<Ctrl-u>", "fake-key <Shift-Home><Delete>", "insert")
+config.bind("<Ctrl-f>", "fake-key <Right>", "insert")
+config.bind("<Ctrl-h>", "fake-key <Backspace>", "insert")
 config.bind("<Ctrl-k>", "fake-key <Shift-End><Delete>", "insert")
 config.bind("<Ctrl-m>", "fake-key <Enter>", "insert")
+config.bind("<Ctrl-n>", "fake-key <Down>", "insert")
+config.bind("<Ctrl-p>", "fake-key <Up>", "insert")
+config.bind("<Ctrl-u>", "fake-key <Shift-Home><Delete>", "insert")
 config.bind("<Ctrl-x><Ctrl-e>", "edit-text", "insert")
+config.bind("<Mod1-b>", "fake-key <Ctrl-Left>", "insert")
+config.bind("<Mod1-d>", "fake-key <Ctrl-Delete>", "insert")
+config.bind("<Mod1-f>", "fake-key <Ctrl-Right>", "insert")
 config.bind(r"<Backspace>", "config-source")
+config.bind('yo', 'yank inline [[{url}][{title}]]')
 
 
 # Bindings for normal mode
 config.bind('gy', 'hint links spawn mpv {hint-url}')
 config.bind('xb', 'config-cycle statusbar.show always never')
-config.bind('xt', 'config-cycle tabs.show always never')
 config.bind('xo', 'config-cycle statusbar.show always never;; config-cycle tabs.show always never')
+config.bind('xt', 'config-cycle tabs.show always never')
 
 # Use a minimalistic user agent string
 config.set('content.headers.user_agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36')
@@ -71,9 +71,9 @@ config.set('content.headers.user_agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x
 config.set('content.plugins', False)
 
 # Set a minimalistic color scheme
+config.set('colors.webpage.darkmode.algorithm', 'lightness-hsl')
 config.set('colors.webpage.darkmode.enabled', True)
 config.set('colors.webpage.darkmode.policy.images', 'never')
-config.set('colors.webpage.darkmode.algorithm', 'lightness-hsl')
 
 # Disable spell checking
 config.set('spellcheck.languages', [])
@@ -375,3 +375,4 @@ ALLOW_IMAGE =  (
 
 for img in ALLOW_IMAGE:
     config.set("content.images", True, img)
+config.source('shortcuts.py')

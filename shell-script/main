@@ -1,3 +1,4 @@
+#for windows
 #NoEnv
 SendMode Input
 SetworkingDir %A_ScriptDir%
@@ -18,7 +19,6 @@ return
 Send, !{F4} ; Alt+F4
 return
 
-
 #IfWinActive ; Add window title if needed
     ; Replace the semicolon with backspace
 
@@ -34,6 +34,3 @@ return
     ; Example: Use Ctrl+; to trigger Backspace
     ^h::SendInput, {Backspace}
 #IfWinActive ; End of window-specific condition
-
-
-

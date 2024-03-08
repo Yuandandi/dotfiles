@@ -39,8 +39,9 @@ HISTFILESIZE=20000
 HISTCONTROL=ignoreboth
 
 shopt -s nocaseglob
-shopt -s histappend
+shopt -s histappend # allow multiple terminals to write to the history file
 shopt -s extglob
+shopt -s cdspell # correct typos
 shopt -s autocd
 shopt -s dirspell
 shopt -s cmdhist
@@ -62,21 +63,20 @@ case "$TERM" in
 esac
 
 alias ahk='cd ~/.local/bin/scripts && explorer.exe main.ahk'
-alias con='cd ~/.config ; ls'
 alias all='~/.local/bin/scripts/all'
-alias bl='bluetuith'
-alias aman='netstat -tua | grep LISTEN'
 alias am='alsamixer'
+alias aman='netstat -tua | grep LISTEN'
 alias aptli='apt list --installed'
 alias bas='cd ~/repos/github.com/yuandandi/notes/bash/'
 alias b='batcat -r :10'
 alias b.="batcat -r :10 (fzf --multi)" # preview multiple files within batcat
 alias bf='batcat'
+alias bl='bluetuith'
 alias bots='~/.local/bin/scripts/bots'
 alias bra='cmd.exe /c start brave.exe'
 alias br='git rev-parse --abbrev-ref HEAD'
 alias brute="~/.local/bin/scripts/brute.sh"
-alias bs='brightnessctl set'
+alias bs='~/.local/bin/scripts/bs'
 alias bu='brew update --auto-update'
 alias caniuser='caniuse'
 alias ccl='clear'
@@ -96,6 +96,7 @@ alias clm='clear'
 alias cm='codium .'
 alias cmo='chmod 764'
 alias cols="~/.local/bin/scripts/colorstrip"
+alias con='cd ~/.config ; ls'
 alias core='~/.local/bin/scripts/core'
 alias cpu='lscpu'
 alias cur="curl -X GET 'https://openexchangerates.org/api/latest.json?app_id=9d128b37ede54a149068edf42f1b3b04' ; grep IDR"
@@ -129,7 +130,7 @@ alias f1g='find . -maxdepth 1 -type f | grep -i "$@"'
 alias fd='~/.local/bin/scripts/fd'
 alias fe='~/.local/bin/scripts/fe'
 alias fetch="~/.local/bin/scripts/fetch.sh"
-alias f="find . -type f 2>/dev/null| grep --exclude-dir={.bzr,CVS,^./.,.hg,.svn,.idea,.tox} -i"
+alias f="find . -type f 2>/dev/null| grep --exclude-dir={.bzr,CVS,^./.,.hg,.svn,.idea,.tox,.git} -i"
 alias fidn='find'
 alias fiel='file'
 alias fig=figlet
@@ -148,7 +149,6 @@ alias fo="cd ~; open (fd | fzf)" # open files anywhere but not a hidden files
 alias fp="cd ~; echo (fd -uu -H --exclude go --exclude ghq --exclude snap --exclude .local --exclude .cache --exclude .rustup --exclude paru --exclude mutt-wizard --exclude .fzf --exclude .vscode-server --exclude squashfs-root --exclude vimplugins --exclude .vim --exclude .tmux --exclude .nvm --exclude .npm --exclude libvips-8.14.5 --exclude clone --exclude .gnupg| fzf --dct ) | xclip -selection clipboard"
 alias free='free -h'
 alias fs='~/.local/bin/scripts/fs'
-alias fv="cd ~/.vim; and vim (fd -H --exclude lazy-lock.json --exclude .git --exclude .jukit --exclude autoload --exclude undodir| fzf --dct)" # faster config vim
 alias fvi="cd ~/.config/vim/; and vim (fd -H --exclude lazy-lock.json --exclude .git --exclude .jukit| fzf --dct)" # faster config vim
 alias fw="cd ~/notes; vim (fd | fzf --dct)" # one day last files changed
 alias ga='git add'
@@ -210,6 +210,7 @@ alias manf='~/.local/bin/scripts/manf'
 alias mb='mv'
 alias mci='make clean install'
 alias mdkir='mkdir'
+alias megc='~/.local/bin/scripts/megc'
 alias meg='~/.local/bin/scripts/meg'
 alias mem='free -h'
 alias mind='~/.local/bin/scripts/mind'
@@ -240,7 +241,7 @@ alias pil='pip list'
 alias pipli='pip list'
 alias pi='podman images'
 alias pirntenv='printenv'
-alias pp='ping 8.8.8.8'
+alias ppp='ping 8.8.8.8'
 alias pre='ls --color=always | fzf --ansi --preview="bat --color=always {}" --preview-window=right:60%:wrap'
 alias pw='pwd'
 alias radion="radio"
@@ -268,6 +269,7 @@ alias sed='sed -E'
 alias setting='gnome-control-center'
 alias sg='sr google'
 alias shell='~/.local/bin/scripts/shell'
+alias shut='sudo shutdown now'
 alias si='sc-im'
 alias slip='systemctl suspend'
 alias sl='ls --color=auto'
@@ -283,7 +285,6 @@ alias sun="~/.local/bin/scripts/sunrise"
 alias sw='sr wiki'
 alias tas='tmux attach-session -t'
 alias ta='tmux attach'
-alias tele='~/.programs/Telegram/Telegram'
 alias term='cd ~/repos/github.com/yuandandi/notes/terms/'
 alias termcolors='~/.local/bin/scripts/termcolors'
 alias te='trans :en'
@@ -328,10 +329,12 @@ alias vv='vim -c "norm Gzz"'  # go to the last line and make in the middle
 alias vx='vim ~/.config/tmux/tmux.conf'
 alias vz="vim ~/.config/vim/lua/danzor/lazy.lua"
 alias wafil='~/.local/bin/scripts/wafile'
+alias wal='~/.local/bin/scripts/wal'
 alias wd='w3m duckduckgo.com'
 alias weather='~/.local/bin/scripts/weather.sh'
 alias weto='curl wttr.in'
 alias wg='w3m google.com'
+alias whatis='whatis -l'
 alias whihc='which'
 alias wh='which'
 alias wich='which'
@@ -342,6 +345,7 @@ alias wm='w3mman'
 alias wp='vim /home/danzor/repos/github.com/yuandandi/notes/program/programs.md'
 alias w='w3m'
 alias x='exit'
+alias yd='~/.local/bin/scripts/yd'
 alias ymd='date +"%Y-%m-%d"'
 alias yt='ytfzf --show-thumbnails'
 alias za='zellij attach'
@@ -425,3 +429,4 @@ fi
 
 # Created by `pipx` on 2024-02-18 20:36:04
 export PATH="$PATH:/home/danzor/.local/bin"
+source ~/.shortcuts
