@@ -1,17 +1,234 @@
-au filetype css ia <buffer> bco background-color: ;<left>
-au filetype css ia <buffer> bor border: ;<left>
-au filetype css ia <buffer> colo color: ;<left>
-au filetype css ia <buffer> ffa font-family: ;<left>
-au filetype css ia <buffer> fsi font-size: ;<left>
-au filetype css ia <buffer> htm html {<cr>}<esc>O
-au filetype css ia <buffer> mbo margin-botton: ;<left>
-au filetype css ia <buffer> osa "Open Sans"
-au filetype css ia <buffer> p p {<cr>}<esc>O
+au filetype css ia <buffer> abs absolute
+au filetype css ia <buffer> adu animation-duration:;<left>
+au filetype css ia <buffer> kfr @keyframes
+au filetype css ia <buffer> ani animation:;<left>
+au filetype css ia <buffer> ora orange
+au filetype css ia <buffer> forw forwards
+au filetype css ia <buffer> tor transform-origin:;<left>
+au filetype css ia <buffer> aic animation-iteration-count:;<left>
+au filetype css ia <buffer> ade animation-delay:;<left>
+au filetype css ia <buffer> atf animation-timing-function:;<left>
+au filetype css ia <buffer> aco align-content:;<left>
+au filetype css ia <buffer> act a:active
+au filetype css ia <buffer> ait align-items:;<left>
+au filetype css ia <buffer> ali aliceblue
+au filetype css ia <buffer> any a:any-link
+au filetype css ia <buffer> ari arial
+au filetype css ia <buffer> bac background:;<left>
+au filetype css ia <buffer> bbe break-before:;<left>
+au filetype css ia <buffer> bbo border-box
+au filetype css ia <buffer> bbot border-bottom:;<left>
+au filetype css ia <buffer> bco background-color:;<left>
+au filetype css ia <buffer> bim background-image:;<left>
+au filetype css ia <buffer> bin break-inside:;<left>
+au filetype css ia <buffer> ble border-left:;<left>
+au filetype css ia <buffer> bol bolder
+au filetype css ia <buffer> bor border:;<left>
+au filetype css ia <buffer> bot both
+au filetype css ia <buffer> bot botton:;<left>
+au filetype css ia <buffer> bpo background-position:;<left>
+au filetype css ia <buffer> bra border-radius:;<left>
+au filetype css ia <buffer> bre background-repeat:;<left>
+au filetype css ia <buffer> bri border-right:;<left>
+au filetype css ia <buffer> bsh box-shadow:;<left>
+au filetype css ia <buffer> bsi box-sizing:;<left>
+au filetype css ia <buffer> bsiz background-size:;<left>
+au filetype css ia <buffer> bto border-top:;<left>
+au filetype css ia <buffer> cal calc()<left>
+au filetype css ia <buffer> cap capitalize
+au filetype css ia <buffer> cbo content-box
+au filetype css ia <buffer> cco column-count:;<left>
+au filetype css ia <buffer> cen center
+au filetype css ia <buffer> cga column-gap:;<left>
+au filetype css ia <buffer> cir circle
+au filetype css ia <buffer> cla clamp()<left>
+au filetype css ia <buffer> cle clear:;<left>
+au filetype css ia <buffer> cne courier new
+au filetype css ia <buffer> col color:;<left>
+au filetype css ia <buffer> colu columns:;<left>
+au filetype css ia <buffer> con content:;<left>
+au filetype css ia <buffer> cor cornflowerblue
+au filetype css ia <buffer> cou courier
+au filetype css ia <buffer> cre column-reverse
+au filetype css ia <buffer> cru column-rule:;<left>
+au filetype css ia <buffer> csp column-span:;<left>
+au filetype css ia <buffer> cur cursor:;<left>
+au filetype css ia <buffer> das dashed
+au filetype css ia <buffer> dbl darkblue
+au filetype css ia <buffer> dbl double
+au filetype css ia <buffer> disc disc
+au filetype css ia <buffer> dis display:;<left>
+au filetype css ia <buffer> dlz decimal-leading-zero
+au filetype css ia <buffer> dod dodgerblue
+au filetype css ia <buffer> eas ease
+au filetype css ia <buffer> eio ease-in-out
+au filetype css ia <buffer> fan fantasy
+au filetype css ia <buffer> fba flex-basis:;<left>
+au filetype css ia <buffer> fc :first-child
+au filetype css ia <buffer> fdi flex-direction:;<left>
+au filetype css ia <buffer> fen flex-end
+au filetype css ia <buffer> ffa font-family:;<left>
+au filetype css ia <buffer> ffl flex-flow:;<left>
+au filetype css ia <buffer> fgr flex-grow:;<left>
+au filetype css ia <buffer> fil filter:;<left>
+au filetype css ia <buffer> fir firebrick
+au filetype css ia <buffer> fix fixed
+au filetype css ia <buffer> fle flex
+au filetype css ia <buffer> flo float:;<left>
+au filetype css ia <buffer> foc a:focus
+au filetype css ia <buffer> fon font:;<left>
+au filetype css ia <buffer> fro flow-root
+au filetype css ia <buffer> fsh flex-shrink:;<left>
+au filetype css ia <buffer> fsi font-size:;<left>
+au filetype css ia <buffer> fsta flex-start
+au filetype css ia <buffer> fst font-style:;<left>
+au filetype css ia <buffer> fwe font-weight:;<left>
+au filetype css ia <buffer> fwr flex-wrap:;<left>
+au filetype css ia <buffer> gaf grid-auto-flow:;<left>
+au filetype css ia <buffer> gap gap:;<left>
+au filetype css ia <buffer> gare grid-area:;<left>
+au filetype css ia <buffer> gar grid-auto-rows:;<left>
+au filetype css ia <buffer> gce grid-column-end:;<left>
+au filetype css ia <buffer> gco grid-column:;<left>
+au filetype css ia <buffer> gcs grid-column-start:;<left>
+au filetype css ia <buffer> gen Geneva
+au filetype css ia <buffer> gold gold
+au filetype css ia <buffer> gre grid-column-end:;<left>
+au filetype css ia <buffer> gro grid-row:;<left>
+au filetype css ia <buffer> grs grid-column-start:;<left>
+au filetype css ia <buffer> gta gtid-template-areas:;<left>
+au filetype css ia <buffer> gtc grid-template-columns:;<left>
+au filetype css ia <buffer> hei height:;<left>
+au filetype css ia <buffer> hel helvatica
+au filetype css ia <buffer> hov a:hover
+au filetype css ia <buffer> hro hue-rotate()<left>
+au filetype css ia <buffer> hsla hsla()<left>
+au filetype css ia <buffer> ibl inline-block
+au filetype css ia <buffer> imp !important
+au filetype css ia <buffer> inh inherit
+au filetype css ia <buffer> is :is()<left>
+au filetype css ia <buffer> ita italic
+au filetype css ia <buffer> jco justify-content:;<left>
+au filetype css ia <buffer> jus justify
+au filetype css ia <buffer> lal lower-alpha
+au filetype css ia <buffer> lca low lowercase
+au filetype css ia <buffer> lc :last-child
+au filetype css ia <buffer> lef left:;<left>
+au filetype css ia <buffer> lgr linear-gradient
+au filetype css ia <buffer> lhe line-height:;<left>
+au filetype css ia <buffer> lig lighter
+au filetype css ia <buffer> lim limegreen
+au filetype css ia <buffer> line linear
+au filetype css ia <buffer> lsi list-style-image:;<left>
+au filetype css ia <buffer> ls list-style:;<left>
+au filetype css ia <buffer> lsp letter-spacing:;<left>
+au filetype css ia <buffer> lspo list-style-position:;<left>
+au filetype css ia <buffer> lst list-style-type:;<left>
+au filetype css ia <buffer> lth line-through
+au filetype css ia <buffer> mara min-aspect-ratio: ;<left>
+au filetype css ia <buffer> mar margin:;<left>
+au filetype css ia <buffer> max max()<left>
+au filetype css ia <buffer> mbo margin-bottom:;<left>
+au filetype css ia <buffer> mhei max-height:;<left>
+au filetype css ia <buffer> mhe min-height:;<left>
+au filetype css ia <buffer> min margin-inline:;<left>
+au filetype css ia <buffer> minn min()<left>
+au filetype css ia <buffer> mon monospace
+au filetype css ia <buffer> mri margin-right:;<left>
+au filetype css ia <buffer> mto margin-top:;<left>
+au filetype css ia <buffer> mwid min-width:;<left>
+au filetype css ia <buffer> mwi max-width:;<left>
+au filetype css ia <buffer> nal not-allowed
+au filetype css ia <buffer> nc :nth-child()<left>
+au filetype css ia <buffer> now nowrap
+au filetype css ia <buffer> nre no-repeat
+au filetype css ia <buffer> obl oblique
+au filetype css ia <buffer> ofl over-flow:;<left>
+au filetype css ia <buffer> oli outline:;<left>
+au filetype css ia <buffer> oof outline-offset:;<left>
+au filetype css ia <buffer> opa opacity:;<left>
+au filetype css ia <buffer> ord order:;<left>
+au filetype css ia <buffer> ose outset
+au filetype css ia <buffer> ove overline
+au filetype css ia <buffer> pad padding:;<left>
+au filetype css ia <buffer> pap papayawhip
+au filetype css ia <buffer> pco place-content:;<left>
+au filetype css ia <buffer> ple padding-left:;<left>
+au filetype css ia <buffer> png png
+au filetype css ia <buffer> pos position:;<left>
+au filetype css ia <buffer> pur purple
+au filetype css ia <buffer> q <q><q><esc>cit
+au filetype css ia <buffer> rbl royalblue
+au filetype css ia <buffer> reb rebeccapurple
+au filetype css ia <buffer> rel relative
+au filetype css ia <buffer> rep repeat()<left>
+au filetype css ia <buffer> rga row-gap:;<left>
+au filetype css ia <buffer> rgba rgba()<left>
+au filetype css ia <buffer> rgb rgb()<left>
+au filetype css ia <buffer> rgr radial-gradient()<left>
+au filetype css ia <buffer> rid ridge
+au filetype css ia <buffer> rig right:;<left>
+au filetype css ia <buffer> rot rotate()<left>
+au filetype css ia <buffer> rox rotateX()<left>
+au filetype css ia <buffer> roy rotateY()<left>
+au filetype css ia <buffer> roz rotateZ()<left>
+au filetype css ia <buffer> sar space-around
+au filetype css ia <buffer> sbe scroll-behaviour:;<left>
+au filetype css ia <buffer> sbet space-between
+au filetype css ia <buffer> sca scale()<left>
+au filetype css ia <buffer> scx scaleX()<left>
+au filetype css ia <buffer> scy scaleY()<left>
+au filetype css ia <buffer> ser serif
+au filetype css ia <buffer> sev space-evenly
+au filetype css ia <buffer> ske skew()<left>
+au filetype css ia <buffer> skx skewX()<left>
+au filetype css ia <buffer> sky skewY()<left>
+au filetype css ia <buffer> smo smooth
+au filetype css ia <buffer> smt scroll-margin-top:;<left>
+au filetype css ia <buffer> sol solid
+au filetype css ia <buffer> squ square
 au filetype css ia <buffer> sse sans-serif
-au filetype css ia <buffer> pos position
-au filetype css ia <buffer> wid width: ;<left>
+au filetype css ia <buffer> sta static
+au filetype css ia <buffer> ste steelblue
+au filetype css ia <buffer> sti sticky
+au filetype css ia <buffer> str stretch
+au filetype css ia <buffer> tah Tahoma
+au filetype css ia <buffer> tal text-align:;<left>
+au filetype css ia <buffer> tdel transition-delay:;<left>
+au filetype css ia <buffer> tde text-decoration:;<left>
+au filetype css ia <buffer> tdu transition-duration:;<left>
+au filetype css ia <buffer> tin text-indent:;<left>
+au filetype css ia <buffer> top top:;<left>
+au filetype css ia <buffer> tpr transition-property:;<left>
+au filetype css ia <buffer> trans transition:;<left>
+au filetype css ia <buffer> tran translate()<left>
+au filetype css ia <buffer> tra transform:;<left>
+au filetype css ia <buffer> tsh text-shadow:;<left>
+au filetype css ia <buffer> ttf transition-timing-function:;<left>
+au filetype css ia <buffer> ttr text-transform:;<left>
+au filetype css ia <buffer> tx translateX()<left>
+au filetype css ia <buffer> ty translateY()<left>
+au filetype css ia <buffer> und underline
+au filetype css ia <buffer> uper text-transform:uppercase;
+au filetype css ia <buffer> upp uppercase
+au filetype css ia <buffer> url url('')<left><left>
+au filetype css ia <buffer> uro upper-roman
+au filetype css ia <buffer> var var(--)<left>
+au filetype css ia <buffer> ver Verdana
+au filetype css ia <buffer> ana animation-name:;<left>
+au filetype css ia <buffer> vis a:visited
+au filetype css ia <buffer> wid width:;<left>
+au filetype css ia <buffer> wsm whitesmoke
+au filetype css ia <buffer> wspa white-space:;<left>
+au filetype css ia <buffer> wsp word-spacing:;<left>
+au filetype css ia <buffer> zin z-index:;<left>
+
+au filetype css ia <buffer> robo @import url('https://fonts.googleapis.com/css2?family=roboto&display=swap');
+
+
+au filetype css nn <buffer> gca A<space>/*  */<left><left><left>
 
 augroup css_settings
-  autocmd!
-  autocmd bufread,bufnewfile *.css execute 'badd ' . expand('~/.vim/init/singkatan/css.vimrc') | execute 'buffer ' . bufnr('~/.vim/init/singkatan/css.vimrc') | setlocal bufhidden=hide | bn
+autocmd!
+autocmd BufRead,BufNewfile *.css execute 'badd ' . expand('~/.vim/init/singkatan/css.vimrc') | execute 'buffer ' . bufnr('~/.vim/init/singkatan/css.vimrc') | setlocal bufhidden=hide | bn
 augroup END

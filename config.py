@@ -24,13 +24,22 @@ config.set('content.desktop_capture', False)
 config.set('content.webgl', False)
 
 
-c.fonts.default_family = '"JetBrainsMonoNl Nerd Font Propo"'
+# c.fonts.default_family = '"JetBrainsMonoNl Nerd Font Propo"'
+# c.fonts.default_size = '12pt'
+# c.fonts.debug_console = '11pt "JetBrainsMonoNl Nerd Font Propo"'
+# c.zoom.default = '160%'
+# c.fonts.prompts = 'default_size JetBrainsMonoNl Nerd Font Propo'
+# c.fonts.statusbar = '11pt "JetBrainsMonoNl Nerd Font Propo"'
+# c.downloads.location.directory = "~/downloads"
+
+c.fonts.default_family = '"Lexend Deca"'
 c.fonts.default_size = '12pt'
-c.fonts.debug_console = '11pt "JetBrainsMonoNl Nerd Font Propo"'
+c.fonts.debug_console = '11pt "Lexend Deca"'
 c.zoom.default = '160%'
 c.fonts.prompts = 'default_size JetBrainsMonoNl Nerd Font Propo'
-c.fonts.statusbar = '11pt "JetBrainsMonoNl Nerd Font Propo"'
+c.fonts.statusbar = '11pt "Lexend Deca"'
 c.downloads.location.directory = "~/downloads"
+
 
 
 config.set('content.javascript.enabled', True, 'chrome-devtools://*')

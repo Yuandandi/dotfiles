@@ -53,7 +53,7 @@ ino <c-l> <c-w>
 " ino <c-m> <c-g>j
 
 " Visual a single line
-nn vv V
+nn vv _v$d
 
 " Play around in visual mode
 xn v <Esc>
@@ -94,7 +94,7 @@ nn dh /[<CR>da[
 nn ch /[<CR>ci[
 
 " Faster curly brackets
-nn cL /(<CR>ci{
+nn cL /}<CR>ci{
 nn dL /(<CR>di{
 nn vL /(<CR>vi{
 
@@ -167,7 +167,8 @@ ino <M-a> <Esc>A<space>
 ino <M-z> <Esc>:wq<cr>
 
 nn <leader>fo :FZF ~<CR>
-nn <leader>fl :FZF ~/learn/<CR>
+nn <leader>ff :FZF<CR>
+nn <leader>fl :FZF ~/repos/github.com/yuandandi/learn/<cr>
 nn <leader>fv :FZF ~/.vim/<CR>
 nn <leader>fn :FZF ~/repos/github.com/yuandandi/notes/<CR>
 
@@ -218,15 +219,13 @@ nn <leader>bd :w<CR>:bd<CR>
 
 ino <C-g>p <Esc>yiwA = <Esc>p_yiwo<Esc>pA.
 
-" ino [] []<left>
-" ino () ()<left>
-" ino {} {}<left>
-" ino "" ""<left>
-" ino '' ''<left>
-" ino :: ::<left>
-
 " open link under the cursor
 nn gx :!qutebrowser <c-r><c-f><cr>
 
 nn <F5> :UndotreeToggle<CR>
 nn !% :%!
+
+nn d> dt>
+
+nn 9 :bn<cr>:bn<cr>
+nn c; ct;

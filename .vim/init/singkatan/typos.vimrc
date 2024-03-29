@@ -12,15 +12,20 @@ ca q q!
 ca t term
 ia abobve above
 ia abou about
+ia abslute absolute
 ia acces access
+ia accesbility accessibility
 ia accesibility accessibility
+ia accesiblity accessibility
 ia accetntuate accentuate
 ia accetp accept
 ia accidently accidentally
 ia accomodat accommodate
 ia accoutn account
+ia accronym acronym
 ia accros across
 ia acdounts accounts
+ia acess access
 ia acess acess
 ia acpi ACPI
 ia acrual actual
@@ -48,6 +53,7 @@ ia agian again
 ia ahd add
 ia ahs has
 ia aht that
+ia ahve have
 ia ai I
 ia ake take
 ia aksk ask
@@ -56,6 +62,7 @@ ia aliasses aliases
 ia allah Allah
 ia allah Allah SWT
 ia alliaxe Allliance
+ia allign align
 ia alll all
 ia allwah Allah
 ia alnalyze analyze
@@ -78,6 +85,8 @@ ia anceient ancient
 ia andn and
 ia android Android
 ia ane and
+ia anhy any
+ia animamte animate
 ia anoteher another
 ia anothere another
 ia anoying annoying
@@ -136,6 +145,7 @@ ia atchitecture architecture
 ia atributte attribute
 ia atrtributes attributes
 ia attribure attribute
+ia attriburte attribute
 ia attriubute attribute
 ia atuo atau
 ia aur AUR
@@ -152,6 +162,7 @@ ia awater water
 ia ayre are
 ia bacanya bapanya
 ia bacany bacanya
+ia backgorund background
 ia backgroudn background
 ia backpsace backspace
 ia backto back to
@@ -165,7 +176,9 @@ ia batt4ery battery
 ia becasue because
 ia bechmarking benchmarking
 ia becoem become
+ia becuase because
 ia beegitu begitu
+ia befoer before
 ia befor before
 ia begginer beginner
 ia begginsers beginners
@@ -214,6 +227,7 @@ ia builign building
 ia builtins builtin
 ia buitlin builtin
 ia bulding building
+ia buttton button
 ia bweteen between
 ia caceh cache
 ia calbacks callbacks
@@ -252,6 +266,7 @@ ia chnages changes
 ia chnanged changed
 ia chooisng choosing
 ia chooose choose
+ia choosen chosen
 ia cintainer container
 ia citty city
 ia civiliation civilization
@@ -264,6 +279,8 @@ ia cli CLI
 ia cliking clicking
 ia clipboeard clipboard
 ia cloesed closed
+ia closign closing
+ia clossest closest
 ia cna can
 ia cnn CNN
 ia cntain contain
@@ -314,6 +331,7 @@ ia conencted connected
 ia conetent content
 ia confert convert
 ia confgiure configure
+ia configruation configuration
 ia configruraation configuration
 ia configurain configuration
 ia confilict conflict
@@ -343,6 +361,7 @@ ia containder container
 ia containerfs containers
 ia containner container
 ia containts contains
+ia conteint content
 ia contemporrary contemporary
 ia conten content
 ia contetn content
@@ -373,6 +392,7 @@ ia cpu CPU
 ia creaet create
 ia Crearte Create
 ia creat create
+ia createing creating
 ia createor creator
 ia creationof creation of
 ia crestes creates
@@ -382,6 +402,7 @@ ia css CSS
 ia csv CSV
 ia culter culture
 ia cummand command
+ia curen current
 ia curent current
 ia currenty currently
 ia currnet current
@@ -429,6 +450,7 @@ ia devault default
 ia develeopment development
 ia developd developed
 ia developmen development
+ia devices device's
 ia dhcp DHCP
 ia dibilanng dibilang
 ia didnt didn't
@@ -477,15 +499,18 @@ ia documen document
 ia documetary documentary
 ia documment document
 ia documnet document
+ia dodnt didn't
 ia doesnt doesn't
 ia Doesnt doesn't
 ia doi do I
 ia dont don't
+ia donwload download
 ia dosplay display
 ia doucument document
 ia dpeak speak
 ia dpends depends
 ia dring drink
+ia drivefrs drivers
 ia driveing driving
 ia dsign design
 ia dta data
@@ -527,13 +552,16 @@ ia effecgt effect
 ia effetctiev effective
 ia ehave have
 ia eho who
+ia ehte the
 ia eht the
 ia eill will
 ia electoronic electronic
+ia eleemnt element
 ia elelment element
 ia elemnt element
 ia elemnts elements
 ia eliptical elliptical
+ia elmeent element
 ia emacs Emacs
 ia emebeded embedded
 ia emost most
@@ -545,6 +573,7 @@ ia ener enter
 ia enginering engineering
 ia english English
 ia enterprize enterprise
+ia entireley entirely
 ia entrie entire
 ia env ENV
 ia envireonment environment
@@ -557,6 +586,7 @@ ia equivlents equivalents
 ia eror error
 ia escapt escape
 ia escreen screen
+ia esential essential
 ia esitimator estimator
 ia espanssions expansions
 ia etherenet Ethernet
@@ -571,6 +601,7 @@ ia evefry every
 ia evertyhong everything
 ia Everythins Everything
 ia everyting everything
+ia evicde device
 ia excelent excellent
 ia excetp except
 ia exchagne exchagne
@@ -587,6 +618,7 @@ ia expresion expression
 ia expresssions expressions
 ia exteremely extremely
 ia extesnsion extension
+ia exuals equals
 ia fafourige favorite
 ia fainth faith
 ia falues values
@@ -630,6 +662,7 @@ ia flie file
 ia folloiwng following
 ia fomrat format
 ia fo of
+ia foollow follow
 ia formater formater
 ia fornt front
 ia fot for
@@ -696,7 +729,6 @@ ia grpe grep
 ia grumpt grumpy
 ia gruping grouping
 ia gsettings gettings
-ia gta Grand Theft Auto
 ia gui GUI
 ia guis GUIs
 ia gutorial tutorial
@@ -712,6 +744,7 @@ ia hased hashed
 ia hatumu hatimu
 ia hdr ####################################################################
 ia hdup hidup
+ia headeer header
 ia headign heading
 ia hedign heeding
 ia he He
@@ -726,6 +759,7 @@ ia hhow how
 ia hiddenf hidden
 ia hieararchy hierarchy
 ia hifher higher
+ia highter higher
 ia hightlight highlight
 ia hiliy hilir
 ia hinduism Hinduism
@@ -766,6 +800,7 @@ ia iamages images
 ia iamge image
 ia iam I am
 ia icmp ICMP
+ia identihfy identify
 ia identitty identity
 ia idesa ideas
 ia id ID 
@@ -777,12 +812,13 @@ ia ifno info
 ia ifnormatin information
 ia ifnormation information
 ia iformation formation
+ia ightness lightness
 ia i I
 ia iinstall install
 ia iircc if I remember correctly
 ia iirc IIRC
 ia iis is
-ia imags image
+    ia imags image
 ia imamah Imamah
 ia imge image
 ia im I'm
@@ -891,6 +927,7 @@ ia its it's
 ia ivnoke invoke
 ia iwdely widely
 ia iwll will
+ia iwth with
 ia jakarta Jakarta
 ia jaopanese Japanese
 ia japanaese Japanese
@@ -929,7 +966,10 @@ ia lates latest
 ia latesst latest
 ia launchhed launched
 ia lcoaly locally
+ia leemnets elements
 ia lein line
+ia lelments elements
+ia lements elements
 ia lengthh length
 ia lern learn
 ia leter letter
@@ -956,9 +996,11 @@ ia lishcense license
 ia lisngint listing
 ia liteasi literasi
 ia literasin literasi
+ia litlle little
 ia litreasinya literasinnya
 ia littel little
 ia litteraly literally
+ia locatae locate
 ia locla local
 ia logica logic
 ia lognger longer
@@ -1026,6 +1068,7 @@ ia mexican Mexican
 ia mgh https://github.com/Yuandandi
 ia microsoft Microsoft
 ia midified modified
+ia midle middle
 ia milions millions
 ia minght might
 ia misstype mistype
@@ -1058,6 +1101,7 @@ ia musilim Muslim
 ia muslim Muslim
 ia muslims Muslims
 ia mux tmux
+ia myaning meaning
 ia nad and
 ia namd named
 ia namesa names
@@ -1141,7 +1185,7 @@ ia ohowever however
 ia ohw how
 ia oiptons options
 ia ois is
-ia oit It
+    ia oit It
 ia okey okay
 ia omg OMG
 ia omited omitted
@@ -1163,8 +1207,11 @@ ia oper open
 ia optinal optional
 ia optioin option
 ia optionla optional
+ia optiosn option
 ia optoins options
+ia optoon option
 ia oraganization organization
+ia ordure order
 ia origis origin
 ia osi OSI
 ia os OS
@@ -1181,7 +1228,9 @@ ia ouptut output
 ia outpus output
 ia overlaped overlapped
 ia overlaping overlapping
+ia overrrid override
 ia ov of
+ia ovverride override
 ia ownd own
 ia pacckage package
 ia packgae package
@@ -1192,8 +1241,11 @@ ia paht path
 ia pakcages packages
 ia paneds panes
 ia papaer paper
+ia paragpah paragraph
+ia paragrpah paragraph
 ia parametere parameters
 ia parametes parameters
+ia parenet parent
 ia parrent parent
 ia particualr particular
 ia passowrd password
@@ -1319,6 +1371,7 @@ ia randr RandR
 ia rangkng rangking
 ia rdf RDF
 ia readlink read link
+ia realy really
 ia reassingde reassigned
 ia reature feature
 ia recongnize recognize
@@ -1334,6 +1387,7 @@ ia reeally really
 ia referrs refers
 ia reguar regular
 ia reidirect redirect
+ia relatibve relative
 ia relevatn relevant
 ia relfect reflect
 ia religiouse religious
@@ -1366,6 +1420,8 @@ ia rmeove remove
 ia rmy my
 ia rooot root
 ia ro or
+ia rpint print
+ia rss RSS
 ia runing running
 ia runique unique
 ia ruude rude
@@ -1377,6 +1433,7 @@ ia savely safely
 ia sbeds beds
 ia scatered scattered
 ia scipt sci pt
+ia screan screen
 ia screeen screen
 ia scren screen
 ia scrigpt script
@@ -1434,7 +1491,7 @@ ia significat significant
 ia signinficance significance
 ia signinficantly significantly
 ia si is
-ia sii see
+    ia sii see
 ia siletn silent
 ia simillar similar
 ia simultaenously simultaneously
@@ -1444,6 +1501,8 @@ ia sixze size
 ia skilstak skilstak
 ia slightliy slightly
 ia slugggish sluggish
+ia smalleer smaller
+ia smoot smooth
 ia socets sockets
 ia soekarno Soekarno
 ia soekarno Sukarno
@@ -1466,6 +1525,7 @@ ia souncdard soundcard
 ia sourcde sourced
 ia SOURCEs SOURCES
 ia sovereingty sovereignty
+ia spearker speaker
 ia speciallity specialty
 ia speciall special
 ia specidfic specific
@@ -1494,6 +1554,7 @@ ia stonesa stones
 ia strenth strength
 ia struff stuff
 ia sttus status
+ia styelsheet stylesheet
 ia suati suatu
 ia subtitutions substitutions
 ia subtitution substitution
@@ -1577,10 +1638,12 @@ ia thigns things
 ia thign thing
 ia thingk think
 ia thinnk think
+ia Thisng Things
 ia thorugh through
 ia thoruth through
 ia thoug though
 ia thout thought
+ia thpe type
 ia throught thought
 ia throug through
 ia th the
@@ -1659,6 +1722,7 @@ ia usptream upstream
 ia usses uses
 ia ussuallly usually
 ia usualy usually
+ia ususally usually
 ia utilitky utility
 ia utilitye utility
 ia utitility utility
@@ -1673,6 +1737,7 @@ ia verison version
 ia versiaon version
 ia versino version
 ia version version
+ia vfertical vertical
 ia viatal vital
 ia viddeo video
 ia videous video's
@@ -1687,6 +1752,7 @@ ia vish fish
 ia vitual virtual
 ia vitual virtula
 ia vlaue value
+ia vlaus values
 ia voacab vocab
 ia vscode VSCode
 ia vuitlin builtin
@@ -1702,6 +1768,7 @@ ia wcho echo
 ia weeki week
 ia wehic which
 ia wel well
+ia wepage webpage
 ia were we're
 ia wetern western
 ia whar what
@@ -1726,12 +1793,14 @@ ia widnows windows
 ia widonws windows
 ia wigthin within
 ia wiht with
+ia willl will
 ia wil will
 ia windos windows
 ia wiritten written
 ia withing within
 ia withoiut without
 ia wi whatis
+ia wiwtah with
 ia wiwth with
 ia woerk work
 ia wofk work
@@ -1766,5 +1835,46 @@ ia youu you
 ia you You
 ia yu you
 ia zealand Zealand
-ia curen current
+ia elemenet element
+ia horizontaly horizontally
+ia devce device
+ia elment element
+ia remofe remove
+ia contente content
+ia prefent prevent
+ia gradinet gradient
+ia visisted visited
+ia PROFIEL PROFILE
+ia botom bottom
+ia devidces devices
+ia cirle circle
+ia thi the
+ia righr right
+ia paragrahp paragraph
+ia cange change
+ia transtitions transitions
+ia despeickle despickle
+ia donw down
+ia donw down
+ia widht width
+ia roatate rotate
+ia 3secon second
+ia speen spin
+ia degre degree
+ia meke make
+ia sugestions suggestions
+ia styeles styles
+ia abbrevieate abbreviate
+ia shpo shop
+ia autohr author
+ia redundent redundant
+ia avalilabel available
+ia gneral general
 ia zola Zola
+ia fiirst first
+ia buitl built
+ia united United
+ia states States
+ia functino function
+ia sensitibe sensitive
+ia lts LTS

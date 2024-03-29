@@ -36,7 +36,6 @@ ia blon 🎈
 ia rckt 🚀
 ia bmi 🌍
 ia mwr 🌸
-ia pto 📷
 ia bku 📚
 ia notbl 🎶
 ia brgr 🍔

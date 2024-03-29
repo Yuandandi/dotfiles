@@ -1,17 +1,21 @@
-ca eht e ~/.config/nvim/lua/dandi/abbrev/html.lua
+
 autocmd FileType html setlocal shiftwidth=2
-            \| nn <buffer> s cit
-            \| nn <leader>2 _v$y:e ~/.config/nvim/lua/dandi/abbrev/html.lua<CR>}}Oautocmd FileType html ia <buffer> <Esc>phi<Space>
-            \| nn <leader>3 yiw:vs ~/.config/nvim/lua/dandi/abbrev/html.lua<CR>}}}Oautocmd FileType html ia <buffer> <Esc>pa <Esc>p2b3ldevip:sort<CR>:wq<CR>
-            \| ino <buffer> <C-g>> <C-o>ct><esc>
-            \| ino <buffer> <C-b> <C-o>?><CR>
-            \| ino <buffer> <C-g>< <Esc>d/<<CR>
-            \| ino <buffer> <C-g>n <C-o>/><CR>
-            \| ino <buffer> <C-g>p <C-o>?><CR>
-            \| nn <buffer> gca A<Space><!----><left><left><left>
+\| nn <buffer> s cit
+\| nn <leader>2 _v$y:e ~/.config/nvim/lua/dandi/abbrev/html.lua<CR>}}Oautocmd FileType html ia <buffer> <Esc>phi<Space>
+\| nn <leader>3 yiw:vs ~/.config/nvim/lua/dandi/abbrev/html.lua<CR>}}}Oautocmd FileType html ia <buffer> <Esc>pa <Esc>p2b3ldevip:sort<CR>:wq<CR>
+\| ino <buffer> <C-g>> <C-o>ct><esc>
+\| ino <buffer> <C-b> <C-o>?><CR>
+\| ino <buffer> <C-g>< <Esc>d/<<CR>
+\| ino <buffer> <C-g>n <C-o>/><CR>
+\| ino <buffer> <C-g>p <C-o>?><CR>
+\| nn <buffer> gca A<Space><!-- --><left><left><left>
+\| nn <buffer> o :w<cr>o
+
+autocmd filetype css nn o :w<cr>o
 
 autocmd FileType html set tw=120
-autocmd FileType html,htmldjango ia <buffer> !!! <!DOCTYPE html><CR><html lang="en"><CR><head><CR><meta charset="UTF-8"><CR><meta name="viewport" content="width=device-width, initial-scale=1.0"><CR><title>Document</title><CR></head><CR><body><CR></body><CR></html>
+
+autocmd filetype html,htmldjango ia <buffer> !!! <!doctype html><cr><html lang="en"><cr><head><cr><meta charset="utf-8"><cr><meta name="viewport" content="width=device-width, initial-scale=1.0"><cr><title>document</title><cr><link rel="stylesheet" href="style.css"><cr></head><cr><body><cr></body><cr></html>
             \| ia <buffer> str <strong></strong><Esc>cit
             \| ia <buffer> ii <i></i><Esc>cit
             \| ia <buffer> q <q></q><Esc>cit
@@ -27,7 +31,7 @@ autocmd FileType html,htmldjango ia <buffer> !!! <!DOCTYPE html><CR><html lang="
             \| ia <buffer> bdi <bdi></bdi><esc>cit
             \| ia <buffer> bdo <bdo dir=""></bdo><C-o>?"><CR>
 
-autocmd FileType html,htmldjango ia <buffer> bi <big></big><Esc>cit
+            autocmd FileType html,htmldjango ia <buffer> bi <big></big><Esc>cit
             \| ia <buffer> blo <blockquote cite=""></blockquote><C-o>?"><CR>
             \| ia <buffer> bod <body><CR></body><C-o>O
             \| ia <buffer> br <br>
@@ -54,6 +58,7 @@ autocmd FileType html,htmldjango ia <buffer> bi <big></big><Esc>cit
             \| ia <buffer> fie <fieldset><CR></fieldset><C-o>O
             \| ia <buffer> fig <figure><CR></figure><Esc>cit
             \| ia <buffer> figc <figcaption></figcaption><Esc>cit
+            \| ia <buffer> cap <caption></caption><esc>cit
             \| ia <buffer> foot <footer><CR></footer><Esc>cit
             \| ia <buffer> formm <form></form><Esc>cit
             \| ia <buffer> h1 <h1></h1><Esc>cit
@@ -68,14 +73,15 @@ autocmd FileType html,htmldjango ia <buffer> bi <big></big><Esc>cit
             \| ia <buffer> htm <html><CR></html><C-o>O
             \| ia <buffer> htmll <html><CR></html><C-o>O
             \| ia <buffer> ifr <iframe src=""></iframe><C-o>?"<CR>
-            \| ia <buffer> img <img src="" alt=""><C-o>?" al<CR>
+            \| ia <buffer> imgg <img src="" alt=""><C-o>?" al<CR>
             \| ia <buffer> inp <input type="" name="" value=""><C-o>?" nam<CR>
             \| ia <buffer> kbd <kbd></kbd><esc>cit
             \| ia <buffer> keyg <keygen name="">
             \| ia <buffer> lab <label for=""></label><C-o>?"<CR>
             \| ia <buffer> lege <legend></legend><Esc>cit
             \| ia <buffer> li <li></li><Esc>cit
-            \| ia <buffer> lin <link rel="" type="" href=""><C-o>?" ty<cr>
+            \| ia <buffer> lin <link rel="" href=""><C-o>?" hre<cr>
+            \| ia <buffer> met <meta name="" content=""><esc>0ci"
 
 autocmd FileType html,vimwiki,htmldjango ia <buffer> lorp Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.
 autocmd FileType html,vimwiki,htmldjango ia <buffer> lors Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
@@ -85,7 +91,6 @@ autocmd FileType html,htmldjango ia <buffer> mai <main><CR></main><Esc>cit
             \| ia <buffer> mar <mark></mark><Esc>cit
             \| ia <buffer> men <menu><CR></menu><Esc>cit
             \| ia <buffer> menui <menuitem></menuitem>
-            \| ia <buffer> met <meta name="" content=""><Esc>citcon<CR>
             \| ia <buffer> mete <meter value=""></meter><Esc>citCR>
             \| ia <buffer> nav <nav><CR></nav><Esc>cit
             \| ia <buffer> nos <noscript><CR></noscript><Esc>cit
@@ -111,7 +116,6 @@ autocmd FileType html,htmldjango ia <buffer> mai <main><CR></main><Esc>cit
             \| ia <buffer> sam <samp></samp><Esc>cit
             \| ia <buffer> sma <small></small><Esc>cit
             \| ia <buffer> spa <span></span><Esc>cit
-            \| ia <buffer> spa <span></span><Esc>cit
             \| ia <buffer> sty <style><CR></style><C-o>O
             \| ia <buffer> stys stylesheet
             \| ia <buffer> sub <sub></sub><Esc>cit
@@ -124,7 +128,7 @@ autocmd FileType html,htmldjango ia <buffer> mai <main><CR></main><Esc>cit
             \| ia <buffer> sou <source src="" type=""><Esc>cittyp<CR>
             \| ia <buffer> sel <select><CR></select><C-o>O
             \| ia <buffer> scr <script><CR></script><C-o>O
-            \| ia <buffer> sec <section id=""><cr></section><esc>?"<cr>i
+            \| ia <buffer> sec <section><cr></section><C-o>O
             \| ia <buffer> sum <summary></summary><Esc>cit
             \| ia <buffer> th <th></th><Esc>cit
             \| ia <buffer> timd <time datetime=""></time><Esc>citCR>
@@ -140,8 +144,10 @@ autocmd FileType html,htmldjango ia <buffer> mai <main><CR></main><Esc>cit
             \| ia <buffer> var <var></var><Esc>cit
 
 autocmd filetype html,htmldjango ia <buffer> cha charset=""<left>
+            \| ia <buffer> rev reversed
             \| ia <buffer> maxl maxlength=""<left>
             \| ia <buffer> cit cite=""<left>
+            \| ia <buffer> dto data-tooltip=""<left>
             \| ia <buffer> cla class=""<left>
             \| ia <buffer> cols cols=""<left>
             \| ia <buffer> con content=""<left>
@@ -150,8 +156,11 @@ autocmd filetype html,htmldjango ia <buffer> cha charset=""<left>
             \| ia <buffer> datet datetime=""<left>
             \| ia <buffer> dir dir=""<left>
             \| ia <buffer> forr for=""<left>
-            \| ia <buffer> headec <header class=""><CR><header><C-o>?"<CR>
+            \| ia <buffer> headec <header class=""><CR></header><C-o>?"<CR>
+            \| ia <buffer> heade <header><cr></header><esc>O
+            \| ia <buffer> der <header class=""><CR></header><C-o>?"<CR>
             \| ia <buffer> hei height=""<left>
+            \| ia <buffer> wid width=""<left>
             \| ia <buffer> heq http-equiv=""<left>
             \| ia <buffer> hre href=""<left>
             \| ia <buffer> id id=""<left>
@@ -166,6 +175,7 @@ autocmd filetype html,htmldjango ia <buffer> cha charset=""<left>
             \| ia <buffer> src src=""<left>
             \| ia <buffer> srcl srclang=""<left>
             \| ia <buffer> sta station=""<left>
+            \| ia <buffer> star start=""<left>
             \| ia <buffer> targ target=""<left>
             \| ia <buffer> tit title=""<left>
             \| ia <buffer> typ type=""<left>
@@ -173,10 +183,19 @@ autocmd filetype html,htmldjango ia <buffer> cha charset=""<left>
             \| ia <buffer> val value=""<left>
             \| ia <buffer> tarb target="_blank"
             \| ia <buffer> blan _blank
+            \| ia <buffer> pla placeholder=""<left>
+            \| ia <buffer> acti action=""<left>
             \| ia <buffer> seta setAttribute();<left><left>
-
+            \| ia <buffer> ofs offscreen
+            \| ia <buffer> che checkbox
+            \| ia <buffer> pp p
+            \| ia <buffer> quo &#10077;&#10078;<esc>F;a
+            \| ia <buffer> hypen &#8221; &#8212;
+            \| ia <buffer> iie <!doctype html><cr> <html lang="en"><cr> <head><cr> <meta charset="utf-8"><cr> <meta http-equiv="X-UA-Compatible" content="IE=edge"><cr> <meta name="viewport" content="width=device-width, initial-scale=1.0"><cr> <title>document</title><cr> <link rel="stylesheet" href="style.css"><cr> </head><cr> <body><cr> </body><cr> </html>
 
 augroup html_settings
-  autocmd!
-  autocmd BufRead,BufNewFile *.html,*.htmldjango execute 'badd ' . expand('~/.vim/init/singkatan/html.vimrc') | execute 'buffer ' . bufnr('~/.vim/init/singkatan/html.vimrc') | setlocal bufhidden=hide | bn
+    autocmd!
+    autocmd BufRead,BufNewFile *.html,*.htmldjango execute 'badd ' . expand('~/.vim/init/singkatan/html.vimrc') | execute 'buffer ' . bufnr('~/.vim/init/singkatan/html.vimrc') | setlocal bufhidden=hide | bn
 augroup END
+
+

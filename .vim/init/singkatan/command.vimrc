@@ -1,5 +1,4 @@
 ca n norm
-ca now put =strftime(\"%c\")
 ca fzf FZF
 ca wq wq!
 ca qa qa!

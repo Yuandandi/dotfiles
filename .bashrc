@@ -6,6 +6,7 @@ esac
 
 set -o vi
 set -o ignoreeof
+set +o noglob
 
 
 # make less more friendly for non-text input files, see lesspipe(1)
@@ -47,12 +48,14 @@ shopt -s dirspell
 shopt -s cmdhist
 shopt -s globstar
 
+
+
 if [ "$color_prompt" = yes ]; then
     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
-unset color_prompt force_color_prompt
+unset color_prompt force_color_prompt 
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
@@ -63,6 +66,17 @@ case "$TERM" in
 esac
 
 alias ahk='cd ~/.local/bin/scripts && explorer.exe main.ahk'
+alias mpv='mvp --ao=pulse'
+alias mvp='mpv'
+alias pd='pwd'
+alias md='~/.local/bin/scripts/md'
+alias clip='xclip -sel clip'
+alias vircam='sudo modprobe v4l2loopback video_nr=7 card_label=Video-Loopback exclusive_caps=1'
+alias po='popd'
+alias pu='pushd .'
+alias cupng='~/.local/bin/scripts/cupng'
+alias linkhandler='~/.local/bin/scripts/linkhandler'
+alias fsort='~/.local/bin/scripts/fsort'
 alias all='~/.local/bin/scripts/all'
 alias am='alsamixer'
 alias aman='netstat -tua | grep LISTEN'
@@ -115,7 +129,6 @@ alias dsk='df -h'
 alias '?'="duck"
 alias duck='~/.local/bin/scripts/duck'
 alias ducks="curl -X GET 'https://openexchangerates.org/api/latest.json?app_id=9d128b37ede54a149068edf42f1b3b04' ; grep IDR"
-alias du='du -ah'
 alias duf='~/.local/bin/scripts/duf'
 alias ecoh='echo'
 alias ed='ed -p ">"'
@@ -163,6 +176,7 @@ alias gl='git log --oneline --decorate --all --graph'
 alias glow='glow -p'
 alias gm='git merge'
 alias gn='cd /home/danzor/repos/github.com/yuandandi/notes ; grep -Hnri '
+alias gl='cd /home/danzor/repos/github.com/yuandandi/learn ; grep -Hnri '
 alias gp='git push'
 alias gp='git push -u origin main'
 alias gpl='git pull'
@@ -228,7 +242,7 @@ alias notes='cd ~/notes ; d -l -g --icons'
 alias now='date +"%Y-%m-%d %T"'
 alias nul='2> /dev/null | more'
 alias nv='vim -u NONE'
-alias o='open'
+alias o='xdg-open'
 alias op='~/.local/bin/scripts/op'
 alias os='source ~/.bashrc'
 alias parot='curl parrot.live'
@@ -241,7 +255,7 @@ alias pil='pip list'
 alias pipli='pip list'
 alias pi='podman images'
 alias pirntenv='printenv'
-alias ppp='ping 8.8.8.8'
+alias ppp='ping  -c 3 8.8.8.8'
 alias pre='ls --color=always | fzf --ansi --preview="bat --color=always {}" --preview-window=right:60%:wrap'
 alias pw='pwd'
 alias radion="radio"
@@ -297,7 +311,7 @@ alias tn="tmux new -s"
 alias top='htop'
 alias topl='~/.local/bin/scripts/topl'
 alias tops='~/.local/bin/scripts/tops'
-alias tot='du -ah | tail -n 1'
+alias tot='du -sh'
 alias to="vim ~/.vim/init/singkatan/typos.vimrc"
 alias troute='traceroute google.com'
 alias tr='vim /home/danzor/repos/github.com/yuandandi/notes/translate'
@@ -357,6 +371,7 @@ alias zz='z -'
 # colored GCC warnings and errors
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 export PAGER=less
+export BROWSER=qutebrowser
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
