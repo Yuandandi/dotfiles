@@ -66,6 +66,9 @@ case "$TERM" in
 esac
 
 alias ahk='cd ~/.local/bin/scripts && explorer.exe main.ahk'
+alias nod='node'
+alias onde='node'
+alias ndoe='node'
 alias mpv='mvp --ao=pulse'
 alias mvp='mpv'
 alias pd='pwd'
@@ -331,7 +334,6 @@ alias vic='~/.local/bin/scripts/vic.sh'
 alias vimp="~/.local/bin/scripts/vimprev.sh"
 alias vim='vim'
 alias vimv='~/.local/bin/vimv'
-alias vit='vim ~/note/translate'
 alias vi='vim'
 alias v='~/.local/bin/scripts/v'
 alias vl='vim ~/.config/sc-im/scimrc'

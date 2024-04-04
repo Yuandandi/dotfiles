@@ -179,14 +179,19 @@ nn <leader>fn :FZF ~/repos/github.com/yuandandi/notes/<CR>
 ino zk <space>:=<space>
 ino zj <space>=<space>
 ino zJ <space>==<space>
-ino zk <space>:=<space>
 ino zK <space>!=<space>
 ino zl ()<left>
 ino zL {}<left>
 ino zh []<left>
+ino zH [<cr>]<esc>O
 ino zP (<cr>)<esc>O
 ino zp {<cr>}<esc>O
 ino zz <esc>zza
+ino z; ""<left>
+ino z' ''<left>
+ino zm <space>=><space>
+ino zn <space>&<space>
+ino zN <space>&&<space>
 
 nn <F4> "=strftime("%c")<CR>P
 ino <F4> <C-R>=strftime("%c")<CR>
@@ -214,6 +219,10 @@ nn <leader>s0 :s/'//g<CR>
 
 nn <leader>idk :s/(/("<CR>:s/)/")<CR>:s/, /", "/g<CR>
 nn <leader>idK :s/{/{"<CR>:s/}/"}<CR>:s/, /", "/g<CR>
+nn <leader>ihk :s/\[/\["<CR>:s/]/"]<CR>:s/, /", "/g<CR>
+nn <leader>ks :s/, / + " " + /g
+nn gop I"<esc>:s/,/":<cr>A,<esc>
+nn god I"<esc>A"<esc>:s/, /": "<cr>A,<esc>
 
 nn <leader>bd :w<CR>:bd<CR>
 
