@@ -29,7 +29,7 @@ nn Q q
 nn tq q
 nn to :e ~/.vim/init/singkatan/typos.vimrc<cr>g`"ciw
 nn tr :e ~/repos/github.com/yuandandi/notes/translate<cr>
-nn te :w<cr>:term<CR>
+nn te :w<cr>:term<cr>firefox home.html
 nn q :x<cr>
 
 " string comma values
@@ -217,8 +217,8 @@ nn <leader>ds :s/"/'/g<CR>
 nn <leader>d0 :s/"//g<CR>
 nn <leader>s0 :s/'//g<CR>
 
-nn <leader>idk :s/(/("<CR>:s/)/")<CR>:s/, /", "/g<CR>
-nn <leader>idK :s/{/{"<CR>:s/}/"}<CR>:s/, /", "/g<CR>
+nn <leader>ilk :s/(/("<CR>:s/)/")<CR>:s/, /", "/g<CR>
+nn <leader>ikK :s/{/{"<CR>:s/}/"}<CR>:s/, /", "/g<CR>
 nn <leader>ihk :s/\[/\["<CR>:s/]/"]<CR>:s/, /", "/g<CR>
 nn <leader>ks :s/, / + " " + /g
 nn gop I"<esc>:s/,/":<cr>A,<esc>

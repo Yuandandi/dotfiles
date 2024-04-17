@@ -16,20 +16,20 @@ autocmd filetype css nn o :w<cr>o
 autocmd FileType html set tw=120
 
 autocmd filetype html,htmldjango ia <buffer> !!! <!doctype html><cr><html lang="en"><cr><head><cr><meta charset="utf-8"><cr><meta name="viewport" content="width=device-width, initial-scale=1.0"><cr><title>document</title><cr><link rel="stylesheet" href="style.css"><cr></head><cr><body><cr></body><cr></html>
-            \| ia <buffer> str <strong></strong><Esc>cit
-            \| ia <buffer> ii <i></i><Esc>cit
-            \| ia <buffer> q <q></q><Esc>cit
-            \| ia <buffer> abb <abbr title=""></abbr><C-o>?"<CR>
-            \| ia <buffer> addr <address><CR></address><C-o>O
-            \| ia <buffer> ah <a href=""></a><Esc>?"><CR>i
-            \| ia <buffer> area <area shape="" coords="" href="" alt=""><C-o>" co<CR>
-            \| ia <buffer> arti <article><CR></article><C-o>O
-            \| ia <buffer> asi <aside></aside><Esc>cit
-            \| ia <buffer> aud <audio controls><CR><CR></audio>
-            \| ia <buffer> b <b></b><Esc>cit
-            \| ia <buffer> bas <base href="" target="">
-            \| ia <buffer> bdi <bdi></bdi><esc>cit
-            \| ia <buffer> bdo <bdo dir=""></bdo><C-o>?"><CR>
+\| ia <buffer> str <strong></strong><Esc>cit
+\| ia <buffer> ii <i></i><Esc>cit
+\| ia <buffer> q <q></q><Esc>cit
+\| ia <buffer> abb <abbr title=""></abbr><C-o>?"<CR>
+\| ia <buffer> addr <address><CR></address><C-o>O
+\| ia <buffer> ah <a href=""></a><Esc>?"><CR>i
+\| ia <buffer> areaa <area shape="" coords="" href="" alt=""><C-o>" co<CR>
+\| ia <buffer> arti <article><CR></article><C-o>O
+\| ia <buffer> asi <aside></aside><Esc>cit
+\| ia <buffer> aud <audio controls><CR><CR></audio>
+\| ia <buffer> b <b></b><Esc>cit
+\| ia <buffer> bas <base href="" target="">
+\| ia <buffer> bdi <bdi></bdi><esc>cit
+\| ia <buffer> bdo <bdo dir=""></bdo><C-o>?"><CR>
 
             autocmd FileType html,htmldjango ia <buffer> bi <big></big><Esc>cit
             \| ia <buffer> blo <blockquote cite=""></blockquote><C-o>?"><CR>
@@ -127,7 +127,7 @@ autocmd FileType html,htmldjango ia <buffer> mai <main><CR></main><Esc>cit
             \| ia <buffer> ul <ul></ul><Esc>cit
             \| ia <buffer> sou <source src="" type=""><Esc>cittyp<CR>
             \| ia <buffer> sel <select><CR></select><C-o>O
-            \| ia <buffer> scr <script><CR></script><C-o>O
+            \| ia <buffer> scr <script></script><esc>F>i src=""<left>
             \| ia <buffer> sec <section><cr></section><C-o>O
             \| ia <buffer> sum <summary></summary><Esc>cit
             \| ia <buffer> th <th></th><Esc>cit
@@ -184,14 +184,18 @@ autocmd filetype html,htmldjango ia <buffer> cha charset=""<left>
             \| ia <buffer> tarb target="_blank"
             \| ia <buffer> blan _blank
             \| ia <buffer> pla placeholder=""<left>
+            \| ia <buffer> onc onclick=""<left>
             \| ia <buffer> acti action=""<left>
             \| ia <buffer> seta setAttribute();<left><left>
             \| ia <buffer> ofs offscreen
             \| ia <buffer> che checkbox
+            \| ia <buffer> jss js
             \| ia <buffer> pp p
             \| ia <buffer> quo &#10077;&#10078;<esc>F;a
             \| ia <buffer> hypen &#8221; &#8212;
             \| ia <buffer> iie <!doctype html><cr> <html lang="en"><cr> <head><cr> <meta charset="utf-8"><cr> <meta http-equiv="X-UA-Compatible" content="IE=edge"><cr> <meta name="viewport" content="width=device-width, initial-scale=1.0"><cr> <title>document</title><cr> <link rel="stylesheet" href="style.css"><cr> </head><cr> <body><cr> </body><cr> </html>
+
+autocmd filetype html,javascript ia <buffer> ale alert("")<left><left>
 
 augroup html_settings
     autocmd!

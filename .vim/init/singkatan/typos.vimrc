@@ -14,6 +14,7 @@ ia 3secon second
 ia abbrevieate abbreviate
 ia abobve above
 ia abou about
+ia abraham Abraham
 ia abslute absolute
 ia accepth accept
 ia acces access
@@ -77,6 +78,7 @@ ia alternatvies alternatives
 ia altoogether altogether
 ia alwasy always
 ia alwsys always
+ia alwyas always
 ia amaka maka
 ia amattresses mattresses
 ia amenalbe amenable
@@ -119,6 +121,8 @@ ia aprop prop
 ia apsp apps
 ia arabic Arabic
 ia ar are
+ia aratio ratio
+ia aray array
 ia archeology archaeology
 ia archieve achieve
 ia arent aren't
@@ -127,6 +131,7 @@ ia arethmatic arithmetic
 ia arguent argument
 ia argumaet argument
 ia argumant argument
+ia argumenet argument
 ia argumetn argument
 ia argumets arguments
 ia aristotles Aristotle's
@@ -151,6 +156,7 @@ ia atributte attribute
 ia atrtributes attributes
 ia attribure attribute
 ia attriburte attribute
+ia attriubures attributes
 ia attriubute attribute
 ia atuo atau
 ia aur AUR
@@ -231,6 +237,7 @@ ia brougth brought
 ia bruinei Brunei
 ia brwowser browser
 ia bsd BSD
+ia bubling bubbling
 ia buddhism Buddhism
 ia builign building
 ia builtins builtin
@@ -256,6 +263,7 @@ ia catd card
 ia categorrized categorized
 ia catt call
 ia centrury century
+ia cereate create
 ia chabge change
 ia chabne change
 ia chage change
@@ -290,6 +298,7 @@ ia classcified classified
 ia cleaniess cleanness
 ia cleansliness cleanliness
 ia clebber clobber
+ia clicke click
 ia cli CLI
 ia cliking clicking
 ia clipboeard clipboard
@@ -373,6 +382,7 @@ ia constandt constandt
 ia constandt constant
 ia constartints constraints
 ia constatnt constant
+ia constractor constructor
 ia consumates consummates
 ia containder container
 ia containerfs containers
@@ -397,6 +407,7 @@ ia coomand command
 ia cooose choose
 ia copmuter computer
 ia corresoponding corresponding
+ia costatnt constant
 ia costco Costco
 ia cotnrol control
 ia couldnt could't
@@ -407,6 +418,7 @@ ia coutnerh counters
 ia coyp copy
 ia cpacity capacity
 ia cpu CPU
+ia cr3eate create
 ia creaet create
 ia Crearte Create
 ia creat create
@@ -416,6 +428,7 @@ ia creationof creation of
 ia crestes creates
 ia crete create
 ia creteria criteria
+ia croppiing cropping
 ia csrf CSRF
 ia css CSS
 ia csv CSV
@@ -462,6 +475,7 @@ ia descriibe describe
 ia descriptsionn description
 ia descripttive descriptive
 ia descrptor descriptor
+ia desing design
 ia desktop Desktop
 ia despeickle despickle
 ia detais detail
@@ -502,6 +516,7 @@ ia direcory directory
 ia direcotry directory
 ia direcrory directory
 ia direcrtory directory
+ia directlye directly
 ia directoru Directory
 ia directory Directory
 ia directoryies directories
@@ -527,6 +542,7 @@ ia dodnt didn't
 ia doesnt doesn't
 ia Doesnt doesn't
 ia doi do I
+ia dom DOM
 ia dont don't
 ia donw down
 ia donwload download
@@ -562,6 +578,7 @@ ia eatch each
 ia eb be
 ia eclare declare
 ia ecleoses encloses
+ia ecmascirpt ECMAScript
 ia ecncoded encoded
 ia ecoh echo
 ia ecossystem ecosystem
@@ -582,10 +599,12 @@ ia eht the
 ia eill will
 ia electoronic electronic
 ia eleemnt element
+ia eleents elements
 ia elelment element
 ia elemenet element
 ia elemnt element
 ia elemnts elements
+ia elemtn element
 ia eliptical elliptical
 ia elmeent element
 ia elment element
@@ -594,12 +613,14 @@ ia emebeded embedded
 ia emost most
 ia emphaise emphasis
 ia emulateor emulator
+ia enalbes enables
 ia enalble enable
 ia encapsulete encapsulate
 ia ener enter
 ia enginering engineering
 ia english English
 ia enterprize enterprise
+ia entier entire
 ia entireley entirely
 ia entrie entire
 ia env ENV
@@ -611,24 +632,30 @@ ia epalace palace
 ia eps EPS
 ia equivlents equivalents
 ia eror error
+ia es6 ES6
 ia escapt escape
 ia escreen screen
 ia esential essential
 ia esitimator estimator
 ia espanssions expansions
+ia estring string
 ia etherenet Ethernet
 ia ethernet Ethernet
 ia eth the
 ia eurasia Eurasia
 ia europ Europe
 ia euser user
+ia eveent event
 ia eveery every
 ia eveerywhere everywhere
 ia evefry every
+ia evenet event
 ia evertyhong everything
 ia Everythins Everything
 ia everyting everything
+ia evetn event
 ia evicde device
+ia evnent event
 ia excelent excellent
 ia excepth except
 ia excetp except
@@ -643,6 +670,7 @@ ia expansoion expansion
 ia experieced experienced
 ia explicityly explicitly
 ia expresion expression
+ia expressino expression
 ia expresssions expressions
 ia exteremely extremely
 ia extesnsion extension
@@ -699,6 +727,7 @@ ia fotns fonts
 ia fots fonts
 ia fromat format
 ia frou from
+ia fucntino function
 ia fucntion function
 ia fullscreen Fullscreen
 ia funcamgental fundamental
@@ -706,9 +735,11 @@ ia funcrion function
 ia functino function
 ia functinos functions
 ia function Function
+ia functionnality functionality
 ia functiono function
 ia furdamentals fundamentals
 ia furnitrue furniture
+ia futere future
 ia fwiw for what it's worth
 ia gabe gave
 ia gactory factory
@@ -753,6 +784,7 @@ ia gplv2 GPLv2
 ia gplv3 GPLv3
 ia gpu GPU
 ia gradinet gradient
+ia granpda grandpa
 ia graphicl graphical
 ia greek Greek
 ia greeks Greeks
@@ -772,6 +804,7 @@ ia hakers hackers
 ia hallowoin hallowing
 ia handel Handel
 ia hans hand
+ia happend happened
 ia happends happens
 ia happesns happens
 ia hased hashed
@@ -820,6 +853,7 @@ ia htahun tahun
 ia htan than
 ia htat that
 ia hte the
+ia hthe the
 ia htis this
 ia hugo Hugo
 ia hundresds hundreds
@@ -828,6 +862,7 @@ ia hwatis whatis
 ia hwat what
 ia hwere where
 ia hwich which
+ia hwihc which
 ia hwo how
 ia Hwo How
 ia hwy why
@@ -881,10 +916,12 @@ ia incetpion inception
 ia includde include
 ia includin including
 ia incoporation incorporation
+ia indentatino indentation
 ia independdecne independence
 ia independece independence
 ia indesks indeks
 ia indexign indexing
+ia indidcte indicate
 ia indifidual individual
 ia indoeneasia Indonesia
 ia indoenesian Indonesian
@@ -924,6 +961,7 @@ ia instaead instead
 ia instagram Instagram
 ia instalation installation
 ia installaiton installation
+ia instanes instances
 ia institued instituted
 ia instlaled installed
 ia insuficient insufficient
@@ -931,6 +969,7 @@ ia intepreter interpreter
 ia interacet interact
 ia interactie interactive
 ia interactivce interactive
+ia interactivfe interactive
 ia interal internal
 ia interenet internet
 ia intergraition integration
@@ -953,6 +992,8 @@ ia irc IRC
 ia islam Islam
 ia isn in
 ia isnt isn't
+ia istener listener
+ia ist It's
 ia isze size
 ia iterm2 iTerm2
 ia itesm items
@@ -982,6 +1023,7 @@ ia josb jobs
 ia jpeg JPEG
 ia js JavaScript
 ia json JSON
+ia jsut just
 ia judaism Judaism
 ia jungel jungle
 ia kapitanya kapita nya
@@ -993,6 +1035,7 @@ ia knowledgte knowledge
 ia knwon known
 ia kong Kong
 ia kusage usage
+ia laik like
 ia langeuage language
 ia languae language
 ia languange language
@@ -1020,6 +1063,7 @@ ia liek like
 ia liete lite
 ia lightwieght lightweight
 ia lik link
+ia lincoln Lincoln
 ia linee line
 ia lineked linked
 ia ling link
@@ -1032,6 +1076,8 @@ ia linxu Linux
 ia liscences licenses
 ia lishcense license
 ia lisngint listing
+ia listerners listeners
+ia listneers listeners
 ia liteasi literasi
 ia literasin literasi
 ia litlle little
@@ -1059,7 +1105,9 @@ ia machhine machine
 ia machien machine
 ia maek make
 ia magter matter
+ia mainpulation manipulation
 ia maintaenance maintenance
+ia maintaint maintains
 ia maket make
 ia malacca Malacca
 ia malasyia Malaysia
@@ -1084,12 +1132,14 @@ ia marsk marks
 ia masyarakay masyarakat
 ia matchies matches
 ia materialzied materialized
+ia mathch match
 ia mattial martial
 ia maximumm maximum
 ia md5 MD5
 ia mdns mDNS
 ia meata meta
 ia mee Dandi Yuan Aridianto
+ia meemory memory
 ia meiji Meiji
 ia meke make
 ia memeofry memory
@@ -1123,6 +1173,7 @@ ia mor more
 ia mornign morning
 ia moses Moses
 ia moset most
+ia mosue mouse
 ia motorcyle motorcycle
 ia movbile mobile
 ia moveing moving
@@ -1143,6 +1194,7 @@ ia muslim Muslim
 ia muslims Muslims
 ia mux tmux
 ia myaning meaning
+ia na an
 ia nad and
 ia namd named
 ia namesa names
@@ -1180,6 +1232,7 @@ ia nokia Nokia
 ia nokias Nokia's
 ia nolder older
 ia nost most
+ia notatino notation
 ia notgherlands Netherlands
 ia nothign nothing
 ia nothig nothing
@@ -1243,10 +1296,12 @@ ia oone one
 ia openeing opening
 ia opengl OpenGL
 ia openssh OpenSSH
+ia operaor operator
 ia operatin operation
 ia Opern Open
 ia opernsource ope resource
 ia oper open
+ia opertor operator
 ia optinal optional
 ia optioin option
 ia optionla optional
@@ -1281,6 +1336,8 @@ ia packgae package
 ia packge package
 ia packges packages
 ia padnoc pandoc
+ia paernt parent
+ia pahases phases
 ia paht path
 ia pakcages packages
 ia paneds panes
@@ -1288,12 +1345,14 @@ ia papaer paper
 ia paragpah paragraph
 ia paragrahp paragraph
 ia paragrpah paragraph
+ia paramaeter parameter
 ia parametere parameters
 ia parametes parameters
 ia parenet parent
 ia parrent parent
 ia particualr particular
 ia passowrd password
+ia passsed passed
 ia pbuh PBUH
 ia pcakage package
 ia pci PCI
@@ -1306,6 +1365,7 @@ ia penuat penguat
 ia peower power
 ia perforamance performance
 ia performang performing
+ia performatnce performance
 ia peritn print
 ia perku perlu
 ia perl Perl
@@ -1313,6 +1373,7 @@ ia permisisons permissions
 ia permisson permission
 ia permorming performing
 ia pernickety persnickety
+ia perobagation propagation
 ia perserivn preserving
 ia perviw preview
 ia phouysical physical
@@ -1340,6 +1401,7 @@ ia possinle possible
 ia possitive positive
 ia postsripts postscripts
 ia potrayed portrayed
+ia powere powers
 ia powerfull powerful
 ia pracitices practices
 ia preciding preceding
@@ -1357,6 +1419,7 @@ ia preocedures procedures
 ia preoceedure procedure
 ia prepetrator perpetrator
 ia presentaiton presentation
+ia presing pressing
 ia presonal personal
 ia prespective prospective
 ia prevenet prevent
@@ -1422,6 +1485,7 @@ ia rdf RDF
 ia readlink read link
 ia realy really
 ia reassingde reassigned
+ia reassingned reassigned
 ia reature feature
 ia recongnize recognize
 ia recuresively recursively
@@ -1434,6 +1498,7 @@ ia redner render
 ia redundatn redundant
 ia redundent redundant
 ia reeally really
+ia reeset reset
 ia referrs refers
 ia reguar regular
 ia reidirect redirect
@@ -1472,6 +1537,7 @@ ia rithtful rightful
 ia rmeove remove
 ia rmy my
 ia roatate rotate
+ia roder order
 ia rooot root
 ia ro or
 ia rpint print
@@ -1600,6 +1666,7 @@ ia stagging staging
 ia standadr standard
 ia starbucks Starbucks
 ia starndard standard
+ia startitng starting
 ia stateement statement
 ia statemenet statement
 ia states States
@@ -1612,12 +1679,15 @@ ia statr start
 ia steatlh stealth
 ia sthe the
 ia stil still
+ia stirngs strings
 ia stonesa stones
 ia strenth strength
+ia strint string
 ia struff stuff
 ia sttus status
 ia styeles styles
 ia styelsheet stylesheet
+ia styel style
 ia suati suatu
 ia subtitutions substitutions
 ia subtitution substitution
@@ -1653,6 +1723,7 @@ ia taht that
 ia taiwan Taiwan
 ia takign taking
 ia taks taks
+ia tath that
 ia tcp TCP
 ia teahidng teaching
 ia tehe the
@@ -1694,6 +1765,7 @@ ia thext text
 ia theyre they're
 ia they They
 ia thhrough through
+ia thidr third
 ia thieeory theory
 ia thiems times
 ia thier their
@@ -1727,6 +1799,7 @@ ia todah today
 ia todo TODO
 ia togetheh together
 ia tomato 🍅
+ia tommorow tomorrow
 ia tonw town
 ia tow two
 ia tpee type
@@ -1737,6 +1810,7 @@ ia trafic traffic
 ia transtitions transitions
 ia trasdidiotnal traditional
 ia travelt travel
+ia traversla traversal
 ia trea Tera
 ia treminal terminal
 ia treu true
@@ -1774,6 +1848,7 @@ ia untik untuk
 ia unveilled unveiled
 ia unversally universally
 ia unwnted unwanted
+ia upercase uppercase
 ia uphil uphill
 ia upt up
 ia urls URLs
@@ -1797,11 +1872,16 @@ ia ususally usually
 ia utilitky utility
 ia utilitye utility
 ia utitility utility
+ia vaibrale variable
+ia vairable variable
+ia valiues values
 ia valu vale
 ia variabel variable
+ia varianle variable
 ia variaous various
 ia varibales variables
 ia varius various
+ia varuable variable
 ia veing being
 ia veiw view
 ia verifid verified
@@ -1828,6 +1908,7 @@ ia vitual virtula
 ia vlaues values
 ia vlaue value
 ia vlaus values
+ia vlexible flexible
 ia voacab vocab
 ia vscode VSCode
 ia vuitlin builtin
@@ -1846,6 +1927,7 @@ ia wel well
 ia wepage webpage
 ia were we're
 ia wetern western
+ia wether whteher
 ia whar what
 ia whats what's
 ia what What
@@ -1853,6 +1935,7 @@ ia wha what
 ia whay why
 ia whch which
 ia whdy why
+ia whenevder whenever
 ia whenn when
 ia when When
 ia wher where
@@ -1913,41 +1996,11 @@ ia youu you
 ia you You
 ia yu you
 ia zealand Zealand
-ia vlexible flexible
-ia stirngs strings
-ia na an
-ia strint string
-ia expressino expression
-ia ecmascirpt ECMAScript
-ia indidcte indicate
-ia startitng starting
-ia varuable variable
-ia enalbes enables
-ia vairable variable
-ia alwyas always
-ia upercase uppercase
-ia reassingned reassigned
-ia notatino notation
-ia costatnt constant
-ia fucntino function
-ia varianle variable
-ia fileter filter
-ia wether whteher
-ia passsed passed
-ia whenevder whenever
-ia instanes instances
-ia laik like
-ia argumenet argument
-ia operaor operator
-ia aray array
-ia jsut just
-ia tommorow tomorrow
-ia opertor operator
-ia eleents elements
-ia estring string
-ia vaibrale variable
-ia es6 ES6
-ia cereate create
-ia constractor constructor
-ia cr3eate create
+ia albert Albert
+ia einstein Einstein
+ia aristoteles Aristotle's
+ia benjamin Benjamin
+ia franklin Franklin
+ia confucius Confucius
+ia steve Steve
 ia zola Zola

@@ -3,6 +3,7 @@ au filetype css ia <buffer> adu animation-duration:;<left>
 au filetype css ia <buffer> kfr @keyframes
 au filetype css ia <buffer> ani animation:;<left>
 au filetype css ia <buffer> ora orange
+au filetype css ia <buffer> ff #fff
 au filetype css ia <buffer> forw forwards
 au filetype css ia <buffer> tor transform-origin:;<left>
 au filetype css ia <buffer> aic animation-iteration-count:;<left>
@@ -222,6 +223,7 @@ au filetype css ia <buffer> wsm whitesmoke
 au filetype css ia <buffer> wspa white-space:;<left>
 au filetype css ia <buffer> wsp word-spacing:;<left>
 au filetype css ia <buffer> zin z-index:;<left>
+au filetype css ia <buffer> poi pointer
 
 au filetype css ia <buffer> robo @import url('https://fonts.googleapis.com/css2?family=roboto&display=swap');
 
