@@ -66,6 +66,7 @@ case "$TERM" in
 esac
 
 alias ahk='cd ~/.local/bin/scripts && explorer.exe main.ahk'
+alias gd="git diff"
 alias lss='ls'
 alias all='~/.local/bin/scripts/all'
 alias am='alsamixer'
@@ -174,6 +175,7 @@ alias gpl='git pull'
 alias gr="entr bash -c 'clear; go run /tmp/co.go' <<< /tmp/co.go"
 alias grep='grep --color --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}'
 alias greph='grep -Hnri'
+alias grpeh='grep -Hnri'
 alias grepl='grep -lnri'
 alias g='rgrep'
 alias gs='git status'
@@ -433,17 +435,28 @@ bind -r '\C-\Shift-u'
 bind -m vi-command 'Control-l: clear-screen'
 bind -m vi-insert 'Control-l: clear-screen'
 
-
-
 # disable c-s in TTY both interactive and non
 if [[ -t 0 && $- = *i* ]]
 then
     stty -ixon
 fi
 
-
-
-
 # Created by `pipx` on 2024-02-18 20:36:04
 export PATH="$PATH:/home/danzor/.local/bin"
 source ~/.shortcuts
+
+eval "$(fzf --bash)"
+
+export FZF_DEFAULT_COMMAND='fd --hidden --strip-cwd-prefix --exclude .git'
+export FZF_CTRL_T_COMMAND='$FZF_DEFAULT_COMMAND'
+export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git"
+
+_fzf_compgen_path() {
+    fd --hidden --exclude .git . "1"
+}
+
+_fzf_compgen_dir() {
+    fd --type=d --hidden --exclude .git . "$1"
+}
+
+source ~/.programs/fzf-git.sh/fzf-git.sh

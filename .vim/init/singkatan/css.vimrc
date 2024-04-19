@@ -1,5 +1,4 @@
-au filetype css ia <buffer> abs absolute
-au filetype css ia <buffer> adu animation-duration:;<left>
+au filetype css ia <buffer> abs absolute au filetype css ia <buffer> adu animation-duration:;<left>
 au filetype css ia <buffer> kfr @keyframes
 au filetype css ia <buffer> ani animation:;<left>
 au filetype css ia <buffer> ora orange
@@ -70,6 +69,7 @@ au filetype css ia <buffer> fdi flex-direction:;<left>
 au filetype css ia <buffer> fen flex-end
 au filetype css ia <buffer> ffa font-family:;<left>
 au filetype css ia <buffer> ffl flex-flow:;<left>
+au filetype css ia <buffer> flex flex:;<left>
 au filetype css ia <buffer> fgr flex-grow:;<left>
 au filetype css ia <buffer> fil filter:;<left>
 au filetype css ia <buffer> fir firebrick
@@ -101,7 +101,7 @@ au filetype css ia <buffer> gta gtid-template-areas:;<left>
 au filetype css ia <buffer> gtc grid-template-columns:;<left>
 au filetype css ia <buffer> hei height:;<left>
 au filetype css ia <buffer> hel helvatica
-au filetype css ia <buffer> hov a:hover
+au filetype css ia <buffer> hov hover
 au filetype css ia <buffer> hro hue-rotate()<left>
 au filetype css ia <buffer> hsla hsla()<left>
 au filetype css ia <buffer> ibl inline-block
@@ -144,7 +144,7 @@ au filetype css ia <buffer> nc :nth-child()<left>
 au filetype css ia <buffer> now nowrap
 au filetype css ia <buffer> nre no-repeat
 au filetype css ia <buffer> obl oblique
-au filetype css ia <buffer> ofl over-flow:;<left>
+au filetype css ia <buffer> ofl overflow:;<left>
 au filetype css ia <buffer> oli outline:;<left>
 au filetype css ia <buffer> oof outline-offset:;<left>
 au filetype css ia <buffer> opa opacity:;<left>
@@ -197,6 +197,7 @@ au filetype css ia <buffer> tah Tahoma
 au filetype css ia <buffer> tal text-align:;<left>
 au filetype css ia <buffer> tdel transition-delay:;<left>
 au filetype css ia <buffer> tde text-decoration:;<left>
+au filetype css ia <buffer> ton transition:;<left>
 au filetype css ia <buffer> tdu transition-duration:;<left>
 au filetype css ia <buffer> tin text-indent:;<left>
 au filetype css ia <buffer> top top:;<left>
@@ -204,6 +205,7 @@ au filetype css ia <buffer> tpr transition-property:;<left>
 au filetype css ia <buffer> trans transition:;<left>
 au filetype css ia <buffer> tran translate()<left>
 au filetype css ia <buffer> tra transform:;<left>
+au filetype css ia <buffer> tnt transparent
 au filetype css ia <buffer> tsh text-shadow:;<left>
 au filetype css ia <buffer> ttf transition-timing-function:;<left>
 au filetype css ia <buffer> ttr text-transform:;<left>
@@ -224,6 +226,9 @@ au filetype css ia <buffer> wspa white-space:;<left>
 au filetype css ia <buffer> wsp word-spacing:;<left>
 au filetype css ia <buffer> zin z-index:;<left>
 au filetype css ia <buffer> poi pointer
+au filetype css ia <buffer> 00 #000
+au filetype css ia <buffer> pto padding-top:;<left>
+au filetype css ia <buffer> cov cover
 
 au filetype css ia <buffer> robo @import url('https://fonts.googleapis.com/css2?family=roboto&display=swap');
 

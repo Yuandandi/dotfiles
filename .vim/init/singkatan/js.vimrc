@@ -3,12 +3,13 @@ autocmd FileType javascript nn <buffer> s cit
 autocmd FileType javascript nn <leader>2 _v$y:e ~/.config/nvim/lua/dandi/abbrev/javascript.lua<CR>}}Oautocmd FileType javascript ia <buffer> <Esc>phi<Space>
 autocmd FileType javascript nn gca A //<space>
 autocmd FileType javascript nn o o;<left>
+autocmd FileType javascript ino zJ <space>===<space>
 
 autocmd filetype javascript ia <buffer> ad add('')<left><left>
 autocmd filetype javascript ia <buffer> pde preventDefault()
 autocmd filetype javascript ia <buffer> spr stopPropagation()
 autocmd filetype javascript ia <buffer> ee e
-autocmd filetype javascript ia <buffer> ael addEventListener()<left>
+autocmd filetype javascript ia <buffer> ael addEventListener('')<left><left>
 autocmd filetype javascript ia <buffer> tar target
 autocmd filetype javascript ia <buffer> ape append()<left>
 autocmd filetype javascript ia <buffer> cad classList.add('')<left><left>
@@ -21,7 +22,7 @@ autocmd filetype javascript ia <buffer> cno childNodes
 autocmd filetype javascript ia <buffer> con constructor()<left>
 autocmd filetype javascript ia <buffer> cont contains('')<left><left>
 autocmd filetype javascript ia <buffer> cre classList.remove('')<left><left>
-autocmd filetype javascript ia <buffer> dbcn document.getElementsByClassName('')<left><left>
+autocmd filetype javascript ia <buffer> dbc document.getElementsByClassName('')<left><left>
 autocmd filetype javascript ia <buffer> dbi document.getElementById('')<left><left>
 autocmd filetype javascript ia <buffer> dce document.createElement('')<left><left>
 autocmd filetype javascript ia <buffer> del delete;<left>
@@ -38,10 +39,10 @@ autocmd filetype javascript ia <buffer> gat getAttribute('')<left><left>
 autocmd filetype javascript ia <buffer> hop .hasOwnProperty()<left>
 autocmd filetype javascript ia <buffer> ifel if() {<cr>} else if () {<cr>} else {<cr>}<esc>{jjf(i
 autocmd filetype javascript ia <buffer> iff if () {<cr>}<esc>?(<cr>
-autocmd filetype javascript ia <buffer> iht innerHTML
+autocmd filetype javascript ia <buffer> iht innerHTML =
 autocmd filetype javascript ia <buffer> i i
 autocmd filetype javascript ia <buffer> imp import
-autocmd filetype javascript ia <buffer> ite innerText
+autocmd filetype javascript ia <buffer> ite innerText =
 autocmd filetype javascript ia <buffer> jpa JSON.parse()<left>
 autocmd filetype javascript ia <buffer> jst JSON.stringify()<left>
 autocmd filetype javascript ia <buffer> lec lastElementChild
@@ -77,6 +78,13 @@ autocmd filetype javascript ia <buffer> whi while() {<cr>}<esc>kf(a
 autocmd FileType javascript ia <buffer> win window
 autocmd FileType javascript ia <buffer> mat matches('')<left><left>
 autocmd FileType javascript ia <buffer> ach appendChild()<left>
+autocmd FileType javascript ia <buffer> sdi style.display
+autocmd FileType javascript ia <buffer> tog toggle('')<left><left>
+autocmd FileType javascript ia <buffer> sin setInterval()<left>
+autocmd FileType javascript ia <buffer> tst toString()<left>
+autocmd FileType javascript ia <buffer> cin clearInterval()<left>
+autocmd FileType javascript ia <buffer> std style.textDecoration = ""<left>
+autocmd FileType javascript ia <buffer> lth line-through
 
 augroup js_settings
 autocmd!

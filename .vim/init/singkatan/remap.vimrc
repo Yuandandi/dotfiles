@@ -238,3 +238,5 @@ nn d> dt>
 
 nn 9 :bn<cr>:bn<cr>
 nn c; ct;
+
+nn gq q
