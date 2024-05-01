@@ -11,7 +11,7 @@ autocmd FileType html setlocal shiftwidth=2
 \| nn <buffer> gca A<Space><!-- --><left><left><left>
 \| nn <buffer> o :w<cr>o
 
-autocmd filetype css nn o :w<cr>o
+autocmd filetype css nn o :w<cr>o;
 
 autocmd FileType html set tw=120
 
@@ -31,57 +31,57 @@ autocmd filetype html,htmldjango ia <buffer> !!! <!doctype html><cr><html lang="
 \| ia <buffer> bdi <bdi></bdi><esc>cit
 \| ia <buffer> bdo <bdo dir=""></bdo><C-o>?"><CR>
 
-            autocmd FileType html,htmldjango ia <buffer> bi <big></big><Esc>cit
-            \| ia <buffer> blo <blockquote cite=""></blockquote><C-o>?"><CR>
-            \| ia <buffer> bod <body><CR></body><C-o>O
-            \| ia <buffer> br <br>
-            \| ia <buffer> butto <button type=""></button><C-o>?"><CR>
-            \| ia <buffer> canv <canvas id=""></canvas><C-o>?"><CR>
-            \| ia <buffer> cite <cite></cite><Esc>cit
-            \| ia <buffer> cod <code></code><Esc>cit
-            \| ia <buffer> col <col>
-            \| ia <buffer> cpr Copyright (c) 2023 Dandi. All Rights Reserved.
-            \| ia <buffer> dat <datalist><CR></datalist><C-o>O
-            \| ia <buffer> datal <datalist><CR></datalist><esc>O
-            \| ia <buffer> dd <dd></dd><Esc>cit
-            \| ia <buffer> det <details><CR></details><C-o>O
-            \| ia <buffer> dfn <dfn></dfn><Esc>cit
-            \| ia <buffer> dial <dialog><CR></dialog><c-o>O
-            \| ia <buffer> div <div></div><Esc>cit
-            \| ia <buffer> divc <div class=""><CR></div><C-o>?"><CR>
-            \| ia <buffer> divci <div class="" id=""></div><C-o>?" id<CR>
-            \| ia <buffer> divi <div id=""></div><C-o>?"<CR>
-            \| ia <buffer> doc <!DOCTYPE>
-            \| ia <buffer> dt <dt></dt><Esc>cit
-            \| ia <buffer> em <em></em><Esc>cit
-            \| ia <buffer> emb <embed src=""></embed><C-o>?"><CR>
-            \| ia <buffer> fie <fieldset><CR></fieldset><C-o>O
-            \| ia <buffer> fig <figure><CR></figure><Esc>cit
-            \| ia <buffer> figc <figcaption></figcaption><Esc>cit
-            \| ia <buffer> cap <caption></caption><esc>cit
-            \| ia <buffer> foot <footer><CR></footer><Esc>cit
-            \| ia <buffer> formm <form></form><Esc>cit
-            \| ia <buffer> h1 <h1></h1><Esc>cit
-            \| ia <buffer> h2 <h2></h2><Esc>cit
-            \| ia <buffer> h3 <h3></h3><Esc>cit
-            \| ia <buffer> h4 <h4></h4><Esc>cit
-            \| ia <buffer> h5 <h5></h5><Esc>cit
-            \| ia <buffer> h6 <h6></h6><Esc>cit
-            \| ia <buffer> hea <head></head><Esc>cit
-            \| ia <buffer> hgr <hgroup><CR></hgroup><C-o>O
-            \| ia <buffer> hr <hr>
-            \| ia <buffer> htm <html><CR></html><C-o>O
-            \| ia <buffer> htmll <html><CR></html><C-o>O
-            \| ia <buffer> ifr <iframe src=""></iframe><C-o>?"<CR>
-            \| ia <buffer> imgg <img src="" alt=""><C-o>?" al<CR>
-            \| ia <buffer> inp <input type="" name="" value=""><C-o>?" nam<CR>
-            \| ia <buffer> kbd <kbd></kbd><esc>cit
-            \| ia <buffer> keyg <keygen name="">
-            \| ia <buffer> lab <label for=""></label><C-o>?"<CR>
-            \| ia <buffer> lege <legend></legend><Esc>cit
-            \| ia <buffer> li <li></li><Esc>cit
-            \| ia <buffer> lin <link rel="" href=""><C-o>?" hre<cr>
-            \| ia <buffer> met <meta name="" content=""><esc>0ci"
+autocmd FileType html,htmldjango ia <buffer> bi <big></big><Esc>cit
+\| ia <buffer> blo <blockquote cite=""></blockquote><C-o>?"><CR>
+\| ia <buffer> bod <body><CR></body><C-o>O
+\| ia <buffer> br <br>
+\| ia <buffer> butto <button></button><esc>cit
+\| ia <buffer> canv <canvas id=""></canvas><esc>F"i
+\| ia <buffer> cite <cite></cite><Esc>cit
+\| ia <buffer> cod <code></code><Esc>cit
+\| ia <buffer> col <col>
+\| ia <buffer> cpr Copyright (c) 2023 Dandi. All Rights Reserved.
+\| ia <buffer> dat <datalist><CR></datalist><C-o>O
+\| ia <buffer> datal <datalist><CR></datalist><esc>O
+\| ia <buffer> dd <dd></dd><Esc>cit
+\| ia <buffer> det <details><CR></details><C-o>O
+\| ia <buffer> dfn <dfn></dfn><Esc>cit
+\| ia <buffer> dial <dialog><CR></dialog><c-o>O
+\| ia <buffer> div <div></div><Esc>cit
+\| ia <buffer> divc <div class=""><CR></div><C-o>?"><CR>
+\| ia <buffer> divci <div class="" id=""></div><C-o>?" id<CR>
+\| ia <buffer> divi <div id=""></div><C-o>?"<CR>
+\| ia <buffer> doc <!DOCTYPE>
+\| ia <buffer> dt <dt></dt><Esc>cit
+\| ia <buffer> em <em></em><Esc>cit
+\| ia <buffer> emb <embed src=""></embed><C-o>?"><CR>
+\| ia <buffer> fie <fieldset><CR></fieldset><C-o>O
+\| ia <buffer> fig <figure><CR></figure><Esc>cit
+\| ia <buffer> figc <figcaption></figcaption><Esc>cit
+\| ia <buffer> cap <caption></caption><esc>cit
+\| ia <buffer> foot <footer><CR></footer><Esc>cit
+\| ia <buffer> formm <form></form><Esc>cit
+\| ia <buffer> h1 <h1></h1><Esc>cit
+\| ia <buffer> h2 <h2></h2><Esc>cit
+\| ia <buffer> h3 <h3></h3><Esc>cit
+\| ia <buffer> h4 <h4></h4><Esc>cit
+\| ia <buffer> h5 <h5></h5><Esc>cit
+\| ia <buffer> h6 <h6></h6><Esc>cit
+\| ia <buffer> hea <head></head><Esc>cit
+\| ia <buffer> hgr <hgroup><CR></hgroup><C-o>O
+\| ia <buffer> hr <hr>
+\| ia <buffer> htm <html><CR></html><C-o>O
+\| ia <buffer> htmll <html><CR></html><C-o>O
+\| ia <buffer> ifr <iframe src=""></iframe><C-o>?"<CR>
+\| ia <buffer> imgg <img src="" alt=""><C-o>?" al<CR>
+\| ia <buffer> inp <input type="" name="" value=""><C-o>?" nam<CR>
+\| ia <buffer> kbd <kbd></kbd><esc>cit
+\| ia <buffer> keyg <keygen name="">
+\| ia <buffer> lab <label for=""></label><C-o>?"<CR>
+\| ia <buffer> lege <legend></legend><Esc>cit
+\| ia <buffer> li <li></li><Esc>cit
+\| ia <buffer> lin <link rel="" href=""><C-o>?" hre<cr>
+\| ia <buffer> met <meta name="" content=""><esc>0ci"
 
 autocmd FileType html,vimwiki,htmldjango ia <buffer> lorp Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.
 autocmd FileType html,vimwiki,htmldjango ia <buffer> lors Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
@@ -143,7 +143,7 @@ autocmd FileType html,htmldjango ia <buffer> mai <main><CR></main><Esc>cit
             \| ia <buffer> vid <video width="" height="" controls></video><Esc>cithei<CR>
             \| ia <buffer> var <var></var><Esc>cit
 
-autocmd filetype html,htmldjango ia <buffer> cha charset=""<left>
+            autocmd filetype html,htmldjango ia <buffer> cha charset=""<left>
             \| ia <buffer> rev reversed
             \| ia <buffer> maxl maxlength=""<left>
             \| ia <buffer> cit cite=""<left>
@@ -168,6 +168,7 @@ autocmd filetype html,htmldjango ia <buffer> cha charset=""<left>
             \| ia <buffer> labe label=""<left>
             \| ia <buffer> lang lang=""<left>
             \| ia <buffer> maxx max=""<left>
+            \| ia <buffer> min min=""<left>
             \| ia <buffer> nam name=""<left>
             \| ia <buffer> nam name=""<left>
             \| ia <buffer> rel rel=""<left>
@@ -190,6 +191,7 @@ autocmd filetype html,htmldjango ia <buffer> cha charset=""<left>
             \| ia <buffer> ofs offscreen
             \| ia <buffer> che checkbox
             \| ia <buffer> jss js
+            \| ia <buffer> navv nav
             \| ia <buffer> pp p
             \| ia <buffer> quo &#10077;&#10078;<esc>F;a
             \| ia <buffer> hypen &#8221; &#8212;

@@ -3,7 +3,12 @@ autocmd FileType javascript nn <buffer> s cit
 autocmd FileType javascript nn <leader>2 _v$y:e ~/.config/nvim/lua/dandi/abbrev/javascript.lua<CR>}}Oautocmd FileType javascript ia <buffer> <Esc>phi<Space>
 autocmd FileType javascript nn gca A //<space>
 autocmd FileType javascript nn o o;<left>
+autocmd FileType javascript nn 0 0:w<cr>
 autocmd FileType javascript ino zJ <space>===<space>
+autocmd FileType javascript,css nn <c-a> <c-a>:w<cr>
+autocmd FileType javascript,css vn <c-a> <c-a>:w<cr>gv
+autocmd FileType javascript,css nn <c-x> <c-x>:w<cr>
+autocmd FileType javascript,css vn <c-x> <c-x>:w<cr>gv
 
 autocmd filetype javascript ia <buffer> ad add('')<left><left>
 autocmd filetype javascript ia <buffer> pde preventDefault()
@@ -22,6 +27,7 @@ autocmd filetype javascript ia <buffer> cno childNodes
 autocmd filetype javascript ia <buffer> con constructor()<left>
 autocmd filetype javascript ia <buffer> cont contains('')<left><left>
 autocmd filetype javascript ia <buffer> cre classList.remove('')<left><left>
+autocmd filetype javascript ia <buffer> crec clearRect()<left>
 autocmd filetype javascript ia <buffer> dbc document.getElementsByClassName('')<left><left>
 autocmd filetype javascript ia <buffer> dbi document.getElementById('')<left><left>
 autocmd filetype javascript ia <buffer> dce document.createElement('')<left><left>
@@ -38,7 +44,7 @@ autocmd filetype javascript ia <buffer> fo for () {<cr>}<esc>kf(a
 autocmd filetype javascript ia <buffer> gat getAttribute('')<left><left>
 autocmd filetype javascript ia <buffer> hop .hasOwnProperty()<left>
 autocmd filetype javascript ia <buffer> ifel if() {<cr>} else if () {<cr>} else {<cr>}<esc>{jjf(i
-autocmd filetype javascript ia <buffer> iff if () {<cr>}<esc>?(<cr>
+autocmd filetype javascript ia <buffer> iff if () {<cr>}<esc>?(<cr>a
 autocmd filetype javascript ia <buffer> iht innerHTML =
 autocmd filetype javascript ia <buffer> i i
 autocmd filetype javascript ia <buffer> imp import
@@ -69,7 +75,7 @@ autocmd filetype javascript ia <buffer> sat setAttribute()<left>
 autocmd filetype javascript ia <buffer> sbc style.backgroundColor
 autocmd filetype javascript ia <buffer> shI .shift()<left>
 autocmd filetype javascript ia <buffer> swi switch() {<cr>}<esc>k0ci(
-autocmd filetype javascript ia <buffer> tco textContent
+autocmd filetype javascript ia <buffer> tco textContent =
 autocmd filetype javascript ia <buffer> tuc toUpperCase()
 autocmd filetype javascript ia <buffer> und undefined
 autocmd filetype javascript ia <buffer> ust "use strict"
@@ -85,6 +91,19 @@ autocmd FileType javascript ia <buffer> tst toString()<left>
 autocmd FileType javascript ia <buffer> cin clearInterval()<left>
 autocmd FileType javascript ia <buffer> std style.textDecoration = ""<left>
 autocmd FileType javascript ia <buffer> lth line-through
+autocmd FileType javascript ia <buffer> gco getContext('')<left><left>
+autocmd FileType javascript ia <buffer> ima Image()<left>
+autocmd FileType javascript ia <buffer> fre fillRect()<left>
+autocmd FileType javascript ia <buffer> raf requestAnimationFrame()<left>
+autocmd FileType javascript ia <buffer> dim drawImage()<left>
+autocmd FileType javascript ia <buffer> fea forEach()<left>
+autocmd FileType javascript ia <buffer> upd udpate()<left>
+autocmd FileType javascript ia <buffer> val value
+autocmd FileType javascript ia <buffer> mfr Math.floor(Math.random())<left>
+autocmd FileType javascript ia <buffer> rgba rgba()<left>
+autocmd FileType javascript ia <buffer> cta currentTarget
+autocmd FileType javascript ia <buffer> sco style.color =
+autocmd FileType javascript ia <buffer> dcl DOMContentLoaded
 
 augroup js_settings
 autocmd!

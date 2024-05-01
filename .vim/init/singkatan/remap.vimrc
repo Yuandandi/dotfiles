@@ -83,6 +83,10 @@ nn cJ /'<CR>ci'
 nn dJ /'<CR>ci'
 nn vJ /'<CR>vi'
 
+" faster yank
+nn yj /"<cr>yi"
+nn yJ /'<cr>yi'
+
 " Faster brackets
 nn cl /(<CR>ci(
 nn dl /(<CR>di(
@@ -155,8 +159,8 @@ vn ; :
 " Find and replace word under the cursor case insensitive or confirmation
 nn <leader>si :%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>
 vn <leader>si :%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>
-nn <leader>sc :%s/\<<C-r><C-w>\>/<C-r><C-w>/gc<Left><Left><Left>
-vn <leader>sc :%s/\<<C-r><C-w>\>/<C-r><C-w>/gc<Left><Left><Left>
+nn <leader>sc :%s/\<<C-r><C-w>\>/<C-r><C-w>/gc<Left><Left><Left><c-w>
+vn <leader>sc :%s/\<<C-r><C-w>\>/<C-r><C-w>/gc<Left><Left><Left><c-w>
 
 " Faster comment paragraph
 nn gcp gcip
@@ -190,8 +194,11 @@ ino zz <esc>zza
 ino z; ""<left>
 ino z' ''<left>
 ino zm <space>=><space>
+ino zM <space><=<space>
 ino zn <space>&<space>
 ino zN <space>&&<space>
+ino z= <space>+=<space>
+ino z- <space>-=<space>
 
 nn <F4> "=strftime("%c")<CR>P
 ino <F4> <C-R>=strftime("%c")<CR>
@@ -212,15 +219,17 @@ cno <m-l> <right>
 cno <M-h> <left>
 cno <M-i> <Home><right>
 
-nn <leader>sd :s/'/"/g<CR>
-nn <leader>ds :s/"/'/g<CR>
-nn <leader>d0 :s/"//g<CR>
-nn <leader>s0 :s/'//g<CR>
+nn gosd :s/'/"/g<CR>
+nn gods :s/"/'/g<CR>
+nn god0 :s/"//g<CR>
+nn gos0 :s/'//g<CR>
 
-nn <leader>ilk :s/(/("<CR>:s/)/")<CR>:s/, /", "/g<CR>
-nn <leader>ikK :s/{/{"<CR>:s/}/"}<CR>:s/, /", "/g<CR>
-nn <leader>ihk :s/\[/\["<CR>:s/]/"]<CR>:s/, /", "/g<CR>
-nn <leader>ks :s/, / + " " + /g
+nn golk :s/(/("<CR>:s/)/")<CR>:s/, /", "/g<CR>
+nn gokk :s/{/{"<CR>:s/}/"}<CR>:s/, /", "/g<CR>
+nn gohk :s/\[/\["<CR>:s/]/"]<CR>:s/, /", "/g<CR>
+nn goks :s/, / + " " + /g
+nn gojs :s/, /: "<esc>A",<esc>
+nn goJs vi{:s/, /: "<cr>gv:norm A",<cr>
 nn gop I"<esc>:s/,/":<cr>A,<esc>
 nn god I"<esc>A"<esc>:s/, /": "<cr>A,<esc>
 
@@ -235,6 +244,7 @@ nn <F5> :UndotreeToggle<CR>
 nn !% :%!
 
 nn d> dt>
+nn c> ct>
 
 nn 9 :bn<cr>:bn<cr>
 nn c; ct;
