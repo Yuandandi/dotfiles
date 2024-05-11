@@ -1,3 +1,2 @@
 #!/bin/bash
 wget "https://randomuser.me/api/?results=$1&format=csv" -qO $2.csv
-

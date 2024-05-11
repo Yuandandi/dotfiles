@@ -29,7 +29,6 @@ ia pitza 🍪
 ia smgka 🍉
 ia spda 🚲
 ia mic 🎤
-ia gtr 🎸
 ia bga 🍀
 ia plgi 🌈
 ia blon 🎈

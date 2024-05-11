@@ -104,6 +104,10 @@ autocmd FileType javascript ia <buffer> rgba rgba()<left>
 autocmd FileType javascript ia <buffer> cta currentTarget
 autocmd FileType javascript ia <buffer> sco style.color =
 autocmd FileType javascript ia <buffer> dcl DOMContentLoaded
+autocmd FileType javascript ia <buffer> qs querySelector("")<left><left>
+autocmd FileType javascript ia <buffer> qsa querySelectorAll("")<left><left>
+autocmd FileType javascript ia <buffer> map map()<left>
+autocmd FileType javascript ia <buffer> joi join("")<left><left>
 
 augroup js_settings
 autocmd!

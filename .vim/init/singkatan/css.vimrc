@@ -110,7 +110,7 @@ au filetype css ia <buffer> hsla hsla()<left>
 au filetype css ia <buffer> ibl inline-block
 au filetype css ia <buffer> imp !important
 au filetype css ia <buffer> inh inherit
-au filetype css ia <buffer> is :is()<left>
+au filetype css ia <buffer> iss :is()<left>
 au filetype css ia <buffer> ita italic
 au filetype css ia <buffer> jco justify-content:
 au filetype css ia <buffer> jus justify
@@ -141,6 +141,7 @@ au filetype css ia <buffer> min margin-inline:
 au filetype css ia <buffer> minn min()<left>
 au filetype css ia <buffer> mon monospace
 au filetype css ia <buffer> mri margin-right:
+au filetype css ia <buffer> mle margin-left:
 au filetype css ia <buffer> mto margin-top:
 au filetype css ia <buffer> mwid min-width:
 au filetype css ia <buffer> mwi max-width:
@@ -160,7 +161,7 @@ au filetype css ia <buffer> ove overline
 au filetype css ia <buffer> pad padding:
 au filetype css ia <buffer> pap papayawhip
 au filetype css ia <buffer> pco place-content:
-au filetype css ia <buffer> pit place-item:
+au filetype css ia <buffer> pit place-items:
 au filetype css ia <buffer> ple padding-left:
 au filetype css ia <buffer> png png
 au filetype css ia <buffer> poi pointer
@@ -229,13 +230,23 @@ au filetype css ia <buffer> uro upper-roman
 au filetype css ia <buffer> var var(--)<left>
 au filetype css ia <buffer> ver Verdana
 au filetype css ia <buffer> vis a:visited
+au filetype css ia <buffer> vty visibility:
 au filetype css ia <buffer> wid width:;<left>
 au filetype css ia <buffer> wsm whitesmoke
 au filetype css ia <buffer> wspa white-space:
 au filetype css ia <buffer> wsp word-spacing:
 au filetype css ia <buffer> zin z-index:
+au filetype css ia <buffer> hid hidden
+au filetype css ia <buffer> tit /*<cr> =============== <cr> ===============<cr> */<esc>kO
+au filetype css ia <buffer> scr screen
+au filetype css ia <buffer> bcol border-color:
+au filetype css ia <buffer> blo block
+au filetype css ia <buffer> bou bounce
+au filetype css ia <buffer> gtr grid-template-rows:
+au filetype css ia <buffer> jse justify-self:
 
 au filetype css nn <buffer> o :w<cr>o;<left>
+au filetype css nn <buffer> 0 :w<cr>0
 au filetype css ia <buffer> robo @import url('https://fonts.googleapis.com/css2?family=roboto&display=swap');
 
 

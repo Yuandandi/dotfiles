@@ -34,6 +34,7 @@ ia acess access
 ia acess acess
 ia acpi ACPI
 ia acrual actual
+ia actoualy actually
 ia actualy actually
 ia adadnya adanya
 ia adala adalah
@@ -63,6 +64,8 @@ ia ai I
 ia ake take
 ia aksk ask
 ia akunbarudanzor unburdens
+ia albert Albert
+ia alfabet alphabet
 ia aliasses aliases
 ia allah Allah
 ia allah Allah SWT
@@ -84,6 +87,7 @@ ia amattresses mattresses
 ia amenalbe amenable
 ia america America
 ia amil mail
+ia amke make
 ia amon among
 ia amreicans Americans
 ia amtrix matrix
@@ -93,11 +97,14 @@ ia android Android
 ia ane and
 ia anhy any
 ia animamte animate
+ia animatino animation
+ia annimation animation
 ia anoteher another
 ia anothere another
 ia anoying annoying
 ia ansd and
 ia ansi ANSI
+ia answere answer
 ia answre answer
 ia antio nation
 ia anythign anything
@@ -134,6 +141,7 @@ ia argumant argument
 ia argumenet argument
 ia argumetn argument
 ia argumets arguments
+ia aristoteles Aristotle's
 ia aristotles Aristotle's
 ia aroud around
 ia aroung around
@@ -173,9 +181,11 @@ ia avodi avoid
 ia avter after
 ia awater water
 ia ayre are
+ia babby baby
 ia bacanya bapanya
 ia bacany bacanya
 ia backgorund background
+ia backgourund background
 ia backgroudn background
 ia backpsace backspace
 ia backto back to
@@ -203,12 +213,14 @@ ia beiing being
 ia beleiefes belief's
 ia belive believe
 ia benefeits benefits
+ia benjamin Benjamin
 ia beradasarkan berdasarkan
 ia berkutat berkarat
 ia berperngaruh berpengaruh
 ia beter better
 ia betwee between
 ia betweeen between
+ia betweein between
 ia betwoeen between
 ia beyon beyond
 ia bi be
@@ -218,9 +230,11 @@ ia binayr binary
 ia blaack black
 ia bleow below
 ia blinnk blink
+ia bluepritn blueprint
 ia bluetooth Bluetooth
 ia bnefits benefits
 ia bnen been
+ia boject object
 ia bolld bold
 ia boolean Boolean
 ia borneo Borneo
@@ -244,6 +258,8 @@ ia builtins builtin
 ia buitl built
 ia buitlin builtin
 ia bulding building
+ia buton button
+ia butotn button
 ia buttton button
 ia bweteen between
 ia caceh cache
@@ -275,6 +291,7 @@ ia charachter character
 ia charactermode character mode
 ia characther character
 ia chareacter character
+ia charteuse chanteuse
 ia chatch catch
 ia chatgpt ChatGPT
 ia cheebkbond cheekbone
@@ -295,6 +312,8 @@ ia citty city
 ia civiliation civilization
 ia ckey key
 ia classcified classified
+ia classe classes
+ia classs class
 ia cleaniess cleanness
 ia cleansliness cleanliness
 ia clebber clobber
@@ -313,6 +332,7 @@ ia cofnlict conflict
 ia cojunt count
 ia collectioin collection
 ia collectiono collection
+ia coloor color
 ia columnd column
 ia colunm column
 ia comamnd command
@@ -364,6 +384,7 @@ ia confilict conflict
 ia conflic conflict
 ia conformace conformance
 ia conformant conform ant
+ia confucius Confucius
 ia confversion conversion
 ia congainers containers
 ia conifig config
@@ -382,12 +403,16 @@ ia constandt constandt
 ia constandt constant
 ia constartints constraints
 ia constatnt constant
+ia const Const
 ia constractor constructor
+ia construcotr constructor
+ia constructorr constructor
 ia consumates consummates
 ia containder container
 ia containerfs containers
 ia containner container
 ia containts contains
+ia conteent content
 ia conteint content
 ia contemporrary contemporary
 ia conten content
@@ -405,6 +430,7 @@ ia cooding coding
 ia cookeis cookies
 ia coomand command
 ia cooose choose
+ia coordintae coordinate
 ia copmuter computer
 ia corresoponding corresponding
 ia costatnt constant
@@ -419,11 +445,13 @@ ia coyp copy
 ia cpacity capacity
 ia cpu CPU
 ia cr3eate create
+ia craete create
 ia creaet create
 ia Crearte Create
 ia creat create
 ia createing creating
 ia createor creator
+ia creatiion creation
 ia creationof creation of
 ia crestes creates
 ia crete create
@@ -436,6 +464,7 @@ ia culter culture
 ia cummand command
 ia curen current
 ia curent current
+ia current current
 ia currenty currently
 ia currnet current
 ia curucial crucial
@@ -501,6 +530,7 @@ ia differenche difference
 ia differencitates differentiates
 ia differents different
 ia differnt different
+ia differten different
 ia difficutl difficult
 ia diguui digurui
 ia dikalim diklaim
@@ -542,6 +572,7 @@ ia dodnt didn't
 ia doesnt doesn't
 ia Doesnt doesn't
 ia doi do I
+ia doign doing
 ia dom DOM
 ia dont don't
 ia donw down
@@ -576,6 +607,7 @@ ia easeier easier
 ia easyly easily
 ia eatch each
 ia eb be
+ia ecanvas canvas
 ia eclare declare
 ia ecleoses encloses
 ia ecmascirpt ECMAScript
@@ -589,6 +621,7 @@ ia ediotr editor
 ia editign editing
 ia editro editor
 ia editror editor
+ia eevent event
 ia efect effect
 ia effecgt effect
 ia effetctiev effective
@@ -597,10 +630,12 @@ ia eho who
 ia ehte the
 ia eht the
 ia eill will
+ia einstein Einstein
 ia electoronic electronic
 ia eleemnt element
 ia eleents elements
 ia elelment element
+ia elememnt element
 ia elemenet element
 ia elemnt element
 ia elemnts elements
@@ -617,6 +652,7 @@ ia enalbes enables
 ia enalble enable
 ia encapsulete encapsulate
 ia ener enter
+ia enew new
 ia enginering engineering
 ia english English
 ia enterprize enterprise
@@ -642,6 +678,7 @@ ia estring string
 ia etherenet Ethernet
 ia ethernet Ethernet
 ia eth the
+ia etner enter
 ia eurasia Eurasia
 ia europ Europe
 ia euser user
@@ -662,6 +699,7 @@ ia excetp except
 ia exchagne exchagne
 ia exchagne exchange
 ia exchgen exchange
+ia execpt except
 ia executbale executable
 ia exif EXIF
 ia exixting existing
@@ -675,6 +713,7 @@ ia expresssions expressions
 ia exteremely extremely
 ia extesnsion extension
 ia exuals equals
+ia faceook facebook
 ia fafourige favorite
 ia fainth faith
 ia falues values
@@ -716,6 +755,8 @@ ia flatpack flatpak
 ia fle file
 ia fles files
 ia flie file
+ia fliper flipper
+ia flippe flipper
 ia folloiwng following
 ia fomrat format
 ia fo of
@@ -725,6 +766,8 @@ ia fornt front
 ia fot for
 ia fotns fonts
 ia fots fonts
+ia fqa Frequently Asked Question
+ia franklin Franklin
 ia fromat format
 ia frou from
 ia fucntino function
@@ -743,6 +786,7 @@ ia futere future
 ia fwiw for what it's worth
 ia gabe gave
 ia gactory factory
+ia gaem game
 ia gelongs belongs
 ia genearate generate
 ia generaly generally
@@ -754,6 +798,7 @@ ia genvironment environment
 ia gerbawah terbawah
 ia gerp grep
 ia getags jags
+ia gettint getting
 ia ghath that
 ia ghe the
 ia gihtub GitHub
@@ -822,11 +867,14 @@ ia helpd help
 ia heres here's
 ia herval herbal
 ia hes he's
+ia hestag hastag
 ia hhousehold household
 ia hhow how
 ia hiddenf hidden
 ia hieararchy hierarchy
+ia hiere here
 ia hifher higher
+ia highier higher
 ia highter higher
 ia hightlight highlight
 ia hiliy hilir
@@ -842,6 +890,7 @@ ia hoem home
 ia hong Hong
 ia hoook hook
 ia horizontaly horizontally
+ia horuzontally horizontally
 ia hostr hosts
 ia houdeholds households
 ia houese house
@@ -856,6 +905,7 @@ ia hte the
 ia hthe the
 ia htis this
 ia hugo Hugo
+ia humblebarg humble bark
 ia hundresds hundreds
 ia hust just
 ia hwatis whatis
@@ -877,6 +927,7 @@ ia identitty identity
 ia idesa ideas
 ia idnetical identical
 ia idnonesia Indonesia
+ia ie i.e.
 ia ifferent different
 ia ifles files
 ia ifno info
@@ -916,6 +967,7 @@ ia incetpion inception
 ia includde include
 ia includin including
 ia incoporation incorporation
+ia increaste increase
 ia indentatino indentation
 ia independdecne independence
 ia independece independence
@@ -936,9 +988,11 @@ ia indonesias Indonesia
 ia indtation indentation
 ia ineteesting interesting
 ia infiite infinite
+ia infomation information
 ia informatinfor information for
 ia informatino information
 ia infuential influential
+ia ingetger integer
 ia ingformation information
 ia ingle single
 ia ingnore ignore
@@ -972,10 +1026,12 @@ ia interactivce interactive
 ia interactivfe interactive
 ia interal internal
 ia interenet internet
+ia interfal interval
 ia intergraition integration
 ia intermitten intermittent
 ia intermpereter interpreter
 ia intermpretation interpretation
+ia intervace interface
 ia intet intent
 ia intractive interactive
 ia intrduced introduced
@@ -1000,6 +1056,7 @@ ia itesm items
 ia it It
 ia itll it'll
 ia itmean it mean
+ia itmes items
 ia itn in
 ia itno into
 ia its it's
@@ -1033,6 +1090,7 @@ ia kisd kids
 ia knowledgte knowledge
 ia knwon known
 ia kong Kong
+ia koordinage coordinate
 ia kusage usage
 ia laik like
 ia langeuage language
@@ -1047,9 +1105,11 @@ ia latesst latest
 ia launchhed launched
 ia lcoaly locally
 ia leemnets elements
+ia lefet left
 ia lein line
 ia lelments elements
 ia lements elements
+ia lengeth length
 ia lengthh length
 ia lern learn
 ia leter letter
@@ -1075,6 +1135,7 @@ ia linxu Linux
 ia liscences licenses
 ia lishcense license
 ia lisngint listing
+ia listenerf listeners
 ia listerners listeners
 ia listneers listeners
 ia liteasi literasi
@@ -1091,6 +1152,7 @@ ia loocate locate
 ia loook look
 ia Lorem Loren
 ia lornum exec curl -sSL "http://metaphorpsum.com/paragraphs/"<left>
+ia lsiteners listeners
 ia lsitens listens
 ia lsit list
 ia lts LTS
@@ -1123,6 +1185,7 @@ ia manger manager
 ia manipulatyed manipulated
 ia manipultation manipulation
 ia manke make
+ia manuiualy manually
 ia markdonw Markdown
 ia markdown Markdown
 ia markdwon markdown
@@ -1136,9 +1199,11 @@ ia mattial martial
 ia maximumm maximum
 ia md5 MD5
 ia mdns mDNS
+ia mdoal modal
 ia meata meta
 ia mee Dandi Yuan Aridianto
 ia meemory memory
+ia meggings muggings
 ia meiji Meiji
 ia meke make
 ia memeofry memory
@@ -1159,6 +1224,7 @@ ia microsoft Microsoft
 ia midified modified
 ia midle middle
 ia milions millions
+ia millisecons milliseconds
 ia minght might
 ia misstype mistype
 ia moderyn modern
@@ -1192,9 +1258,11 @@ ia musilim Muslim
 ia muslim Muslim
 ia muslims Muslims
 ia mux tmux
+ia mve move
 ia myaning meaning
 ia na an
 ia nad and
+ia naimation animation
 ia namd named
 ia namesa names
 ia nam name
@@ -1377,6 +1445,7 @@ ia perserivn preserving
 ia perviw preview
 ia phouysical physical
 ia physicall physical
+ia pickeld pickled
 ia pid PID
 ia piosts posts
 ia pirnt print
@@ -1394,6 +1463,7 @@ ia porcesses processes
 ia porgramming programming
 ia porgrams programs
 ia porne prone
+ia positoin position
 ia posix POSIX
 ia possibel possible
 ia possinle possible
@@ -1453,6 +1523,7 @@ ia prominetn prominent
 ia promram program
 ia promtp prompt
 ia properti property
+ia propertise properties
 ia prophtets prophets
 ia propietary proprietary
 ia propionents proponents
@@ -1477,7 +1548,9 @@ ia quiestion question
 ia quiotes quotes
 ia quran Qur'an
 ia radion radio
+ia radnom random
 ia randonm random
+ia randon random
 ia randr RandR
 ia rangkng rangking
 ia rdf RDF
@@ -1524,6 +1597,8 @@ ia requriemetns requirements
 ia resasons reasons
 ia resemblence resemblance
 ia resons reasons
+ia restorinign restoring
+ia restroe restore
 ia resutl result
 ia retirn return
 ia retirun return
@@ -1532,6 +1607,7 @@ ia retturn return
 ia reveald revealed
 ia rever refer
 ia righr right
+ia ritghts rights
 ia rithtful rightful
 ia rmeove remove
 ia rmy my
@@ -1545,6 +1621,7 @@ ia runing running
 ia runique unique
 ia ruude rude
 ia saha saja
+ia salvia saliva
 ia sape shape
 ia sarawak Sarawak
 ia saty say
@@ -1566,6 +1643,7 @@ ia searhc search
 ia sebagh sabah
 ia seccure secure
 ia secodns seconds
+ia secondk seconds
 ia secrue secure
 ia secureity security
 ia secur recur
@@ -1614,7 +1692,9 @@ ia signinficantly significantly
 ia si is
     ia sii see
 ia siletn silent
+ia similay similar
 ia simillar similar
+ia simpel simple
 ia simultaenously simultaneously
 ia sinagaproe Singapore
 ia singel single
@@ -1654,6 +1734,7 @@ ia specifed specified
 ia specifes specifies
 ia specifidc specific
 ia specivic specific
+ia specivied specified
 ia spedning spending
 ia speen spin
 ia spirirual spiritual
@@ -1676,6 +1757,7 @@ ia statment statement
 ia statred started
 ia statr start
 ia steatlh stealth
+ia steve Steve
 ia sthe the
 ia stil still
 ia stirngs strings
@@ -1703,6 +1785,7 @@ ia sufix suffix
 ia sugestions suggestions
 ia sukarno Sukarno
 ia superflosu superfluous
+ia suppoerted supported
 ia suppresed suppressed
 ia surender surrender
 ia suroundign surrounding
@@ -1722,6 +1805,8 @@ ia taht that
 ia taiwan Taiwan
 ia takign taking
 ia taks taks
+ia taks task
+ia targetting targeting
 ia tath that
 ia tcp TCP
 ia teahidng teaching
@@ -1784,6 +1869,7 @@ ia thout thought
 ia thpe type
 ia throught thought
 ia throug through
+ia throuth through
 ia throut through
 ia th the
 ia tht that
@@ -1791,6 +1877,7 @@ ia thwo two
 ia tiem time
 ia tierminal terminal
 ia tiktok TikTok
+ia timerstatues timerstatus
 ia tithub GitHub
 ia tlah telah
 ia tls TLS
@@ -1814,8 +1901,11 @@ ia trea Tera
 ia treminal terminal
 ia treu true
 ia tshirt T-Shirt
+ia tsk task
+ia tstarting starting
 ia tty TTY
 ia tui TUI
+ia tumeric turmeric
 ia tursn turn
 ia tu too
 ia tyepes types
@@ -1825,12 +1915,14 @@ ia ubuntu Ubuntu
 ia ubutnu Ubuntu
 ia udner under
 ia udnoubtedly undoubtedly
+ia udpate update
 ia udp UDP
 ia uisngg using
 ia umverella umbrella
 ia uncacceptable unacceptable
 ia Uncerstatnd Understand
 ia underlaying underlying
+ia underlien underline
 ia underpinings underpinnings
 ia undershore underscore
 ia Understatnd Understand
@@ -1874,11 +1966,14 @@ ia utitility utility
 ia vaibrale variable
 ia vairable variable
 ia valiues values
+ia valus values
 ia valu vale
 ia variabel variable
+ia varialbe variable
 ia varianle variable
 ia variaous various
 ia varibales variables
+ia varibale variable
 ia varius various
 ia varuable variable
 ia veing being
@@ -1934,9 +2029,11 @@ ia wha what
 ia whay why
 ia whch which
 ia whdy why
+ia wheneever whenever
 ia whenevder whenever
 ia whenn when
 ia when When
+ia wheres where's
 ia wher where
 ia whidh which
 ia whn when
@@ -1995,102 +2092,57 @@ ia youu you
 ia you You
 ia yu you
 ia zealand Zealand
-ia albert Albert
-ia einstein Einstein
-ia fqa Frequently Asked Question
-ia aristoteles Aristotle's
-ia benjamin Benjamin
-ia franklin Franklin
-ia confucius Confucius
-ia steve Steve
-ia gettint getting
-ia buton button
-ia wheres where's
-ia lsiteners listeners
-ia mdoal modal
-ia animatino animation
-ia naimation animation
-ia answere answer
-ia varibale variable
-ia interfal interval
-ia timerstatues timerstatus
-ia millisecons milliseconds
-ia secondk seconds
-ia taks task
-ia listenerf listeners
-ia etner enter
-ia tsk task
-ia hiere here
-ia doign doing
-ia infomation information
-ia gaem game
-ia varialbe variable
-ia construcotr constructor
-ia classs class
-ia koordinage coordinate
-ia highier higher
-ia aray array
-ia elememnt element
-ia lengeth length
-ia enew new
-ia annimation animation
-ia targetting targeting
-ia ie i.e.
-ia conteent content
-ia ecanvas canvas
-ia suppoerted supported
-ia creatiion creation
-ia boject object
-ia actoualy actually
-ia constructorr constructor
-ia coordintae coordinate
-ia lefet left
-ia mve move
-ia differten different
-ia amke make
-ia increaste increase
-ia similay similar
-ia classe classes
-ia bluepritn blueprint
-ia craete create
-ia propertise properties
-ia horuzontally horizontally
-ia positoin position
-ia craete create
-ia udpate update
-ia manuiualy manually
-ia restroe restore
-ia restorinign restoring
-ia fliper flipper
-ia simpel simple
-ia coloor color
-ia flippe flipper
-ia backgourund background
-ia betweein between
-ia const Const
-ia ingetger integer
-ia execpt except
-ia hestag hastag
-ia randon random
-ia alfabet alphabet
-ia radnom random
-ia valus values
-ia butotn button
-ia specivied specified
-ia wheneever whenever
-ia throuth through
-ia eevent event
-ia intervace interface
-ia underlien underline
-ia babby baby
-ia meggings muggings
-ia ritghts rights
-ia tumeric turmeric
-ia charteuse chanteuse
-ia humblebarg humble bark
-ia pickeld pickled
-ia salvia saliva
-ia tstarting starting
-ia itmes items
-ia current current
+ia elementens element ens
+ia ecolor color
+ia mvoe move
+ia spedified specified
+ia conttent content
+ia whteher whether
+ia netwokr network
+ia moinitor monitor
+ia responss response
+ia aloiwn allowing
+ia sourcd source
+ia xcreen screen
+ia forsce force
+ia hsis this
+ia usefoul useful
+ia immideately immediately
+ia revresh refresh
+ia aboiut about
+ia aboout about
+ia socicla social
+ia inderictly indirectly
+ia shouild should
+ia surrouinding surrounding
+ia appoririate appropriate
+ia allignment alignment
+ia modeal modal
+ia staack stack
+ia alements aliments
+ia whteher whether
+ia quesstion question
+ia genelra general
+ia questin questing
+ia sngle single
+ia ingridients ingredients
+ia majosr majors
+ia hsow show
+ia slectors selectors
+ia insisde inside
+ia hte the
+ia awesonme awesome
+ia underkline underline
+ia mnenu menu
+ia buttermilke buttermilk
+ia pancakge pancake
+ia lenght length
+ia retrun return
+ia itereate iterate
+ia joingin joining
+ia specifieid specified
+ia separatro separator
+ia ubttons buttons
+ia enterface interface
+ia acccess access
 ia zola Zola

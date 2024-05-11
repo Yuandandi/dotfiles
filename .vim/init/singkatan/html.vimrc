@@ -1,24 +1,21 @@
 
 autocmd FileType html setlocal shiftwidth=2
-\| nn <buffer> s cit
-\| nn <leader>2 _v$y:e ~/.config/nvim/lua/dandi/abbrev/html.lua<CR>}}Oautocmd FileType html ia <buffer> <Esc>phi<Space>
-\| nn <leader>3 yiw:vs ~/.config/nvim/lua/dandi/abbrev/html.lua<CR>}}}Oautocmd FileType html ia <buffer> <Esc>pa <Esc>p2b3ldevip:sort<CR>:wq<CR>
-\| ino <buffer> <C-g>> <C-o>ct><esc>
 \| ino <buffer> <C-b> <C-o>?><CR>
+\| ino <buffer> <C-g>> <C-o>ct><esc>
 \| ino <buffer> <C-g>< <Esc>d/<<CR>
 \| ino <buffer> <C-g>n <C-o>/><CR>
 \| ino <buffer> <C-g>p <C-o>?><CR>
 \| nn <buffer> gca A<Space><!-- --><left><left><left>
 \| nn <buffer> o :w<cr>o
+\| nn <buffer> s cit
+\| nn <leader>2 _v$y:e ~/.config/nvim/lua/dandi/abbrev/html.lua<CR>}}Oautocmd FileType html ia <buffer> <Esc>phi<Space>
+\| nn <leader>3 yiw:vs ~/.config/nvim/lua/dandi/abbrev/html.lua<CR>}}}Oautocmd FileType html ia <buffer> <Esc>pa <Esc>p2b3ldevip:sort<CR>:wq<CR>
 
 autocmd filetype css nn o :w<cr>o;
 
 autocmd FileType html set tw=120
 
 autocmd filetype html,htmldjango ia <buffer> !!! <!doctype html><cr><html lang="en"><cr><head><cr><meta charset="utf-8"><cr><meta name="viewport" content="width=device-width, initial-scale=1.0"><cr><title>document</title><cr><link rel="stylesheet" href="style.css"><cr></head><cr><body><cr></body><cr></html>
-\| ia <buffer> str <strong></strong><Esc>cit
-\| ia <buffer> ii <i></i><Esc>cit
-\| ia <buffer> q <q></q><Esc>cit
 \| ia <buffer> abb <abbr title=""></abbr><C-o>?"<CR>
 \| ia <buffer> addr <address><CR></address><C-o>O
 \| ia <buffer> ah <a href=""></a><Esc>?"><CR>i
@@ -26,10 +23,13 @@ autocmd filetype html,htmldjango ia <buffer> !!! <!doctype html><cr><html lang="
 \| ia <buffer> arti <article><CR></article><C-o>O
 \| ia <buffer> asi <aside></aside><Esc>cit
 \| ia <buffer> aud <audio controls><CR><CR></audio>
-\| ia <buffer> b <b></b><Esc>cit
 \| ia <buffer> bas <base href="" target="">
+\| ia <buffer> b <b></b><Esc>cit
 \| ia <buffer> bdi <bdi></bdi><esc>cit
 \| ia <buffer> bdo <bdo dir=""></bdo><C-o>?"><CR>
+\| ia <buffer> ii <i></i><Esc>cit
+\| ia <buffer> q <q></q><Esc>cit
+\| ia <buffer> str <strong></strong><Esc>cit
 
 autocmd FileType html,htmldjango ia <buffer> bi <big></big><Esc>cit
 \| ia <buffer> blo <blockquote cite=""></blockquote><C-o>?"><CR>
@@ -87,61 +87,61 @@ autocmd FileType html,vimwiki,htmldjango ia <buffer> lorp Lorem ipsum dolor sit 
 autocmd FileType html,vimwiki,htmldjango ia <buffer> lors Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
 
 autocmd FileType html,htmldjango ia <buffer> mai <main><CR></main><Esc>cit
-            \| ia <buffer> map <map name=""><CR></map><Esc>citCR>
-            \| ia <buffer> mar <mark></mark><Esc>cit
-            \| ia <buffer> men <menu><CR></menu><Esc>cit
-            \| ia <buffer> menui <menuitem></menuitem>
-            \| ia <buffer> mete <meter value=""></meter><Esc>citCR>
-            \| ia <buffer> nav <nav><CR></nav><Esc>cit
-            \| ia <buffer> nos <noscript><CR></noscript><Esc>cit
-            \| ia <buffer> obj <object width="" height="" data=""></object><Esc>cithei<CR>
-            \| ia <buffer> ol <ol></ol><Esc>cit
-            \| ia <buffer> olci <ol class="" id=""><CR></ol><Esc>citid<CR>
-            \| ia <buffer> oli <ol class=""><CR></ol><Esc>citCR>
-            \| ia <buffer> oli <ol id=""><CR></ol><Esc>citCR>
-            \| ia <buffer> opt <option value=""></option><Esc>citCR>
-            \| ia <buffer> optg <optgroup><CR></optgroup><C-o>O
-            \| ia <buffer> outp <output name="" for=""></output><Esc>citfor<CR>
-            \| ia <buffer> p <p></p><Esc>cit
-            \| ia <buffer> param <param name="" value=""><Esc>citval<CR>
-            \| ia <buffer> pc <p class=""></p><Esc>citCR>
-            \| ia <buffer> pci <p class="" id=""></p><Esc>citCR>
-            \| ia <buffer> pi <p id=""></p><Esc>citCR>
-            \| ia <buffer> pre <pre></pre><Esc>cit
-            \| ia <buffer> prog <progress value="" max=""></progress><Esc>citmax<CR>
-            \| ia <buffer> rp <rp></rp><Esc>cit
-            \| ia <buffer> rt <rt></rt><Esc>cit
-            \| ia <buffer> rub <ruby><CR></ruby><C-o>O
-            \| ia <buffer> ss <s></s><Esc>cit
-            \| ia <buffer> sam <samp></samp><Esc>cit
-            \| ia <buffer> sma <small></small><Esc>cit
-            \| ia <buffer> spa <span></span><Esc>cit
-            \| ia <buffer> sty <style><CR></style><C-o>O
-            \| ia <buffer> stys stylesheet
-            \| ia <buffer> sub <sub></sub><Esc>cit
-            \| ia <buffer> sup <sup></sup><Esc>cit
-            \| ia <buffer> tab <table></table><Esc>cit
-            \| ia <buffer> td <td></td><Esc>cit
-            \| ia <buffer> titl <title><CR></title><C-o>O
-            \| ia <buffer> tr <tr></tr><Esc>cit
-            \| ia <buffer> ul <ul></ul><Esc>cit
-            \| ia <buffer> sou <source src="" type=""><Esc>cittyp<CR>
-            \| ia <buffer> sel <select><CR></select><C-o>O
-            \| ia <buffer> scr <script></script><esc>F>i src=""<left>
-            \| ia <buffer> sec <section><cr></section><C-o>O
-            \| ia <buffer> sum <summary></summary><Esc>cit
-            \| ia <buffer> th <th></th><Esc>cit
-            \| ia <buffer> timd <time datetime=""></time><Esc>citCR>
-            \| ia <buffer> tfo <tfoot><CR></tfoot><C-o>O
-            \| ia <buffer> tbo <tbody><CR></tbody><C-o>O
-            \| ia <buffer> thea <thead><CR></thead>C-o>O
-            \| ia <buffer> tra <track src="" kind="" srclang="" label=""><Esc>citkin<CR>
-            \| ia <buffer> tex <textarea rows="" cols=""></textarea><Esc>citcol<CR>
-            \| ia <buffer> uu <u></u><Esc>cit
-            \| ia <buffer> uli <ul id=""><CR></ul><Esc>citCR>
-            \| ia <buffer> ulc <ul class=""></ul><Esc>citCR>
-            \| ia <buffer> vid <video width="" height="" controls></video><Esc>cithei<CR>
-            \| ia <buffer> var <var></var><Esc>cit
+\| ia <buffer> map <map name=""><CR></map><Esc>citCR>
+\| ia <buffer> mar <mark></mark><Esc>cit
+\| ia <buffer> men <menu><CR></menu><Esc>cit
+\| ia <buffer> menui <menuitem></menuitem>
+\| ia <buffer> mete <meter value=""></meter><Esc>citCR>
+\| ia <buffer> nav <nav><CR></nav><Esc>cit
+\| ia <buffer> nos <noscript><CR></noscript><Esc>cit
+\| ia <buffer> obj <object width="" height="" data=""></object><Esc>cithei<CR>
+\| ia <buffer> ol <ol></ol><Esc>cit
+\| ia <buffer> olci <ol class="" id=""><CR></ol><Esc>citid<CR>
+\| ia <buffer> oli <ol class=""><CR></ol><Esc>citCR>
+\| ia <buffer> oli <ol id=""><CR></ol><Esc>citCR>
+\| ia <buffer> opt <option value=""></option><Esc>citCR>
+\| ia <buffer> optg <optgroup><CR></optgroup><C-o>O
+\| ia <buffer> outp <output name="" for=""></output><Esc>citfor<CR>
+\| ia <buffer> p <p></p><Esc>cit
+\| ia <buffer> param <param name="" value=""><Esc>citval<CR>
+\| ia <buffer> pcc <p class=""></p><Esc>cit<left><left>
+\| ia <buffer> pci <p class="" id=""></p><Esc>citCR>
+\| ia <buffer> pi <p id=""></p><Esc>citCR>
+\| ia <buffer> pre <pre></pre><Esc>cit
+\| ia <buffer> prog <progress value="" max=""></progress><Esc>citmax<CR>
+\| ia <buffer> rp <rp></rp><Esc>cit
+\| ia <buffer> rt <rt></rt><Esc>cit
+\| ia <buffer> rub <ruby><CR></ruby><C-o>O
+\| ia <buffer> ss <s></s><Esc>cit
+\| ia <buffer> sam <samp></samp><Esc>cit
+\| ia <buffer> sma <small></small><Esc>cit
+\| ia <buffer> spa <span></span><Esc>cit
+\| ia <buffer> sty <style><CR></style><C-o>O
+\| ia <buffer> stys stylesheet
+\| ia <buffer> sub <sub></sub><Esc>cit
+\| ia <buffer> sup <sup></sup><Esc>cit
+\| ia <buffer> tab <table></table><Esc>cit
+\| ia <buffer> td <td></td><Esc>cit
+\| ia <buffer> titl <title><CR></title><C-o>O
+\| ia <buffer> tr <tr></tr><Esc>cit
+\| ia <buffer> ul <ul></ul><Esc>cit
+\| ia <buffer> sou <source src="" type=""><Esc>cittyp<CR>
+\| ia <buffer> sel <select><CR></select><C-o>O
+\| ia <buffer> scr <script></script><esc>F>i src=""<left>
+\| ia <buffer> sec <section></section><esc>cit
+\| ia <buffer> sum <summary></summary><Esc>cit
+\| ia <buffer> th <th></th><Esc>cit
+\| ia <buffer> timd <time datetime=""></time><Esc>citCR>
+\| ia <buffer> tfo <tfoot><CR></tfoot><C-o>O
+\| ia <buffer> tbo <tbody><CR></tbody><C-o>O
+\| ia <buffer> thea <thead><CR></thead>C-o>O
+\| ia <buffer> tra <track src="" kind="" srclang="" label=""><Esc>citkin<CR>
+\| ia <buffer> tex <textarea rows="" cols=""></textarea><Esc>citcol<CR>
+\| ia <buffer> uu <u></u><Esc>cit
+\| ia <buffer> uli <ul id=""><CR></ul><Esc>citCR>
+\| ia <buffer> ulc <ul class=""></ul><Esc>citCR>
+\| ia <buffer> vid <video width="" height="" controls></video><Esc>cithei<CR>
+\| ia <buffer> var <var></var><Esc>cit
 
             autocmd filetype html,htmldjango ia <buffer> cha charset=""<left>
             \| ia <buffer> rev reversed
@@ -195,7 +195,7 @@ autocmd FileType html,htmldjango ia <buffer> mai <main><CR></main><Esc>cit
             \| ia <buffer> pp p
             \| ia <buffer> quo &#10077;&#10078;<esc>F;a
             \| ia <buffer> hypen &#8221; &#8212;
-            \| ia <buffer> iie <!doctype html><cr> <html lang="en"><cr> <head><cr> <meta charset="utf-8"><cr> <meta http-equiv="X-UA-Compatible" content="IE=edge"><cr> <meta name="viewport" content="width=device-width, initial-scale=1.0"><cr> <title>document</title><cr> <link rel="stylesheet" href="style.css"><cr> </head><cr> <body><cr> </body><cr> </html>
+            \| ia <buffer> fonaw <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" /> 
 
 autocmd filetype html,javascript ia <buffer> ale alert("")<left><left>
 
