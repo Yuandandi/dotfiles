@@ -66,6 +66,7 @@ case "$TERM" in
 esac
 
 alias ahk='cd ~/.local/bin/scripts && explorer.exe main.ahk'
+alias watch="watch -n 0.1"
 alias all='~/.local/bin/scripts/all'
 alias am='alsamixer'
 alias aman='netstat -tua | grep LISTEN'
@@ -136,6 +137,7 @@ alias fd='~/.local/bin/scripts/fd'
 alias fe='~/.local/bin/scripts/fe'
 alias fetch="~/.local/bin/scripts/fetch.sh"
 alias f="find . -type f 2>/dev/null| grep --exclude-dir={.bzr,CVS,^./.,.hg,.svn,.idea,.tox,.git} -i"
+alias fa="find . -maxdepth 1 -type f 2>/dev/null| grep --exclude-dir={.bzr,CVS,^./.,.hg,.svn,.idea,.tox,.git} -i"
 alias fidn='find'
 alias fiel='file'
 alias fig=figlet

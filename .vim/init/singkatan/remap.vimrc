@@ -12,6 +12,7 @@ nn <buffer> du ggVG:norm _wgUl<cr>gv:norm f.wgUl<cr>
 nn <buffer> <leader>md :%norm _i1. <cr>ggVG:norm _wgUl<cr>gv:norm f.wgUl<cr>
 nn e =ip:w!<cr>g;
 nn E $
+vn E $
 
 " Greatest remap ever
 xn <leader>p "_dP
@@ -60,6 +61,7 @@ xn v <Esc>
 
 " Common change dk (delete kata)
 nn dk daw
+nn dK daW
 
 " Faster selection
 nn vp vip
@@ -71,7 +73,7 @@ vn vK viW
 
 " Faster quotes
 nn cj <Right><Right>/"<CR>ci"
-nn dj /"<CR>ci"
+nn dj /"<CR>di"
 nn vj /"<CR>vi"
 
 " shell integration
@@ -156,11 +158,12 @@ nn : ;
 vn : ;
 vn ; :
 
-" Find and replace word under the cursor case insensitive or confirmation
-nn <leader>si :%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>
+    " Find and replace word under the cursor case insensitive or confirmation
+    nn <leader>si :%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>
 vn <leader>si :%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>
 nn <leader>sc :%s/\<<C-r><C-w>\>/<C-r><C-w>/gc<Left><Left><Left><c-w>
 vn <leader>sc :%s/\<<C-r><C-w>\>/<C-r><C-w>/gc<Left><Left><Left><c-w>
+nn <leader>sl :s/\<<C-r><C-w>\>/<C-r><C-w>/g<Left><Left><c-w>
 
 " Faster comment paragraph
 nn gcp gcip
@@ -173,6 +176,7 @@ ino <M-z> <Esc>:wq<cr>
 nn <leader>fo :FZF ~<CR>
 nn <leader>ff :FZF<CR>
 nn <leader>fl :FZF ~/repos/github.com/yuandandi/learn/<cr>
+nn <leader>fc :FZF ~/clone/<cr>
 nn <leader>fv :FZF ~/.vim/<CR>
 nn <leader>fn :FZF ~/repos/github.com/yuandandi/notes/<CR>
 
@@ -193,6 +197,7 @@ ino zp {<cr>}<esc>O
 ino zz <esc>zza
 ino z; ""<left>
 ino z' ''<left>
+ino zb ``<left>
 ino zm <space>=><space>
 ino zM <space><=<space>
 ino zn <space>&<space>
@@ -250,3 +255,4 @@ nn 9 :bn<cr>:bn<cr>
 nn c; ct;
 
 nn gq q
+

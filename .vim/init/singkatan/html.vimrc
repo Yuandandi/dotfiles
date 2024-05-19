@@ -15,7 +15,7 @@ autocmd filetype css nn o :w<cr>o;
 
 autocmd FileType html set tw=120
 
-autocmd filetype html,htmldjango ia <buffer> !!! <!doctype html><cr><html lang="en"><cr><head><cr><meta charset="utf-8"><cr><meta name="viewport" content="width=device-width, initial-scale=1.0"><cr><title>document</title><cr><link rel="stylesheet" href="style.css"><cr></head><cr><body><cr></body><cr></html>
+autocmd filetype html,htmldjango ia <buffer> !!! <!DOCTYPE html><cr><html lang="en"><cr><head><cr><meta charset="UTF-8" /><cr><meta name="viewport" content="width=device-width, initial-scale=1.0"><cr><title>document</title><cr><link rel="stylesheet" href="styles.css" /><cr></head><cr><body><cr></body><cr></html>
 \| ia <buffer> abb <abbr title=""></abbr><C-o>?"<CR>
 \| ia <buffer> addr <address><CR></address><C-o>O
 \| ia <buffer> ah <a href=""></a><Esc>?"><CR>i
@@ -125,7 +125,7 @@ autocmd FileType html,htmldjango ia <buffer> mai <main><CR></main><Esc>cit
 \| ia <buffer> titl <title><CR></title><C-o>O
 \| ia <buffer> tr <tr></tr><Esc>cit
 \| ia <buffer> ul <ul></ul><Esc>cit
-\| ia <buffer> sou <source src="" type=""><Esc>cittyp<CR>
+\| ia <buffer> sou <source src="" type="">
 \| ia <buffer> sel <select><CR></select><C-o>O
 \| ia <buffer> scr <script></script><esc>F>i src=""<left>
 \| ia <buffer> sec <section></section><esc>cit
@@ -138,66 +138,73 @@ autocmd FileType html,htmldjango ia <buffer> mai <main><CR></main><Esc>cit
 \| ia <buffer> tra <track src="" kind="" srclang="" label=""><Esc>citkin<CR>
 \| ia <buffer> tex <textarea rows="" cols=""></textarea><Esc>citcol<CR>
 \| ia <buffer> uu <u></u><Esc>cit
-\| ia <buffer> uli <ul id=""><CR></ul><Esc>citCR>
-\| ia <buffer> ulc <ul class=""></ul><Esc>citCR>
+\| ia <buffer> ulc <ul class=""><cr></ul><esc>kf"a
 \| ia <buffer> vid <video width="" height="" controls></video><Esc>cithei<CR>
 \| ia <buffer> var <var></var><Esc>cit
+\| ia <buffer> ulia <ul class=""><cr><li><cr><a href="#" class=""></a><cr></li><cr></ul><esc>kkkkci"
 
-            autocmd filetype html,htmldjango ia <buffer> cha charset=""<left>
-            \| ia <buffer> rev reversed
-            \| ia <buffer> maxl maxlength=""<left>
-            \| ia <buffer> cit cite=""<left>
-            \| ia <buffer> dto data-tooltip=""<left>
-            \| ia <buffer> cla class=""<left>
-            \| ia <buffer> cols cols=""<left>
-            \| ia <buffer> con content=""<left>
-            \| ia <buffer> condw content="width=device-width, initial-scale=1"
-            \| ia <buffer> dat data=""<left>
-            \| ia <buffer> datet datetime=""<left>
-            \| ia <buffer> dir dir=""<left>
-            \| ia <buffer> forr for=""<left>
-            \| ia <buffer> headec <header class=""><CR></header><C-o>?"<CR>
-            \| ia <buffer> heade <header><cr></header><esc>O
-            \| ia <buffer> der <header class=""><CR></header><C-o>?"<CR>
-            \| ia <buffer> hei height=""<left>
-            \| ia <buffer> wid width=""<left>
-            \| ia <buffer> heq http-equiv=""<left>
-            \| ia <buffer> hre href=""<left>
-            \| ia <buffer> id id=""<left>
-            \| ia <buffer> kin kind=""<left>
-            \| ia <buffer> labe label=""<left>
-            \| ia <buffer> lang lang=""<left>
-            \| ia <buffer> maxx max=""<left>
-            \| ia <buffer> min min=""<left>
-            \| ia <buffer> nam name=""<left>
-            \| ia <buffer> nam name=""<left>
-            \| ia <buffer> rel rel=""<left>
-            \| ia <buffer> rel rel=""<left>
-            \| ia <buffer> src src=""<left>
-            \| ia <buffer> srcl srclang=""<left>
-            \| ia <buffer> sta station=""<left>
-            \| ia <buffer> star start=""<left>
-            \| ia <buffer> tar target=""<left>
-            \| ia <buffer> tit title=""<left>
-            \| ia <buffer> typ type=""<left>
-            \| ia <buffer> typ type=""<left>
-            \| ia <buffer> val value=""<left>
-            \| ia <buffer> tarb target="_blank"
-            \| ia <buffer> blan _blank
-            \| ia <buffer> pla placeholder=""<left>
-            \| ia <buffer> onc onclick=""<left>
-            \| ia <buffer> acti action=""<left>
-            \| ia <buffer> seta setAttribute();<left><left>
-            \| ia <buffer> ofs offscreen
-            \| ia <buffer> che checkbox
-            \| ia <buffer> jss js
-            \| ia <buffer> navv nav
-            \| ia <buffer> pp p
-            \| ia <buffer> quo &#10077;&#10078;<esc>F;a
-            \| ia <buffer> hypen &#8221; &#8212;
-            \| ia <buffer> fonaw <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" /> 
+
+autocmd filetype html,htmldjango ia <buffer> cha charset=""<left>
+\| ia <buffer> rev reversed
+\| ia <buffer> maxl maxlength=""<left>
+\| ia <buffer> cit cite=""<left>
+\| ia <buffer> dto data-tooltip=""<left>
+\| ia <buffer> cla class=""<left>
+\| ia <buffer> cols cols=""<left>
+\| ia <buffer> con content=""<left>
+\| ia <buffer> mut muted
+\| ia <buffer> aut autoplay
+\| ia <buffer> loo loop
+\| ia <buffer> cont controls
+\| ia <buffer> condw content="width=device-width, initial-scale=1"
+\| ia <buffer> dat data=""<left>
+\| ia <buffer> datet datetime=""<left>
+\| ia <buffer> dir dir=""<left>
+\| ia <buffer> forr for=""<left>
+\| ia <buffer> headec <header class=""><CR></header><C-o>?"<CR>
+\| ia <buffer> heade <header></header><esc>cit
+\| ia <buffer> der <header class=""><CR></header><C-o>?"<CR>
+\| ia <buffer> hei height=""<left>
+\| ia <buffer> wid width=""<left>
+\| ia <buffer> heq http-equiv=""<left>
+\| ia <buffer> hre href=""<left>
+\| ia <buffer> id id=""<left>
+\| ia <buffer> kin kind=""<left>
+\| ia <buffer> labe label=""<left>
+\| ia <buffer> lang lang=""<left>
+\| ia <buffer> maxx max=""<left>
+\| ia <buffer> min min=""<left>
+\| ia <buffer> nam name=""<left>
+\| ia <buffer> nam name=""<left>
+\| ia <buffer> rel rel=""<left>
+\| ia <buffer> rel rel=""<left>
+\| ia <buffer> src src=""<left>
+\| ia <buffer> srcl srclang=""<left>
+\| ia <buffer> sta station=""<left>
+\| ia <buffer> star start=""<left>
+\| ia <buffer> tar target=""<left>
+\| ia <buffer> tit title=""<left>
+\| ia <buffer> typ type=""<left>
+\| ia <buffer> typ type=""<left>
+\| ia <buffer> val value=""<left>
+\| ia <buffer> tarb target="_blank"
+\| ia <buffer> blan _blank
+\| ia <buffer> pla placeholder=""<left>
+\| ia <buffer> onc onclick=""<left>
+\| ia <buffer> acti action=""<left>
+\| ia <buffer> seta setAttribute();<left><left>
+\| ia <buffer> ofs offscreen
+\| ia <buffer> che checkbox
+\| ia <buffer> jss js
+\| ia <buffer> navv nav
+\| ia <buffer> pp p
+\| ia <buffer> quo &#10077;&#10078;<esc>F;a
+\| ia <buffer> hypen &#8221; &#8212;
+\| ia <buffer> fonaw <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" /> 
+\| ia <buffer> ic <i class=""></i><esc>F"i
 
 autocmd filetype html,javascript ia <buffer> ale alert("")<left><left>
+
 
 augroup html_settings
     autocmd!
@@ -205,3 +212,6 @@ augroup html_settings
 augroup END
 
 
+" autoplay attribute ; is a Boolean. When present the video will automatically start playing
+" number ; defines a field for entering a number;
+" placeholder ; attribute specifies a short hint that describes the expected value of an input field(e.g. a sample value or a short description of the expected format)

@@ -256,3 +256,7 @@ augroup css_settings
 autocmd!
 autocmd BufRead,BufNewfile *.css execute 'badd ' . expand('~/.vim/init/singkatan/css.vimrc') | execute 'buffer ' . bufnr('~/.vim/init/singkatan/css.vimrc') | setlocal bufhidden=hide | bn
 augroup END
+
+" scroll-behaviour ; property specifies whether to smoothly animate the scroll position, instead of a straight jump, When the user click on a link within scrollable box
+" visibility ; property specifies whether or not an element is visible, hidden element take up space on the page. use the display property to both hide and remove element from the document
+" display ; property specifies the display behaviour the type of rendering box of an element;

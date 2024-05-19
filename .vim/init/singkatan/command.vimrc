@@ -2,7 +2,6 @@ ca n norm
 ca fzf FZF
 ca wq wq!
 ca qa qa!
-ca lorem ~/.local/bin/scripts/lorem.sh
 ca qq q!
 ca q qa!
 ca wqm wq!
@@ -47,4 +46,5 @@ se laststatus=0
 se listchars-=eol
 
 autocmd FileType go,python,lua,fish,rust,md ino <buffer> <M-s> <C-o>S
-autocmd FileType go,python,fish,javascript,cpp,lua nn <C-m> yypk
+autocmd FileType go,python,fish,javascript,cpp,lua,html nn <C-m> yypk
+au Bufread,BufNewFile .vimrc set tw=999 
