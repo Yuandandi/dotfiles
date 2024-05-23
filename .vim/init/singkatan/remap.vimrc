@@ -44,9 +44,12 @@ nn <leader>dd :le<cr>:s/ /", "/g<cr>I"<end>"<esc>=ipg;
 
 nn gh <C-W>h
 nn gj <C-W>j
-nn gk <C-W>k
+" nn gk <C-W>k
 nn gl <C-W>l
 nn vn vip:norm 
+
+" nn gk whi"<esc>Bi"<esc>
+nn gk Bi"<esc>wWhi"<esc>
 
 ino <c-l> <c-w>
 
@@ -96,7 +99,7 @@ nn vl /(<CR>vi(
 
 " Square brackets
 nn vh /[<CR>vi[
-nn dh /[<CR>da[
+nn dh /[<CR>di[
 nn ch /[<CR>ci[
 
 " Faster curly brackets
@@ -110,6 +113,7 @@ nn c' /'<CR>ci'
 
 " Delete the paragraph easier
 nn dp dap
+nn cp cip
 
 " Common change dk (delete kata)
 nn yk yiw
@@ -143,7 +147,7 @@ ino <M-z> <esc>:wq<cr>
 ino <C-b> <Esc>bz=1<CR>A
 
 " In the middle of the paragraph
-nn cm ko<CR>
+nn cm O<cr>
 
 " C-q for suggestions
 ino <C-q> <Esc>bz=<CR>
@@ -184,26 +188,30 @@ nn <leader>fn :FZF ~/repos/github.com/yuandandi/notes/<CR>
 " ino <c-i> <c-x>f
 
 " faster operator
-ino zk <space>:=<space>
+ino zb ``<left>
+ino zH [<cr>]<esc>O
+ino zh []<left>
 ino zj <space>=<space>
 ino zJ <space>==<space>
+ino zk <space>:=<space>
 ino zK <space>!=<space>
+ino z' ''<left>
+ino z; ""<left>
 ino zl ()<left>
 ino zL {}<left>
-ino zh []<left>
-ino zH [<cr>]<esc>O
-ino zP (<cr>)<esc>O
-ino zp {<cr>}<esc>O
-ino zz <esc>zza
-ino z; ""<left>
-ino z' ''<left>
-ino zb ``<left>
-ino zm <space>=><space>
+ino zm <space>>=<space>
 ino zM <space><=<space>
 ino zn <space>&<space>
 ino zN <space>&&<space>
-ino z= <space>+=<space>
+ino zp {<cr>}<esc>O
+ino zP (<cr>)<esc>O
 ino z- <space>-=<space>
+ino z= <space>+=<space>
+ino zz <esc>zza
+ino zv <space>><space>
+ino zV <space><<space>
+ino zt <space>+<space>
+ino zT <space>-<space>
 
 nn <F4> "=strftime("%c")<CR>P
 ino <F4> <C-R>=strftime("%c")<CR>
@@ -232,11 +240,12 @@ nn gos0 :s/'//g<CR>
 nn golk :s/(/("<CR>:s/)/")<CR>:s/, /", "/g<CR>
 nn gokk :s/{/{"<CR>:s/}/"}<CR>:s/, /", "/g<CR>
 nn gohk :s/\[/\["<CR>:s/]/"]<CR>:s/, /", "/g<CR>
-nn goks :s/, / + " " + /g
+nn goks :s/, / + " " + /g<cr> 
 nn gojs :s/, /: "<esc>A",<esc>
 nn goJs vi{:s/, /: "<cr>gv:norm A",<cr>
 nn gop I"<esc>:s/,/":<cr>A,<esc>
 nn god I"<esc>A"<esc>:s/, /": "<cr>A,<esc>
+nn got :s/, / + /g<cr>
 
 nn <leader>bd :w<CR>:bd<CR>
 
@@ -255,4 +264,9 @@ nn 9 :bn<cr>:bn<cr>
 nn c; ct;
 
 nn gq q
+
+" globally capitalize after the double quote
+nn ge :%s/"\(\w\)/"\U\1/g<cr>:%s/\. \s*\(\w\)/. \U\1/g<cr>
+" Map `]c` to go to the next comment
+nnoremap ]c /\v^\s*#<CR>n
 

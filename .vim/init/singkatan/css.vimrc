@@ -22,7 +22,8 @@ au filetype css ia <buffer> bef ::before
 au filetype css ia <buffer> bim background-image:
 au filetype css ia <buffer> bin break-inside:
 au filetype css ia <buffer> ble border-left:
-au filetype css ia <buffer> bol bolder
+au filetype css ia <buffer> ber bolder
+au filetype css ia <buffer> bol bold
 au filetype css ia <buffer> bor border:
 au filetype css ia <buffer> bot both
 au filetype css ia <buffer> bot botton:
@@ -86,7 +87,7 @@ au filetype css ia <buffer> fsh flex-shrink:
 au filetype css ia <buffer> fsi font-size:
 au filetype css ia <buffer> fsta flex-start
 au filetype css ia <buffer> fst font-style:
-au filetype css ia <buffer> fwe font-weight:
+au filetype css ia <buffer> fwe font-weight: " foo
 au filetype css ia <buffer> fwr flex-wrap:
 au filetype css ia <buffer> gaf grid-auto-flow:
 au filetype css ia <buffer> gap gap:
@@ -166,6 +167,7 @@ au filetype css ia <buffer> ple padding-left:
 au filetype css ia <buffer> png png
 au filetype css ia <buffer> poi pointer
 au filetype css ia <buffer> pos position:
+au filetype css ia <buffer> pbo padding-bottom:
 au filetype css ia <buffer> pto padding-top:
 au filetype css ia <buffer> pur purple
 au filetype css ia <buffer> q <q><q><esc>cit

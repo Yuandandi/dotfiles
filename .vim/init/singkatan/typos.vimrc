@@ -87,7 +87,9 @@ ia alnalyze analyze
 ia alocate allocate
 ia aloiwn allowing
 ia aloso also
+ia alowing allowing
 ia alse also
+ia alternativeley alternatively
 ia alternatvies alternatives
 ia altoogether altogether
 ia alwasy always
@@ -111,6 +113,7 @@ ia animamte animate
 ia animatino animation
 ia annimation animation
 ia anoteher another
+ia anotehr another
 ia anothe another
 ia anothere another
 ia anoying annoying
@@ -163,8 +166,9 @@ ia arros arrows
 ia arrray array
 ia arsterisk asterisk
 ia articel article
+ia ascces access
 ia ascii ASCII
-ia asean ASEAN 
+ia asean ASEAN
 ia ashemed ashamed
 ia asigned assigned
 ia asmaller smaller
@@ -195,6 +199,7 @@ ia avim Vim
 ia avodi avoid
 ia avter after
 ia awater water
+ia awati await
 ia awesonme awesome
 ia ayre are
 ia babby baby
@@ -299,6 +304,7 @@ ia catanya caranya
 ia catd card
 ia categorrized categorized
 ia catt call
+ia cellls cells
 ia centrury century
 ia cereate create
 ia chabge change
@@ -318,6 +324,7 @@ ia chatch catch
 ia chatgpt ChatGPT
 ia cheebkbond cheekbone
 ia chekc check
+ia chian chain
 ia china China
 ia chinas China
 ia chinas China's
@@ -500,6 +507,7 @@ ia custoamizatios customization
 ia custoers customers
 ia custormer customer
 ia cutlere culture
+ia dahs dash
 ia @ dandiyuan@proton.me
 ia dangef danger
 ia darkmde darkmode
@@ -710,6 +718,7 @@ ia epalace palace
 ia eps EPS
 ia equivlents equivalents
 ia eror error
+ia erpresentaion representation
 ia es6 ES6
 ia escapt escape
 ia escreen screen
@@ -722,6 +731,7 @@ ia etherenet Ethernet
 ia ethernet Ethernet
 ia eth the
 ia etner enter
+ia etop top
 ia eurasia Eurasia
 ia europ Europe
 ia euser user
@@ -821,6 +831,8 @@ ia fromat format
 ia frou from
 ia fucntino function
 ia fucntion function
+ia fulfiled fulfilled
+ia fulfillement fulfillment
 ia fullscreen Fullscreen
 ia funcamgental fundamental
 ia funcrion function
@@ -996,14 +1008,15 @@ ia i I
 ia iinstall install
 ia iircc if I remember correctly
 ia iirc IIRC
-ia iis is
-    ia iiterate iterate
+ia iiterate iterate
 ia imaage image
 ia imags image
 ia imamah Imamah
+ia imediatley immediately
 ia imge image
 ia im I'm
 ia immams imams
+ia immetdiatiielly immediately
 ia immideately immediately
 ia imortance importance
 ia impertaive imperative
@@ -1022,6 +1035,7 @@ ia imune immune
 ia inadvertnet inadvertent
 ia inavetebly inevitably
 ia inboun inbound
+ia incerement increment
 ia incetpion inception
 ia includde include
 ia includin including
@@ -1443,7 +1457,7 @@ ia ohowever however
 ia ohw how
 ia oiptons options
 ia ois is
-    ia oit It
+ia oit It
 ia okey okay
 ia ok OK
 ia omg OMG
@@ -1483,6 +1497,7 @@ ia oter other
 ia oter otter
 ia otgher other
 ia othe other
+ia otherr other
 ia otomatisa otomatis
 ia otpions options
 ia ot to
@@ -1759,7 +1774,7 @@ ia scrol scroll
 ia scrpt script
 ia scultpture sculptures
 ia scutlures cultures
-ia searchsploti searchsploit 
+ia searchsploti searchsploit
 ia searhch search
 ia searhc search
 ia sebagh sabah
@@ -1773,6 +1788,7 @@ ia seeek seek
 ia seee see
 ia seeral several
 ia seeseorang seseorang
+ia seleected selected
 ia semanics semantics
 ia sensiteive sensitive
 ia sensitibe sensitive
@@ -1815,7 +1831,7 @@ ia significat significant
 ia signinficance significance
 ia signinficantly significantly
 ia si is
-    ia sii see
+ia sii see
 ia siletn silent
 ia similay similar
 ia simillar similar
@@ -1881,6 +1897,7 @@ ia stablished established
 ia stagging staging
 ia standadr standard
 ia starbucks Starbucks
+ia stareted started
 ia starndard standard
 ia startitng starting
 ia stateement statement
@@ -1992,6 +2009,7 @@ ia tHe tHe
 ia thext text
 ia theyre they're
 ia they They
+ia theyve they've
 ia thhrough through
 ia thidr third
 ia thieeory theory
@@ -2034,6 +2052,7 @@ ia togetheh together
 ia tomato 🍅
 ia tommorow tomorrow
 ia tonw town
+ia toppoings toppings
 ia tow two
 ia tpee type
 ia tracet traced
@@ -2251,18 +2270,4 @@ ia you You
 ia yu you
 ia zealand Zealand
 ia zip ZIP
-ia seleected selected
-ia stareted started
-ia toppoings toppings
-ia immetdiatiielly immediately
-ia alowing allowing
-ia chian chain
-ia fulfiled fulfilled
-ia imediatley immediately
-ia cellls cells
-ia otherr other
-ia fulfillement fulfillment
-ia etop top
-ia awati await
-ia anotehr another
 ia zola Zola

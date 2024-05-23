@@ -9,7 +9,8 @@ autocmd FileType javascript,css nn <c-a> <c-a>:w<cr>
 autocmd FileType javascript,css vn <c-a> <c-a>:w<cr>gv
 autocmd FileType javascript,css nn <c-x> <c-x>:w<cr>
 autocmd FileType javascript,css vn <c-x> <c-x>:w<cr>gv
-autocmd FileType javascript ino zd ${}<left>
+autocmd FileType javascript se tw=120
+
 nn gct I// ********** <esc>A **********<esc>gccgUU
 
 autocmd filetype javascript ia <buffer> ad add("")<left><left>
@@ -23,6 +24,7 @@ autocmd filetype javascript ia <buffer> spr stopPropagation()
     autocmd filetype javascript ia <buffer> ape append()<left>
     autocmd filetype javascript ia <buffer> cad classList.add("")<left><left>
     autocmd filetype javascript ia <buffer> cco classList.contains("")<left><left>
+    autocmd filetype javascript ia <buffer> fal false
     autocmd filetype javascript ia <buffer> c const
     autocmd filetype javascript ia <buffer> cla class
     autocmd filetype javascript ia <buffer> cl console.log()<left>
@@ -47,7 +49,7 @@ autocmd filetype javascript ia <buffer> spr stopPropagation()
                 autocmd filetype javascript ia <buffer> fo for () {<cr>}<esc>kf(a
                     autocmd filetype javascript ia <buffer> gat getAttribute("")<left><left>
                     autocmd filetype javascript ia <buffer> hop .hasOwnProperty()<left>
-                    autocmd filetype javascript ia <buffer> ifel if() {<cr>} else if () {<cr>} else {<cr>}<esc>{jjf(i
+                    autocmd filetype javascript ia <buffer> ifel if () {<cr>} else if () {<cr>} else {<cr>}<esc>{jjf(i<esc>?^if<cr>ci(
                         autocmd filetype javascript ia <buffer> iff if () {<cr>}<esc>?(<cr>a
                             autocmd filetype javascript ia <buffer> iht innerHTML
                             autocmd filetype javascript ia <buffer> i i
@@ -140,8 +142,7 @@ autocmd filetype javascript ia <buffer> spr stopPropagation()
                                         autocmd FileType javascript ia <buffer> fin finally()<left>
                                         autocmd FileType javascript ia <buffer> awa await()<left>
                                         autocmd FileType javascript ia <buffer> sti setTimeout()<left>
-
-
+                                        autocmd FileType javascript ia <buffer> fori for (let i = 0; i < messages.length; i++) {<cr>console.log(messages[i]);<cr>}
 
 augroup js_settings
 autocmd!
@@ -149,43 +150,48 @@ autocmd BufRead,BufNewFile *.js execute 'badd ' . expand('~/.vim/init/singkatan/
 augroup END
 
 " alert() ; method displays an alert box with message an and OK button. the alert() method is used When You want information to come through to the user;
-                        " createAttribute ; method creates an attribute and returns the attribute as and Attr object;
-                        " dataset ; read-only property of the HTML interface provides read/write aces to custom data attributes (data-*) on elements. It exposes a map of strings (DOMStringMap) with an entry for each data-* attributes;
-                        " date ; Objects represent a single moment in time in a platform-independent (year, months, date, hours, minutes, seconds) remember month is 0-indexing hours Using 24hours format;
-                        " DOMContentLoaded ; event fires When the initial html document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading;
-                        " format. date Objects encapsulate an integral number that represent milliseconds;
-                        " format() ; method of itnl.listformat instances returning a string with a language-specific representation of the lints;
-                        " getBoundingClientRect() ; method returns the size of an element and it's position relative to the viewport;
-                        " getDate() ; get the date in number;
-                        " getDay() ; method of date instances returns the day of the week for this date according to local time where 0 is represents Sunday.;
-                        " getFullYear() ; method of date instances returns the year for date according to local time ;
-                        " getHours() ; method of date instances returns the hours for date according to local time ;
-                        " getMinutes() ; method of date instances returns the year for date according to local time ;
-                        " getMonth() ; method of date instances returns the month for date according to local time ;
-                        " getTime() ; method of date instances returns the number of milliseconds for this date since epoch, which is defined as the midnight at the beginning January 1, 1970, UTC;
-                        " height ; property sets or returns the height of an element;
-                        " isNaN() ; Function determines whether a value is NaN, first converting the value to a number if necessary because coercion the isNaN() Function can be surprising, You may prefer to user Number.isNaN();
-                        " length ; property returns the length of a string, the length property of an empty string is 0;
-                        " load ; event is fired When the hole page has loaded including all dependent resource such as stylesheet, scripts, iframes, and images;
-                        " offsetTop ; a number, representing the top position of the element, in pixels;
-                        " pageYOffset ; read only window property that returns the number of pixels the document has been scrolled vertically;
-                        " preventDefault(); method of the event interface tells the user agent that if the event doesn't get explicitly handled, it's default action should not be taken as It normally would be;
-                        " removeChild() ; method removes an element's child;
-                        " scroll event ; fires When the document view has been scrolled.;
-                        " scrollTo(); a particular set of coordinate in the document;
-                        " setAttributeNode() ; method adds an attribute node to an element, replaces existing attribute nodes, returns an attribute object;
-                        " setInterval() ; method calls a Function at a specified intervals(in milliseconds), continues calling the Function until clearInterval() is called or the window is closed;
-                        " slice ; extracts a sections of a string without modifying the original string;
-                        " submit ; fires When a <form> is submitted;
-                        " target ; contains a reference to the element that triggered the event, while e.currentTarget contains a reference to the element that event handler is attached to ;
-                        " textContent ; property sets or returns the text content of the specified node, and all it's descendants;
-                        " value ; property in JavaScript that retrieves the current o fan input field in a form. essentially It returns the value entered into an html input element, such as text box;
-                        " removeItem() ; method removes the specified storage object item, belongs to the storage object, which can be either a localStorage object or a sessinoStroage object;
-                        " getItem() ; method returns value of the  specified storage object item;
-                        " display ; property specifies the display behaviour the type of rendering box of an element (block ; element is rendered as a block-level element)
-                            " transform ; transform property applies a 2d or 3d transformation to an element. this property allows You to rotate, scale, move, ske, etc. elements
-                            " setTimeout() ; method sets a timer which executes a Function or specified piece of code once the timer expires;
-                        " then() ; method of promise instances takes up to two arguments: callback Function for the fulfilled and rejected cases of the promise. It immediately returns an equivalent promise object, allowing You to chain calls to other promise methods;
-                        " catch() ; method of promise instances schedules a Function to be called When the promise is rejected. It immediately returns an equivalent promise object, allowing You to chain to other promise method
-                            " finally() ; method of promise instances schedules a Function to be called When the promise is settled(either fulfilled or rejected). It immediately returns an equivalent promise object, allowing You to chain cells to other promise methods;
-                            " await() ; used to wait for a promise and get Its fulfillment value. It can only be used inside an async Function or at the etop level of a module;
+" createAttribute ; method creates an attribute and returns the attribute as and Attr object;
+" dataset ; read-only property of the HTML interface provides read/write aces to custom data attributes (data-*) on elements. It exposes a map of strings (DOMStringMap) with an entry for each data-* attributes;
+" date ; Objects represent a single moment in time in a platform-independent (year, months, date, hours, minutes, seconds) remember month is 0-indexing hours Using 24hours format;
+" DOMContentLoaded ; event fires When the initial html document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading;
+" format. date Objects encapsulate an integral number that represent milliseconds;
+" format() ; method of itnl.listformat instances returning a string with a language-specific representation of the lints;
+" getBoundingClientRect() ; method returns the size of an element and it's position relative to the viewport;
+" getDate() ; get the date in number;
+" getDay() ; method of date instances returns the day of the week for this date according to local time where 0 is represents Sunday.;
+" getFullYear() ; method of date instances returns the year for date according to local time ;
+" getHours() ; method of date instances returns the hours for date according to local time ;
+" getMinutes() ; method of date instances returns the year for date according to local time ;
+" getMonth() ; method of date instances returns the month for date according to local time ;
+" getTime() ; method of date instances returns the number of milliseconds for this date since epoch, which is defined as the midnight at the beginning January 1, 1970, UTC;
+" height ; property sets or returns the height of an element;
+" isNaN() ; Function determines whether a value is NaN, first converting the value to a number if necessary because coercion the isNaN() Function can be surprising, You may prefer to user Number.isNaN();
+" length ; property returns the length of a string, the length property of an empty string is 0;
+" load ; event is fired When the hole page has loaded including all dependent resource such as stylesheet, scripts, iframes, and images;
+" offsetTop ; a number, representing the top position of the element, in pixels;
+" pageYOffset ; read only window property that returns the number of pixels the document has been scrolled vertically;
+" preventDefault(); method of the event interface tells the user agent that if the event doesn't get explicitly handled, it's default action should not be taken as It normally would be;
+" removeChild() ; method removes an element's child;
+" scroll event ; fires When the document view has been scrolled.;
+" scrollTo(); a particular set of coordinate in the document;
+" setAttributeNode() ; method adds an attribute node to an element, replaces existing attribute nodes, returns an attribute object;
+" setInterval() ; method calls a Function at a specified intervals(in milliseconds), continues calling the Function until clearInterval() is called or the window is closed;
+" slice ; extracts a sections of a string without modifying the original string;
+" submit ; fires When a <form> is submitted;
+" target ; contains a reference to the element that triggered the event, while e.currentTarget contains a reference to the element that event handler is attached to ;
+" textContent ; property sets or returns the text content of the specified node, and all it's descendants;
+" value ; property in JavaScript that retrieves the current o fan input field in a form. essentially It returns the value entered into an html input element, such as text box;
+" removeItem() ; method removes the specified storage object item, belongs to the storage object, which can be either a localStorage object or a sessinoStroage object;
+" getItem() ; method returns value of the  specified storage object item;
+" display ; property specifies the display behaviour the type of rendering box of an element (block ; element is rendered as a block-level element)
+    " transform ; transform property applies a 2d or 3d transformation to an element. this property allows You to rotate, scale, move, ske, etc. elements
+    " setTimeout() ; method sets a timer which executes a Function or specified piece of code once the timer expires;
+" then() ; method of promise instances takes up to two arguments: callback Function for the fulfilled and rejected cases of the promise. It immediately returns an equivalent promise object, allowing You to chain calls to other promise methods;
+" catch() ; method of promise instances schedules a Function to be called When the promise is rejected. It immediately returns an equivalent promise object, allowing You to chain to other promise method
+    " finally() ; method of promise instances schedules a Function to be called When the promise is settled(either fulfilled or rejected). It immediately returns an equivalent promise object, allowing You to chain cells to other promise methods;
+" await() ; used to wait for a promise and get Its fulfillment value. It can only be used inside an async Function or at the etop level of a module;
+" pop(); removes the last element of an array;
+" push() ; methods adds new items to the end of an array;
+" return ; statement stops the execution of a Function and returns a value; if omitted It returns undefined
+    " math ; object has no constructor, static, all methods and properties can be used whiteout creating a math object first;
+" Mathe.floor() ; static method always rounds down an return the largest than or equal to a give number;

@@ -66,7 +66,6 @@ case "$TERM" in
 esac
 
 alias ahk='cd ~/.local/bin/scripts && explorer.exe main.ahk'
-alias watch="watch -n 0.1"
 alias all='~/.local/bin/scripts/all'
 alias am='alsamixer'
 alias aman='netstat -tua | grep LISTEN'
@@ -133,11 +132,11 @@ alias exgo='~/.local/bin/scripts/exgo.sh'
 alias exshell='~/.local/bin/scripts/exe'
 alias f1='find -maxdepth 1 -type f | more'
 alias f1g='find . -maxdepth 1 -type f | grep -i "$@"'
+alias fa="find . -maxdepth 1 -type f 2>/dev/null| grep --exclude-dir={.bzr,CVS,^./.,.hg,.svn,.idea,.tox,.git} -i"
 alias fd='~/.local/bin/scripts/fd'
 alias fe='~/.local/bin/scripts/fe'
 alias fetch="~/.local/bin/scripts/fetch.sh"
 alias f="find . -type f 2>/dev/null| grep --exclude-dir={.bzr,CVS,^./.,.hg,.svn,.idea,.tox,.git} -i"
-alias fa="find . -maxdepth 1 -type f 2>/dev/null| grep --exclude-dir={.bzr,CVS,^./.,.hg,.svn,.idea,.tox,.git} -i"
 alias fidn='find'
 alias fiel='file'
 alias fig=figlet
@@ -354,6 +353,7 @@ alias vx='vim ~/.config/tmux/tmux.conf'
 alias vz="vim ~/.config/vim/lua/danzor/lazy.lua"
 alias wafil='~/.local/bin/scripts/wafile'
 alias wal='~/.local/bin/scripts/wal'
+alias watch="watch -n 0.1"
 alias wd='w3m duckduckgo.com'
 alias weather='~/.local/bin/scripts/weather.sh'
 alias weto='curl wttr.in'
