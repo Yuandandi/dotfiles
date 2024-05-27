@@ -1,4 +1,11 @@
 au filetype css ia <buffer> 00 #000
+au filetype css ia <buffer> nor normal
+au filetype css ia <buffer> tdc text-decoration-color:
+au filetype css ia <buffer> boco border-collapse:
+au filetype css ia <buffer> tds text-decoration-style:
+au filetype css ia <buffer> tdt text-decoration-thickness:
+au filetype css ia <buffer> dot dotted
+au filetype css ia <buffer> tdl text-decoration-line:
 au filetype css ia <buffer> abs absolute 
 au filetype css ia <buffer> aco align-content:
 au filetype css ia <buffer> act a:active
@@ -8,14 +15,18 @@ au filetype css ia <buffer> aft ::after
 au filetype css ia <buffer> aic animation-iteration-count:
 au filetype css ia <buffer> ait align-items:
 au filetype css ia <buffer> ali aliceblue
+au filetype css ia <buffer> msb mediumslateblue
 au filetype css ia <buffer> ana animation-name:
 au filetype css ia <buffer> ani animation:
 au filetype css ia <buffer> any a:any-link
-au filetype css ia <buffer> ari arial
+au filetype css ia <buffer> ari Arial
 au filetype css ia <buffer> atf animation-timing-function:
 au filetype css ia <buffer> bac background:
 au filetype css ia <buffer> bbe break-before:
 au filetype css ia <buffer> bbo border-box
+au filetype css ia <buffer> bls border-left-style:
+au filetype css ia <buffer> brs border-right-style:
+au filetype css ia <buffer> bbs border-bottom-style:
 au filetype css ia <buffer> bbot border-bottom:
 au filetype css ia <buffer> bco background-color:
 au filetype css ia <buffer> bef ::before
@@ -57,7 +68,7 @@ au filetype css ia <buffer> csp column-span:
 au filetype css ia <buffer> cur cursor:
 au filetype css ia <buffer> das dashed
 au filetype css ia <buffer> dbl darkblue
-au filetype css ia <buffer> dbl double
+au filetype css ia <buffer> dou double
 au filetype css ia <buffer> disc disc
 au filetype css ia <buffer> dis display:
 au filetype css ia <buffer> dlz decimal-leading-zero
@@ -87,7 +98,7 @@ au filetype css ia <buffer> fsh flex-shrink:
 au filetype css ia <buffer> fsi font-size:
 au filetype css ia <buffer> fsta flex-start
 au filetype css ia <buffer> fst font-style:
-au filetype css ia <buffer> fwe font-weight: " foo
+au filetype css ia <buffer> fwe font-weight:
 au filetype css ia <buffer> fwr flex-wrap:
 au filetype css ia <buffer> gaf grid-auto-flow:
 au filetype css ia <buffer> gap gap:
@@ -117,9 +128,9 @@ au filetype css ia <buffer> jco justify-content:
 au filetype css ia <buffer> jus justify
 au filetype css ia <buffer> kfr @keyframes
 au filetype css ia <buffer> lal lower-alpha
-au filetype css ia <buffer> lca low lowercase
-au filetype css ia <buffer> lc :last-child
-au filetype css ia <buffer> lef left:;<left>
+au filetype css ia <buffer> lowe lowercase
+au filetype css ia <buffer> lch :last-child
+au filetype css ia <buffer> lef left
 au filetype css ia <buffer> lgr linear-gradient
 au filetype css ia <buffer> lhe line-height:
 au filetype css ia <buffer> lig lighter
@@ -157,12 +168,13 @@ au filetype css ia <buffer> oof outline-offset:
 au filetype css ia <buffer> opa opacity:
 au filetype css ia <buffer> ora orange
 au filetype css ia <buffer> ord order:
-au filetype css ia <buffer> ose outset
+au filetype css ia <buffer> outs outset
 au filetype css ia <buffer> ove overline
 au filetype css ia <buffer> pad padding:
 au filetype css ia <buffer> pap papayawhip
 au filetype css ia <buffer> pco place-content:
 au filetype css ia <buffer> pit place-items:
+au filetype css ia <buffer> pri padding-right:
 au filetype css ia <buffer> ple padding-left:
 au filetype css ia <buffer> png png
 au filetype css ia <buffer> poi pointer
@@ -179,8 +191,9 @@ au filetype css ia <buffer> rga row-gap:
 au filetype css ia <buffer> rgba rgba()<left>
 au filetype css ia <buffer> rgb rgb()<left>
 au filetype css ia <buffer> rgr radial-gradient()<left>
+au filetype css ia <buffer> ins inset
 au filetype css ia <buffer> rid ridge
-au filetype css ia <buffer> rig right:;<left>
+au filetype css ia <buffer> rig right
 au filetype css ia <buffer> rot rotate()<left>
 au filetype css ia <buffer> rox rotateX()<left>
 au filetype css ia <buffer> roy rotateY()<left>
@@ -213,7 +226,7 @@ au filetype css ia <buffer> tdu transition-duration:
 au filetype css ia <buffer> tin text-indent:
 au filetype css ia <buffer> tnt transparent
 au filetype css ia <buffer> ton transition:
-au filetype css ia <buffer> top top:
+au filetype css ia <buffer> top top
 au filetype css ia <buffer> tor transform-origin:
 au filetype css ia <buffer> tpr transition-property:
 au filetype css ia <buffer> trans transition:
@@ -232,20 +245,28 @@ au filetype css ia <buffer> uro upper-roman
 au filetype css ia <buffer> var var(--)<left>
 au filetype css ia <buffer> ver Verdana
 au filetype css ia <buffer> vis a:visited
-au filetype css ia <buffer> vty visibility:
-au filetype css ia <buffer> wid width:;<left>
+au filetype css ia <buffer> visi visibility:
+au filetype css ia <buffer> wid width:
 au filetype css ia <buffer> wsm whitesmoke
 au filetype css ia <buffer> wspa white-space:
 au filetype css ia <buffer> wsp word-spacing:
 au filetype css ia <buffer> zin z-index:
+au filetype css ia <buffer> non none
 au filetype css ia <buffer> hid hidden
 au filetype css ia <buffer> tit /*<cr> =============== <cr> ===============<cr> */<esc>kO
 au filetype css ia <buffer> scr screen
+au filetype css ia <buffer> val vertical-align:
 au filetype css ia <buffer> bcol border-color:
 au filetype css ia <buffer> blo block
 au filetype css ia <buffer> bou bounce
 au filetype css ia <buffer> gtr grid-template-rows:
+au filetype css ia <buffer> bst border-style:
+au filetype css ia <buffer> bwi border-width:
 au filetype css ia <buffer> jse justify-self:
+au filetype css ia <buffer> ost outline-style:
+au filetype css ia <buffer> lbl lightblue
+au filetype css ia <buffer> ini initial
+au filetype css ia <buffer> gro groove
 
 au filetype css nn <buffer> o :w<cr>o;<left>
 au filetype css nn <buffer> 0 :w<cr>0
@@ -262,3 +283,9 @@ augroup END
 " scroll-behaviour ; property specifies whether to smoothly animate the scroll position, instead of a straight jump, When the user click on a link within scrollable box
 " visibility ; property specifies whether or not an element is visible, hidden element take up space on the page. use the display property to both hide and remove element from the document
 " display ; property specifies the display behaviour the type of rendering box of an element;
+" max-width ; maximum width of an element, if the content is larger than the maximum width, It will automatically change the height of the element
+" text-align ; property specifies the horizontal alignment of the text in an element
+" justify ; stretches the lines so that each line has equal width (like in newspapers and magazines)
+" initial ; sets this property to it's default value
+" inherit ; inherit property from it's parent element
+

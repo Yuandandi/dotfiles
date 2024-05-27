@@ -6,6 +6,7 @@ autocmd FileType html setlocal shiftwidth=2
 \| ino <buffer> <C-g>n <C-o>/><CR>
 \| ino <buffer> <C-g>p <C-o>?><CR>
 \| nn <buffer> gca A<Space><!-- --><left><left><left>
+\| nn <buffer> ge _f>w~:w<cr>
 \| nn <buffer> o :w<cr>o
 \| nn <buffer> s cit
 \| nn <leader>2 _v$y:e ~/.config/nvim/lua/dandi/abbrev/html.lua<CR>}}Oautocmd FileType html ia <buffer> <Esc>phi<Space>
@@ -82,6 +83,7 @@ autocmd FileType html,htmldjango ia <buffer> bi <big></big><Esc>cit
 \| ia <buffer> li <li></li><Esc>cit
 \| ia <buffer> lin <link rel="" href=""><C-o>?" hre<cr>
 \| ia <buffer> met <meta name="" content=""><esc>0ci"
+\| ia <buffer> meth method=""<left>
 
 autocmd FileType html,vimwiki,htmldjango ia <buffer> lorp Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.
 autocmd FileType html,vimwiki,htmldjango ia <buffer> lors Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
@@ -89,6 +91,7 @@ autocmd FileType html,vimwiki,htmldjango ia <buffer> lors Lorem ipsum dolor sit 
 autocmd FileType html,htmldjango ia <buffer> mai <main><CR></main><Esc>cit
 \| ia <buffer> map <map name=""><CR></map><Esc>citCR>
 \| ia <buffer> mar <mark></mark><Esc>cit
+\| ia <buffer> del <dell></del><left><left><left><left><left><left><left>
 \| ia <buffer> men <menu><CR></menu><Esc>cit
 \| ia <buffer> menui <menuitem></menuitem>
 \| ia <buffer> mete <meter value=""></meter><Esc>citCR>
@@ -191,6 +194,7 @@ autocmd filetype html,htmldjango ia <buffer> cha charset=""<left>
 \| ia <buffer> blan _blank
 \| ia <buffer> pla placeholder=""<left>
 \| ia <buffer> onc onclick=""<left>
+\| ia <buffer> styl style=""<left>
 \| ia <buffer> acti action=""<left>
 \| ia <buffer> seta setAttribute();<left><left>
 \| ia <buffer> ofs offscreen
@@ -201,6 +205,7 @@ autocmd filetype html,htmldjango ia <buffer> cha charset=""<left>
 \| ia <buffer> quo &#10077;&#10078;<esc>F;a
 \| ia <buffer> hypen &#8221; &#8212;
 \| ia <buffer> fonaw <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" /> 
+\| ia <buffer> fonmi <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 \| ia <buffer> ic <i class=""></i><esc>F"i
 
 autocmd filetype html,javascript ia <buffer> ale alert("")<left><left>
@@ -215,3 +220,7 @@ augroup END
 " autoplay attribute ; is a Boolean. When present the video will automatically start playing
 " number ; defines a field for entering a number;
 " placeholder ; attribute specifies a short hint that describes the expected value of an input field(e.g. a sample value or a short description of the expected format)
+" onclick() ; event occurs When the user clicks on an html element;
+" height="" ; attribute the number in pixels
+" width="" ; attribute the number in pixels
+" method ; How to send from-data (the form-data is sent to the page specified in the action attribute)

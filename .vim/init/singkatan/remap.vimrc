@@ -212,6 +212,7 @@ ino zv <space>><space>
 ino zV <space><<space>
 ino zt <space>+<space>
 ino zT <space>-<space>
+ino z[ ${}<left>
 
 nn <F4> "=strftime("%c")<CR>P
 ino <F4> <C-R>=strftime("%c")<CR>
@@ -266,7 +267,13 @@ nn c; ct;
 nn gq q
 
 " globally capitalize after the double quote
-nn ge :%s/"\(\w\)/"\U\1/g<cr>:%s/\. \s*\(\w\)/. \U\1/g<cr>
+nn ge :s/"\(\w\)/"\U\1/g<cr>:s/\. \s*\(\w\)/. \U\1/g<cr>
+vn ge :s/"\(\w\)/"\U\1/g<cr>:s/\. \s*\(\w\)/. \U\1/g<cr>
+
 " Map `]c` to go to the next comment
 nnoremap ]c /\v^\s*#<CR>n
+
+" Yank to system clipboard
+vnoremap <silent> <F8> :w !xclip -selection clipboard<CR><CR>
+nnoremap <silent> <F8> :w !xclip -selection clipboard<CR><CR>
 

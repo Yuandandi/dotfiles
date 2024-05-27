@@ -7,5 +7,6 @@ Plug 'rstacruz/sparkup'
 Plug 'turbio/bracey.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'mbbill/undotree',
+Plug 'dhruvasagar/vim-table-mode'
 
 call plug#end()
