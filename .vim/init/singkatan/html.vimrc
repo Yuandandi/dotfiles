@@ -22,6 +22,7 @@ autocmd filetype html,htmldjango ia <buffer> !!! <!DOCTYPE html><cr><html lang="
 \| ia <buffer> ah <a href=""></a><Esc>?"><CR>i
 \| ia <buffer> areaa <area shape="" coords="" href="" alt=""><C-o>" co<CR>
 \| ia <buffer> arti <article><CR></article><C-o>O
+\| ia <buffer> cen <center></center><Esc>cit
 \| ia <buffer> asi <aside></aside><Esc>cit
 \| ia <buffer> aud <audio controls><CR><CR></audio>
 \| ia <buffer> bas <base href="" target="">
@@ -224,3 +225,4 @@ augroup END
 " height="" ; attribute the number in pixels
 " width="" ; attribute the number in pixels
 " method ; How to send from-data (the form-data is sent to the page specified in the action attribute)
+" center ; used in html4 to center-align text

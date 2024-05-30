@@ -20,6 +20,7 @@ autocmd filetype javascript ia <buffer> sty style
 autocmd filetype javascript ia <buffer> spr stopPropagation()
     autocmd filetype javascript ia <buffer> ee e
     autocmd filetype javascript ia <buffer> ael addEventListener("")<left><left>
+    autocmd filetype javascript ia <buffer> onc onclick =
     autocmd filetype javascript ia <buffer> tar target
     autocmd filetype javascript ia <buffer> ape append()<left>
     autocmd filetype javascript ia <buffer> cad classList.add("")<left><left>
@@ -80,7 +81,7 @@ autocmd filetype javascript ia <buffer> spr stopPropagation()
                                 autocmd filetype javascript ia <buffer> ret return
                                 autocmd filetype javascript ia <buffer> sat setAttribute()<left>
                                 autocmd filetype javascript ia <buffer> sbc style.backgroundColor
-                                autocmd filetype javascript ia <buffer> shI .shift()<left>
+                                autocmd filetype javascript ia <buffer> shi .shift()<left>
                                 autocmd filetype javascript ia <buffer> swi switch() {<cr>}<esc>k0ci(
                                         autocmd filetype javascript ia <buffer> tco textContent =
                                         autocmd filetype javascript ia <buffer> tuc toUpperCase()
@@ -218,3 +219,4 @@ augroup END
                                 " setItem(); method of the storage interface, When passed a key name and value, will add that key to the given storage object, or update that keys value If It already exists; ("key", "value")
                                 " dblclick ; event fires When a poiinting device button (such as a mouses primary button) is double-clicked;
                             " chrome ; method provided by the chorme extensions API When we want to interact with chrome extensions;
+                            " onclick ; ;

@@ -288,4 +288,6 @@ augroup END
 " justify ; stretches the lines so that each line has equal width (like in newspapers and magazines)
 " initial ; sets this property to it's default value
 " inherit ; inherit property from it's parent element
-
+" padding ; create space around an elements content inside of any defined borders
+" float ; property is used for positioning and formatting content e.g. let an image float left tot the text in a container (left, fight, none,inherit)
+" all ; resets all property, apart from unicode-bidi and direction. to their initial or inherited value (initial ; changes all the properties applied to the elements or the elements parent to their initial value) (inherit ; changes all the properties applied to the element or the elements parent to their parent value) "unset ; changes all the properties applied to the element or the elements parent to their parent value if They rare inheritable or to their initial value if not"

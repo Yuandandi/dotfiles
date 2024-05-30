@@ -49,7 +49,7 @@ nn gl <C-W>l
 nn vn vip:norm 
 
 " nn gk whi"<esc>Bi"<esc>
-nn gk Bi"<esc>wWhi"<esc>
+" nn gk Bi"<esc>wWhi"<esc>
 
 ino <c-l> <c-w>
 
@@ -118,6 +118,10 @@ nn cp cip
 " Common change dk (delete kata)
 nn yk yiw
 nn yK yiW
+
+" Common change dk (delete kata)
+nn yl yi(
+nn yL yi{
 
 " Paste after yanking a paragraph
 nn yp yap}
@@ -269,6 +273,7 @@ nn gq q
 " globally capitalize after the double quote
 nn ge :s/"\(\w\)/"\U\1/g<cr>:s/\. \s*\(\w\)/. \U\1/g<cr>
 vn ge :s/"\(\w\)/"\U\1/g<cr>:s/\. \s*\(\w\)/. \U\1/g<cr>
+nn gE :s/`\(\w\)/`\U\1/g<cr>
 
 " Map `]c` to go to the next comment
 nnoremap ]c /\v^\s*#<CR>n
