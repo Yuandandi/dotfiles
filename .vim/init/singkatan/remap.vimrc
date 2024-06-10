@@ -171,7 +171,7 @@ vn ; :
 vn <leader>si :%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>
 nn <leader>sc :%s/\<<C-r><C-w>\>/<C-r><C-w>/gc<Left><Left><Left><c-w>
 vn <leader>sc :%s/\<<C-r><C-w>\>/<C-r><C-w>/gc<Left><Left><Left><c-w>
-nn <leader>sl :s/\<<C-r><C-w>\>/<C-r><C-w>/g<Left><Left><c-w>
+nn <leader>sl :s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left><c-w>
 
 " Faster comment paragraph
 nn gcp gcip
@@ -204,6 +204,7 @@ ino z; ""<left>
 ino zl ()<left>
 ino zL {}<left>
 ino zm <space>>=<space>
+ino zr <space>=><space>
 ino zM <space><=<space>
 ino zn <space>&<space>
 ino zN <space>&&<space>
@@ -273,7 +274,7 @@ nn gq q
 " globally capitalize after the double quote
 nn ge :s/"\(\w\)/"\U\1/g<cr>:s/\. \s*\(\w\)/. \U\1/g<cr>
 vn ge :s/"\(\w\)/"\U\1/g<cr>:s/\. \s*\(\w\)/. \U\1/g<cr>
-nn gE :s/`\(\w\)/`\U\1/g<cr>
+nn gE :s/\<./\u&/g<cr>
 
 " Map `]c` to go to the next comment
 nnoremap ]c /\v^\s*#<CR>n
@@ -281,4 +282,10 @@ nnoremap ]c /\v^\s*#<CR>n
 " Yank to system clipboard
 vnoremap <silent> <F8> :w !xclip -selection clipboard<CR><CR>
 nnoremap <silent> <F8> :w !xclip -selection clipboard<CR><CR>
+
+nnoremap <silent> <F7> :set filetype=html<cr>
+ino <silent> <F7> <esc>:set filetype=html<cr>a
+
+nnoremap <silent> <F6> :set filetype=javascript.jsx<cr>
+ino <silent> <F6> <esc>:set filetype=javascript.jsx<cr>a
 

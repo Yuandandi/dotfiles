@@ -17,6 +17,8 @@ au filetype css ia <buffer> ait align-items:
 au filetype css ia <buffer> ali aliceblue
 au filetype css ia <buffer> msb mediumslateblue
 au filetype css ia <buffer> ana animation-name:
+au filetype css ia <buffer> bpx background-position-x:
+au filetype css ia <buffer> bpy background-position-y:
 au filetype css ia <buffer> ani animation:
 au filetype css ia <buffer> any a:any-link
 au filetype css ia <buffer> ari Arial
@@ -179,6 +181,7 @@ au filetype css ia <buffer> ple padding-left:
 au filetype css ia <buffer> png png
 au filetype css ia <buffer> poi pointer
 au filetype css ia <buffer> pos position:
+au filetype css ia <buffer> pbl padding-block:
 au filetype css ia <buffer> pbo padding-bottom:
 au filetype css ia <buffer> pto padding-top:
 au filetype css ia <buffer> pur purple
@@ -265,6 +268,7 @@ au filetype css ia <buffer> bwi border-width:
 au filetype css ia <buffer> jse justify-self:
 au filetype css ia <buffer> ost outline-style:
 au filetype css ia <buffer> lbl lightblue
+au filetype css ia <buffer> bla black
 au filetype css ia <buffer> ini initial
 au filetype css ia <buffer> gro groove
 
@@ -291,3 +295,4 @@ augroup END
 " padding ; create space around an elements content inside of any defined borders
 " float ; property is used for positioning and formatting content e.g. let an image float left tot the text in a container (left, fight, none,inherit)
 " all ; resets all property, apart from unicode-bidi and direction. to their initial or inherited value (initial ; changes all the properties applied to the elements or the elements parent to their initial value) (inherit ; changes all the properties applied to the element or the elements parent to their parent value) "unset ; changes all the properties applied to the element or the elements parent to their parent value if They rare inheritable or to their initial value if not"
+" ::marker ; CSS pseudo-element selects the marker box of a list item, which typically contains a bullet or number. works in <li> and <summary> elements

@@ -295,7 +295,6 @@ alias shut='sudo shutdown now'
 alias si='sc-im'
 alias slip='systemctl suspend'
 alias sl='ls --color=auto'
-alias s='ls'
 alias smtl='sort coo.md | uniq -dc | sort -nr'
 alias sni='sudo snap install'
 alias snli='snap list'
@@ -381,7 +380,7 @@ alias zz='z -'
 # colored GCC warnings and errors
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 export PAGER=less
-export BROWSER=qutebrowser
+export BROWSER=Firefox
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert

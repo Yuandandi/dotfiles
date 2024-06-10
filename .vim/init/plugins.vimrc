@@ -8,5 +8,8 @@ Plug 'turbio/bracey.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'mbbill/undotree',
 Plug 'dhruvasagar/vim-table-mode'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'hail2u/vim-css3-syntax'
 
 call plug#end()

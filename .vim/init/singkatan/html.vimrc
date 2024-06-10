@@ -16,7 +16,7 @@ autocmd filetype css nn o :w<cr>o;
 
 autocmd FileType html set tw=120
 
-autocmd filetype html,htmldjango ia <buffer> !!! <!DOCTYPE html><cr><html lang="en"><cr><head><cr><meta charset="UTF-8" /><cr><meta name="viewport" content="width=device-width, initial-scale=1.0"><cr><title>document</title><cr><link rel="stylesheet" href="styles.css" /><cr></head><cr><body><cr></body><cr></html>
+autocmd filetype html,htmldjango ia <buffer> !!! <!DOCTYPE html><cr><html lang="en"><cr><head><cr><meta charset="UTF-8" /><cr><meta name="viewport" content="width=device-width, initial-scale=1.0"><cr><title>document</title><cr><link rel="stylesheet" type="text/css" href="styles.css" /><cr></head><cr><body><cr></body><cr></html>
 \| ia <buffer> abb <abbr title=""></abbr><C-o>?"<CR>
 \| ia <buffer> addr <address><CR></address><C-o>O
 \| ia <buffer> ah <a href=""></a><Esc>?"><CR>i
@@ -75,7 +75,7 @@ autocmd FileType html,htmldjango ia <buffer> bi <big></big><Esc>cit
 \| ia <buffer> htm <html><CR></html><C-o>O
 \| ia <buffer> htmll <html><CR></html><C-o>O
 \| ia <buffer> ifr <iframe src=""></iframe><C-o>?"<CR>
-\| ia <buffer> imgg <img src="" alt=""><C-o>?" al<CR>
+\| ia <buffer> imgg <img src="" alt="" /><C-o>?" al<CR>
 \| ia <buffer> inp <input type="" name="" value=""><C-o>?" nam<CR>
 \| ia <buffer> kbd <kbd></kbd><esc>cit
 \| ia <buffer> keyg <keygen name="">
@@ -149,65 +149,65 @@ autocmd FileType html,htmldjango ia <buffer> mai <main><CR></main><Esc>cit
 
 
 autocmd filetype html,htmldjango ia <buffer> cha charset=""<left>
-\| ia <buffer> rev reversed
-\| ia <buffer> maxl maxlength=""<left>
+\| ia <buffer> acti action=""<left>
+\| ia <buffer> aut autoplay
+\| ia <buffer> blan _blank
+\| ia <buffer> che checkbox
 \| ia <buffer> cit cite=""<left>
-\| ia <buffer> dto data-tooltip=""<left>
 \| ia <buffer> cla class=""<left>
 \| ia <buffer> cols cols=""<left>
 \| ia <buffer> con content=""<left>
-\| ia <buffer> mut muted
-\| ia <buffer> aut autoplay
-\| ia <buffer> loo loop
-\| ia <buffer> cont controls
 \| ia <buffer> condw content="width=device-width, initial-scale=1"
+\| ia <buffer> cont controls
 \| ia <buffer> dat data=""<left>
 \| ia <buffer> datet datetime=""<left>
+\| ia <buffer> der <header class=""><CR></header><C-o>?"<CR>
 \| ia <buffer> dir dir=""<left>
+\| ia <buffer> dto data-tooltip=""<left>
+\| ia <buffer> fonaw <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" /> 
+\| ia <buffer> fonmi <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+\| ia <buffer> fongo <link rel="preconnect" href="https://fonts.googleapis.com"><cr><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><cr><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" crossorigin>
 \| ia <buffer> forr for=""<left>
 \| ia <buffer> headec <header class=""><CR></header><C-o>?"<CR>
 \| ia <buffer> heade <header></header><esc>cit
-\| ia <buffer> der <header class=""><CR></header><C-o>?"<CR>
 \| ia <buffer> hei height=""<left>
-\| ia <buffer> wid width=""<left>
 \| ia <buffer> heq http-equiv=""<left>
 \| ia <buffer> hre href=""<left>
+\| ia <buffer> hypen &#8221; &#8212;
+\| ia <buffer> ic <i class=""></i><esc>F"i
 \| ia <buffer> id id=""<left>
+\| ia <buffer> jss js
 \| ia <buffer> kin kind=""<left>
 \| ia <buffer> labe label=""<left>
 \| ia <buffer> lang lang=""<left>
+\| ia <buffer> loo loop
+\| ia <buffer> maxl maxlength=""<left>
 \| ia <buffer> maxx max=""<left>
 \| ia <buffer> min min=""<left>
+\| ia <buffer> mut muted
 \| ia <buffer> nam name=""<left>
-\| ia <buffer> nam name=""<left>
+\| ia <buffer> navv nav
+\| ia <buffer> ofs offscreen
+\| ia <buffer> onc onclick=""<left>
+\| ia <buffer> pla placeholder=""<left>
+\| ia <buffer> pp p
+\| ia <buffer> quo &#10077;&#10078;<esc>F;a
 \| ia <buffer> rel rel=""<left>
-\| ia <buffer> rel rel=""<left>
-\| ia <buffer> src src=""<left>
+\| ia <buffer> rev reversed
+\| ia <buffer> seta setAttribute();<left><left>
 \| ia <buffer> srcl srclang=""<left>
-\| ia <buffer> sta station=""<left>
+\| ia <buffer> src src=""<left>
+\| ia <buffer> sreact <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script><cr><script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script><cr><script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 \| ia <buffer> star start=""<left>
+\| ia <buffer> sta station=""<left>
+\| ia <buffer> styl style=""<left>
+\| ia <buffer> tarb target="_blank"
 \| ia <buffer> tar target=""<left>
 \| ia <buffer> tit title=""<left>
 \| ia <buffer> typ type=""<left>
-\| ia <buffer> typ type=""<left>
 \| ia <buffer> val value=""<left>
-\| ia <buffer> tarb target="_blank"
-\| ia <buffer> blan _blank
-\| ia <buffer> pla placeholder=""<left>
-\| ia <buffer> onc onclick=""<left>
-\| ia <buffer> styl style=""<left>
-\| ia <buffer> acti action=""<left>
-\| ia <buffer> seta setAttribute();<left><left>
-\| ia <buffer> ofs offscreen
-\| ia <buffer> che checkbox
-\| ia <buffer> jss js
-\| ia <buffer> navv nav
-\| ia <buffer> pp p
-\| ia <buffer> quo &#10077;&#10078;<esc>F;a
-\| ia <buffer> hypen &#8221; &#8212;
-\| ia <buffer> fonaw <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" /> 
-\| ia <buffer> fonmi <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-\| ia <buffer> ic <i class=""></i><esc>F"i
+\| ia <buffer> wid width=""<left>
+
 
 autocmd filetype html,javascript ia <buffer> ale alert("")<left><left>
 
@@ -226,3 +226,5 @@ augroup END
 " width="" ; attribute the number in pixels
 " method ; How to send from-data (the form-data is sent to the page specified in the action attribute)
 " center ; used in html4 to center-align text
+" type ; style (specifies the internet media type aka mime type)
+" span ; tag is an inline container used to mark up a part of a text, or a part of a document, much like div element buth div is block level element
