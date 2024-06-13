@@ -76,7 +76,7 @@ autocmd FileType html,htmldjango ia <buffer> bi <big></big><Esc>cit
 \| ia <buffer> htmll <html><CR></html><C-o>O
 \| ia <buffer> ifr <iframe src=""></iframe><C-o>?"<CR>
 \| ia <buffer> imgg <img src="" alt="" /><C-o>?" al<CR>
-\| ia <buffer> inp <input type="" name="" value=""><C-o>?" nam<CR>
+\| ia <buffer> inp <input type="" name="" value="" /><C-o>?" nam<CR>
 \| ia <buffer> kbd <kbd></kbd><esc>cit
 \| ia <buffer> keyg <keygen name="">
 \| ia <buffer> lab <label for=""></label><C-o>?"<CR>

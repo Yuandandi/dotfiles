@@ -54,6 +54,7 @@ se updatetime=50
 se novb "no visual bell
 se wildignore=*.exe,*.dll,*.pdb
 se wildmenu
+se wildignorecase
 se winaltkeys=no
 se ru "runtime
 

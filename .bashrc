@@ -66,8 +66,8 @@ case "$TERM" in
 esac
 
 alias ahk='cd ~/.local/bin/scripts && explorer.exe main.ahk'
-alias all='~/.local/bin/scripts/all'
 alias am='alsamixer'
+alias all="~/.local/bin/scripts/all"
 alias aman='netstat -tua | grep LISTEN'
 alias aptli='apt list --installed'
 alias bas='cd ~/repos/github.com/yuandandi/notes/bash/'
@@ -341,7 +341,6 @@ alias vim='vim'
 alias vimv='~/.local/bin/vimv'
 alias vircam='sudo modprobe v4l2loopback video_nr=7 card_label=Video-Loopback exclusive_caps=1'
 alias vi='vim'
-alias v='~/.local/bin/scripts/v'
 alias vl='vim ~/.config/sc-im/scimrc'
 alias vm='mv'
 alias vr='vim ~/.bashrc'

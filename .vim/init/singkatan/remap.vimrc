@@ -289,3 +289,5 @@ ino <silent> <F7> <esc>:set filetype=html<cr>a
 nnoremap <silent> <F6> :set filetype=javascript.jsx<cr>
 ino <silent> <F6> <esc>:set filetype=javascript.jsx<cr>a
 
+nn <F3> :vimgrep // --max-depth 3 **/*<left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left>
+nn <F2> :args `find . -type f`<cr>

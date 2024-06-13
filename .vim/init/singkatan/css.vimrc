@@ -294,5 +294,10 @@ augroup END
 " inherit ; inherit property from it's parent element
 " padding ; create space around an elements content inside of any defined borders
 " float ; property is used for positioning and formatting content e.g. let an image float left tot the text in a container (left, fight, none,inherit)
-" all ; resets all property, apart from unicode-bidi and direction. to their initial or inherited value (initial ; changes all the properties applied to the elements or the elements parent to their initial value) (inherit ; changes all the properties applied to the element or the elements parent to their parent value) "unset ; changes all the properties applied to the element or the elements parent to their parent value if They rare inheritable or to their initial value if not"
+" all ; resets all property, apart from Unicode-bidi and direction. to their initial or inherited value (initial ; changes all the properties applied to the elements or the elements parent to their initial value) (inherit ; changes all the properties applied to the element or the elements parent to their parent value) "unset ; changes all the properties applied to the element or the elements parent to their parent value if They rare inheritable or to their initial value if not"
 " ::marker ; CSS pseudo-element selects the marker box of a list item, which typically contains a bullet or number. works in <li> and <summary> elements
+" text-overflow ; How overflowed content that is not displayed should be signaled to the user.
+" grid-auto-columns; specifies the size of an implicitly-created grid column
+" font-weight ; sets the weight (or boldness) of the font. depends on the font-family that is set
+
+" fr ; fractional unit 1fr Is equal to part of the available space (perbandingan) if we set 1fr 1fr means that It will devide into 2 parts
