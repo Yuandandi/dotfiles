@@ -46,5 +46,5 @@ se laststatus=0
 se listchars-=eol
 
 autocmd FileType go,python,lua,fish,rust,md ino <buffer> <M-s> <C-o>S
-autocmd FileType css,go,python,fish,javascript,cpp,lua,html,javascript.jsx nn <C-m> yypk
+" autocmd FileType css,go,python,fish,javascript,cpp,lua,html,javascript.jsx nn <C-m> yypk
 au Bufread,BufNewFile .vimrc set tw=999 

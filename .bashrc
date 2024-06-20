@@ -66,8 +66,8 @@ case "$TERM" in
 esac
 
 alias ahk='cd ~/.local/bin/scripts && explorer.exe main.ahk'
-alias am='alsamixer'
 alias all="~/.local/bin/scripts/all"
+alias am='alsamixer'
 alias aman='netstat -tua | grep LISTEN'
 alias aptli='apt list --installed'
 alias bas='cd ~/repos/github.com/yuandandi/notes/bash/'
@@ -227,7 +227,7 @@ alias megc='~/.local/bin/scripts/megc'
 alias meg='~/.local/bin/scripts/meg'
 alias mem='free -h'
 alias mind='~/.local/bin/scripts/mind'
-alias m='more'
+alias m='mkdir'
 alias m.="mv (fzf --multi)" # easier way to copy multiple files
 alias mna='man'
 alias mor='more'

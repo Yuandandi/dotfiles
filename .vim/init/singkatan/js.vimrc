@@ -2,180 +2,231 @@
 autocmd FileType javascript nn <buffer> s cit
 autocmd FileType javascript nn <leader>2 _v$y:e ~/.config/nvim/lua/dandi/abbrev/javascript.lua<CR>}}Oautocmd FileType javascript ia <buffer> <Esc>phi<Space>
 autocmd filetype javascript,javascript.jsx ino zJ <space>===<space>
+" autocmd filetype typescript nn <buffer> <cr> yypk
 
-autocmd FileType javascript,javascript.jsx nn gca A //<space>
-autocmd FileType javascript,javascript.jsx nn o o;<left>
-autocmd FileType javascript,javascript.jsx nn 0 0:w<cr>
-autocmd FileType javascript,javascript.jsx,css,html nn <c-a> <c-a>:w<cr>
-autocmd FileType javascript,javascript.jsx,css,html vn <c-a> <c-a>:w<cr>gv
-autocmd FileType javascript,javascript.jsx,css,html nn <c-x> <c-x>:w<cr>
-autocmd FileType javascript,javascript.jsx,css,html vn <c-x> <c-x>:w<cr>gv
-autocmd FileType javascript,javascript.jsx se tw=120
+autocmd FileType javascript,javascript.jsx,typescript nn gca A //<space>
+autocmd FileType javascript,javascript.jsx,typescript nn o o;<left>
+autocmd FileType javascript,javascript.jsx,typescript nn 0 0:w<cr>
+autocmd FileType javascript,javascript.jsx,css,html,typescript nn <c-a> <c-a>:w<cr>
+autocmd FileType javascript,javascript.jsx,css,html,typescript vn <c-a> <c-a>:w<cr>gv
+autocmd FileType javascript,javascript.jsx,css,html,typescript nn <c-x> <c-x>:w<cr>
+autocmd FileType javascript,javascript.jsx,css,html,typescript vn <c-x> <c-x>:w<cr>gv
+autocmd FileType javascript,javascript.jsx,typescript se tw=120
 
 nn gct I// ********** <esc>A **********<esc>gccgUU
 
-autocmd FileType javascript,javascript.jsx ia <buffer> ach appendChild()<left>
-autocmd filetype javascript,javascript.jsx ia <buffer> ad add("")<left><left>
-autocmd filetype javascript,javascript.jsx ia <buffer> ael addEventListener("")<left><left>
-autocmd FileType javascript,javascript.jsx ia <buffer> ale alert("")<left><left>
-autocmd filetype javascript,javascript.jsx ia <buffer> ape append()<left>
-autocmd FileType javascript,javascript.jsx ia <buffer> awa await()<left>
-autocmd FileType javascript,javascript.jsx ia <buffer> boo Boolean()<left>
-autocmd filetype javascript,javascript.jsx ia <buffer> cad classList.add("")<left><left>
-autocmd FileType javascript,javascript.jsx ia <buffer> catc catch()<left>
-autocmd FileType javascript,javascript.jsx ia <buffer> cat createAttribute('')<left><left>
-autocmd filetype javascript,javascript.jsx ia <buffer> cco classList.contains("")<left><left>
-autocmd filetype javascript,javascript.jsx ia <buffer> c const
-autocmd FileType javascript,javascript.jsx ia <buffer> cin clearInterval()<left>
-autocmd filetype javascript,javascript.jsx ia <buffer> cla class
-autocmd filetype javascript,javascript.jsx ia <buffer> cl console.log()<left>
-autocmd filetype javascript,javascript.jsx ia <buffer> cli classList
-autocmd filetype javascript,javascript.jsx ia <buffer> cna className=""<left>
-autocmd filetype javascript,javascript.jsx ia <buffer> cno childNodes
-autocmd filetype javascript,javascript.jsx ia <buffer> con constructor()<left>
-autocmd filetype javascript,javascript.jsx ia <buffer> cont contains("")<left><left>
-autocmd filetype javascript,javascript.jsx ia <buffer> crec clearRect()<left>
-autocmd filetype javascript,javascript.jsx ia <buffer> cre classList.remove("")<left><left>
-autocmd FileType javascript,javascript.jsx ia <buffer> cta currentTarget
-autocmd FileType javascript,javascript.jsx ia <buffer> ctq chrome.tabs.query()<left>
-autocmd filetype javascript,javascript.jsx ia <buffer> dbc document.getElementsByClassName("")<left><left>
-autocmd filetype javascript,javascript.jsx ia <buffer> dbi document.getElementById("")<left><left>
-autocmd FileType javascript,javascript.jsx ia <buffer> dbl dblclick
-autocmd filetype javascript,javascript.jsx ia <buffer> dbt document.getElementsByTagName("")<left><left>
-autocmd filetype javascript,javascript.jsx ia <buffer> dce document.createElement("")<left><left>
-autocmd FileType javascript,javascript.jsx ia <buffer> dcl DOMContentLoaded
-autocmd filetype javascript,javascript.jsx ia <buffer> del delete;<left>
-autocmd FileType javascript,javascript.jsx ia <buffer> dim drawImage()<left>
-autocmd FileType javascript,javascript.jsx ia <buffer> dlh document.location.href
-autocmd filetype javascript,javascript.jsx ia <buffer> doc document
-autocmd filetype javascript,javascript.jsx ia <buffer> dqsa document.querySelectorAll("")<left><left>
-autocmd filetype javascript,javascript.jsx ia <buffer> dqs document.querySelector("")<left><left>
-autocmd FileType javascript,javascript.jsx ia <buffer> dse dataset
-autocmd filetype javascript,javascript.jsx ia <buffer> ex export
-autocmd filetype javascript,javascript.jsx ia <buffer> fal false
-autocmd FileType javascript,javascript.jsx ia <buffer> fea forEach()<left>
-autocmd filetype javascript,javascript.jsx ia <buffer> fec firstElementChild
-autocmd filetype javascript,javascript.jsx ia <buffer> f function() {<cr>}<esc>?(<cr>i
-autocmd FileType javascript,javascript.jsx ia <buffer> fin finally()<left>
-autocmd filetype javascript,javascript.jsx ia <buffer> fn function () {<cr>}<esc>?(<cr>i
-autocmd filetype javascript,javascript.jsx ia <buffer> fo for () {<cr>}<esc>kf(a
-autocmd FileType javascript,javascript.jsx ia <buffer> fori for (let i = 0; i < messages.length; i++) {<cr>console.log(messages[i]);<cr>}
-autocmd FileType javascript,javascript.jsx ia <buffer> fre fillRect()<left>
-autocmd filetype javascript,javascript.jsx ia <buffer> gat getAttribute("")<left><left>
-autocmd FileType javascript,javascript.jsx ia <buffer> gbcr getBoundingClientRect()<left>
-autocmd FileType javascript,javascript.jsx ia <buffer> gco getContext('')<left><left>
-autocmd FileType javascript,javascript.jsx ia <buffer> gda getDate()<left>
-autocmd FileType javascript,javascript.jsx ia <buffer> gday getDay()<left>
-autocmd FileType javascript,javascript.jsx ia <buffer> gfy getFullYear()<left>
-autocmd FileType javascript,javascript.jsx ia <buffer> gho getHours()<left>
-autocmd FileType javascript,javascript.jsx ia <buffer> git getItem()<left>
-autocmd FileType javascript,javascript.jsx ia <buffer> gmi getMinutes()<left>
-autocmd FileType javascript,javascript.jsx ia <buffer> gmo getMonth()<left>
-autocmd FileType javascript,javascript.jsx ia <buffer> gti getTime()<left>
-autocmd filetype javascript,javascript.jsx ia <buffer> hei height
-autocmd filetype javascript,javascript.jsx ia <buffer> hop .hasOwnProperty()<left>
-autocmd FileType javascript,javascript.jsx ia <buffer> ifb if (hasSolvedChallenge === true && hasHintsLeft === true) {<cr>}
-autocmd filetype javascript,javascript.jsx ia <buffer> ifel if () {<cr>} else if () {<cr>} else {<cr>}<esc>{jjf(i<esc>?^if<cr>ci(
-    autocmd filetype javascript,javascript.jsx ia <buffer> iff if () {<cr>}<esc>?(<cr>a
-autocmd filetype javascript,javascript.jsx ia <buffer> iht innerHTML
-autocmd filetype javascript,javascript.jsx ia <buffer> i i
-autocmd FileType javascript,javascript.jsx ia <buffer> ima Image()<left>
-autocmd filetype javascript,javascript.jsx ia <buffer> imre import React from "react"
-autocmd filetype javascript,javascript.jsx ia <buffer> imp import
-autocmd filetype javascript,javascript.jsx ia <buffer> ite innerText =
-    autocmd FileType javascript,javascript.jsx ia <buffer> joi join("")<left><left>
-autocmd filetype javascript,javascript.jsx ia <buffer> jpa JSON.parse()<left>
-autocmd filetype javascript,javascript.jsx ia <buffer> jss JavaScript
-autocmd filetype javascript,javascript.jsx ia <buffer> jst JSON.stringify()<left>
-autocmd FileType javascript,javascript.jsx ia <buffer> lcl localStorage.clear()
-autocmd filetype javascript,javascript.jsx ia <buffer> lec lastElementChild
-autocmd filetype javascript,javascript.jsx ia <buffer> len length
-autocmd FileType javascript,javascript.jsx ia <buffer> lgi window.localStorage.getItem()<left>
-autocmd filetype javascript,javascript.jsx ia <buffer> l let
-autocmd FileType javascript,javascript.jsx ia <buffer> lsi window.localStorage.setItem()<left>
-autocmd FileType javascript,javascript.jsx ia <buffer> lst localStorage
-autocmd FileType javascript,javascript.jsx ia <buffer> lth line-through
-autocmd FileType javascript,javascript.jsx ia <buffer> map map()<left>
-autocmd FileType javascript,javascript.jsx ia <buffer> mat matches('')<left><left>
-autocmd filetype javascript,javascript.jsx ia <buffer> mfl Math.floor()<left>
-autocmd FileType javascript,javascript.jsx ia <buffer> mfr Math.floor(Math.random())<left>
-autocmd filetype javascript,javascript.jsx ia <buffer> mongodb mongodb
-autocmd filetype javascript,javascript.jsx ia <buffer> mou mouseover
-autocmd filetype javascript,javascript.jsx ia <buffer> mpo Math.pow()<left>
-autocmd filetype javascript,javascript.jsx ia <buffer> mra Math.random()<left>
-autocmd filetype javascript,javascript.jsx ia <buffer> mro Math.round()<left>
-autocmd filetype javascript,javascript.jsx ia <buffer> msq Math.sqrt()<left>
-autocmd FileType javascript,javascript.jsx ia <buffer> nda new Date()<left>
-autocmd filetype javascript,javascript.jsx ia <buffer> nes nextElementSibling
-autocmd FileType javascript,javascript.jsx ia <buffer> npr new Promise()<left>
-autocmd filetype javascript,javascript.jsx ia <buffer> ofr Object.freeeze()<left>;
-autocmd filetype javascript,javascript.jsx ia <buffer> onc onclick =
-    autocmd FileType javascript,javascript.jsx ia <buffer> oto offsetTop
-autocmd FileType javascript,javascript.jsx ia <buffer> pau pause('')<left><left>
-autocmd filetype javascript,javascript.jsx ia <buffer> pde preventDefault()
-autocmd filetype javascript,javascript.jsx ia <buffer> pel parentElement
-autocmd filetype javascript,javascript.jsx ia <buffer> pes previousElementSibling
-autocmd filetype javascript,javascript.jsx ia <buffer> pin parseInt()<left>
-autocmd filetype javascript,javascript.jsx ia <buffer> pno parentNode
-autocmd filetype javascript,javascript.jsx ia <buffer> pop pop()<left>
-autocmd filetype javascript,javascript.jsx ia <buffer> pus push()<left>
-autocmd FileType javascript,javascript.jsx ia <buffer> pyo pageYOffset
-autocmd FileType javascript,javascript.jsx ia <buffer> qsa querySelectorAll("")<left><left>
-autocmd FileType javascript,javascript.jsx ia <buffer> qs querySelector("")<left><left>
-autocmd FileType javascript,javascript.jsx ia <buffer> raf requestAnimationFrame()<left>
-autocmd filetype javascript,javascript.jsx ia <buffer> rat removeAttribute('')<left><left>
-autocmd FileType javascript,javascript.jsx ia <buffer> rch removeChild()<left>
-autocmd filetype javascript,javascript.jsx ia <buffer> rem remove('')<left><left>
-autocmd filetype javascript ia <buffer> ret return
-autocmd filetype javascript,javascript.jsx ia <buffer> reviewdao ReviewDAO
-autocmd FileType javascript,javascript.jsx ia <buffer> rgba rgba()<left>
-autocmd FileType javascript,javascript.jsx ia <buffer> rit removeItem("")<left><left>
-autocmd FileType javascript,javascript.jsx ia <buffer> san setAttributeNode()<left>
-autocmd filetype javascript,javascript.jsx ia <buffer> sat setAttribute()<left>
-autocmd filetype javascript,javascript.jsx ia <buffer> sbco style.backgroundColor
-autocmd filetype javascript,javascript.jsx ia <buffer> sbot style.bottom = ""<left>
-autocmd FileType javascript,javascript.jsx ia <buffer> scol style.color =
-    autocmd FileType javascript,javascript.jsx ia <buffer> sdis style.display = ""<left>
-autocmd filetype javascript,javascript.jsx ia <buffer> shi .shift()<left>
-autocmd FileType javascript,javascript.jsx ia <buffer> sin setInterval()<left>
-autocmd FileType javascript,javascript.jsx ia <buffer> sit setItem()<left>
-autocmd filetype javascript,javascript.jsx ia <buffer> slef style.left = ""<left>
-autocmd FileType javascript,javascript.jsx ia <buffer> sli slice()<left>
-autocmd filetype javascript,javascript.jsx ia <buffer> spr stopPropagation()
-autocmd filetype javascript,javascript.jsx ia <buffer> srig style.right = ""<left>
-autocmd FileType javascript,javascript.jsx ia <buffer> stde style.textDecoration = ""<left>
-autocmd FileType javascript,javascript.jsx ia <buffer> sti setTimeout()<left>
-autocmd FileType javascript,javascript.jsx ia <buffer> sto scrollTo()<left>
-autocmd filetype javascript,javascript.jsx ia <buffer> sto style.top = ""<left>
-autocmd FileType javascript,javascript.jsx ia <buffer> stra style.transform =
-    autocmd filetype javascript,javascript.jsx ia <buffer> sty style
-autocmd FileType javascript,javascript.jsx ia <buffer> sub submit
-autocmd filetype javascript,javascript.jsx ia <buffer> swi switch() {<cr>}<esc>k0ci(
-    autocmd filetype javascript,javascript.jsx ia <buffer> tar target
-autocmd filetype javascript,javascript.jsx ia <buffer> tco textContent =
-    autocmd FileType javascript,javascript.jsx ia <buffer> tog toggle('')<left><left>
-autocmd FileType javascript,javascript.jsx ia <buffer> tra transform
-autocmd FileType javascript,javascript.jsx ia <buffer> tst toString()<left>
-autocmd filetype javascript,javascript.jsx ia <buffer> tuc toUpperCase()
-autocmd filetype javascript,javascript.jsx ia <buffer> und undefined
-autocmd FileType javascript,javascript.jsx ia <buffer> upd udpate()<left>
-autocmd filetype javascript,javascript.jsx ia <buffer> ust "use strict"
-autocmd FileType javascript,javascript.jsx ia <buffer> val value
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> ach appendChild()<left>
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> ad add("")<left><left>
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> ael addEventListener("")<left><left>
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> ale alert("")<left><left>
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> ape append()<left>
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> awa await()<left>
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> boo Boolean()<left>
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> cad classList.add("")<left><left>
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> catc catch()<left>
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> cat createAttribute('')<left><left>
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> cco classList.contains("")<left><left>
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> c const
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> cin clearInterval()<left>
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> cla class
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> cl console.log()<left>
+autocmd filetype typescript ia <buffer> clL console.log({  })<left><left><left>
+autocmd filetype typescript ia <buffer> cll console.log(())<left><left><left>
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> cli classList
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> cna className=""<left>
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> cno childNodes
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> con constructor()<left>
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> cont contains("")<left><left>
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> crec clearRect()<left>
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> cre classList.remove("")<left><left>
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> cta currentTarget
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> ctq chrome.tabs.query()<left>
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> dbc document.getElementsByClassName("")<left><left>
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> dbi document.getElementById("")<left><left>
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> dbl dblclick
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> dbt document.getElementsByTagName("")<left><left>
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> dce document.createElement("")<left><left>
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> dcl DOMContentLoaded
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> del delete;<left>
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> dim drawImage()<left>
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> dlh document.location.href
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> doc document
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> dqsa document.querySelectorAll("")<left><left>
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> dqs document.querySelector("")<left><left>
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> dse dataset
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> ex export
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> fal false
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> fea forEach()<left>
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> fec firstElementChild
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> f function() {<cr>}<esc>?(<cr>i
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> fin finally()<left>
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> fn function () {<cr>}<esc>?(<cr>i
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> fo for () {<cr>}<esc>kf(a
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> fori for (let i = 0; i < messages.length; i++) {<cr>console.log(messages[i]);<cr>}
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> fre fillRect()<left>
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> gat getAttribute("")<left><left>
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> gbcr getBoundingClientRect()<left>
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> gco getContext('')<left><left>
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> gda getDate()<left>
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> gday getDay()<left>
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> gfy getFullYear()<left>
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> gho getHours()<left>
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> git getItem()<left>
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> gmi getMinutes()<left>
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> gmo getMonth()<left>
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> gti getTime()<left>
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> hei height
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> hop .hasOwnProperty()<left>
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> ifb if (hasSolvedChallenge === true && hasHintsLeft === true) {<cr>}
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> ifel if () {<cr>} else if () {<cr>} else {<cr>}<esc>{jjf(i<esc>?^if<cr>ci(
+    autocmd filetype typescript,javascript,javascript.jsx ia <buffer> iff if () {<cr>}<esc>?(<cr>a
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> iht innerHTML
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> i i
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> ima Image()<left>
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> imre import React from "react"
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> imp import
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> ite innerText =
+    autocmd FileType typescript,javascript,javascript.jsx ia <buffer> joi join("")<left><left>
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> jpa JSON.parse()<left>
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> jss JavaScript
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> jst JSON.stringify()<left>
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> lcl localStorage.clear()
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> lec lastElementChild
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> len length
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> lgi window.localStorage.getItem()<left>
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> l let
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> lsi window.localStorage.setItem()<left>
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> lst localStorage
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> lth line-through
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> map map()<left>
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> mat matches('')<left><left>
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> mfl Math.floor()<left>
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> mfr Math.floor(Math.random())<left>
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> mongodb mongodb
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> mou mouseover
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> mpo Math.pow()<left>
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> mra Math.random()<left>
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> mro Math.round()<left>
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> msq Math.sqrt()<left>
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> nda new Date()<left>
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> nes nextElementSibling
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> npr new Promise()<left>
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> ofr Object.freeeze()<left>;
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> onc onclick =
+    autocmd FileType typescript,javascript,javascript.jsx ia <buffer> oto offsetTop
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> pau pause('')<left><left>
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> pde preventDefault()
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> pel parentElement
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> pes previousElementSibling
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> pin parseInt()<left>
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> pno parentNode
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> pop pop()<left>
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> pus push()<left>
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> pyo pageYOffset
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> qsa querySelectorAll("")<left><left>
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> qs querySelector("")<left><left>
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> raf requestAnimationFrame()<left>
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> rat removeAttribute('')<left><left>
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> rch removeChild()<left>
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> rem remove('')<left><left>
+autocmd filetype javascript,typescript ia <buffer> ret return
+autocmd filetype javascript.jsx,typescript ia <buffer> ret return zP
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> reviewdao ReviewDAO
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> rgba rgba()<left>
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> rit removeItem("")<left><left>
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> san setAttributeNode()<left>
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> sat setAttribute()<left>
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> sbco style.backgroundColor
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> sbot style.bottom = ""<left>
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> scol style.color =
+    autocmd FileType typescript,javascript,javascript.jsx ia <buffer> sdis style.display = ""<left>
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> shi .shift()<left>
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> sin setInterval()<left>
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> sit setItem()<left>
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> slef style.left = ""<left>
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> sli slice()<left>
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> spr stopPropagation()
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> srig style.right = ""<left>
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> stde style.textDecoration = ""<left>
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> sti setTimeout()<left>
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> sto scrollTo()<left>
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> sto style.top = ""<left>
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> stra style.transform =
+    autocmd filetype typescript,javascript,javascript.jsx ia <buffer> sty style
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> sub submit
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> swi switch() {<cr>}<esc>k0ci(
+    autocmd filetype typescript,javascript,javascript.jsx ia <buffer> tar target
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> tco textContent =
+    autocmd FileType typescript,javascript,javascript.jsx ia <buffer> tog toggle('')<left><left>
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> tra transform
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> und undefined
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> upd udpate()<left>
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> ust "use strict"
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> val value
 autocmd filetype javascript,javascript.jsx ia <buffer> v var
-autocmd filetype javascript,javascript.jsx ia <buffer> whi while() {<cr>}<esc>kf(a
-autocmd FileType javascript,javascript.jsx ia <buffer> win window
-autocmd FileType javascript,javascript.jsx ia <buffer> rre ReactDOM.render()<left>
-autocmd FileType javascript,javascript.jsx ia <buffer> edf export default function() {<cr>return (<cr>)<cr>}<esc>?ion<cr>wi
-autocmd FileType javascript.jsx ia <buffer> onc onClick={}<left>
-autocmd FileType javascript.jsx ia <buffer> omo onMouseOver={}<left>
-autocmd FileType javascript.jsx ia <buffer> rus React.useState()<left>
+autocmd filetype typescript ia <buffer> v void
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> whi while() {<cr>}<esc>kf(a
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> win window
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> rre ReactDOM.render()<left>
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> edf export default function() {<cr>return (<cr>)<cr>}<esc>?ion<cr>wi
+autocmd FileType javascript.jsx,typescript ia <buffer> onc onClick={}<left>
+autocmd FileType javascript.jsx,typescript ia <buffer> keyy key={}<left>
+autocmd FileType javascript.jsx,typescript ia <buffer> omo onMouseOver={}<left>
+autocmd FileType javascript.jsx,typescript ia <buffer> rus React.useState()<left>
+autocmd FileType javascript.jsx,typescript ia <buffer> bco backgroundColor:
+autocmd FileType javascript.jsx,typescript ia <buffer> ftog function toggle(id){<cr>setSquares(prevSquares =><cr>prevSquares.map(square =><cr>square.id === id ? { ...square, on: !square.on } : square<cr>)<cr>);<cr>}
+autocmd FileType javascript.jsx,typescript ia <buffer> cbo checkbox
+autocmd FileType javascript.jsx,typescript ia <buffer> hfo htmlFor=""<left>
 
-augroup js_settings
-autocmd!
-autocmd BufRead,BufNewFile *.js,*.jsx execute 'badd ' . expand('~/.vim/init/singkatan/js.vimrc') | execute 'buffer ' . bufnr('~/.vim/init/singkatan/js.vimrc') | setlocal bufhidden=hide | bn
-augroup END
+autocmd FileType typescript ia <buffer> s string
+autocmd FileType typescript ia <buffer> b boolean
+autocmd FileType typescript ia <buffer> n number
+autocmd FileType typescript ia <buffer> t type
+autocmd FileType typescript ia <buffer> int interface
+
+" number method;
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> tst toString()<left>
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> tex toExponential()
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> tfi toFixed()
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> TLS toLocaleString()
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> tpr toPrecision()
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> vof valueOf()
+
+" string method;
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> tlo toLowerCase()
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> tup toUpperCase()
+
+" boolean method;
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> vof valueOf()
+autocmd filetype typescript ia <buffer> ron readonly
+autocmd filetype typescript ia <buffer> rar ReadonlyArray<><left>
+autocmd filetype typescript ia <buffer> pub public
+autocmd filetype typescript ia <buffer> pri private
+autocmd filetype typescript ia <buffer> mes message
+autocmd filetype typescript ia <buffer> err error
+
+" augroup js_settings
+" autocmd!
+" autocmd BufRead,BufNewFile *.js,*.jsx execute 'badd ' . expand('~/.vim/init/singkatan/js.vimrc') | execute 'buffer ' . bufnr('~/.vim/init/singkatan/js.vimrc') | setlocal bufhidden=hide | bn
+" augroup END
 
 autocmd BufRead,BufNewFile,BufWritePost *.c,*.js,*.jsx,*.h call matchadd('Todo', 'TODO')
+
+autocmd FileType javascript.jsx setlocal foldmethod=expr
+autocmd FileType javascript.jsx setlocal foldexpr=JSFolds()
+
+function! JSFolds()
+  let thisline = getline(v:lnum)
+  if thisline =~? '\v^\s*$'
+    return '-1'
+  endif
+
+  if thisline =~ '^import.*$'
+    return 1
+  else
+    return indent(v:lnum) / &shiftwidth
+  endif
+endfunction
 
 " alert() ; method displays an alert box with message an and OK button. the alert() method is used When You want information to come through to the user;
 " createAttribute ; method creates an attribute and returns the attribute as and Attr object;
@@ -238,3 +289,7 @@ autocmd BufRead,BufNewFile,BufWritePost *.c,*.js,*.jsx,*.h call matchadd('Todo',
 " removeEventListener ; removes an event listerner previously registered with EventTarget.addEventListener() from the target;
 " clearInterval() method cancels a timed, repeating action which was previously established by a call to setInterval();
 " class ; keyword can be used to define a class inside an expression;
+" SyntheticBaseEvent ; object that wraps the natvie event in react, It gives you the same functionalities and more. like making sure you have the same behaviour accross browsers
+
+" readonly ; we won't be able to change the value;
+

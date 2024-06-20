@@ -9,7 +9,7 @@ nn <C-d> <C-d>zz
 nn n nzzzv
 nn N Nzzzv
 nn <buffer> du ggVG:norm _wgUl<cr>gv:norm f.wgUl<cr>
-nn <buffer> <leader>md :%norm _i1. <cr>ggVG:norm _wgUl<cr>gv:norm f.wgUl<cr>
+nn <buffer> gomd :%norm _i1. <cr>ggVG:norm _wgUl<cr>gv:norm f.wgUl<cr>
 nn e =ip:w!<cr>g;
 nn E $
 vn E $
@@ -23,7 +23,7 @@ vn <leader>gy "+y
 nn <leader>e :Ex<CR>
 nn <leader>Y "+Y
 xn <leader>d "_d
-nn <leader>so :source ~.vimrc<CR>
+nn <leader>so :w<cr>:source $MYVIMRC<CR>
 nn <leader>su !ipsort -u<cr>
 nn co O<esc>j
 nn Q q
@@ -42,11 +42,11 @@ nn <leader>dd :le<cr>:s/ /", "/g<cr>I"<end>"<esc>=ipg;
 
 " Move between split
 
-nn gh <C-W>h
-nn gj <C-W>j
+" nn gj <C-W>j
+" nn gh <C-W>h
 " nn gk <C-W>k
-nn gl <C-W>l
-nn vn vip:norm 
+" nn gl <C-W>l
+" nn vn vip:norm 
 
 " nn gk whi"<esc>Bi"<esc>
 " nn gk Bi"<esc>wWhi"<esc>
@@ -73,6 +73,8 @@ nn vp vip
 nn ck ciw
 nn cK ciW
 vn vK viW
+vn vk viw
+nn vk viw
 
 " Faster quotes
 nn cj <Right><Right>/"<CR>ci"
@@ -105,7 +107,7 @@ nn ch /[<CR>ci[
 " Faster curly brackets
 nn cL /}<CR>ci{
 nn dL /(<CR>di{
-nn vL /(<CR>vi{
+nn vL /{<CR>vi{
 
 " Faster quotes
 nn c" /"<CR>ci"
@@ -221,7 +223,6 @@ ino z[ ${}<left>
 
 nn <F4> "=strftime("%c")<CR>P
 ino <F4> <C-R>=strftime("%c")<CR>
-nn <F5> :se spell!<CR>
 nn gs :se spell!<CR>
 
 nn <F5> <Cmd>se spell!<CR>
@@ -266,7 +267,6 @@ nn !% :%!
 nn d> dt>
 nn c> ct>
 
-nn 9 :bn<cr>:bn<cr>
 nn c; ct;
 
 nn gq q
@@ -289,5 +289,24 @@ ino <silent> <F7> <esc>:set filetype=html<cr>a
 nnoremap <silent> <F6> :set filetype=javascript.jsx<cr>
 ino <silent> <F6> <esc>:set filetype=javascript.jsx<cr>a
 
-nn <F3> :vimgrep // --max-depth 3 **/*<left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left>
+" grep file, grep buffer, open all the files the current and under Directory
+nn grf :vimgrep // --max-depth 3 **/*<left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left>
+nn grb :vimgrep // --max-depth 3 ##<left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left>
 nn <F2> :args `find . -type f`<cr>
+nn goli :s/\(\S\)\s/\1\r/g<cr>=ip:w<cr>
+nn <F2> :vimgrep /<c-r><c-w>/ --max-depth 3 **/*<cr>:cfdo s/<c-r><c-w>//g<left><left>
+
+vn g[ A]<esc>gvo<esc>i[<esc>
+vn g( A)<esc>gvo<esc>i(<esc>
+vn g{ A}<esc>gvo<esc>i{<esc>
+vn g' A'<esc>gvo<esc>i'<esc>
+vn g" A"<esc>gvo<esc>i"<esc>
+
+nn g[ viwA]<esc>gvo<esc>i[<esc>
+nn g( viwA)<esc>gvo<esc>i(<esc>
+nn g{ viwA}<esc>gvo<esc>i{<esc>
+nn g" viwA"<esc>gvo<esc>i"<esc>
+nn g' viwA'<esc>gvo<esc>i'<esc>
+
+" get the full path of the current file
+nn gotf :put =expand('%:p')<cr>

@@ -2,11 +2,16 @@
 syntax on
 filetype plugin indent on
 " let &backupdir=expand('~/.vim/backupdir')
+colo slate
 
+se foldlevel=999
 se acd
 se ai
 " se dir=~/.vim/backupdir
 " se backupcopy=yes
+se showmatch
+se nojoinspaces
+
 se expandtab
 " se mouse=a
 se gp=git\ grep\ -n
@@ -22,7 +27,7 @@ se nohls
 se ignorecase
 se incsearch
 se is
-se isfname+=@-@
+    se isfname+=@-@
 se laststatus=0
 se laststatus=2
 se listchars-=eol
@@ -34,7 +39,7 @@ se noswapfile
 se nowrap
 se path+=**
 " se ruler
-se scrolloff=8
+" se scrolloff=8
 se shiftwidth=4
 se shiftwidth=4
 se signcolumn=auto
@@ -52,19 +57,32 @@ se undodir=$HOME/.vim/undodir
 se undofile
 se updatetime=50
 se novb "no visual bell
-se wildignore=*.exe,*.dll,*.pdb
+se wildignore=*.exe,*.dll,*.pdb,.*.o,*.obj " ignore completion this type
 se wildmenu
 se wildignorecase
+se fdm=marker
 se winaltkeys=no
 se ru "runtime
+au FileType vim setlocal foldmethod=marker
 
+" silent folds and save position. firstline avoid When enter Vim with nofile
+" specifies so It won't triggered 
+autocmd BufWinLeave *.* mkview!
+autocmd BufWinEnter *.* silent loadview
 
 let g:netrw_browse_split = 0
 let g:netrw_banner = 0
 let g:netrw_winsize = 25
-au filetype tmp BufRead,BufNewFile * startinser " Always on the insert mode when opening vim
 
-" Force loclist to alwasy close when buffer does (affects vim-go)
+" au filetype tmp BufRead,BufNewFile * startinser " Always on the insert mode when opening vim
+
+" " open the file in the folds indent, but set to fold manual directly
+" augroup vimrc
+"     au BufReadPre * setlocal foldmethod=indent
+"     au BufWinEnter * if &fdm == 'indent' | setlocal foldmethod=manual | endif
+" augroup END
+
+" Force loclist to always close when buffer does (affects vim-go)
 augroup CloseLocklistWindowGroup
     autocmd!
     autocmd QuitPre * if empty(&buftype) | lclose | endif
