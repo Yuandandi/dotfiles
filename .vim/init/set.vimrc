@@ -13,24 +13,20 @@ se showmatch
 se nojoinspaces
 
 se expandtab
+se fdm=marker
 " se mouse=a
 se gp=git\ grep\ -n
 se guicursor=
 se guifont=Lucida_Console:h25
-se guioptions-=T
-se guioptions-=m
 se guioptions-=r
 se hid
-se spelllang=id,en_us 
 " se spell
 se nohls
 se ignorecase
 se incsearch
 se is
     se isfname+=@-@
-se laststatus=0
 se laststatus=2
-se listchars-=eol
 se listchars=tab:→\ ,eol:↲
 se nocompatible
 se nohls
@@ -52,7 +48,6 @@ se spr
 se tabpagemax=5
 se tabstop=4
 " se termguicolors
-se textwidth=80
 se undodir=$HOME/.vim/undodir
 se undofile
 se updatetime=50
@@ -60,7 +55,6 @@ se novb "no visual bell
 se wildignore=*.exe,*.dll,*.pdb,.*.o,*.obj " ignore completion this type
 se wildmenu
 se wildignorecase
-se fdm=marker
 se winaltkeys=no
 se ru "runtime
 au FileType vim setlocal foldmethod=marker
@@ -75,15 +69,22 @@ let g:netrw_banner = 0
 let g:netrw_winsize = 25
 
 " au filetype tmp BufRead,BufNewFile * startinser " Always on the insert mode when opening vim
-
-" " open the file in the folds indent, but set to fold manual directly
+" open the file in the folds indent, but set to fold manual directly
 " augroup vimrc
 "     au BufReadPre * setlocal foldmethod=indent
 "     au BufWinEnter * if &fdm == 'indent' | setlocal foldmethod=manual | endif
 " augroup END
 
 " Force loclist to always close when buffer does (affects vim-go)
-augroup CloseLocklistWindowGroup
-    autocmd!
-    autocmd QuitPre * if empty(&buftype) | lclose | endif
-augroup END
+" augroup CloseLocklistWindowGroup
+" 	autocmd!
+" 	autocmd QuitPre * if empty(&buftype) | lclose | endif
+" augroup END
+
+" Check for file changes automatically
+set autoread
+" Automatically reload the file if it's changed outside of Vim
+autocmd FocusGained,BufEnter * checktime
+" Show a message when the file is reloaded
+autocmd FileChangedShellPost * echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
+

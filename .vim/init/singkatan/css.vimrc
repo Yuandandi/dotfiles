@@ -90,7 +90,6 @@ au filetype css ia <buffer> fil filter:
 au filetype css ia <buffer> fir firebrick
 au filetype css ia <buffer> fix fixed
 au filetype css ia <buffer> fle flex
-au filetype css ia <buffer> flex flex:
 au filetype css ia <buffer> flo float:
 au filetype css ia <buffer> foc a:focus
 au filetype css ia <buffer> fon font:

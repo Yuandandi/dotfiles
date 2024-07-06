@@ -9,10 +9,15 @@ nn <C-d> <C-d>zz
 nn n nzzzv
 nn N Nzzzv
 nn <buffer> du ggVG:norm _wgUl<cr>gv:norm f.wgUl<cr>
-nn <buffer> gomd :%norm _i1. <cr>ggVG:norm _wgUl<cr>gv:norm f.wgUl<cr>
-nn e =ip:w!<cr>g;
+nn <buffer> gomd :%norm _i1. <cr>ggVG:norm _wgUl<cr>gv:norm f.wgUl<cr>gvojg<c-a>
+nn e V<esc>=ip:w<cr>gv<esc>
 nn E $
 vn E $
+
+" open image inside ("")
+nn <leader>i yi":!feh <c-r>"<cr>
+" open image './' required
+" nn <leader>i 0/\.\/<cr>yiW:!feh <c-r>"
 
 " Greatest remap ever
 xn <leader>p "_dP
@@ -51,7 +56,8 @@ nn <leader>dd :le<cr>:s/ /", "/g<cr>I"<end>"<esc>=ipg;
 " nn gk whi"<esc>Bi"<esc>
 " nn gk Bi"<esc>wWhi"<esc>
 
-ino <c-l> <c-w>
+ino <c-l> <esc>yypkA
+nn <c-l> yyp
 
 " go down
 " ino <c-m> <c-g>j
@@ -156,7 +162,6 @@ ino <C-b> <Esc>bz=1<CR>A
 nn cm O<cr>
 
 " C-q for suggestions
-ino <C-q> <Esc>bz=<CR>
 nn <C-k> <cmd>cnext<CR>zz
 nn <C-j> <cmd>cprev<CR>zz
 nn <leader>k <cmd>lnext<CR>zz
@@ -204,6 +209,7 @@ ino zK <space>!=<space>
 ino z' ''<left>
 ino z; ""<left>
 ino zl ()<left>
+ino z0 ()
 ino zL {}<left>
 ino zm <space>>=<space>
 ino zr <space>=><space>
@@ -220,6 +226,10 @@ ino zV <space><<space>
 ino zt <space>+<space>
 ino zT <space>-<space>
 ino z[ ${}<left>
+ino zx <space>!==<space>
+
+nn zl zL
+nn zh zH
 
 nn <F4> "=strftime("%c")<CR>P
 ino <F4> <C-R>=strftime("%c")<CR>
@@ -270,6 +280,7 @@ nn c> ct>
 nn c; ct;
 
 nn gq q
+nn gb q
 
 " globally capitalize after the double quote
 nn ge :s/"\(\w\)/"\U\1/g<cr>:s/\. \s*\(\w\)/. \U\1/g<cr>
@@ -277,7 +288,7 @@ vn ge :s/"\(\w\)/"\U\1/g<cr>:s/\. \s*\(\w\)/. \U\1/g<cr>
 nn gE :s/\<./\u&/g<cr>
 
 " Map `]c` to go to the next comment
-nnoremap ]c /\v^\s*#<CR>n
+" nnoremap ]c /\v^\s*#<CR>n
 
 " Yank to system clipboard
 vnoremap <silent> <F8> :w !xclip -selection clipboard<CR><CR>
@@ -310,3 +321,5 @@ nn g' viwA'<esc>gvo<esc>i'<esc>
 
 " get the full path of the current file
 nn gotf :put =expand('%:p')<cr>
+
+nn d= d+

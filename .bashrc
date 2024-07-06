@@ -8,7 +8,6 @@ set -o vi
 set -o ignoreeof
 set +o noglob
 
-
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
@@ -50,11 +49,14 @@ shopt -s globstar
 
 
 
-if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
-fi
+# if [ "$color_prompt" = yes ]; then
+#     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+# else
+#     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+# fi
+
+PS1='\W\$ ' # simple bash cuurrent folder name
+
 unset color_prompt force_color_prompt 
 
 # If this is an xterm set the title to user@host:dir
@@ -169,7 +171,7 @@ alias gle='cd /home/danzor/repos/github.com/yuandandi/learn ; grep -Hnri '
 alias gl='git log --oneline --decorate --all --graph'
 alias glow='glow -p'
 alias gm='git merge'
-alias gn='cd /home/danzor/repos/github.com/yuandandi/notes ; grep -Hnri '
+alias gn='cd /home/danzor/repos/github.com/yuandandi/notes ; grep -Hnri'
 alias gp='git push'
 alias gp='git push -u origin main'
 alias gpl='git pull'
@@ -190,10 +192,10 @@ alias ifconifg='ifconfig'
 alias ipa='ip address'
 alias ips='~/.local/bin/scripts/ips'
 alias iptab='sudo iptables --verbose --numeric --list --line-numbers'
+alias i='sudo pacman -Sy --needed'
 alias iv='vim'
 alias ix='~/.local/bin/scripts/ix'
 #alias i='yes | sudo apt install' (Ubuntu)
-alias i='yes | sudo pacman -S --needed'
 alias kil='kill -9'
 alias kmdir='mkdir'
 alias la='ls -A | grep "^\..*"'
@@ -221,6 +223,7 @@ alias manf='~/.local/bin/scripts/manf'
 alias mb='mv'
 alias mbon='bmon'
 alias mci='make clean install'
+alias mdf='megadf -h'
 alias mdkir='mkdir'
 alias md='~/.local/bin/scripts/md'
 alias megc='~/.local/bin/scripts/megc'
@@ -231,7 +234,6 @@ alias m='mkdir'
 alias m.="mv (fzf --multi)" # easier way to copy multiple files
 alias mna='man'
 alias mor='more'
-alias mpv='mpv --ao=pulse'
 alias mroe='more'
 alias mr='rm'
 alias mt='xargs mv -t'
@@ -273,6 +275,7 @@ alias rand="ranger --show-only-dirs"
 alias ran="ranger"
 alias ra='ranger'
 alias rd='radio --search'
+alias rec='ffmpeg -framerate 10 -f x11grab -video_size 1920x1080 -i :0.0'
 alias rem='vim ~/.vim/init/singkatan/remap.vimrc'
 alias rf='rm -rf'
 alias rg='rg -S'
@@ -341,7 +344,7 @@ alias vim='vim'
 alias vimv='~/.local/bin/vimv'
 alias vircam='sudo modprobe v4l2loopback video_nr=7 card_label=Video-Loopback exclusive_caps=1'
 alias vi='vim'
-alias vl='vim ~/.config/sc-im/scimrc'
+alias rek='ffmpeg -video_size 761x534 -r 20 -f x11grab -i :0.0+1152,0 -vcodec libx264 -preset ultrafast'
 alias vm='mv'
 alias vr='vim ~/.bashrc'
 alias vt='vim /mnt/c/Users/Dandi/AppData/Local/Packages/Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe/LocalState/settings.json'
@@ -461,6 +464,15 @@ _fzf_compgen_path() {
 
 _fzf_compgen_dir() {
     fd --type=d --hidden --exclude .git . "$1"
+}
+
+function yy() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
 }
 
 source ~/.programs/fzf-git.sh/fzf-git.sh

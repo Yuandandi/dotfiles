@@ -33,6 +33,10 @@ autocmd filetype html,htmldjango ia <buffer> !!! <!DOCTYPE html><cr><html lang="
 \| ia <buffer> q <q></q><Esc>cit
 \| ia <buffer> str <strong></strong><Esc>cit
 
+" keyword
+autocmd FileType html,htmldjango ia <buffer> def defer
+autocmd FileType html,htmldjango ia <buffer> mod module
+
 autocmd FileType html,htmldjango ia <buffer> bi <big></big><Esc>cit
 \| ia <buffer> blo <blockquote cite=""></blockquote><C-o>?"><CR>
 \| ia <buffer> bod <body><CR></body><C-o>O
@@ -227,4 +231,5 @@ augroup END
 " method ; How to send from-data (the form-data is sent to the page specified in the action attribute)
 " center ; used in html4 to center-align text
 " type ; style (specifies the internet media type aka mime type)
-" span ; tag is an inline container used to mark up a part of a text, or a part of a document, much like div element buth div is block level element
+" span ; tag is an inline container used to mark up a part of a text, or a part of a document, much like div element but div is block level element
+" defer ;  boolean attribute, the script is downloaded in parallel to parish the page, and executed after the page has finished parsing
