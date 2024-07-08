@@ -2,11 +2,14 @@
 " autocmd BufRead,BufNewFile *.jsx set filetype=javascript
 autocmd FileType javascript nn <buffer> s cit
 autocmd FileType javascript nn <leader>2 _v$y:e ~/.config/nvim/lua/dandi/abbrev/javascript.lua<CR>}}Oautocmd FileType javascript ia <buffer> <Esc>phi<Space>
+autocmd FileType javascript nn \ :w<cr>:!node %<cr>
+autocmd FileType javascript nn <BS> :w<cr>yyp!!node %<cr>kA // <esc>J
 " autocmd filetype javascript,javascript.jsx ino zJ <space>===<space>
 
 " autocmd filetype typescript nn <buffer> <cr> yypk
 autocmd FileType javascript,javascript.jsx,typescript nn gca A //<space>
 autocmd FileType javascript,javascript.jsx,typescript nn o o;<left>
+autocmd FileType javascript,javascript.jsx,typescript nn cm O<cr>;<left>
 autocmd FileType javascript,javascript.jsx,typescript nn 0 0:w<cr>
 autocmd FileType javascript,javascript.jsx,css,html,typescript nn <c-a> <c-a>:w<cr>
 autocmd FileType javascript,javascript.jsx,css,html,typescript vn <c-a> <c-a>:w<cr>gv
@@ -44,10 +47,8 @@ autocmd FileType javascript,javascript.jsx,typescript ia <buffer> clisk click
 autocmd FileType javascript,javascript.jsx,typescript ia <buffer> rsc readystatechange
 autocmd FileType javascript,javascript.jsx,typescript ia <buffer> rst readyState
 
-autocmd FileType javascript,javascript.jsx,typescript ia <buffer> cha charAt()<left>
 autocmd FileType javascript,javascript.jsx,typescript ia <buffer> iin isInteger()<left>
 autocmd FileType javascript,javascript.jsx,typescript ia <buffer> pfl parseFloat()<left>
-autocmd FileType javascript,javascript.jsx,typescript ia <buffer> ind indexOf()<left>
 autocmd FileType javascript,javascript.jsx,typescript ia <buffer> ach appendChild()<left>
 autocmd FileType javascript,javascript.jsx,typescript ia <buffer> inc includes()<left>
 autocmd filetype javascript,javascript.jsx,typescript ia <buffer> ad add("")<left><left>
@@ -157,7 +158,6 @@ autocmd filetype typescript,javascript,javascript.jsx ia <buffer> tar target
 autocmd filetype javascript,javascript.jsx,typescript ia <buffer> tco textContent =
 autocmd FileType typescript,javascript,javascript.jsx ia <buffer> tog toggle('')<left><left>
 autocmd FileType javascript,javascript.jsx,typescript ia <buffer> tra transform
-autocmd FileType javascript,javascript.jsx ia <buffer> num Number
 autocmd FileType javascript,javascript.jsx ia <buffer> isn isNaN()<left>
 autocmd filetype javascript,javascript.jsx,typescript ia <buffer> und undefined
 autocmd FileType javascript,javascript.jsx,typescript ia <buffer> upd udpate()<left>
@@ -176,7 +176,12 @@ autocmd FileType javascript.jsx,typescript ia <buffer> bco backgroundColor:
 autocmd FileType javascript.jsx,typescript ia <buffer> ftog function toggle(id){<cr>setSquares(prevSquares =><cr>prevSquares.map(square =><cr>square.id === id ? { ...square, on: !square.on } : square<cr>)<cr>);<cr>}
 autocmd FileType javascript.jsx,typescript ia <buffer> cbo checkbox
 autocmd FileType javascript.jsx,typescript ia <buffer> hfo htmlFor=""<left>"
-autocmd FileType javascript,javascript.jsx,typescript ia <buffer> sli slice()<left>
+
+" date and time method
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> dtf DateTimeFormat()<left>
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> dat Date()<left>
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> dno Date.now()<left>
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> idt Intl.DateTimeFormat('').format()<esc>F'i
 
 " Event listener
 autocmd filetype javascript,javascript.jsx,typescript ia <buffer> ael addEventListener("")<left><left>
@@ -209,7 +214,7 @@ autocmd filetype javascript,javascript.jsx,typescript ia <buffer> cl console.log
 autocmd filetype typescript,javascript.jsx,javascript ia <buffer> cll console.log({  })<left><left><left>
 autocmd filetype typescript,javascript.jsx,javascript ia <buffer> cer console.error()<left>
 autocmd filetype typescript,javascript.jsx,javascript ia <buffer> ccl console.clear()<left>
-autocmd filetype typescript,javascript.jsx,javascript ia <buffer> cota console.table()<left>
+autocmd filetype typescript,javascript.jsx,javascript ia <buffer> ctab console.table()<left>
 autocmd filetype typescript,javascript.jsx,javascript ia <buffer> cwa console.warn()<left>
 autocmd filetype typescript,javascript.jsx,javascript ia <buffer> cgr console.group();<cr>console.groupEnd()<esc>k0ci(""<left>
 
@@ -223,6 +228,9 @@ autocmd filetype javascript,javascript.jsx,typescript ia <buffer> spr stopPropag
 autocmd FileType javascript ia <buffer> crea create()<left>
 autocmd FileType javascript ia <buffer> sup super()<left>
 autocmd FileType javascript ia <buffer> cle clear()<left>
+
+" string to number
+autocmd FileType javascript,javascript.jsx ia <buffer> num Number()<left>
 
 " js keys;
 autocmd FileType javascript,javascript.jsx,typescript ia <buffer> obj Object
@@ -248,6 +256,7 @@ autocmd FileType javascript,javascript.jsx,typescript ia <buffer> mra Math.rando
 autocmd filetype javascript,javascript.jsx,typescript ia <buffer> mpo Math.pow()<left>
 autocmd FileType javascript,javascript.jsx,typescript ia <buffer> mmi Math.min()<left>
 autocmd filetype javascript,javascript.jsx,typescript ia <buffer> msq Math.sqrt()<left>
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> mab Math.abs()<left>
 
 " promise
 autocmd filetype javascript,javascript.jsx,typescript ia <buffer> res resolve()<left>
@@ -264,7 +273,7 @@ autocmd filetype javascript,javascript.jsx,typescript ia <buffer> uns unshift()<
 autocmd FileType javascript,javascript.jsx,typescript ia <buffer> sin setInterval()<left>
 autocmd FileType javascript,javascript.jsx,typescript ia <buffer> spl splice()<left>
 autocmd FileType javascript,javascript.jsx,typescript ia <buffer> sit setItem()<left>
-autocmd FileType javascript,javascript.jsx,typescript ia <buffer> rev reversed()<left>
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> rev reverse()<left>
 autocmd FileType typescript,javascript,javascript.jsx ia <buffer> joi join("")<left><left>
 autocmd FileType typescript,javascript,javascript.jsx ia <buffer> conc concat()<left>
 
@@ -281,7 +290,7 @@ autocmd filetype typescript ia <buffer> abs abstract
 autocmd FileType javascript,javascript.jsx,typescript ia <buffer> tst toString()<left>
 autocmd filetype javascript,javascript.jsx,typescript ia <buffer> tex toExponential()
 autocmd filetype javascript,javascript.jsx,typescript ia <buffer> tfi toFixed()
-autocmd filetype javascript,javascript.jsx,typescript ia <buffer> TLS toLocaleString()
+autocmd filetype javascript,javascript.jsx,typescript ia <buffer> tls toLocaleString()
 autocmd filetype javascript,javascript.jsx,typescript ia <buffer> tpr toPrecision()
 autocmd filetype javascript,javascript.jsx,typescript ia <buffer> vof valueOf()
 
@@ -294,6 +303,11 @@ autocmd FileType javascript,javascript.jsx,typescript ia <buffer> map map()<left
 autocmd filetype javascript,javascript.jsx,typescript ia <buffer> tlo toLowerCase()
 autocmd filetype javascript,javascript.jsx,typescript ia <buffer> tup toUpperCase()
 autocmd filetype javascript,javascript.jsx,typescript ia <buffer> tus toUTCString()
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> cha charAt()<left>
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> ind indexOf()<left>
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> subs substring()<left>
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> rep replace()<left>
+autocmd FileType javascript,javascript.jsx,typescript ia <buffer> sli slice()<left>
 
 " boolean method;
 autocmd filetype javascript,javascript.jsx,typescript ia <buffer> vof valueOf()

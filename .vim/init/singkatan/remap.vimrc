@@ -14,6 +14,8 @@ nn e V<esc>=ip:w<cr>gv<esc>
 nn E $
 vn E $
 
+nn <F12> :!systemctl suspend<cr>
+
 " open image inside ("")
 nn <leader>i yi":!feh <c-r>"<cr>
 " open image './' required

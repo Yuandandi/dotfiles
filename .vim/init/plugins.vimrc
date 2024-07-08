@@ -12,5 +12,6 @@ Plug 'pangloss/vim-javascript'
 " Plug 'mxw/vim-jsx'
 " Plug 'hail2u/vim-css3-syntax'
 Plug 'christoomey/vim-titlecase'
+Plug 'voldikss/vim-floaterm'
 
 call plug#end()
