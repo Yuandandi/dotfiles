@@ -68,6 +68,7 @@ case "$TERM" in
 esac
 
 alias ahk='cd ~/.local/bin/scripts && explorer.exe main.ahk'
+alias ba="~/.local/bin/scripts/fehbg"
 alias all="~/.local/bin/scripts/all"
 alias am='alsamixer'
 alias aman='netstat -tua | grep LISTEN'
@@ -166,6 +167,7 @@ alias gco='git checkout'
 alias gd="git diff"
 alias gg='cmd.exe /c start brave.exe https://google.com'
 alias gg="google"
+alias g='grep -Hnri'
 alias gist='cmd.exe /c start brave.exe https://gist.github.com'
 alias gle='cd /home/danzor/repos/github.com/yuandandi/learn ; grep -Hnri '
 alias gl='git log --oneline --decorate --all --graph'
@@ -177,10 +179,7 @@ alias gp='git push -u origin main'
 alias gpl='git pull'
 alias gr="entr bash -c 'clear; go run /tmp/co.go' <<< /tmp/co.go"
 alias grep='grep --color --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}'
-alias greph='grep -Hnri'
 alias grepl='grep -lnri'
-alias g='rgrep'
-alias grpeh='grep -Hnri'
 alias gs='git status'
 alias gt='~/.local/bin/scripts/gt'
 alias gw='git worktree'
@@ -197,8 +196,9 @@ alias iv='vim'
 alias ix='~/.local/bin/scripts/ix'
 #alias i='yes | sudo apt install' (Ubuntu)
 alias kil='kill -9'
+alias k="killall"
 alias kmdir='mkdir'
-alias la='ls -A | grep "^\..*"'
+alias la='ls -A | grep "jk"'
 alias las='~/.local/bin/scripts/las'
 alias last='~/.local/bin/scripts/last'
 alias lb='lynx bing.com'
@@ -372,11 +372,9 @@ alias w='w3m'
 alias x='exit'
 alias yd='~/.local/bin/scripts/yd'
 alias ymd='date +"%Y-%m-%d"'
+alias ymd='ytfzf -md'
 alias yt='ytfzf --show-thumbnails'
-alias za='zellij attach'
-alias zn='zellij --session'
 alias zola='flatpak run org.getzola.zola'
-alias zz='z -'
 
 
 # colored GCC warnings and errors

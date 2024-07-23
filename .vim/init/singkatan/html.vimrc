@@ -213,23 +213,10 @@ autocmd filetype html,htmldjango ia <buffer> cha charset=""<left>
 \| ia <buffer> wid width=""<left>
 
 
-autocmd filetype html,javascript ia <buffer> ale alert("")<left><left>
+autocmd filetype html,javascript ia <buffer> ale alert('')<left><left>
 
 
-augroup html_settings
-    autocmd!
-    autocmd BufRead,BufNewFile *.html,*.htmldjango execute 'badd ' . expand('~/.vim/init/singkatan/html.vimrc') | execute 'buffer ' . bufnr('~/.vim/init/singkatan/html.vimrc') | setlocal bufhidden=hide | bn
-augroup END
-
-
-" autoplay attribute ; is a Boolean. When present the video will automatically start playing
-" number ; defines a field for entering a number;
-" placeholder ; attribute specifies a short hint that describes the expected value of an input field(e.g. a sample value or a short description of the expected format)
-" onclick() ; event occurs When the user clicks on an html element;
-" height="" ; attribute the number in pixels
-" width="" ; attribute the number in pixels
-" method ; How to send from-data (the form-data is sent to the page specified in the action attribute)
-" center ; used in html4 to center-align text
-" type ; style (specifies the internet media type aka mime type)
-" span ; tag is an inline container used to mark up a part of a text, or a part of a document, much like div element but div is block level element
-" defer ;  boolean attribute, the script is downloaded in parallel to parish the page, and executed after the page has finished parsing
+" augroup html_settings
+"     autocmd!
+"     autocmd BufRead,BufNewFile *.html,*.htmldjango execute 'badd ' . expand('~/.vim/init/singkatan/html.vimrc') | execute 'buffer ' . bufnr('~/.vim/init/singkatan/html.vimrc') | setlocal bufhidden=hide | bn
+" augroup END
