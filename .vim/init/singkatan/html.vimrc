@@ -1,5 +1,5 @@
 
-autocmd FileType html setlocal shiftwidth=2
+au FileType html setlocal shiftwidth=2
 \| ino <buffer> <C-b> <C-o>?><CR>
 \| ino <buffer> <C-g>> <C-o>ct><esc>
 \| ino <buffer> <C-g>< <Esc>d/<<CR>
@@ -12,11 +12,11 @@ autocmd FileType html setlocal shiftwidth=2
 \| nn <leader>2 _v$y:e ~/.config/nvim/lua/dandi/abbrev/html.lua<CR>}}Oautocmd FileType html ia <buffer> <Esc>phi<Space>
 \| nn <leader>3 yiw:vs ~/.config/nvim/lua/dandi/abbrev/html.lua<CR>}}}Oautocmd FileType html ia <buffer> <Esc>pa <Esc>p2b3ldevip:sort<CR>:wq<CR>
 
-autocmd filetype css nn o :w<cr>o;
+au filetype css nn o :w<cr>o;
 
-autocmd FileType html set tw=120
+au FileType html set tw=120
 
-autocmd filetype html,htmldjango ia <buffer> !!! <!DOCTYPE html><cr><html lang="en"><cr><head><cr><meta charset="UTF-8" /><cr><meta name="viewport" content="width=device-width, initial-scale=1.0"><cr><title>document</title><cr><link rel="stylesheet" type="text/css" href="styles.css" /><cr></head><cr><body><cr></body><cr></html>
+au filetype html,htmldjango ia <buffer> !!! <!DOCTYPE html><cr><html lang="en"><cr><head><cr><meta charset="UTF-8" /><cr><meta name="viewport" content="width=device-width, initial-scale=1.0"><cr><title>document</title><cr><link rel="stylesheet" type="text/css" href="styles.css" /><cr></head><cr><body><cr></body><cr></html>
 \| ia <buffer> abb <abbr title=""></abbr><C-o>?"<CR>
 \| ia <buffer> addr <address><CR></address><C-o>O
 \| ia <buffer> ah <a href=""></a><Esc>?"><CR>i
@@ -34,10 +34,10 @@ autocmd filetype html,htmldjango ia <buffer> !!! <!DOCTYPE html><cr><html lang="
 \| ia <buffer> str <strong></strong><Esc>cit
 
 " keyword
-autocmd FileType html,htmldjango ia <buffer> def defer
-autocmd FileType html,htmldjango ia <buffer> mod module
+au FileType html,htmldjango ia <buffer> def defer
+au FileType html,htmldjango ia <buffer> mod module
 
-autocmd FileType html,htmldjango ia <buffer> bi <big></big><Esc>cit
+au FileType html,htmldjango ia <buffer> bi <big></big><Esc>cit
 \| ia <buffer> blo <blockquote cite=""></blockquote><C-o>?"><CR>
 \| ia <buffer> bod <body><CR></body><C-o>O
 \| ia <buffer> br <br>
@@ -90,10 +90,10 @@ autocmd FileType html,htmldjango ia <buffer> bi <big></big><Esc>cit
 \| ia <buffer> met <meta name="" content=""><esc>0ci"
 \| ia <buffer> meth method=""<left>
 
-autocmd FileType html,vimwiki,htmldjango ia <buffer> lorp Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.
-autocmd FileType html,vimwiki,htmldjango ia <buffer> lors Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
+au FileType html,vimwiki,htmldjango ia <buffer> lorp Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.
+au FileType html,vimwiki,htmldjango ia <buffer> lors Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
 
-autocmd FileType html,htmldjango ia <buffer> mai <main><CR></main><Esc>cit
+au FileType html,htmldjango ia <buffer> mai <main><CR></main><Esc>cit
 \| ia <buffer> map <map name=""><CR></map><Esc>citCR>
 \| ia <buffer> mar <mark></mark><Esc>cit
 \| ia <buffer> del <dell></del><left><left><left><left><left><left><left>
@@ -152,7 +152,7 @@ autocmd FileType html,htmldjango ia <buffer> mai <main><CR></main><Esc>cit
 \| ia <buffer> ulia <ul class=""><cr><li><cr><a href="#" class=""></a><cr></li><cr></ul><esc>kkkkci"
 
 
-autocmd filetype html,htmldjango ia <buffer> cha charset=""<left>
+au filetype html,htmldjango ia <buffer> cha charset=""<left>
 \| ia <buffer> acti action=""<left>
 \| ia <buffer> aut autoplay
 \| ia <buffer> blan _blank
@@ -213,10 +213,10 @@ autocmd filetype html,htmldjango ia <buffer> cha charset=""<left>
 \| ia <buffer> wid width=""<left>
 
 
-autocmd filetype html,javascript ia <buffer> ale alert('')<left><left>
+au filetype html,javascript ia <buffer> ale alert('')<left><left>
 
 
 " augroup html_settings
-"     autocmd!
-"     autocmd BufRead,BufNewFile *.html,*.htmldjango execute 'badd ' . expand('~/.vim/init/singkatan/html.vimrc') | execute 'buffer ' . bufnr('~/.vim/init/singkatan/html.vimrc') | setlocal bufhidden=hide | bn
+"     au!
+"     au BufRead,BufNewFile *.html,*.htmldjango execute 'badd ' . expand('~/.vim/init/singkatan/html.vimrc') | execute 'buffer ' . bufnr('~/.vim/init/singkatan/html.vimrc') | setlocal bufhidden=hide | bn
 " augroup END

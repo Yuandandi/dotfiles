@@ -11,6 +11,7 @@ se ai
 " se backupcopy=yes
 se showmatch
 se nojoinspaces
+se cot=menu,fuzzy " completeopt
 
 se expandtab
 se fdm=marker
@@ -59,10 +60,10 @@ se winaltkeys=no
 se ru "runtime
 au FileType vim setlocal foldmethod=marker
 
-" silent folds and save position. firstline avoid When enter Vim with nofile
-" specifies so It won't triggered 
-autocmd BufWinLeave *.* mkview!
-autocmd BufWinEnter *.* silent loadview
+" " silent folds and save position. firstline avoid When enter Vim with nofile
+" " specifies so It won't triggered 
+" autocmd BufWinLeave *.* mkview!
+" autocmd BufWinEnter *.* silent loadview
 
 let g:netrw_browse_split = 0
 let g:netrw_banner = 0
@@ -88,3 +89,9 @@ autocmd FocusGained,BufEnter * checktime
 " Show a message when the file is reloaded
 autocmd FileChangedShellPost * echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
 
+" set completeopt=menuone,noinsert,noselect
+set shortmess+=c
+
+
+menu File.Save :w<CR>
+menu MyMenu.New\ File :edit newfile.txt<CR>

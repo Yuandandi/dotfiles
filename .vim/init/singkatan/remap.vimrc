@@ -122,7 +122,7 @@ nn c" /"<CR>ci"
 nn c' /'<CR>ci'
 
 " Delete the paragraph easier
-nn dp dap
+" nn dp dap
 nn cp cip
 
 " Common change dk (delete kata)
@@ -149,7 +149,7 @@ nn dW :%s/\s*$//g<cr>
 
 " Select, delete, and visual in a faster way
 nn vo ggVG
-nn do ggVGd
+" nn do ggVGd
 
 " Faster :wq and :q!
 nn Z :wq!<CR>
@@ -211,6 +211,7 @@ ino zK <space>!=<space>
 ino z' ''<left>
 ino z; ""<left>
 ino zl ()<left>
+ino z. ("")<left><left>
 ino z0 ()
 ino zL {}<left>
 ino zm <space>>=<space>
@@ -273,7 +274,8 @@ ino <C-g>p <Esc>yiwA = <Esc>p_yiwo<Esc>pA.
 " open link under the cursor
 nn gx :!qutebrowser <c-r><c-f><cr>
 
-nn <F5> :UndotreeToggle<CR>
+" nn <F5> :UndotreeToggle<CR>
+
 nn !% :%!
 
 nn d> dt>
@@ -306,6 +308,7 @@ ino <silent> <F6> <esc>:set filetype=javascript.jsx<cr>a
 nn grf :vimgrep // --max-depth 3 **/*<left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left>
 nn grb :vimgrep // --max-depth 3 ##<left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left>
 nn <F2> :args `find . -type f`<cr>
+nn <F3> :wa<Bar>exe "mksession! " .. v:this_session<CR>:so ~/sessions/
 nn goli :s/\(\S\)\s/\1\r/g<cr>=ip:w<cr>
 nn <F2> :vimgrep /<c-r><c-w>/ --max-depth 3 **/*<cr>:cfdo s/<c-r><c-w>//g<left><left>
 
@@ -325,3 +328,13 @@ nn g' viwA'<esc>gvo<esc>i'<esc>
 nn gotf :put =expand('%:p')<cr>
 
 nn d= d+
+
+"{{{ List Month
+inoremap <F5> <C-R>=ListMonths()<CR>
+func ListMonths()
+    call complete(col('.'), ['January', 'February', 'March',
+                \ 'April', 'May', 'June', 'July', 'August', 'September',
+                \ 'October', 'November', 'December'])
+    return ''
+endfunc
+"}}}

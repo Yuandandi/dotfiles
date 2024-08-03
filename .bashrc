@@ -68,11 +68,12 @@ case "$TERM" in
 esac
 
 alias ahk='cd ~/.local/bin/scripts && explorer.exe main.ahk'
-alias ba="~/.local/bin/scripts/fehbg"
 alias all="~/.local/bin/scripts/all"
 alias am='alsamixer'
+alias dmenurecord='~/.local/bin/dmenurecord'
 alias aman='netstat -tua | grep LISTEN'
 alias aptli='apt list --installed'
+alias ba="~/.local/bin/scripts/fehbg"
 alias bas='cd ~/repos/github.com/yuandandi/notes/bash/'
 alias b='batcat -r :10'
 alias b.="batcat -r :10 (fzf --multi)" # preview multiple files within batcat
@@ -86,8 +87,8 @@ alias brute="~/.local/bin/scripts/brute.sh"
 alias bs='~/.local/bin/scripts/bs'
 alias bu='brew update --auto-update'
 alias caniuser='caniuse'
+alias c="calcurse"
 alias ccl='clear'
-alias c='clear'
 alias c.="cp (fzf --multi)" # easier way to copy multiple files
 alias ...='cd ../.. && d -g --icons'
 alias ..='cd .. ; ls -A --color=auto'
@@ -213,9 +214,9 @@ alias ll="d -l -g --icons"
 alias l="lynx"
 # alias lock=' gnome-screensaver-command --lock' (gnome Ubuntu)
 alias lorem='bash ~/.local/bin/scripts/lorem.sh'
+alias ls='ls --color=auto --group-directories-first'
 alias lsd='ls -d */'
 alias lsj='ls'
-alias ls='ls --color=auto'
 alias lsm='ls'
 alias lss='ls'
 alias lt="d --tree --level=2 -a"
@@ -373,7 +374,7 @@ alias x='exit'
 alias yd='~/.local/bin/scripts/yd'
 alias ymd='date +"%Y-%m-%d"'
 alias ymd='ytfzf -md'
-alias yt='ytfzf --show-thumbnails'
+alias yt='ytfzf --show-thumbnails -d'
 alias zola='flatpak run org.getzola.zola'
 
 
@@ -464,13 +465,14 @@ _fzf_compgen_dir() {
     fd --type=d --hidden --exclude .git . "$1"
 }
 
+# exit yazi in the current window on yazi itself
 function yy() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
-	yazi "$@" --cwd-file="$tmp"
-	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-		cd -- "$cwd"
-	fi
-	rm -f -- "$tmp"
+    local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+    yazi "$@" --cwd-file="$tmp"
+    if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+        cd -- "$cwd"
+    fi
+    rm -f -- "$tmp"
 }
 
 source ~/.programs/fzf-git.sh/fzf-git.sh
