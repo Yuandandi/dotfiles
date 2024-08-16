@@ -11,6 +11,7 @@ nn N Nzzzv
 nn <buffer> du ggVG:norm _wgUl<cr>gv:norm f.wgUl<cr>
 nn <buffer> gomd :%norm _i1. <cr>ggVG:norm _wgUl<cr>gv:norm f.wgUl<cr>gvojg<c-a>
 nn e V<esc>=ip:w<cr>gv<esc>
+" nn e <esc>:w<cr>
 nn E $
 vn E $
 
@@ -213,7 +214,7 @@ ino z; ""<left>
 ino zl ()<left>
 ino z. ("")<left><left>
 ino z0 ()
-ino zL {}<left>
+ino zL {  }<left><left>
 ino zm <space>>=<space>
 ino zr <space>=><space>
 ino zM <space><=<space>
@@ -223,7 +224,7 @@ ino zp {<cr>}<esc>O
 ino zP (<cr>)<esc>O
 ino z- <space>-=<space>
 ino z= <space>+=<space>
-ino zz <esc>zza
+" ino zz <esc>zza
 ino zv <space>><space>
 ino zV <space><<space>
 ino zt <space>+<space>
@@ -338,3 +339,8 @@ func ListMonths()
     return ''
 endfunc
 "}}}
+
+" Custom keybindings for ALE navigation
+nmap <silent> ]e <Plug>(ale_next_wrap)
+nmap <silent> [e <Plug>(ale_previous_wrap)
+

@@ -67,10 +67,10 @@ case "$TERM" in
     *) ;;
 esac
 
+alias aci='acpi'
 alias ahk='cd ~/.local/bin/scripts && explorer.exe main.ahk'
 alias all="~/.local/bin/scripts/all"
 alias am='alsamixer'
-alias dmenurecord='~/.local/bin/dmenurecord'
 alias aman='netstat -tua | grep LISTEN'
 alias aptli='apt list --installed'
 alias ba="~/.local/bin/scripts/fehbg"
@@ -119,7 +119,8 @@ alias dir='mkdir'
 alias dk='cmd.exe /c start brave.exe https://duckduckgo.com'
 alias dl='lynx duckduckgo.com'
 alias d='~/.local/bin/scripts/d'
-alias dot='qutebrowser https://github.com/yuandandi/dotfiles'
+alias dmenurecord='~/.local/bin/dmenurecord'
+alias dot='$(which librewolf) https://github.com/yuandandi/dotfiles'
 alias d.="rm (fzf --multi)" # delete multiple files
 alias dsk='df -h'
 alias '?'="duck"
@@ -207,16 +208,16 @@ alias lc='clear'
 alias 'ld'="duck"
 alias lg='lazygit'
 alias lg='lynx google.com'
-alias librewolf='flatpak run io.gitlab.librewolf-community'
+# alias librewolf='flatpak run io.gitlab.librewolf-community'
 alias li="d -l -g --icons --sort=size"
 alias linkhandler='~/.local/bin/scripts/linkhandler'
 alias ll="d -l -g --icons"
 alias l="lynx"
 # alias lock=' gnome-screensaver-command --lock' (gnome Ubuntu)
 alias lorem='bash ~/.local/bin/scripts/lorem.sh'
-alias ls='ls --color=auto --group-directories-first'
 alias lsd='ls -d */'
 alias lsj='ls'
+alias ls='ls --color=auto --group-directories-first'
 alias lsm='ls'
 alias lss='ls'
 alias lt="d --tree --level=2 -a"
@@ -381,7 +382,7 @@ alias zola='flatpak run org.getzola.zola'
 # colored GCC warnings and errors
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 export PAGER=less
-export BROWSER=Firefox
+export BROWSER=librewolf
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert

@@ -1,5 +1,5 @@
 
-au FileType html setlocal shiftwidth=2
+au FileType javascript,html setlocal shiftwidth=2
 \| ino <buffer> <C-b> <C-o>?><CR>
 \| ino <buffer> <C-g>> <C-o>ct><esc>
 \| ino <buffer> <C-g>< <Esc>d/<<CR>
@@ -16,7 +16,7 @@ au filetype css nn o :w<cr>o;
 
 au FileType html set tw=120
 
-au filetype html,htmldjango ia <buffer> !!! <!DOCTYPE html><cr><html lang="en"><cr><head><cr><meta charset="UTF-8" /><cr><meta name="viewport" content="width=device-width, initial-scale=1.0"><cr><title>document</title><cr><link rel="stylesheet" type="text/css" href="styles.css" /><cr></head><cr><body><cr></body><cr></html>
+au filetype javascript,html,htmldjango ia <buffer> !!! <!DOCTYPE html><cr><html lang="en"><cr><head><cr><meta charset="UTF-8" /><cr><meta name="viewport" content="width=device-width, initial-scale=1.0"><cr><title>document</title><cr><link rel="stylesheet" type="text/css" href="styles.css" /><cr></head><cr><body><cr></body><cr></html>
 \| ia <buffer> abb <abbr title=""></abbr><C-o>?"<CR>
 \| ia <buffer> addr <address><CR></address><C-o>O
 \| ia <buffer> ah <a href=""></a><Esc>?"><CR>i
@@ -37,7 +37,7 @@ au filetype html,htmldjango ia <buffer> !!! <!DOCTYPE html><cr><html lang="en"><
 au FileType html,htmldjango ia <buffer> def defer
 au FileType html,htmldjango ia <buffer> mod module
 
-au FileType html,htmldjango ia <buffer> bi <big></big><Esc>cit
+au FileType javascript,html,htmldjango ia <buffer> bi <big></big><Esc>cit
 \| ia <buffer> blo <blockquote cite=""></blockquote><C-o>?"><CR>
 \| ia <buffer> bod <body><CR></body><C-o>O
 \| ia <buffer> br <br>
@@ -93,7 +93,7 @@ au FileType html,htmldjango ia <buffer> bi <big></big><Esc>cit
 au FileType html,vimwiki,htmldjango ia <buffer> lorp Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.
 au FileType html,vimwiki,htmldjango ia <buffer> lors Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
 
-au FileType html,htmldjango ia <buffer> mai <main><CR></main><Esc>cit
+au FileType javascript,html,htmldjango ia <buffer> mai <main><CR></main><Esc>cit
 \| ia <buffer> map <map name=""><CR></map><Esc>citCR>
 \| ia <buffer> mar <mark></mark><Esc>cit
 \| ia <buffer> del <dell></del><left><left><left><left><left><left><left>
@@ -152,7 +152,7 @@ au FileType html,htmldjango ia <buffer> mai <main><CR></main><Esc>cit
 \| ia <buffer> ulia <ul class=""><cr><li><cr><a href="#" class=""></a><cr></li><cr></ul><esc>kkkkci"
 
 
-au filetype html,htmldjango ia <buffer> cha charset=""<left>
+au filetype javascript,html,htmldjango ia <buffer> cha charset=""<left>
 \| ia <buffer> acti action=""<left>
 \| ia <buffer> aut autoplay
 \| ia <buffer> blan _blank
@@ -179,7 +179,7 @@ au filetype html,htmldjango ia <buffer> cha charset=""<left>
 \| ia <buffer> hre href=""<left>
 \| ia <buffer> hypen &#8221; &#8212;
 \| ia <buffer> ic <i class=""></i><esc>F"i
-\| ia <buffer> id id=""<left>
+\| ia <buffer> idd id=""<left>
 \| ia <buffer> jss js
 \| ia <buffer> kin kind=""<left>
 \| ia <buffer> labe label=""<left>

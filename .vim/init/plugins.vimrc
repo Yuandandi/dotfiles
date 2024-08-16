@@ -18,7 +18,7 @@ Plug 'christoomey/vim-titlecase'
 " Language Server Protocol (LSP) support
 " Plug 'prabirshrestha/vim-lsp'
 " Plug 'mattn/vim-lsp-settings'
-Plug 'dense-analysis/ale'
+" Plug 'dense-analysis/ale'
 
 " " Autocompletion
 " Plug 'hrsh7th/nvim-compe' 

@@ -2,17 +2,17 @@
 " au BufRead,BufNewFile *.jsx set filetype=javascript
 au FileType javascript nn <buffer> s cit
 au FileType javascript nn <leader>2 _v$y:e ~/.config/nvim/lua/dandi/abbrev/javascript.lua<CR>}}Oautocmd FileType javascript ia <buffer> <Esc>phi<Space>
-au FileType javascript nn <buffer> \ :w<cr>:!node ../build/js/main.js<cr>
+" au FileType javascript nn <buffer> \ :w<cr>:!node ../build/js/main.js<cr>
 " au FileType typescript nn <buffer> \ :w<cr>:!node ../build/js/main.js<cr>
 " au FileType typescript nn <buffer> \ :lcd ..<CR>:!tsc<CR>:lcd -<CR>:!node ../build/js/main.js<cr>
-au FileType typescript nn <buffer> \ :lcd ..<CR>:!tsc<CR>:lcd -<CR>
-au FileType javascript nn <BS> :w<cr>yyp!!node %<cr>kA // <esc>J
+" au FileType typescript nn <buffer> \ :lcd ..<CR>:!tsc<CR>:lcd -<CR>
+" au FileType javascript nn <BS> :w<cr>yyp!!node %<cr>kA // <esc>J
 au FileType javascript,typescript ino zfl // {{{<cr><cr>}}}<up><esc>cc<esc>O<cr>;<esc>i
 au filetype javascript,javascript.jsx,typescript ino zJ <space>===<space>
 
 " au filetype typescript nn <buffer> <cr> yypk
 au FileType javascript,javascript.jsx,typescript nn gca A //<space>
-au FileType javascript,javascript.jsx nn o o;<left>
+" au FileType javascript,javascript.jsx nn o o;<left>
 au FileType javascript,javascript.jsx,typescript nn cm O<cr>;<left>
 au FileType javascript,javascript.jsx,typescript nn 0 0:w<cr>
 au FileType javascript,javascript.jsx,css,html,typescript nn <c-a> <c-a>:w<cr>
@@ -162,7 +162,6 @@ au filetype javascript,javascript.jsx,typescript ia <buffer> iht innerHTML
 au filetype javascript,javascript.jsx,typescript ia <buffer> oht outerHTML
 au filetype javascript,javascript.jsx,typescript ia <buffer> i i
 au filetype javascript,javascript.jsx,typescript ia <buffer> ima Image()<left>
-au filetype javascript,javascript.jsx,typescript ia <buffer> imre import React from "react"
 au filetype javascript,javascript.jsx,typescript ia <buffer> imp import
 au filetype javascript,javascript.jsx,typescript ia <buffer> ite innerText
 au filetype javascript,javascript.jsx,typescript ia <buffer> jss JavaScript
@@ -217,13 +216,13 @@ au filetype javascript,javascript.jsx,typescript ia <buffer> upd udpate()<left>
 au filetype javascript,javascript.jsx,typescript ia <buffer> ust "use strict"
 au filetype javascript,javascript.jsx,typescript ia <buffer> whi while () {<cr>}<esc>kf(a
 au filetype javascript,javascript.jsx,typescript ia <buffer> win window
-au filetype javascript,javascript.jsx,typescript ia <buffer> rre ReactDOM.render()<left>
 au filetype javascript,javascript.jsx,typescript ia <buffer> edf export default function() {<cr>return (<cr>)<cr>}<esc>?ion<cr>wi
 au filetype javascript,javascript.jsx,typescript ia <buffer> edc export default class{<cr>}<esc>kf{i
-au filetype javascript.jsx,typescript ia <buffer> onc onClick={}<left>
+au filetype javascript,javascript.jsx,typescript ia <buffer> oncl onClick={}<left>
+au filetype javascript,javascript.jsx,typescript ia <buffer> onch onChange={}<left>
+au filetype javascript,javascript.jsx,typescript ia <buffer> onsu onSubmit={}<left>
 au filetype javascript.jsx,typescript ia <buffer> keyy key={}<left>
 au filetype javascript.jsx,typescript ia <buffer> omo onMouseOver={}<left>
-au filetype javascript.jsx,typescript ia <buffer> rus React.useState()<left>
 au filetype javascript.jsx,typescript ia <buffer> bco backgroundColor:
 au filetype javascript.jsx,typescript ia <buffer> ftog function toggle(id){<cr>setSquares(prevSquares =><cr>prevSquares.map(square =><cr>square.id === id ? { ...square, on: !square.on } : square<cr>)<cr>);<cr>}
 au filetype javascript.jsx,typescript ia <buffer> cbo checkbox
@@ -275,6 +274,7 @@ au filetype typescript,javascript.jsx,javascript ia <buffer> ct console.table()<
 au filetype typescript,javascript.jsx,javascript ia <buffer> cw console.warn()<left>
 au filetype typescript,javascript.jsx,javascript ia <buffer> cg console.group();<cr>console.groupEnd()<esc>k0ci(""<left>
 au filetype typescript,javascript.jsx,javascript ia <buffer> clt console.log(typeof )<left>
+au filetype typescript,javascript.jsx,javascript ia <buffer> clf console.log("foo")<left>
 
 " JSON method
 au filetype javascript,javascript.jsx,typescript ia <buffer> jpa JSON.parse()<left>
@@ -329,7 +329,7 @@ au FileType javascript,javascript.jsx,typescript ia <buffer> ge get()<left>
 au FileType javascript,javascript.jsx,typescript ia <buffer> kpr keypress
 au FileType javascript,javascript.jsx,typescript ia <buffer> kup keyup
 au FileType javascript,javascript.jsx,typescript ia <buffer> kdo keydown
-au FileType javascript,javascript.jsx,typescript ia <buffer> inp input
+" au FileType javascript,javascript.jsx,typescript ia <buffer> inp input
 au FileType javascript,javascript.jsx,typescript ia <buffer> chan change
 
 " Keyboard Evens;
@@ -353,6 +353,17 @@ au FileType javascript,javascript.jsx,typescript ia <buffer> cws createWriteStre
 au FileType javascript,javascript.jsx,typescript ia <buffer> rmd rmdir("")<left><left>
 au FileType javascript,javascript.jsx,typescript ia <buffer> mkd mdkir("")<left><left>
 au FileType javascript,javascript.jsx,typescript ia <buffer> cse createServer()<left>
+
+" }}}
+" {{{ React
+
+au filetype javascript,javascript.jsx,typescript ia <buffer> rre ReactDOM.render()<left>
+au filetype javascript,javascript.jsx,typescript ia <buffer> rue React.useEffect()<left>
+au filetype javascript,javascript.jsx,typescript ia <buffer> rur React.useRef()<left>
+au filetype javascript,javascript.jsx,typescript ia <buffer> rfr React.Fragment
+au filetype javascript,javascript.jsx,typescript ia <buffer> rce React.createElement()<left>
+au filetype javascript,javascript.jsx,typescript ia <buffer> imre import React from "react"
+au filetype javascript.jsx,typescript ia <buffer> rus React.useState()<left>
 
 " }}}
 "" {{{ method
@@ -404,23 +415,24 @@ au FileType typescript,javascript,javascript.jsx ia <buffer> afr Array.from()
 au FileType typescript,javascript,javascript.jsx ia <buffer> isa isArray()<left>
 au FileType typescript,javascript,javascript.jsx ia <buffer> eve every()<left>
 
-au FileType typescript ia <buffer> st string
-au FileType typescript ia <buffer> bo boolean
-au FileType typescript ia <buffer> nu number
-au FileType typescript ia <buffer> rg RegExp
-au FileType typescript ia <buffer> vo void
-au FileType typescript ia <buffer> int interface
-au filetype typescript ia <buffer> impl implements
-au filetype typescript ia <buffer> abs abstract
-au filetype typescript ia <buffer> co const
-au filetype typescript ia <buffer> va var
-au filetype typescript ia <buffer> le let
-au filetype typescript ia <buffer> hel HTMLElement
+au FileType javascript,typescript ia <buffer> st string
+au FileType javascript,typescript ia <buffer> bo boolean
+au FileType javascript,typescript ia <buffer> nu number
+au FileType javascript,typescript ia <buffer> rg RegExp
+au FileType javascript,typescript ia <buffer> vo void
+au FileType javascript,typescript ia <buffer> int interface
+au filetype javascript,typescript ia <buffer> impl implements
+au filetype javascript,typescript ia <buffer> abs abstract
+au filetype javascript,typescript ia <buffer> co const
+au filetype javascript,typescript ia <buffer> va var
+au filetype javascript,typescript ia <buffer> le let
+au filetype javascript,typescript ia <buffer> hel HTMLElement
 
 " event Object;
 au filetype javascript,javascript.jsx,typescript ia <buffer> tist timestamp
 au filetype javascript,javascript.jsx,typescript ia <buffer> tar target
 au FileType javascript,javascript.jsx,typescript ia <buffer> cta currentTarget
+au FileType javascript,javascript.jsx,typescript ia <buffer> cva current.value
 au filetype javascript,javascript.jsx,typescript ia <buffer> typ type
 au filetype javascript,javascript.jsx,typescript ia <buffer> clx clientX
 au filetype javascript,javascript.jsx,typescript ia <buffer> cly clientY
@@ -436,6 +448,8 @@ au FileType javascript,javascript.jsx,typescript ia <buffer> tst toString()<left
 au filetype javascript,javascript.jsx,typescript ia <buffer> tex toExponential()
 au filetype javascript,javascript.jsx,typescript ia <buffer> tfi toFixed()
 au filetype javascript,javascript.jsx,typescript ia <buffer> tls toLocaleString()
+au filetype javascript,javascript.jsx,typescript ia <buffer> tlds toLocaleString()
+au filetype javascript,javascript.jsx,typescript ia <buffer> tlts toLocaleTimeString()
 au filetype javascript,javascript.jsx,typescript ia <buffer> tpr toPrecision()
 au filetype javascript,javascript.jsx,typescript ia <buffer> vof valueOf()
 

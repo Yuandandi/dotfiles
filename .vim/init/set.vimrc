@@ -14,7 +14,7 @@ se nojoinspaces
 se cot=menu,fuzzy " completeopt
 
 se expandtab
-se fdm=marker
+" se fdm=marker
 " se mouse=a
 se gp=git\ grep\ -n
 se guicursor=
@@ -60,10 +60,9 @@ se winaltkeys=no
 se ru "runtime
 au FileType vim setlocal foldmethod=marker
 
-" " silent folds and save position. firstline avoid When enter Vim with nofile
-" " specifies so It won't triggered 
-" autocmd BufWinLeave *.* mkview!
-" autocmd BufWinEnter *.* silent loadview
+" silent folds and save position. firstline avoid When enter Vim with nofile specifies so It won't triggered 
+autocmd BufWinLeave *.* mkview!
+autocmd BufWinEnter *.* silent loadview
 
 let g:netrw_browse_split = 0
 let g:netrw_banner = 0
@@ -91,6 +90,8 @@ autocmd FileChangedShellPost * echohl WarningMsg | echo "File changed on disk. B
 
 " set completeopt=menuone,noinsert,noselect
 set shortmess+=c
+
+au FileType vim nn <buffer> e :w<cr>:bd<cr>
 
 
 menu File.Save :w<CR>
