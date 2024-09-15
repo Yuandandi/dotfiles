@@ -1,3 +1,0 @@
-#!/usr/bin/bash 
-
-sort $1| uniq -c | sort -r | head -5

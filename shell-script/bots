@@ -1,5 +1,0 @@
-#!/bin/bash
-
-#10 files smallest size
-
-ls -lSh | tail

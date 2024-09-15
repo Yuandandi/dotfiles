@@ -1,4 +1,0 @@
-#!/bin/bash
-
-#print environtment variable name with sort
-printenv | cut -d '=' -f 1 | sort | more

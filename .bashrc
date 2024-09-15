@@ -451,6 +451,8 @@ bind '"\eh": "htop\n"'
 bind '"\eo": "bmon\n"'
 bind '"\ea": "xdg-open $(fd -H | fzf)\n"'
 bind '"\ep": "keepassxc\n"'
+bind '"\ee": "acpi\n"'
+
 
 # }}}
 
@@ -545,6 +547,8 @@ function hidden() {
 function dotfile() {
     $EDITOR $(fd $1 ~/.abook ~/.config ~/.local/bin ~/.ncmpcpp ~/.newsboat ~/.programs ~/.scripts ~/.vim ~/.w3m | fzf)
 }
+
+# comment
 
 # }}}
 source ~/.programs/fzf-git.sh/fzf-git.sh

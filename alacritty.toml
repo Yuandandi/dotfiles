@@ -1,0 +1,28 @@
+# Alacritty For Unix
+
+# General
+live_config_reload = true
+
+[window]
+opacity = 0.3
+decorations = "Full"
+
+[scrolling]
+history = 1000
+
+[font]
+normal = { family = "JetbrainsMonoNl Nerd Font Propo", style = "Semi bold"}
+
+[colors]
+transparent_background_colors = true
+
+[selection]
+save_to_clipboard = true
+
+[mouse]
+hide_when_typing = true
+
+[debug]
+persistent_logging = true
+
+# add

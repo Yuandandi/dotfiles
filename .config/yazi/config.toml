@@ -1,5 +1,0 @@
-[applications]
-video = "/usr/bin/mpb --no-pause %f"
-
-[keybindings]
-gn = "~/repos/github.com/yuandandi/notes/"

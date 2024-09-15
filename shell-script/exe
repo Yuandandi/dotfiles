@@ -1,2 +1,0 @@
-#!/bin/bash
-entr bash -c "clear; ./$1; shellcheck $1" <<< $1
