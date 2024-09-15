@@ -129,3 +129,4 @@ menu MyMenu.New\ File :edit newfile.txt<CR>
 "     autocmd BufWritePre * if &undofile | silent! execute 'undofile' | endif
 " augroup END}}}
 
+" addons
