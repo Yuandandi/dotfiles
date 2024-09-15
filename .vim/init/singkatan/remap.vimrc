@@ -1,45 +1,53 @@
 " Set leader key
-let g:mapleader = " "
+" let g:mapleader = " "
 
 " Define key mappings
-vn J :m '>+1<CR>gv=gv
+
+" visual moving block like in GUI
+vn J :m '>+1<CR>gv=gv               
 vn K :m '<-2<CR>gv=gv
+
+" J but stays still in position
 nn J mzJ`z
+" scroll half stays in position
 nn <C-d> <C-d>zz
+" search pattern stays still in middle
 nn n nzzzv
 nn N Nzzzv
+
 nn <buffer> du ggVG:norm _wgUl<cr>gv:norm f.wgUl<cr>
-nn <buffer> gomd :%norm _i1. <cr>ggVG:norm _wgUl<cr>gv:norm f.wgUl<cr>gvojg<c-a>
+nn <buffer> <silent> gomd :%norm _i1. <cr>ggVG:norm _wgUl<cr>gv:norm f.wgUl<cr>gvojg<c-a>    " on the currrent paragraph make number increment
 nn e V<esc>=ip:w<cr>gv<esc>
-" nn e <esc>:w<cr>
 nn E $
 vn E $
 
+"{{{ Shell Combos
 nn <F12> :!systemctl suspend<cr>
+"}}}
 
-" open image inside ("")
-nn <leader>i yi":!feh <c-r>"<cr>
+"{{{ Open Image Inside ("")
+nn <silent> <buffer> filetype html <leader>i yi":!feh <c-r>"<cr>
+nn <silent> <leader>i yiW:!feh <c-r>"<cr>
 " open image './' required
 " nn <leader>i 0/\.\/<cr>yiW:!feh <c-r>"
+"}}}
 
-" Greatest remap ever
-xn <leader>p "_dP
-
-" Next greatest remap ever by asbjornHaland
-nn <leader>gy "+y
-vn <leader>gy "+y
+" Next Greatest Remap Ever by Asbjornhaland
+" nn <leader>gy "+y                             " didn't work in my current Vim build, works in any NeoVim version
+" vn <leader>gy "+y                             " didn't work in my current Vim build, works in any NeoVim version
+" nn <leader>Y "+Y                              " 
+" xn <leader>d "_d
 nn <leader>e :Ex<CR>
-nn <leader>Y "+Y
-xn <leader>d "_d
 nn <leader>so :w<cr>:source $MYVIMRC<CR>
 nn <leader>su !ipsort -u<cr>
+
 nn co O<esc>j
+" nn q :x<cr>
 nn Q q
 nn tq q
 nn to :e ~/.vim/init/singkatan/typos.vimrc<cr>g`"ciw
 nn tr :e ~/repos/github.com/yuandandi/notes/translate<cr>
-nn te :w<cr>:term<cr>firefox home.html
-nn q :x<cr>
+nn te :w<cr>:term<cr>
 
 " string comma values
 nn <leader>sk :s/, /', '/g<cr>I'<end>'
@@ -47,19 +55,9 @@ nn <leader>dk :s/, /", "/g<cr>I"<end>"
 nn <leader>ss :le<cr>:s/ /', '/g<cr>I'<end>'<esc>=ipg;
 nn <leader>dd :le<cr>:s/ /", "/g<cr>I"<end>"<esc>=ipg;
 
-
 " Move between split
 
-" nn gj <C-W>j
-" nn gh <C-W>h
-" nn gk <C-W>k
-" nn gl <C-W>l
-" nn vn vip:norm 
-
-" nn gk whi"<esc>Bi"<esc>
-" nn gk Bi"<esc>wWhi"<esc>
-
-ino <c-l> <esc>yypkA
+ino <c-l>u <esc>gUiwA<Space>
 nn <c-l> yyp
 
 " go down
@@ -153,7 +151,7 @@ nn vo ggVG
 " nn do ggVGd
 
 " Faster :wq and :q!
-nn Z :wq!<CR>
+" nn Z :wq!<CR>
 nn Q ZQ
 
 ino <M-z> <esc>:wq<cr>
@@ -165,8 +163,8 @@ ino <C-b> <Esc>bz=1<CR>A
 nn cm O<cr>
 
 " C-q for suggestions
-nn <C-k> <cmd>cnext<CR>zz
-nn <C-j> <cmd>cprev<CR>zz
+nn <C-k> <cmd>cnext<CR>
+nn <C-j> <cmd>cprev<CR>
 nn <leader>k <cmd>lnext<CR>zz
 nn <leader>j <cmd>lprev<CR>zz
 
@@ -183,20 +181,28 @@ nn <leader>sc :%s/\<<C-r><C-w>\>/<C-r><C-w>/gc<Left><Left><Left><c-w>
 vn <leader>sc :%s/\<<C-r><C-w>\>/<C-r><C-w>/gc<Left><Left><Left><c-w>
 nn <leader>sl :s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left><c-w>
 
-" Faster comment paragraph
-nn gcp gcip
+nn <leader>se :mks ~/session/
+
+"{{{ Faster comment paragraph
 nn <leader>x <cmd>!chmod +x %<CR>
 nn <leader>fo :r !~/script/fuzzy_find.sh<CR>
+"}}}
 
-ino <M-a> <Esc>A<space>
-ino <M-z> <Esc>:wq<cr>
-
+"{{{ Finding Files
 nn <leader>fo :FZF ~<CR>
 nn <leader>ff :FZF<CR>
 nn <leader>fl :FZF ~/repos/github.com/yuandandi/learn/<cr>
-nn <leader>fc :FZF ~/clone/<cr>
 nn <leader>fv :FZF ~/.vim/<CR>
 nn <leader>fn :FZF ~/repos/github.com/yuandandi/notes/<CR>
+
+" You Can Live Without Fzf Buddy
+nn <leader>cn :cd ~/repos/github.com/yuandandi/notes/<cr>:fin 
+nn <leader>cd :cd ~/repos/github.com/yuandandi/dotfiles/<cr>:fin 
+nn <leader>cl :cd ~/repos/github.com/yuandandi/learn/<cr>:fin 
+nn <leader>cv :cd ~/.vim/<cr>:fin 
+nn <leader>co :cd ~<cr>:fin 
+
+"}}}
 
 " ino <c-l> <c-x>l
 " ino <c-i> <c-x>f
@@ -223,6 +229,7 @@ ino zN <space>&&<space>
 ino zp {<cr>}<esc>O
 ino zP (<cr>)<esc>O
 ino z- <space>-=<space>
+au filetype css iu z-
 ino z= <space>+=<space>
 " ino zz <esc>zza
 ino zv <space>><space>
@@ -230,16 +237,17 @@ ino zV <space><<space>
 ino zt <space>+<space>
 ino zT <space>-<space>
 ino z[ ${}<left>
+ino z\ <space>\|\|<space>
 ino zx <space>!==<space>
 
 nn zl zL
 nn zh zH
+nn z, zMzvzz
 
 nn <F4> "=strftime("%c")<CR>P
 ino <F4> <C-R>=strftime("%c")<CR>
 nn gs :se spell!<CR>
 
-nn <F5> <Cmd>se spell!<CR>
 nn <Right> ]s
 nn <Left> [s
 nn <Up> yiw <Cmd>vs ~/.vim/init/singkatan/typos.vimrc<CR>}Oia <Esc>pA <Esc>pz=1<CR><CR>yiw<Cmd>wq!<CR>viwp
@@ -273,7 +281,7 @@ nn <leader>bd :w<CR>:bd<CR>
 ino <C-g>p <Esc>yiwA = <Esc>p_yiwo<Esc>pA.
 
 " open link under the cursor
-nn gx :!qutebrowser <c-r><c-f><cr>
+nn gx :!librewolf <c-r><c-f><cr>
 
 " nn <F5> :UndotreeToggle<CR>
 
@@ -293,26 +301,30 @@ vn ge :s/"\(\w\)/"\U\1/g<cr>:s/\. \s*\(\w\)/. \U\1/g<cr>
 nn gE :s/\<./\u&/g<cr>
 
 " Map `]c` to go to the next comment
-" nnoremap ]c /\v^\s*#<CR>n
+" nn ]c /\v^\s*#<CR>n
 
 " Yank to system clipboard
-vnoremap <silent> <F8> :w !xclip -selection clipboard<CR><CR>
-nnoremap <silent> <F8> :w !xclip -selection clipboard<CR><CR>
+vn <silent> <F8> :w !xclip -selection clipboard<CR><CR>
+nn <silent> <F8> :w !xclip -selection clipboard<CR><CR>
 
-nnoremap <silent> <F7> :set filetype=html<cr>
+nn <silent> <F7> :set filetype=html<cr>
 ino <silent> <F7> <esc>:set filetype=html<cr>a
 
-nnoremap <silent> <F6> :set filetype=javascript.jsx<cr>
-ino <silent> <F6> <esc>:set filetype=javascript.jsx<cr>a
+nn <silent> <buffer> filetype javascript <F6> :set filetype=javascript.jsx<cr>
+ino <silent> <buffer> filetype javascript <F6> <esc>:set filetype=javascript.jsx<cr>a
 
-" grep file, grep buffer, open all the files the current and under Directory
+"{{{ Grep File, Grep Buffer, Open All the Files the Current and Under Directory
+
 nn grf :vimgrep // --max-depth 3 **/*<left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left>
 nn grb :vimgrep // --max-depth 3 ##<left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left>
-nn <F2> :args `find . -type f`<cr>
+
+nn <F5> :args `find . -type f`<cr>
 nn <F3> :wa<Bar>exe "mksession! " .. v:this_session<CR>:so ~/sessions/
 nn goli :s/\(\S\)\s/\1\r/g<cr>=ip:w<cr>
 nn <F2> :vimgrep /<c-r><c-w>/ --max-depth 3 **/*<cr>:cfdo s/<c-r><c-w>//g<left><left>
 
+"}}}
+"{{{ Surround Word or Your Visual Select
 vn g[ A]<esc>gvo<esc>i[<esc>
 vn g( A)<esc>gvo<esc>i(<esc>
 vn g{ A}<esc>gvo<esc>i{<esc>
@@ -324,13 +336,15 @@ nn g( viwA)<esc>gvo<esc>i(<esc>
 nn g{ viwA}<esc>gvo<esc>i{<esc>
 nn g" viwA"<esc>gvo<esc>i"<esc>
 nn g' viwA'<esc>gvo<esc>i'<esc>
+"}}}
 
 " get the full path of the current file
 nn gotf :put =expand('%:p')<cr>
 
 nn d= d+
 
-"{{{ List Month
+"{{{ List of the month
+
 inoremap <F5> <C-R>=ListMonths()<CR>
 func ListMonths()
     call complete(col('.'), ['January', 'February', 'March',
@@ -338,9 +352,32 @@ func ListMonths()
                 \ 'October', 'November', 'December'])
     return ''
 endfunc
-"}}}
 
-" Custom keybindings for ALE navigation
+"}}}
+"{{{ Custom keybindings for ALE navigation
+
 nmap <silent> ]e <Plug>(ale_next_wrap)
 nmap <silent> [e <Plug>(ale_previous_wrap)
 
+"}}}
+
+nn gf :e <cfile><CR>
+
+vmap sb "zdi<b><C-R>z</b><Esc> : wrap <b></b> around visually selected text
+
+" uppercase first letter current line or selected line (Camel Case) 
+nn tu :s/\v<(.)(\w*)/\u\1\L\2/g<cr>
+vn tu :s/\v<(.)(\w*)/\u\1\L\2/g<cr>
+ino <c-l>c <esc>:s/\v<(.)(\w*)/\u\1\L\2/g<cr>
+
+ino <expr> <C-L>x "foo"
+
+" grep recursive current and child Directory of the word under the cursor and open quickfix list directly
+" nn gro :execute "vimgrep /" . expand("<cWORD>") . "/j **" <Bar> cw<CR>
+nn gro :execute "noautocmd vimgrep /" . expand("<cWORD>") . "/j **" <Bar> cw<CR>
+nn <c-b> <c-^>
+
+nn g: :g/:$/p
+
+syntax match Colons /\v:$/ containedin=ALL
+highlight Colons ctermbg=yellow guibg=yellow

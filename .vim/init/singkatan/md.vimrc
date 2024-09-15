@@ -13,3 +13,4 @@ au filetype markdown ino <buffer> <esc> <esc>:w<cr>
 au filetype markdown nn <buffer> <leader>vs vip:sor u<cr>
 au filetype markdown nn <buffer> ta bi`<esc>wwhha`<esc>
 au filetype markdown nn <buffer> <leader>21 :%s/  */ /g<cr>
+au filetype markdown ino <buffer> zfl <!-- {{{<cr>-->}}}<esc>

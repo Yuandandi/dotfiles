@@ -6,13 +6,14 @@ au FileType javascript nn <leader>2 _v$y:e ~/.config/nvim/lua/dandi/abbrev/javas
 " au FileType typescript nn <buffer> \ :w<cr>:!node ../build/js/main.js<cr>
 " au FileType typescript nn <buffer> \ :lcd ..<CR>:!tsc<CR>:lcd -<CR>:!node ../build/js/main.js<cr>
 " au FileType typescript nn <buffer> \ :lcd ..<CR>:!tsc<CR>:lcd -<CR>
-" au FileType javascript nn <BS> :w<cr>yyp!!node %<cr>kA // <esc>J
+au FileType javascript nn <BS> :w<cr>yyp!!node %<cr>kA // <esc>J
+au FileType javascript nn \ :w<cr>:!node %<cr>
 au FileType javascript,typescript ino zfl // {{{<cr><cr>}}}<up><esc>cc<esc>O<cr>;<esc>i
 au filetype javascript,javascript.jsx,typescript ino zJ <space>===<space>
 
 " au filetype typescript nn <buffer> <cr> yypk
 au FileType javascript,javascript.jsx,typescript nn gca A //<space>
-" au FileType javascript,javascript.jsx nn o o;<left>
+au FileType javascript,javascript.jsx nn o o;<left>
 au FileType javascript,javascript.jsx,typescript nn cm O<cr>;<left>
 au FileType javascript,javascript.jsx,typescript nn 0 0:w<cr>
 au FileType javascript,javascript.jsx,css,html,typescript nn <c-a> <c-a>:w<cr>
@@ -105,7 +106,6 @@ au filetype javascript,javascript.jsx,typescript ia <buffer> pfl parseFloat()<le
 au filetype javascript,javascript.jsx,typescript ia <buffer> ach appendChild()<left>
 au filetype javascript,javascript.jsx,typescript ia <buffer> inc includes()<left>
 au filetype javascript,javascript.jsx,typescript ia <buffer> ad add("")<left><left>
-au filetype javascript,javascript.jsx,typescript ia <buffer> ale alert("")<left><left>
 au filetype javascript,javascript.jsx,typescript ia <buffer> ape append()<left>
 au filetype javascript,javascript.jsx,typescript ia <buffer> awa await()<left>
 au filetype javascript,javascript.jsx,typescript ia <buffer> boo Boolean()<left>
@@ -133,7 +133,6 @@ au filetype javascript,javascript.jsx,typescript ia <buffer> qse querySelector("
 au filetype javascript,javascript.jsx,typescript ia <buffer> dse dataset
 au filetype javascript,javascript.jsx,typescript ia <buffer> ex export
 au filetype javascript,javascript.jsx,typescript ia <buffer> fal false
-au filetype javascript,javascript.jsx,typescript ia <buffer> fea forEach()<left>
 au filetype javascript,javascript.jsx,typescript ia <buffer> fec firstElementChild
 au filetype javascript,javascript.jsx,typescript ia <buffer> f function() {<cr>}<esc>?(<cr>i
 au filetype javascript,javascript.jsx,typescript ia <buffer> fin finally zp
@@ -156,7 +155,7 @@ au filetype javascript,javascript.jsx,typescript ia <buffer> hei height
 au filetype javascript,javascript.jsx,typescript ia <buffer> hop hasOwnProperty()<left>
 au filetype javascript,javascript.jsx,typescript ia <buffer> ifb if (hasSolvedChallenge === true && hasHintsLeft === true) {<cr>}
 au filetype javascript,javascript.jsx,typescript ia <buffer> ifel if () {<cr>} else if () {<cr>} else {<cr>}<esc>{jjf(i<esc>?^if<cr>ci(
-    au filetype javascript,javascript.jsx,typescript ia <buffer> eif else if
+au filetype javascript,javascript.jsx,typescript ia <buffer> eif else if () {<cr>}<esc>kci(
 au filetype typescript,javascript,javascript.jsx ia <buffer> iff if () {<cr>}<esc>?(<cr>a
 au filetype javascript,javascript.jsx,typescript ia <buffer> iht innerHTML
 au filetype javascript,javascript.jsx,typescript ia <buffer> oht outerHTML
@@ -228,6 +227,7 @@ au filetype javascript.jsx,typescript ia <buffer> ftog function toggle(id){<cr>s
 au filetype javascript.jsx,typescript ia <buffer> cbo checkbox
 au filetype javascript.jsx,typescript ia <buffer> hfo htmlFor=""<left>"
 
+
 " date and time method
 au FileType javascript,javascript.jsx,typescript ia <buffer> dtf DateTimeFormat()<left>
 au FileType javascript,javascript.jsx,typescript ia <buffer> dat Date()<left>
@@ -288,7 +288,7 @@ au FileType javascript ia <buffer> sup super()<left>
 au FileType javascript ia <buffer> cle clear()<left>
 
 " string to number
-au FileType javascript,javascript.jsx ia <buffer> num Number()<left>
+au FileType javascript,javascript.jsx ia <buffer> numb Number()<left>
 
 " js keys;
 au FileType javascript,javascript.jsx,typescript ia <buffer> obj Object
@@ -304,6 +304,11 @@ au FileType javascript,javascript.jsx,typescript ia <buffer> sy scrollY
 
 " interface
 au FileType javascript,javascript.jsx,typescript ia <buffer> hie HTMLImageElement
+
+" popup box
+au filetype javascript,javascript.jsx,typescript ia <buffer> ale alert("")<left><left>
+au filetype javascript,javascript.jsx,typescript ia <buffer> conf confirm("")<left><left>
+au filetype javascript,javascript.jsx,typescript ia <buffer> promp prompt("")<left><left>
 
 " Global Object;
 au FileType javascript,javascript.jsx,typescript ia <buffer> inf Infinity
@@ -358,23 +363,30 @@ au FileType javascript,javascript.jsx,typescript ia <buffer> cse createServer()<
 " {{{ React
 
 au filetype javascript,javascript.jsx,typescript ia <buffer> rre ReactDOM.render()<left>
+au filetype javascript,javascript.jsx,typescript ia <buffer> rcr ReactDOM.crateRoot()<left>
 au filetype javascript,javascript.jsx,typescript ia <buffer> rue React.useEffect()<left>
 au filetype javascript,javascript.jsx,typescript ia <buffer> rur React.useRef()<left>
 au filetype javascript,javascript.jsx,typescript ia <buffer> rfr React.Fragment
 au filetype javascript,javascript.jsx,typescript ia <buffer> rce React.createElement()<left>
 au filetype javascript,javascript.jsx,typescript ia <buffer> imre import React from "react"
-au filetype javascript.jsx,typescript ia <buffer> rus React.useState()<left>
+au filetype javascript,javascript.jsx,typescript ia <buffer> rus React.useState()<left>
+au filetype html ia <buffer> reunp <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script><cr><script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
 
 " }}}
 "" {{{ method
 " math method;
-au FileType javascript.jsx,typescript ia <buffer> math Math
-au FileType javascript.jsx,typescript ia <buffer> pi PI
-au FileType javascript.jsx,typescript ia <buffer> tru trunc()<left>
-au FileType javascript.jsx,typescript ia <buffer> rou round()<left>
-au FileType javascript.jsx,typescript ia <buffer> cei ceil()<left>
-au FileType javascript.jsx,typescript ia <buffer> flo floor<left>
-au FileType javascript.jsx,typescript ia <buffer> pow pow()<left>
+au FileType javascript,javascript.jsx,typescript ia <buffer> math Math
+au FileType javascript,javascript.jsx,typescript ia <buffer> pi PI
+au FileType javascript,javascript.jsx,typescript ia <buffer> tru trunc()<left>
+au FileType javascript,javascript.jsx,typescript ia <buffer> rou round()<left>
+au FileType javascript,javascript.jsx,typescript ia <buffer> sinn sin()<left>
+au FileType javascript,javascript.jsx,typescript ia <buffer> tan tan()<left>
+au FileType javascript,javascript.jsx,typescript ia <buffer> cei ceil()<left>
+au FileType javascript,javascript.jsx,typescript ia <buffer> cos cos()<left>
+au FileType javascript,javascript.jsx,typescript ia <buffer> ran random()<left>
+au FileType javascript,javascript.jsx,typescript ia <buffer> logg log()<left>
+au FileType javascript,javascript.jsx,typescript ia <buffer> flo floor()<left>
+au FileType javascript,javascript.jsx,typescript ia <buffer> pow pow()<left>
 au filetype javascript,javascript.jsx,typescript ia <buffer> mfl Math.floor()<left>
 au FileType javascript,javascript.jsx,typescript ia <buffer> mfr Math.floor(Math.random())<left>
 au FileType javascript,javascript.jsx,typescript ia <buffer> mro Math.round()<left>
@@ -394,7 +406,7 @@ au filetype javascript,javascript.jsx,typescript ia <buffer> val value
 " promise
 au filetype javascript,javascript.jsx,typescript ia <buffer> res resolve()<left>
 au filetype javascript,javascript.jsx,typescript ia <buffer> rej reject()<left>
-au filetype javascript,javascript.jsx,typescript ia <buffer> pro promise()<left>
+au filetype javascript,javascript.jsx,typescript ia <buffer> promi promise()<left>
 au filetype javascript,javascript.jsx,typescript ia <buffer> thenn then("")<left><left>
 
 " storage
@@ -403,8 +415,10 @@ au filetype javascript,javascript.jsx,typescript ia <buffer> sst sessionStorage
 " array method;
 au filetype javascript,javascript.jsx,typescript ia <buffer> shi shift()<left>
 au filetype javascript,javascript.jsx,typescript ia <buffer> uns unshift()<left>
+au filetype javascript,javascript.jsx,typescript ia <buffer> fea forEach()<left>
 au FileType javascript,javascript.jsx,typescript ia <buffer> sin setInterval()<left>
 au FileType javascript,javascript.jsx,typescript ia <buffer> spl splice()<left>
+au FileType javascript,javascript.jsx,typescript ia <buffer> spt split()<left>
 au FileType javascript,javascript.jsx,typescript ia <buffer> sit setItem()<left>
 au FileType javascript,javascript.jsx,typescript ia <buffer> rev reverse()<left>
 au FileType typescript,javascript,javascript.jsx ia <buffer> joi join("")<left><left>
@@ -424,8 +438,8 @@ au FileType javascript,typescript ia <buffer> int interface
 au filetype javascript,typescript ia <buffer> impl implements
 au filetype javascript,typescript ia <buffer> abs abstract
 au filetype javascript,typescript ia <buffer> co const
-au filetype javascript,typescript ia <buffer> va var
-au filetype javascript,typescript ia <buffer> le let
+au filetype javascript,typescript ia <buffer> v var
+au filetype javascript,typescript ia <buffer> l let
 au filetype javascript,typescript ia <buffer> hel HTMLElement
 
 " event Object;

@@ -4,12 +4,14 @@ case $- in
     *) return ;;
 esac
 
+theme.sh black-metal-marduk
+
 set -o vi
 set -o ignoreeof
 set +o noglob
 
 # make less more friendly for non-text input files, see lesspipe(1)
-[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+[ -x /usr/bin/lesspipe ] && eval ""
 
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
@@ -38,24 +40,15 @@ HISTSIZE=100000
 HISTFILESIZE=20000
 HISTCONTROL=ignoreboth
 
-shopt -s nocaseglob
-shopt -s histappend # allow multiple terminals to write to the history file
+shopt -s nocaseglob     # case-insensitive file expansion
+shopt -s histverify     # sudo !$<cr> will print first to verify
+shopt -s histappend     # allow multiple terminals to write to the history file
 shopt -s extglob
-shopt -s cdspell # correct typos
+shopt -s cdspell        # /tmp/foo no need cd infron
 shopt -s autocd
 shopt -s dirspell
 shopt -s cmdhist
 shopt -s globstar
-
-
-
-# if [ "$color_prompt" = yes ]; then
-#     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-# else
-#     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
-# fi
-
-PS1='\W\$ ' # simple bash cuurrent folder name
 
 unset color_prompt force_color_prompt 
 
@@ -67,12 +60,15 @@ case "$TERM" in
     *) ;;
 esac
 
+# {{{ Alias
+
 alias aci='acpi'
 alias ahk='cd ~/.local/bin/scripts && explorer.exe main.ahk'
 alias all="~/.local/bin/scripts/all"
 alias am='alsamixer'
 alias aman='netstat -tua | grep LISTEN'
 alias aptli='apt list --installed'
+alias ari="screen aria2c -x2"
 alias ba="~/.local/bin/scripts/fehbg"
 alias bas='cd ~/repos/github.com/yuandandi/notes/bash/'
 alias b='batcat -r :10'
@@ -86,8 +82,6 @@ alias br='git rev-parse --abbrev-ref HEAD'
 alias brute="~/.local/bin/scripts/brute.sh"
 alias bs='~/.local/bin/scripts/bs'
 alias bu='brew update --auto-update'
-alias caniuser='caniuse'
-alias c="calcurse"
 alias ccl='clear'
 alias c.="cp (fzf --multi)" # easier way to copy multiple files
 alias ...='cd ../.. && d -g --icons'
@@ -104,6 +98,7 @@ alias clj='clear'
 alias clm='clear'
 alias cm='codium .'
 alias cmo='chmod 764'
+alias co='curl -O'
 alias cols="~/.local/bin/scripts/colorstrip"
 alias con='cd ~/.config ; ls'
 alias core='~/.local/bin/scripts/core'
@@ -111,14 +106,14 @@ alias cpu='lscpu'
 alias cupng='~/.local/bin/scripts/cupng'
 alias cur="curl -X GET 'https://openexchangerates.org/api/latest.json?app_id=9d128b37ede54a149068edf42f1b3b04' ; grep IDR"
 alias d1='find -maxdepth 1 -type d'
+alias d='dict'
 alias defb='xdg-settings get default-web-browser'
 alias deft='xdg-mime query default text/plain'
 alias dfh='df -h --output='size','pcent' /home/'
 alias dh="cd ~; and rm (fzf --multi)" # delete multiple files from anywhere
-alias dir='mkdir'
-alias dk='cmd.exe /c start brave.exe https://duckduckgo.com'
+alias di='cd ~/Downloads/asset/image/ ; curl -O'
 alias dl='lynx duckduckgo.com'
-alias d='~/.local/bin/scripts/d'
+# alias d='~/.local/bin/scripts/d'
 alias dmenurecord='~/.local/bin/dmenurecord'
 alias dot='$(which librewolf) https://github.com/yuandandi/dotfiles'
 alias d.="rm (fzf --multi)" # delete multiple files
@@ -133,28 +128,21 @@ alias e.="explorer.exe ." # delete multiple files from anywhere
 alias e="explorer.exe" # delete multiple files from anywhere
 alias ehco='echo'
 alias en='~/.local/bin/scripts/en'
+alias ex='exiftool'
 alias exgo='~/.local/bin/scripts/exgo.sh'
 alias exshell='~/.local/bin/scripts/exe'
 alias f1='find -maxdepth 1 -type f | more'
 alias f1g='find . -maxdepth 1 -type f | grep -i "$@"'
-alias fa="find . -maxdepth 1 -type f 2>/dev/null| grep --exclude-dir={.bzr,CVS,^./.,.hg,.svn,.idea,.tox,.git} -i"
-alias fd='~/.local/bin/scripts/fd'
 alias fe='~/.local/bin/scripts/fe'
 alias fetch="~/.local/bin/scripts/fetch.sh"
 alias f="find . -type f 2>/dev/null| grep --exclude-dir={.bzr,CVS,^./.,.hg,.svn,.idea,.tox,.git} -i"
+alias fid='~/.local/bin/scripts/fid'
 alias fidn='find'
 alias fiel='file'
 alias fig=figlet
-alias fishh='curl "http://asciiquarium.live?cols=100&rows=30"'
-alias fishhh='curl "http://asciiquarium.live?cols=$(tput cols)&rows=$(tput lines)"'
 alias fkil='ps -ef | fzf -m | awk '\''{print $2}'\'' | xargs kill'
-alias fla="vim (fd --changed-within 1d | fzf)" # one day last files changed
-alias fl="cd ~/learn; vim (fd | fzf --dct)" # one day last files changed
 alias fli='yes | sudo flatpak install'
 alias fls='flatpak search'
-alias fn="~/.local/bin/scripts/fn"
-alias fnot='find . 2>/dev/null| grep -v'
-alias fo="cd ~; open (fd | fzf)" # open files anywhere but not a hidden files
 alias fp="cd ~; echo (fd -uu -H --exclude go --exclude ghq --exclude snap --exclude .local --exclude .cache --exclude .rustup --exclude paru --exclude mutt-wizard --exclude .fzf --exclude .vscode-server --exclude squashfs-root --exclude vimplugins --exclude .vim --exclude .tmux --exclude .nvm --exclude .npm --exclude libvips-8.14.5 --exclude clone --exclude .gnupg| fzf --dct ) | xclip -selection clipboard"
 alias free='free -h'
 alias fs='~/.local/bin/scripts/fs'
@@ -167,9 +155,9 @@ alias gc='git commit'
 alias gcl='git clone'
 alias gco='git checkout'
 alias gd="git diff"
-alias gg='cmd.exe /c start brave.exe https://google.com'
-alias gg="google"
+# alias gg='cmd.exe /c start brave.exe https://google.com'
 alias g='grep -Hnri'
+alias gg='w3m google.com'
 alias gist='cmd.exe /c start brave.exe https://gist.github.com'
 alias gle='cd /home/danzor/repos/github.com/yuandandi/learn ; grep -Hnri '
 alias gl='git log --oneline --decorate --all --graph'
@@ -196,24 +184,18 @@ alias iptab='sudo iptables --verbose --numeric --list --line-numbers'
 alias i='sudo pacman -Sy --needed'
 alias iv='vim'
 alias ix='~/.local/bin/scripts/ix'
-#alias i='yes | sudo apt install' (Ubuntu)
 alias kil='kill -9'
 alias k="killall"
 alias kmdir='mkdir'
-alias la='ls -A | grep "jk"'
 alias las='~/.local/bin/scripts/las'
 alias last='~/.local/bin/scripts/last'
 alias lb='lynx bing.com'
 alias lc='clear'
 alias 'ld'="duck"
 alias lg='lazygit'
-alias lg='lynx google.com'
-# alias librewolf='flatpak run io.gitlab.librewolf-community'
-alias li="d -l -g --icons --sort=size"
+alias li='~/.local/bin/scripts/li'
 alias linkhandler='~/.local/bin/scripts/linkhandler'
 alias ll="d -l -g --icons"
-alias l="lynx"
-# alias lock=' gnome-screensaver-command --lock' (gnome Ubuntu)
 alias lorem='bash ~/.local/bin/scripts/lorem.sh'
 alias lsd='ls -d */'
 alias lsj='ls'
@@ -232,7 +214,6 @@ alias megc='~/.local/bin/scripts/megc'
 alias meg='~/.local/bin/scripts/meg'
 alias mem='free -h'
 alias mind='~/.local/bin/scripts/mind'
-alias m='mkdir'
 alias m.="mv (fzf --multi)" # easier way to copy multiple files
 alias mna='man'
 alias mor='more'
@@ -243,8 +224,8 @@ alias mvp='mpv'
 alias mvp='mvp --ao=pulse'
 alias ndoe='node'
 alias newgit='~/.local/bin/scripts/newgit'
+alias noc='shopt -u progcomp' # disable bash completion
 alias nod='node'
-alias not='cd ~/repos/github.com/yuandandi/notes/'
 alias note='cd ~/notes ; d -l -g --icons'
 alias notes='cd ~/notes ; d -l -g --icons'
 alias now='date +"%Y-%m-%d %T"'
@@ -265,8 +246,9 @@ alias pil='pip list'
 alias pipli='pip list'
 alias pi='podman images'
 alias pirntenv='printenv'
+alias p='~/.local/bin/scripts/p'
 alias po='popd'
-alias ppp='ping  -c 3 8.8.8.8'
+alias ppp='ping  -c3 8.8.8.8'
 alias pre='ls --color=always | fzf --ansi --preview="bat --color=always {}" --preview-window=right:60%:wrap'
 alias pu='pushd .'
 alias pw='pwd'
@@ -295,12 +277,14 @@ alias sc='shellcheck'
 alias sd='sr duckduckgo'
 alias sed='sed -E'
 alias setting='gnome-control-center'
-alias sg='sr google'
+alias sg='sr google -browser=w3m'
 alias shell='~/.local/bin/scripts/shell'
 alias shut='sudo shutdown now'
 alias si='sc-im'
 alias slip='systemctl suspend'
 alias sl='ls --color=auto'
+alias smi='sudo make install'
+alias sm='sr opendir_music'
 alias smtl='sort coo.md | uniq -dc | sort -nr'
 alias sni='sudo snap install'
 alias snli='snap list'
@@ -309,6 +293,7 @@ alias sot='tmux source ~/.config/tmux/tmux.conf'
 alias speedtest='speedtest.net'
 alias spt='speedtest'
 alias sun="~/.local/bin/scripts/sunrise"
+alias sup='sudo updatedb'
 alias sw='sr wiki'
 alias tas='tmux attach-session -t'
 alias ta='tmux attach'
@@ -339,9 +324,7 @@ alias va='vim ~/.config/alacritty/alacritty.toml'
 alias vb='vim -c "norm g;' # go to the last position You close the file
 alias vc='vim ~/.vimrc'
 alias ve='cd /mnt/c/Users/Dandi/AppData/Roaming/espanso/match'
-alias vf='vim ~/.bashrc'
 alias vh='vim /mnt/c/Users/Dandi/AppData/Roaming/Hyper/.hyper.js'
-alias vic='~/.local/bin/scripts/vic.sh'
 alias vimp="~/.local/bin/scripts/vimprev.sh"
 alias vim='vim'
 alias vimv='~/.local/bin/vimv'
@@ -349,7 +332,6 @@ alias vircam='sudo modprobe v4l2loopback video_nr=7 card_label=Video-Loopback ex
 alias vi='vim'
 alias vm='mv'
 alias vr='vim ~/.bashrc'
-alias vt='vim /mnt/c/Users/Dandi/AppData/Local/Packages/Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe/LocalState/settings.json'
 alias v.="vim (fd -H | fzf --dct)" # search from the curent directory
 alias vv='vim -c "norm Gzz"'  # go to the last line and make in the middle
 alias vx='vim ~/.config/tmux/tmux.conf'
@@ -360,7 +342,7 @@ alias watch="watch -n 0.1"
 alias wd='w3m duckduckgo.com'
 alias weather='~/.local/bin/scripts/weather.sh'
 alias weto='curl wttr.in'
-alias wg='w3m google.com'
+alias wg='w3m -M google.com'
 alias whatis='whatis -l'
 alias whihc='which'
 alias wh='which'
@@ -370,13 +352,17 @@ alias wk='wikit'
 alias wl='wc -l'
 alias wm='w3mman'
 alias wp='vim /home/danzor/repos/github.com/yuandandi/notes/program/programs.md'
+alias ws='w3m -M https://searx.be'
 alias w='w3m'
 alias x='exit'
 alias yd='~/.local/bin/scripts/yd'
-alias ymd='date +"%Y-%m-%d"'
-alias ymd='ytfzf -md'
+alias ydm="yt-dlp --external-downloader aria2c -x --audio-format mp3 "
+alias yec='shopt -s progcomp' # source completion back
+alias ymd='cd ~/music/ ; ytfzf -md'
 alias yt='ytfzf --show-thumbnails -d'
 alias zola='flatpak run org.getzola.zola'
+
+# }}}
 
 
 # colored GCC warnings and errors
@@ -410,13 +396,15 @@ fi
 
 eval "$(zoxide init bash)"
 
-
+# {{{ Path
+[ -d "$HOME/.w3m/bin" ] && PATH="$HOME/.w3m/bin:$PATH"
 export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:~/.local/bin/scripts
+export PATH=$PATH:/usr/lib/surfraw
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 export EDITOR=vim
-export LYNX_CFG="~/.config/lynx/lynx.cfg"
-export LYNX_LSS="~/.config/lynx/lynx.lss"
+# }}}
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -436,11 +424,35 @@ _edit_wo_executing() {
     rm -f "$tmpf"  # -f for those who have alias rm='rm -i'
 }
 
-bind -x '"\C-x\C-e":_edit_wo_executing'
+# {{{ Bindings
+
+bind -x '"\C-x\C-e":_edit_wo_executing'         # edit $ in Vim
 bind 'set completion-ignore-case on'
-bind -r '\C-\Shift-u'
-bind -m vi-command 'Control-l: clear-screen'
+bind -m vi-command 'Control-l: clear-screen'    # clear screen noremal and insert mode vi mode
 bind -m vi-insert 'Control-l: clear-screen'
+
+# alt-number to complete previous command
+bind '"\e1": "!:0 \n"'
+bind '"\e2": "!:0-1 \n"'
+bind '"\e3": "!:0-2 \n"'
+bind '"\e3": "!:0-3 \n"'
+
+bind '"\C-k": "cd ..\n"'
+bind '"\C-e": "xdg-open $(find . -maxdepth 4 | fzf)\n"'
+bind '"\C-f": "$EDITOR $(find . -maxdepth 4 | fzf)\n"'
+bind '"\C-v": "vifm .\n"'
+bind '"\C-g": "yy \n"'
+bind '"\C-o": "xdg-open $(fd | fzf)\n"'
+bind '"\ew": "w3mlastsession\n"'
+bind '"\en": "cd ~/repos/github.com/yuandandi/notes/ ; $EDITOR $(fd | fzf)\n"'
+bind '"\el": "cd ~/repos/github.com/yuandandi/learn/ ; $EDITOR $(fd | fzf)\n"'
+bind '"\em": "mu\n"'
+bind '"\eh": "htop\n"'
+bind '"\eo": "bmon\n"'
+bind '"\ea": "xdg-open $(fd -H | fzf)\n"'
+bind '"\ep": "keepassxc\n"'
+
+# }}}
 
 # disable c-s in TTY both interactive and non
 if [[ -t 0 && $- = *i* ]]
@@ -457,6 +469,10 @@ eval "$(fzf --bash)"
 export FZF_DEFAULT_COMMAND='fd --hidden --strip-cwd-prefix --exclude .git'
 export FZF_CTRL_T_COMMAND='$FZF_DEFAULT_COMMAND'
 export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git"
+
+# alias fl="cd ~/repos/github.com/yuandandi/learn/; vim $(fd | fzf )" # one day last files changed
+
+# {{{ Function
 
 _fzf_compgen_path() {
     fd --hidden --exclude .git . "1"
@@ -476,4 +492,59 @@ function yy() {
     rm -f -- "$tmp"
 }
 
+
+function fl() {
+    cd ~/repos/github.com/yuandandi/learn/ ; vim $(fzf)
+}
+
+function m() {
+    mkdir -p "$*"
+    cd "$*"
+}
+
+function fn() {
+    vim $(find ~/repos/github.com/yuandandi/notes/ -type f 2>/dev/null | grep $1 | grep -v './.git' -m 1)
+}
+
+function fo() {
+    cd ~; xdg-open $(fd | fzf)
+}
+
+function oi() {
+    cd ~/Downloads/asset/image/ ; feh $(fzf)
+}
+
+function ov() {
+    cd ~/youtube/ ; mpv $(fzf)
+}
+
+function ob() {
+    python3 -m readability.readability -u $1 -b
+}
+
+function not() {
+    $EDITOR ~/repos/github.com/yuandandi/notes/$1
+}
+
+function ow() {
+    python3 -m readability.readability -u $1 > /tmp/output.html ; w3m /tmp/output.html
+}
+
+function im() {
+    feh $(fd --full-path ~/Downloads/asset/image/ | fzf)
+}
+
+function mu() {
+    mpv $(fd --full-path ~/music/ | fzf)
+}
+
+function hidden() {
+    xdg-open $(fd -H | fzf)
+}
+
+function dotfile() {
+    $EDITOR $(fd $1 ~/.abook ~/.config ~/.local/bin ~/.ncmpcpp ~/.newsboat ~/.programs ~/.scripts ~/.vim ~/.w3m | fzf)
+}
+
+# }}}
 source ~/.programs/fzf-git.sh/fzf-git.sh

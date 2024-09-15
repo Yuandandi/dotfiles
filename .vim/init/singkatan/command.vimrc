@@ -26,24 +26,6 @@ ca sex Sexplore
 ca ewq wq
 
 filetype plugin on
-syntax on
-
-nmap <F13> <Plug>VimwikiNextLink
-nmap <F14> <Plug>VimwikiPrevLink
-nmap <F15> <Plug>VimwikiAddHeaderLevel
-
-se listchars=tab:→\ ,eol:↲
-se hid
-se winaltkeys=no
-se spr
-se ai
-se acd
-se nohls
-se path+=**
-se nocompatible
-se visualbell
-se laststatus=0
-se listchars-=eol
 
 au FileType go,python,lua,fish,rust,md ino <buffer> <M-s> <C-o>S
 " autocmd FileType css,go,python,fish,javascript,cpp,lua,html,javascript.jsx nn <C-m> yypk

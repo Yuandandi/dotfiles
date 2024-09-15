@@ -5,6 +5,7 @@ Plug 'tpope/vim-commentary'
 " Plug 'rstacruz/sparkup'
 " Plug 'turbio/bracey.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 " Plug 'mbbill/undotree',
 " Plug 'dhruvasagar/vim-table-mode'
 " Plug 'pangloss/vim-javascript'
