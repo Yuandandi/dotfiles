@@ -1,0 +1,94 @@
+# # Do not copy the mtime
+# --no-mtime
+
+# # Download all available subs, except live chat
+# # --sub-langs all,-live_chat
+
+# # Embed video's subs into the video
+# # --embed-subs
+
+# # Embed video's thumbnail into the video
+# # --embed-thumbnail
+
+# # Embed video's chapters into the video
+# --embed-chapters
+
+# # Embed sponsorblock mark as chapters into the video
+# --sponsorblock-mark all
+
+# # Use aria2c as external downloader
+# --downloader aria2c
+
+# # Display progress in console titlebar
+# # --console-title
+
+# # --split
+
+# # limit file name length
+
+# # yt-dlp configuration file
+
+# # Output template for downloaded files
+# # You can customize the filename and path here
+# # Example: 'Videos/%(title)s-%(id)s.%(ext)s'
+# output = ~/Downloads/youtube/%(title)s-%(id)s.%(ext)s
+
+# # Format selection
+# # Use 'bestvideo+bestaudio' for best quality, or specify other formats
+# # format = bestvideo+bestaudio/best
+
+# # Merge video and audio into one file
+# # Only necessary if you download separate video and audio streams
+# # merge_output_format = mp4
+
+# # Download playlist entries
+# # 'True' to download entire playlist, 'False' to only download single video
+# playlist = True
+
+# # Download thumbnails
+# # Set to True if you want to download thumbnails
+# # write_thumbnail = True
+
+# # Download subtitles
+# # 'True' to download subtitles, 'auto' to download auto-generated subtitles
+# subtitlesformat = best
+# write_subtitles = True
+# subtitleslangs = en
+
+# # Archive file to keep track of downloaded videos
+# # Helps avoid downloading the same video multiple times
+# # archive = ~/Downloads/archive.txt
+
+# # Add metadata to the downloaded file
+# # Includes title, artist, album, etc.
+# # write_info_json = True
+
+# # Use cookies for authenticated sites
+# # Path to a cookies file if required for access
+# # cookies = ~/.config/yt-dlp/cookies.txt
+
+# # Limit download speed (in bytes per second)
+# # For example, 500k would be 500 KB/s
+# # Set to 0 for no limit
+# rate_limit = 0
+
+# # Download videos in the background
+# # Useful for running multiple downloads simultaneously
+# concurrent_fragment_downloads = 4
+
+# # Set the user agent if needed
+# # Some sites require a specific user agent to download
+# # user_agent = Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36
+
+# # Write log files
+# # Useful for debugging or keeping track of downloads
+# # verbose = True
+# # logtostderr = True
+
+# # Proxy settings if needed
+# # proxy = http://127.0.0.1:8080
+
+# # Set default download directory
+# # Ensure the directory exists
+# download_archive = ~/Downloads/yt-dlp-archive.txt
+
