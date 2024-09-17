@@ -4,7 +4,7 @@ case $- in
     *) return ;;
 esac
 
-theme.sh black-metal-marduk
+# theme.sh black-metal-marduk
 
 set -o vi
 set -o ignoreeof
@@ -62,15 +62,12 @@ esac
 
 # {{{ Alias
 
-alias aci='acpi'
 alias ahk='cd ~/.local/bin/scripts && explorer.exe main.ahk'
-alias all="~/.local/bin/scripts/all"
 alias am='alsamixer'
 alias aman='netstat -tua | grep LISTEN'
 alias aptli='apt list --installed'
 alias ari="screen aria2c -x2"
-alias ba="~/.local/bin/scripts/fehbg"
-alias bas='cd ~/repos/github.com/yuandandi/notes/bash/'
+alias bg="~/.local/bin/scripts/fehbg"
 alias b='batcat -r :10'
 alias b.="batcat -r :10 (fzf --multi)" # preview multiple files within batcat
 alias bf='batcat'
@@ -88,11 +85,6 @@ alias ...='cd ../.. && d -g --icons'
 alias ..='cd .. ; ls -A --color=auto'
 alias childtohere='~/.local/bin/scripts/childtohere'
 alias cip='curl ipinfo.io/ip'
-alias claer='clear'
-alias clar='clear'
-alias cl='clear'
-alias clean='sudo apt autoclean && sudo apt autoremove'
-alias clIP='clip.exe'
 alias clip='xclip -sel clip'
 alias clj='clear'
 alias clm='clear'
@@ -196,7 +188,6 @@ alias lg='lazygit'
 alias li='~/.local/bin/scripts/li'
 alias linkhandler='~/.local/bin/scripts/linkhandler'
 alias ll="d -l -g --icons"
-alias lorem='bash ~/.local/bin/scripts/lorem.sh'
 alias lsd='ls -d */'
 alias lsj='ls'
 alias ls='ls --color=auto --group-directories-first'
@@ -271,9 +262,7 @@ alias rs='rsync --recursive'
 alias rsv='rsync --recursive ~/.config/vim/ ~/backup/nvimbak/'
 # alias r='yes | sudo apt remove'
 alias r='yes | sudo pacman -Runs'
-alias sb='source ~/.bashrc'
 alias scim='sc-im'
-alias sc='shellcheck'
 alias sd='sr duckduckgo'
 alias sed='sed -E'
 alias setting='gnome-control-center'
@@ -363,12 +352,26 @@ alias yt='ytfzf --show-thumbnails -d'
 alias zola='flatpak run org.getzola.zola'
 
 # }}}
+# {{{ Export
 
-
-# colored GCC warnings and errors
-export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
-export PAGER=less
+[ -d "$HOME/.w3m/bin" ] && PATH="$HOME/.w3m/bin:$PATH"
 export BROWSER=librewolf
+export BROWSER_PRIVATE='librewolf --private-window'
+export EDITOR=/usr/bin/vim
+export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+export GOPATH=$HOME/go
+export HRULEWIDTH=73
+export IMAGE_OPENER=/usr/bin/nsxiv
+export PAGER=less
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:~/.local/bin/scripts
+export PATH=$PATH:/usr/lib/surfraw
+export PATH=$PATH:/usr/local/go/bin
+export TERM=xterm-256color
+
+# }}}
+
+# }}}
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -396,22 +399,10 @@ fi
 
 eval "$(zoxide init bash)"
 
-# {{{ Path
-[ -d "$HOME/.w3m/bin" ] && PATH="$HOME/.w3m/bin:$PATH"
-export PATH=$PATH:/usr/local/go/bin
-export PATH=$PATH:~/.local/bin/scripts
-export PATH=$PATH:/usr/lib/surfraw
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin
-export EDITOR=vim
-# }}}
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-export TERM=xterm-256color
-export HRULEWIDTH=73
 
 # edit longline shell into a anim buffer
 _edit_wo_executing() {
@@ -426,33 +417,43 @@ _edit_wo_executing() {
 
 # {{{ Bindings
 
-bind -x '"\C-x\C-e":_edit_wo_executing'         # edit $ in Vim
 bind 'set completion-ignore-case on'
-bind -m vi-command 'Control-l: clear-screen'    # clear screen noremal and insert mode vi mode
-bind -m vi-insert 'Control-l: clear-screen'
 
-# alt-number to complete previous command
+# {{{ alt keys combos
+
 bind '"\e1": "!:0 \n"'
 bind '"\e2": "!:0-1 \n"'
+bind '"\e[24": "systemctl suspend\n"'
 bind '"\e3": "!:0-2 \n"'
 bind '"\e3": "!:0-3 \n"'
-
-bind '"\C-k": "cd ..\n"'
-bind '"\C-e": "xdg-open $(find . -maxdepth 4 | fzf)\n"'
-bind '"\C-f": "$EDITOR $(find . -maxdepth 4 | fzf)\n"'
-bind '"\C-v": "vifm .\n"'
-bind '"\C-g": "yy \n"'
-bind '"\C-o": "xdg-open $(fd | fzf)\n"'
-bind '"\ew": "w3mlastsession\n"'
-bind '"\en": "cd ~/repos/github.com/yuandandi/notes/ ; $EDITOR $(fd | fzf)\n"'
+bind '"\e8": "dotfile\n"'
+bind '"\e9": "kill -9 **\t"'
+bind '"\ea": "cd ; xdg-open $(fd -H | fzf)\n"'
+bind '"\ed": "libreoffice\n"'
+bind '"\ee": "acpi\n"'
+bind '"\eg": "w3m https://google.com\n"'
+bind '"\eh": "htop\n"'
 bind '"\el": "cd ~/repos/github.com/yuandandi/learn/ ; $EDITOR $(fd | fzf)\n"'
 bind '"\em": "mu\n"'
-bind '"\eh": "htop\n"'
+bind '"\en": "$EDITOR $(fd --full-path /home/danzor/repos/github.com/yuandandi/notes/ | fzf)\n"'
 bind '"\eo": "bmon\n"'
-bind '"\ea": "xdg-open $(fd -H | fzf)\n"'
 bind '"\ep": "keepassxc\n"'
-bind '"\ee": "acpi\n"'
+bind '"\ew": "w3mlastsession\n"'
+bind '"\ez": "zi\n"'
 
+# }}}
+# {{{ Control Key Combos
+
+bind '"\C-e": "xdg-open $(find . -maxdepth 4 | fd | fzf)\n"'    # open 4 depth Directory
+bind '"\C-f": "$EDITOR $(find . -maxdepth 4 | fd | fzf)\n"'     # vi 4 depth Directory
+bind '"\C-k": "cd ..\n"'                                        # parent dir
+bind '"\C-o": "xdg-open $(fd | fzf)\n"'                         # xdg-open
+bind '"\C-v": "vifm .\n"'                                       # vifm
+bind '"\C-y": "yy \n"'                                          # yazi
+bind -m vi-command 'Control-l: clear-screen'                    # clear screen noremal and insert mode vi mode
+bind -m vi-insert 'Control-l: clear-screen'
+
+# }}}
 
 # }}}
 
@@ -471,8 +472,6 @@ eval "$(fzf --bash)"
 export FZF_DEFAULT_COMMAND='fd --hidden --strip-cwd-prefix --exclude .git'
 export FZF_CTRL_T_COMMAND='$FZF_DEFAULT_COMMAND'
 export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git"
-
-# alias fl="cd ~/repos/github.com/yuandandi/learn/; vim $(fd | fzf )" # one day last files changed
 
 # {{{ Function
 
@@ -513,7 +512,7 @@ function fo() {
 }
 
 function oi() {
-    cd ~/Downloads/asset/image/ ; feh $(fzf)
+    cd ~/Downloads/asset/image/ ; $IMAGE $(fzf)
 }
 
 function ov() {
@@ -528,12 +527,12 @@ function not() {
     $EDITOR ~/repos/github.com/yuandandi/notes/$1
 }
 
-function ow() {
-    python3 -m readability.readability -u $1 > /tmp/output.html ; w3m /tmp/output.html
+function ba() {
+    $EDITOR ~/repos/github.com/yuandandi/notes/bash/$1
 }
 
-function im() {
-    feh $(fd --full-path ~/Downloads/asset/image/ | fzf)
+function ow() {
+    python3 -m readability.readability -u $1 > /tmp/output.html ; w3m /tmp/output.html
 }
 
 function mu() {
@@ -545,10 +544,15 @@ function hidden() {
 }
 
 function dotfile() {
-    $EDITOR $(fd $1 ~/.abook ~/.config ~/.local/bin ~/.ncmpcpp ~/.newsboat ~/.programs ~/.scripts ~/.vim ~/.w3m | fzf)
+    $EDITOR $(fd . /home/danzor/.abook ~/.config /home/danzor/.local/bin /home/danzor/.ncmpcpp /home/danzor/.newsboat /home/danzor/.programs /home/danzor/.scripts /home/danzor/.vim /home/danzor/.w3m | fzf)
 }
 
-# comment
+function all() {
+    git add .; git commit -m "$@"; git push
+}
 
 # }}}
-source ~/.programs/fzf-git.sh/fzf-git.sh
+
+# foo
+
+source ~/.programs/fzf-git.sh
