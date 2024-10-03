@@ -10,6 +10,7 @@ set -o ignoreeof
 set +o noglob
 # }}}
 # {{{ Less and Colors
+
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval ""
 
@@ -35,23 +36,27 @@ if [ -n "$force_color_prompt" ]; then
         color_prompt=
     fi
 fi
+
 # }}}
 # {{{ Hist
+
 HISTSIZE=100000
 HISTFILESIZE=20000
 HISTCONTROL=ignoreboth
+
 # }}}
 # {{{ Shopt
 
-shopt -s nocaseglob     # case-insensitive file expansion
+# shopt -s nocaseglob     # case-insensitive file expansion
 shopt -s histverify     # sudo !$<cr> will print first to verify
-shopt -s histappend     # allow multiple terminals to write to the history file
-shopt -s extglob
-shopt -s cdspell        # /tmp/foo no need cd infron
-shopt -s autocd
-shopt -s dirspell
-shopt -s cmdhist
-shopt -s globstar
+# shopt -s histappend     # allow multiple terminals to write to the history file
+# shopt -s extglob
+# shopt -s cdspell        # correct small typos
+# shopt -s autocd
+# shopt -s dirspell
+# shopt -s cmdhist
+# shopt -s globstar
+# shopt -s cdable_vars    # enable cdpath variable
 
 # }}}
 # {{{ Unset Colors
@@ -67,35 +72,18 @@ esac
 # }}}
 # {{{ Alias
 
-alias b='batcat -r :10'
-# alias b.="batcat -r :10 $(fzf --multi)" # preview multiple files within batcat
-alias bf='batcat'
-alias bl='bluetuith'
 alias bmon='bmon -f /home/danzor/.config/bmon/bmon.conf'
-alias bots='~/.local/bin/scripts/bots'
-alias bra='cmd.exe /c start brave.exe'
-alias br='git rev-parse --abbrev-ref HEAD'
-alias brute="~/.local/bin/scripts/brute.sh"
-alias bs='~/.local/bin/scripts/bs'
-alias bu='brew update --auto-update'
-alias ccl='clear'
-alias c.="cp (fzf --multi)" # easier way to copy multiple files
-alias ...='cd ../.. && d -g --icons'
-alias ..='cd .. ; ls -A --color=auto'
-alias childtohere='~/.local/bin/scripts/childtohere'
+alias l='less'
+alias cl='clear'
 alias cip='curl ipinfo.io/ip'
 alias clip='xclip -sel clip'
-alias clj='clear'
-alias clm='clear'
-alias cm='codium .'
 alias cmo='chmod 764'
 alias co='curl -O'
 alias cols="~/.local/bin/scripts/colorstrip"
-alias con='cd ~/.config ; ls'
-alias core='~/.local/bin/scripts/core'
+alias core='grep ^processor /proc/cpuinfo | wc -l'
 alias cpu='lscpu'
 alias cupng='~/.local/bin/scripts/cupng'
-alias cur="curl -X GET 'https://openexchangerates.org/api/latest.json?app_id=9d128b37ede54a149068edf42f1b3b04' ; grep IDR"
+alias cur="curl -s -X GET 'https://openexchangerates.org/api/latest.json?app_id=9d128b37ede54a149068edf42f1b3b04' | less"
 alias d1='find -maxdepth 1 -type d'
 alias d='dict'
 alias defb='xdg-settings get default-web-browser'
@@ -106,19 +94,13 @@ alias di='cd ~/Downloads/asset/image/ ; curl -O'
 alias dl='lynx duckduckgo.com'
 # alias d='~/.local/bin/scripts/d'
 alias dmenurecord='~/.local/bin/dmenurecord'
-alias dot='$(which librewolf) https://github.com/yuandandi/dotfiles'
-alias d.="rm (fzf --multi)" # delete multiple files
-alias dsk='df -h'
+alias dots='$BROWSER https://github.com/yuandandi/dotfiles'
 alias '?'="duck"
 alias duck='~/.local/bin/scripts/duck'
 alias ducks="curl -X GET 'https://openexchangerates.org/api/latest.json?app_id=9d128b37ede54a149068edf42f1b3b04' ; grep IDR"
-alias duf='~/.local/bin/scripts/duf'
 alias ecoh='echo'
-alias ed='ed -p ">"'
-alias e.="explorer.exe ." # delete multiple files from anywhere
-alias e="explorer.exe" # delete multiple files from anywhere
 alias ehco='echo'
-alias en='~/.local/bin/scripts/en'
+alias en='printenv | cut -d '=' -f 1 | sort | more'
 alias ex='exiftool'
 alias exgo='~/.local/bin/scripts/exgo.sh'
 alias exshell='~/.local/bin/scripts/exe'
@@ -134,13 +116,12 @@ alias fig=figlet
 alias fkil='ps -ef | fzf -m | awk '\''{print $2}'\'' | xargs kill'
 alias fli='yes | sudo flatpak install'
 alias fls='flatpak search'
-alias fp="cd ~; echo (fd -uu -H --exclude go --exclude ghq --exclude snap --exclude .local --exclude .cache --exclude .rustup --exclude paru --exclude mutt-wizard --exclude .fzf --exclude .vscode-server --exclude squashfs-root --exclude vimplugins --exclude .vim --exclude .tmux --exclude .nvm --exclude .npm --exclude libvips-8.14.5 --exclude clone --exclude .gnupg| fzf --dct ) | xclip -selection clipboard"
 alias free='free -h'
 alias gad='git add'
 alias gbr='git branch'
-alias gco='git commit'
-alias gcl='git clone'
 alias gch='git checkout'
+alias gcl='git clone'
+alias gco='git commit'
 alias gdi="git diff"
 alias g='grep -Hnri'
 alias gg='w3m google.com'
@@ -150,9 +131,8 @@ alias gl='git log --oneline --decorate --all --graph'
 alias glow='glow -p'
 alias gm='git merge'
 alias gn='cd /home/danzor/repos/github.com/yuandandi/notes ; grep -Hnri'
-alias gpus='git push -u origin main'
 alias gpul='git pull'
-alias gr="entr bash -c 'clear; go run /tmp/co.go' <<< /tmp/co.go"
+alias gpus='git push -u origin main'
 alias grep='grep --color --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}'
 alias grepl='grep -lnri'
 alias gs='git status'
@@ -162,6 +142,7 @@ alias het='~/.local/bin/scripts/het'
 alias h=head
 alias his='history | tail'
 alias hist='history'
+alias idr="curl -s -X GET 'https://openexchangerates.org/api/latest.json?app_id=9d128b37ede54a149068edf42f1b3b04' | grep -i IDR"
 alias ifconifg='ifconfig'
 alias ipa='ip address'
 alias ips='~/.local/bin/scripts/ips'
@@ -180,6 +161,7 @@ alias 'ld'="duck"
 alias lg='lazygit'
 alias li='~/.local/bin/scripts/li'
 alias linkhandler='~/.local/bin/scripts/linkhandler'
+alias links='w3m ~/repos/github.com/yuandandi/notes/links/linksall.md'
 alias ll="d -l -g --icons"
 alias lsd='ls -d */'
 alias lsj='ls'
@@ -206,11 +188,7 @@ alias mr='rm'
 alias mt='xargs mv -t'
 alias mvp='mpv'
 alias mvp='mvp --ao=pulse'
-alias ndoe='node'
 alias newgit='~/.local/bin/scripts/newgit'
-alias nod='node'
-alias note='cd ~/notes ; d -l -g --icons'
-alias notes='cd ~/notes ; d -l -g --icons'
 alias now='date +"%Y-%m-%d %T"'
 alias nul='2> /dev/null | more'
 alias nv='vim -u NONE'
@@ -229,9 +207,7 @@ alias pil='pip list'
 alias pipli='pip list'
 alias pi='podman images'
 alias pirntenv='printenv'
-alias p='~/.local/bin/scripts/p'
 alias po='popd'
-alias ppp='ping  -c3 8.8.8.8'
 alias pre='ls --color=always | fzf --ansi --preview="bat --color=always {}" --preview-window=right:60%:wrap'
 alias pu='pushd .'
 alias pw='pwd'
@@ -254,6 +230,7 @@ alias rs='rsync --recursive'
 alias rsv='rsync --recursive ~/.config/vim/ ~/backup/nvimbak/'
 # alias r='yes | sudo apt remove'
 alias r='yes | sudo pacman -Runs'
+alias sb='sr -browser=librewolf'
 alias scim='sc-im'
 alias sd='sr duckduckgo'
 alias sed='sed -E'
@@ -268,28 +245,23 @@ alias smi='sudo make install'
 alias sm='sr opendir_music'
 alias smtl='sort coo.md | uniq -dc | sort -nr'
 alias sni='sudo snap install'
-alias snli='snap list'
 alias so='source ~/.bashrc'
 alias sot='tmux source ~/.config/tmux/tmux.conf'
 alias speedtest='speedtest.net'
-alias spt='speedtest'
 alias sun="~/.local/bin/scripts/sunrise"
 alias sup='sudo updatedb'
 alias sw='sr wiki'
 alias tas='tmux attach-session -t'
-alias ta='tmux attach'
-alias term='cd ~/repos/github.com/yuandandi/notes/terms/'
+alias ta='tmux attach -t'
 alias termcolors='~/.local/bin/scripts/termcolors'
 alias te='trans :en'
 alias ti='trans :id'
-alias tk="tmux kill-session -t"
-alias tl='tmux list-sessions'
-alias tn="tmux new -s"
 alias top='htop'
 alias topl='~/.local/bin/scripts/topl'
 alias tops='~/.local/bin/scripts/tops'
 alias tot='du -sh'
 alias to="vim ~/.vim/init/singkatan/typos.vimrc"
+alias plug="vim ~/.vim/init/plugins.vimrc"
 alias troute='traceroute google.com'
 alias tr='vim /home/danzor/repos/github.com/yuandandi/notes/translate'
 alias t='tail'
@@ -302,8 +274,7 @@ alias u='yes | sudo pacman -Syu'
 alias va='vim ~/.config/alacritty/alacritty.toml'
 alias vb='vim -c "norm g;' # go to the last position You close the file
 alias vc='vim ~/.vimrc'
-alias ve='cd /mnt/c/Users/Dandi/AppData/Roaming/espanso/match'
-alias vh='vim /mnt/c/Users/Dandi/AppData/Roaming/Hyper/.hyper.js'
+alias vifmimg='/home/danzor/.config/vifm/scripts/vifmrun'
 alias vimp="~/.local/bin/scripts/vimprev.sh"
 alias vim='vim'
 alias vimv='~/.local/bin/vimv'
@@ -336,9 +307,8 @@ alias w='w3m'
 alias x='exit'
 alias yd='~/.local/bin/scripts/yd'
 alias ydm="yt-dlp --external-downloader aria2c -x --audio-format mp3 "
-alias ymd='cd ~/music/ ; ytfzf -md'
 alias yt='ytfzf --show-thumbnails -d'
-alias zola='flatpak run org.getzola.zola'
+alias type='type'
 
 # }}}
 # {{{ Export
@@ -352,11 +322,31 @@ export GOPATH=$HOME/go
 export HRULEWIDTH=73
 export IMAGE_OPENER=/usr/bin/nsxiv
 export PAGER=less
-export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:~/.local/bin/scripts
-export PATH=$PATH:/usr/lib/surfraw
-export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:$GOPATH/bin/
+export PATH=$PATH:~/.local/bin/scripts/
+export PATH=$PATH:~/.programs/fzf-nova/
+export PATH=$PATH:/usr/lib/surfraw/
+export PATH=$PATH:~/.programs/clone/dotfiles_v2/normal_user/scripts/
+export PATH=$PATH:/usr/local/go/bin/
 export TERM=xterm-256color
+export IMAGES=~/Downloads/asset/image/
+export NOTES=~/repos/github.com/yuandandi/notes/
+export SCRIPTS=~/.local/bin/scripts
+
+# {{{ often dirs you can cd to one of these anywhere
+
+# export bash=~/repos/github.com/yuandandi/notes/bash
+# export config=~/.config
+# export dotfiles=~/repos/github.com/yuandandi/dotfiles/
+# export download=~/Downloads/
+# export images=~/Downloads/asset/image/
+# export learn=~/repos/github.com/yuandandi/learn/
+# export music=~/music
+# export notes=~/repos/github.com/yuandandi/notes/
+# export programs=~/.programs
+# export scripts=~/.local/bin/scripts/
+# export vim=~/.vim
+# export youtube=~/youtube
 
 # }}}
 
@@ -410,26 +400,33 @@ bind 'set completion-ignore-case on'
 
 # {{{ Alt Keys Combos
 
-bind '"\e1": "!:0 \n"'                  # a-1 1 word above
-bind '"\e2": "!:0-1 \n"'                # a-2 2 word above
-bind '"\e3": "!:0-2 \n"'                # a-3 3 words above
-bind '"\e[24": "systemctl suspend\n"'   # f12   sleep
-bind '"\ex": "bemoji\n"'                # a-x emoji
-bind '"\e8": "dotfile\n"'               # vim dotfiles
+bind '"\e0": "sudo shutdown now\n"'                                          # a-0 suspend programs
+bind '"\e[15": "cd /home/danzor/.local/bin/scripts\n"'                       # f5 cd scripts
+bind '"\e[17": "cd /home/danzor/repos/github.com/yuandandi/notes/\n"'        # f6 cd notes
+bind '"\e[18": "cd /home/danzor/repos/github.com/yuandandi/learn/\n"'        # f7 cd learn
+bind '"\e[19": "ping -c3 8.8.8.8\n"'                                         # f8 ping 3 times
+bind '"\e[20": "cd /home/danzor/youtube/\n"'                                 # f9 cd YouTube
+bind '"\e[24": "systemctl suspend\n"'                                        # f12 sleep
+bind '"\e8": "night\n"'                 # brightness 1
 bind '"\e9": "kill -9 **\t"'            # suspend programs
-bind '"\ea": "cd ; xdg-open $(fd -H | fzf)\n"'  # open hidden including hidden files
+bind '"\ea": "cd ; xdg-open $(fd -H | fzf)\n"'  # open hidden including hidden files)
 bind '"\ed": "libreoffice\n"'                   # librewolf
 bind '"\ee": "acpi\n"'                          # ACPI (battery)
+bind '"\ef": "fzf-nova\n"' 		                # dmenu replacement
 bind '"\eg": "w3m https://google.com\n"'        # Google w3m
 bind '"\eh": "htop\n"'                          # htop
-bind '"\el": "cd ~/repos/github.com/yuandandi/learn/ ; $EDITOR $(fd | fzf)\n"'  # vim learn
-bind '"\em": "mu\n"'                                                            # music fussy
-bind '"\en": "$EDITOR $(fd --full-path /home/danzor/repos/github.com/yuandandi/notes/ | fzf)\n"'    # vim notes
+bind '"\el": "find_learn\n"'                    # vim learn
+bind '"\em": "mu\n"'                            # music fussy
+bind '"\en": "find_notes\n"'            # notes dir
 bind '"\eo": "bmon\n"'                  # bmon (internet connection)
 bind '"\ep": "keepassxc\n"'             # keepassxc (password manager)
-bind '"\ew": "w3mlastsession\n"'        # w3mlastsession (last opened w3m)
-bind '"\ez": "zi\n"'                    # cd interactive anywhere from anywhere
+bind '"\es": "vim_session\n"'           # fuzzy vim session
 bind '"\et": "theme.sh -i\n"'           # theme.sh fzf
+bind '"\ew": "w3mlastsession\n"'        # w3mlastsession (last opened w3m)
+bind '"\ex": "bemoji\n"'                # a-x emoji
+bind '"\ez": "zi\n"'                    # cd interactive anywhere from anywhere
+bind '"\ej": "date\n"'                  # datetime
+bind '"\t":menu-complete' 		        # Tab: Cycle thru completion
 
 # }}}
 # {{{ Control Key Combos
@@ -437,8 +434,8 @@ bind '"\et": "theme.sh -i\n"'           # theme.sh fzf
 bind '"\C-e": "xdg-open $(find . -maxdepth 4 | fd | fzf)\n"'    # open 4 depth Directory
 bind '"\C-f": "$EDITOR $(find . -maxdepth 4 | fd | fzf)\n"'     # vi 4 depth Directory
 bind '"\C-k": "cd ..\n"'                                        # parent dir
-bind '"\C-o": "xdg-open $(fd | fzf)\n"'                         # xdg-open
-bind '"\C-a": "$EDITOR $(fd . /home/danzor/konfig| fzf)\n"'     # vim config symlink
+# bind '"\C-o": "xdg-open $(fd | fzf)\n"'                         # xdg-open
+bind '"\C-a": "$EDITOR $(fd -H . /home/danzor/konfig| fzf)\n"'     # vim config symlink
 bind '"\C-v": "vifm .\n"'                                       # vifm
 bind '"\C-y": "yy \n"'                                          # yazi
 bind -m vi-command 'Control-l: clear-screen'                    # clear screen normal and insert mode vi mode
@@ -447,13 +444,12 @@ bind -m vi-insert 'Control-l: clear-screen'
 # }}}
 
 # }}}
-
-# disable c-s in TTY both interactive and non
+# {{{ disable c-s in TTY both interactive and non
 if [[ -t 0 && $- = *i* ]]
 then
     stty -ixon
 fi
-
+# }}}
 # Created by `pipx` on 2024-02-18 20:36:04
 export PATH="$PATH:/home/danzor/.local/bin"
 source ~/.shortcuts
@@ -464,7 +460,49 @@ export FZF_DEFAULT_COMMAND='fd --hidden --strip-cwd-prefix --exclude .git'
 export FZF_CTRL_T_COMMAND='$FZF_DEFAULT_COMMAND'
 export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git"
 
+# {{{ Surfraw Completion
+
+# http://askubuntu.com/a/345150
+# https://www.debian-administration.org/article/317/An_introduction_to_bash_completion_part_2
+_cmpl_surfraw() {
+    # reply=($(awk 'NF != 0 && !/^#/ {print $1}' ~/.config/surfraw/bookmarks | sort -n))
+    local cur=${COMP_WORDS[COMP_CWORD]}
+    COMPREPLY=($(awk 'NF != 0 && !/^#/ {print $1}' ~/.config/surfraw/bookmarks | sort -n))
+    # COMPREPLY=($(awk 'NF != 0 && !/^#/ {print $1}' ~/.config/surfraw/bookmarks | sort -n))
+    # local cur=${COMP_WORDS[COMP_CWORD]}
+    # COMPREPLY=( $(compgen -W "fooOption barOption" -- $cur) )
+}
+complete -F _cmpl_surfraw srb
+
+# }}}
 # {{{ Function
+
+# # {{{ cd and bd combinator
+# function cd() { # everytime you cd will pushd into stack
+#     if [ "$#" = "0" ]
+#     then
+#         pushd ${HOME} > /dev/null
+#     elif [ -f "${1}" ]
+#     then
+#         ${EDITOR} ${1}
+#     else
+#         pushd "$1" > /dev/null
+#     fi
+# }
+
+# function bd(){ # bd backdirectory to the last cd/stackdir
+#     if [ "$#" = "0" ]
+#     then
+#         popd > /dev/null
+#     else
+#         for i in $(seq ${1})
+#         do
+#             popd > /dev/null
+#         done
+#     fi
+# }
+
+# # }}}
 
 _fzf_compgen_path() {
     fd --hidden --exclude .git . "1"
@@ -503,18 +541,14 @@ function fo() {
 }
 
 function oi() {
-    cd ~/Downloads/asset/image/ ; $IMAGE $(fzf)
+    cd ~/Downloads/asset/image/ ; $IMAGE_OPENER $(fzf)
 }
 
-function ov() {
+function play_video() {
     cd ~/youtube/ ; mpv $(fzf)
 }
 
-function ob() {
-    python3 -m readability.readability -u $1 -b
-}
-
-function not() {
+function newNotes() {
     $EDITOR ~/repos/github.com/yuandandi/notes/$1
 }
 
@@ -522,12 +556,12 @@ function ba() {
     $EDITOR ~/repos/github.com/yuandandi/notes/bash/$1
 }
 
-function ow() {
+function readability() {
     python3 -m readability.readability -u $1 > /tmp/output.html ; w3m /tmp/output.html
 }
 
 function mu() {
-    mpv $(fd --full-path ~/music/ | fzf)
+    mpv $(fd . /home/danzor/music/ | fzf)
 }
 
 function hidden() {
@@ -535,10 +569,10 @@ function hidden() {
 }
 
 function dotfile() {
-    $EDITOR $(fd . /home/danzor/.abook ~/.config /home/danzor/.local/bin /home/danzor/.ncmpcpp /home/danzor/.newsboat /home/danzor/.programs /home/danzor/.scripts /home/danzor/.vim /home/danzor/.w3m | fzf)
+    $EDITOR $(fd . /home/danzor/.abook ~/.config /home/danzor/.local/bin/ /home/danzor/.ncmpcpp /home/danzor/.newsboat /home/danzor/.programs /home/danzor/.scripts /home/danzor/.vim /home/danzor/.w3m | fzf)
 }
 
-function all() {
+function all {
     git add .; git commit -m "$@"; git push
 }
 
@@ -546,8 +580,92 @@ function big_to_low() {
     find . -type f -exec du --si {} + | sort -h
 }
 
-# }}}
+function bs {
+    brightnessctl set "$1%"
+}
 
-# foo
+function night {
+    brightnessctl set 1
+}
+
+function wimg {
+    w3m -o imgdisplay=/home/danzor/.local/bin/scripts/w3mimg $1
+    /home/danzor/.local/bin/scripts/w3mimg
+}
+
+function vim_session {
+    vim -S $(fd . /home/danzor/session | fzf)
+}
+
+function find_notes {
+    $EDITOR $(fd --type f . /home/danzor/repos/github.com/yuandandi/notes/| fzf -i --preview 'bat {}')
+}
+
+function find_learn {
+    $EDITOR $(fd --type f . /home/danzor/repos/github.com/yuandandi/learn/ | fzf -i --preview 'bat {}')
+}
+
+function lf() { # last file e.g. lf 1 the lastest file, lf 2 latest number to
+    if [ "x${1}" == "x" ]
+    then
+        n=1
+    else
+        n="${1}"
+    fi
+    ls -rt1 | tail -n ${n} | head -n 1
+}
+
+function lff() { # open latest file current dir with vim
+    $EDITOR $(if [ "x${1}" == "x" ]
+then
+    n=1
+else
+    n="${1}"
+    fi
+    ls -rt1 | tail -n ${n} | head -n 1)
+}
+
+function ymd() {
+    cd ~/music/ ; ytfzf -md $@
+}
+
+show_colour() {
+    perl -e 'foreach $a(@ARGV){print "\e[48:2::".join(":",unpack("C*",pack("H*",$a)))."m \e[49m "};print "\n"' "$@"
+}
+
+function colpic() {
+    colorpicker --short --one-shot --preview | xclip -selection clipboard
+}
+
+function p() {
+    plocate $1 | vim -R -
+}
+
+function tf() {
+    tldr --list | fzf --preview "tldr {1} --color=always" --preview-window=right,70% | xargs tldr
+}
+
+function c() {
+    cht.sh $@
+}
+
+# attatch to the current dir on tmux
+function tat {
+    name=$(basename `pwd` | sed -e 's/\.//g')
+    if tmux ls 2>&1 | grep "$name"; then
+        tmux attach -t "$name"
+    elif [ -f .envrc ]; then
+        direnv exec / tmux new-session -s "$name"
+    else
+        tmux new-session -s "$name"
+    fi
+}
+
+# }}}
+# # {{{ Auto Detect URL W3m
+# if [ -f "/usr/lib/w3m/cgi-bin/treat_as_url.cgi" ] ; then
+#     alias w3m="w3m /usr/lib/w3m/cgi-bin/treat_as_url.cgi"
+# fi
+# # }}}
 
 source ~/.programs/fzf-git.sh
