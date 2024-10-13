@@ -1,0 +1,12 @@
+[user]
+    name = Yuandandi
+    mail = yoan.yoan.56829@gmail.com
+    email = yoan.yoan.56829@gmail.com
+[core]
+    editor = vim
+    pager = delta
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    navigation = true
+    side-by-side = true

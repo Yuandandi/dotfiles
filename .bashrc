@@ -40,20 +40,20 @@ fi
 # }}}
 # {{{ Hist
 
-HISTSIZE=100000
-HISTFILESIZE=20000
-HISTCONTROL=ignoreboth
+HISTSIZE= HISTSIZE=     # infinite history
+# HISTFILESIZE=20000
+# HISTCONTROL=ignoreboth
 
 # }}}
 # {{{ Shopt
 
 # shopt -s nocaseglob     # case-insensitive file expansion
-shopt -s histverify     # sudo !$<cr> will print first to verify
+# shopt -s histverify     # sudo !$<cr> will print first to verify
 # shopt -s histappend     # allow multiple terminals to write to the history file
 # shopt -s extglob
 # shopt -s cdspell        # correct small typos
-# shopt -s autocd
-# shopt -s dirspell
+shopt -s autocd
+shopt -s dirspell
 # shopt -s cmdhist
 # shopt -s globstar
 # shopt -s cdable_vars    # enable cdpath variable
@@ -73,9 +73,9 @@ esac
 # {{{ Alias
 
 alias bmon='bmon -f /home/danzor/.config/bmon/bmon.conf'
-alias l='less'
-alias cl='clear'
+alias boot='ln -s ~/Downloads/frameworks/bootstrap/js/ ~/Downloads/frameworks/bootstrap/css/ .'
 alias cip='curl ipinfo.io/ip'
+alias cl='clear'
 alias clip='xclip -sel clip'
 alias cmo='chmod 764'
 alias co='curl -O'
@@ -161,8 +161,8 @@ alias 'ld'="duck"
 alias lg='lazygit'
 alias li='~/.local/bin/scripts/li'
 alias linkhandler='~/.local/bin/scripts/linkhandler'
-alias links='w3m ~/repos/github.com/yuandandi/notes/links/linksall.md'
 alias ll="d -l -g --icons"
+alias l='less'
 alias lsd='ls -d */'
 alias lsj='ls'
 alias ls='ls --color=auto --group-directories-first'
@@ -191,7 +191,6 @@ alias mvp='mvp --ao=pulse'
 alias newgit='~/.local/bin/scripts/newgit'
 alias now='date +"%Y-%m-%d %T"'
 alias nul='2> /dev/null | more'
-alias nv='vim -u NONE'
 alias onde='node'
 alias op='~/.local/bin/scripts/op'
 alias os='source ~/.bashrc'
@@ -207,8 +206,10 @@ alias pil='pip list'
 alias pipli='pip list'
 alias pi='podman images'
 alias pirntenv='printenv'
+alias plug="vim ~/.vim/init/plugins.vimrc"
 alias po='popd'
 alias pre='ls --color=always | fzf --ansi --preview="bat --color=always {}" --preview-window=right:60%:wrap'
+alias p='sudo pacman'
 alias pu='pushd .'
 alias pw='pwd'
 alias radion="radio"
@@ -252,21 +253,24 @@ alias sun="~/.local/bin/scripts/sunrise"
 alias sup='sudo updatedb'
 alias sw='sr wiki'
 alias tas='tmux attach-session -t'
-alias ta='tmux attach -t'
+alias ta='tmux attach'
 alias termcolors='~/.local/bin/scripts/termcolors'
 alias te='trans :en'
 alias ti='trans :id'
+alias tk='tmux kill-session -t'
+alias tl='tmux ls'
+alias tn='tmux new-session -s'
 alias top='htop'
 alias topl='~/.local/bin/scripts/topl'
 alias tops='~/.local/bin/scripts/tops'
 alias tot='du -sh'
 alias to="vim ~/.vim/init/singkatan/typos.vimrc"
-alias plug="vim ~/.vim/init/plugins.vimrc"
 alias troute='traceroute google.com'
 alias tr='vim /home/danzor/repos/github.com/yuandandi/notes/translate'
 alias t='tail'
 alias tt='tail -n 1'
 alias tyep='type'
+alias type='type'
 alias uniq='uniq -c'
 alias untar='tar xvf'
 alias upfile='~/.local/bin/scripts/upfile'
@@ -308,7 +312,6 @@ alias x='exit'
 alias yd='~/.local/bin/scripts/yd'
 alias ydm="yt-dlp --external-downloader aria2c -x --audio-format mp3 "
 alias yt='ytfzf --show-thumbnails -d'
-alias type='type'
 
 # }}}
 # {{{ Export
@@ -357,7 +360,6 @@ export SCRIPTS=~/.local/bin/scripts
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 # See /usr/share/doc/bash-doc/dmples in the bash-doc package.
-
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
@@ -382,18 +384,6 @@ eval "$(zoxide init bash)"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# edit longline shell into a anim buffer
-_edit_wo_executing() {
-    local editor="${EDITOR:-nano}"
-    tmpf="$(mktemp)"
-    printf '%s\n' "$READLINE_LINE" > "$tmpf"
-    "$editor" "$tmpf"
-    READLINE_LINE="$(<"$tmpf")"
-    READLINE_POINT="${#READLINE_LINE}"
-    rm -f "$tmpf"  # -f for those who have alias rm='rm -i'
-}
-
 # {{{ Bindings
 
 bind 'set completion-ignore-case on'
@@ -637,7 +627,7 @@ function colpic() {
     colorpicker --short --one-shot --preview | xclip -selection clipboard
 }
 
-function p() {
+function pl() {
     plocate $1 | vim -R -
 }
 
